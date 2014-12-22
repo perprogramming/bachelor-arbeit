@@ -8,16 +8,24 @@
 
 \pagestyle{empty}
 \include{\secDir/00_Deckblatt}
-
 \end{spacing}
 
 \pagestyle{Hauptteil}
+
+\include{\secDir/01_Erklaerung}
+\include{\secDir/02_Inhaltsverzeichnis}
+\include{\secDir/03_Abbildungsverzeichnis}
+\include{\secDir/04_Abkuerzungsverzeichnis}
+
 \setcounter{page}{1}
 \pagenumbering{arabic}
-
-\include{\secDir/01_Inhalt_der_Arbeit}
-\include{\secDir/02_Gliederung}
-\include{\secDir/03_Literaturverzeichnis}
-\include{\secDir/04_Zeitplan}
+\include{\secDir/05_Einleitung}
+\include{\secDir/06_Grundlagen}
+\include{\secDir/07_Konzeption}
+\include{\secDir/08_Implementierung}
+\include{\secDir/09_Evaluation}
+\include{\secDir/10_Fazit}
+\include{\secDir/11_Literaturverzeichnis}
+\include{\secDir/12_Anhang}
 
 \end{document}
