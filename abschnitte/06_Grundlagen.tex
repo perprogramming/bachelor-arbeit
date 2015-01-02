@@ -1,4 +1,22 @@
-\section{Grundlagen und Ansätze der Virtualisierung}
+\section{Grundlagen und Ansätze der Virtualisierung von Testumgebungen}
+
+Laut Duden leitet sich das Adjektiv "`virtuell"' vom lateinischen "`virtus"' für "`Kraft, Tugend, Männlichkeit"' ab. Es bedeutet so viel wie "`von unwirklicher, scheinbarer, nicht tatsächlicher Form"'.
+
+Innerhalb der Informatik kann man von zwei unterschiedlichen Arten der Virtuatlität sprechen. Zum einen gibt es den Bereich der "virtuellen Realität", bei der einem Menschen mit Hilfe einer in Echtzeit computergenerierten Umgebung das Gefühl vermittelt wird, sich in einer anderen Wirklichkeit zu befinden. Zum anderen gibt es eben den Bereich der Virtualisierung, bei dem es darum geht, einem Anwender (Mensch oder auch Programm) bestimmte Rahmenbedingungen vorzuspielen, die so eigentlich nicht existieren.
+
+Ein einfaches Beispiel für Virtualisierung sind Hardware-Emulatoren. Hardware-Emulatoren gaukeln Software vor, mit einer Hardware zu interagieren, die so physisch gar nicht existiert. Dies wird z.B. verwendet, um alte Spiele von nicht mehr produzierten Spielekonsolen auf aktuellen Computern auszuführen oder auch um Apps für mobile Geräte wie Smartphones oder Tablets auf Desktoprechnern zu entwickeln oder zu testen, ohne diese Geräte wirklich vorzuhalten.
+
+Ein weiteres Beispiel ist die Virtualisierung von Netzwerkressourcen. So können z.B. VLANs (Virtual Local Area Networks) verbundenen Geräten eine ganz andere Verkabelung vorgaukeln als sie physikalisch vorliegt, um so bestimmte Zugriffe zu erlauben oder zu sperren.
+
+Der für diese Arbeit interessante Bereich der Virtualisierung ist das Bereitstellen virtueller Betriebsumgebungen. Eine Betriebsumgebung meint die Umgebung, die ein Programm für seine Ausführung benötigt. Dazu gehören vor allem bestimmte Hardware-Bauteile (Prozessoren, Arbeitsspeicher, Festplatten, Netzwerk-Adapter), ein Betriebssystem und eventuell zusätzliche Anwendungsprogramme, mit denen das Programm interagiert. Für gewöhnlich läuft eine solche Betriebsumgebung genau auf einem Rechner (z.B. Server oder Desktoprechner). Es gibt nun verschiedene Ansätze eine solche Betriebsumgebung zu virtualisieren, die sich hinsichtlich ihrer Implementierung und Funktionalität unterscheiden. Grundsätzlich unterscheidet man zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden, um so mögliche Kandidaten für die Virtualisierung von Testumgebungen gemäß der Problemstellung zu finden.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{bilder/Einordnung_Virtualisierungstechnologien_für_virtuelle_Betriebsumgebungen.png}
+    \caption{Einordnung Virtualisierungtechnologienen für virtuelle Betriebsumgebungen \citep{Hirschbach06}}
+    \label{an_tranciver}
+  \end{center}
+\end{figure}
 
 \subsection{Bare Metal Hypervisor: KVM}
 
