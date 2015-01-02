@@ -12,16 +12,52 @@ Der für diese Arbeit interessante Bereich der Virtualisierung ist das Bereitste
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{bilder/Einordnung_Virtualisierungstechnologien_für_virtuelle_Betriebsumgebungen.png}
+    \includegraphics[width=8cm]{bilder/Einordnung_Virtualisierungstechnologien_für_virtuelle_Betriebsumgebungen.png}
     \caption{Einordnung Virtualisierungtechnologienen für virtuelle Betriebsumgebungen \citep{Hirschbach06}}
-    \label{an_tranciver}
   \end{center}
 \end{figure}
 
-\subsection{Bare Metal Hypervisor: KVM}
+\subsection{Systemvirtualisierung mittels Hypervisor}
 
-\subsection{Hosted Hypervisor: VirtualBox}
+Als Hypervisor oder auch \ac{VMM} wird eine Software bezeichnet, die die physisch vorhandene Hardware abstrahiert und mehreren Gastbetriebssystemen zur Verfügung stellt. Dabei spielt es den Gastsystemen jeweils vor, dass sie auf einem eigenen vollständigen Rechner mit Prozessor, Arbeitsspeicher, Festplatte und sonstigen Geräten laufen. Ein solcher virtueller Rechner wird auch \ac{VM} genannt. Je nach tatsächlich vorhandener Hardware muss der \ac{VMM} dabei die Hardware für das Gastsystem emulieren, virtualisieren oder paravirtualisieren. Emulieren meint hierbei, das der \ac{VMM} dem Gastsystem eine Hardware anbietet, die garnicht existiert. Virtualisieren meint, dass er Zugriffe des Gastsystems auf die virtuelle Hardware entsprechend auf die physische Hardware übersetzt. Paravirtualisierung findet dann statt, wenn die physische Hardware selbst das Konzept der Virtualisierung versteht und die Zugriffe des Gastsystems zumindest teilweise selbst verarbeiten kann. Hierbei unterscheiden sich die unterschiedlichen Ansätze natürlich vorallem hinsichtlich ihrer Performance, da das Übersetzen der Zugriffe oder das komplette Emulieren einer Hardware aufwendiger ist, als direkt auf die Hardware zuzugreifen.
 
-\subsection{Container: Docker}
+Robert P. Goldberg, der die Grundlagen des \ac{VMM} in den 70er Jahren wissenschaftlich erarbeitet hat, unterscheidet in seiner Doktorarbeit "`Architectural Principles for Virtual Computer Systems"' zwei Klassen des \ac{VMM} \citep[vgl.][S. 22 ff.]{Goldberg73}: Dem Typ I \ac{VMM} oder auch "`Bare Metal Hypervisor"' und dem Typ II \ac{VMM} oder auch "`Hosted Hypervisor"'. In den folgenden beiden Unterkapiteln sollen diese beiden Klassen und entsprechende Implementierungen näher beleuchtet werden.
 
-\subsection{Alternativen: MirageOS}
+Darauf folgt abschließend ein Unterkapitel zu den sogenannten Unikernels, einer relativ neuen Entwicklung innerhalb der Systemvirtualisierung mittels Hypervisor, die eine bestimmte Art von \acs{VM} beschreibt \citep[siehe Abstract]{MadMorAnd13}.
+
+\subsubsection{Bare Metal Hypervisors}
+
+Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm direkt auf echter physischer Hardware läuft und somit kein Betriebssystem auf dem Hostsystem benötigt.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/VMM-Type1.jpg}
+    \caption{Virtual Machine Monitor Type I \citep{wiki:002}}
+  \end{center}
+\end{figure}
+
+Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt ein Bare Metal Hypervisor als ressourceneffizienter als ein Hosted Hypervisor. Größter Nachteil dieser Variante ist aber, dass sie mit mehr Installationsaufwand verbunden ist, da der Hypervisor selbst die passenden Gerätetreiber für die zugrundeliegende Hardware benötigt und man nicht auf Standardwerkzeuge wie zum Beispiel den Installationsmanagers eines Hostbetriebssystems zugreifen kann. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel KVM, Xen, Microsoft Hyper-V und VMWare ESX \citep{wiki:004}.
+
+\subsubsection{Hosted Hypervisors}
+
+Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb eines Hostbetriebssystems läuft. Es ist somit möglich, auch andere Programme neben dem Hypervisor und seinen Gastbetriebssystemen zu verwenden. Größter Vorteil dieser Variante ist es also, dass das Hostsystem auch für gewöhnliche Benutzerarbeiten zur Verfügung steht und nicht ausschließlich zur Virtualisierung verwendet werden muss. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel Parallels Desktop, WMWare Workstation und Oracle VirtualBox \citep{wiki:004}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/VMM-Type2.jpg}
+    \caption{Virtual Machine Monitor Type II \citep{wiki:003}}
+  \end{center}
+\end{figure}
+
+\subsubsection{Unikernels}
+
+Eine relativ neue Entwicklung innerhalb der Systemvirtualisierung mittels Hypervisor sind die sogenannten Unikernels. Vertreter dieser Idee kommen zum Beispiel aus dem Bereich der \ac{SOA} oder der Microservice Architecture. In diesen Architekturen wird versucht, die Teile eines IT-Systems als einzelne Dienste zu betrachten, die (meist über Netzwerk) miteinander kommunizieren. Es ist dabei von Vorteil, wenn diese Dienste jeweils eine bestimmte Aufgabe erledigen und über eine einfache Schnittstelle angesprochen werden können. Solche Dienste können nun jeweils über eine eigene \ac{VM} innerhalb der Virtualisierung abgebildet werden. Hierbei wird nun kritisiert, dass die Installation eines kompletten Gastbetriebssystems und die in ihm laufenden Anwendungsprogramme meist wesentlich mehr Resourcen und Programmcode verwenden und mehr Zugriffspunkte bieten, als für den eigentlichen Dienst benötigt wird. Als konzeptionelles Beispiel stellen wir uns hier einmal einen Dienst vor, der als einzige Aufgabe hat, mit Hilfe einer fortlaufenden Zahl neue Kundennummern zu generieren. Es ist nun durchaus nachvollziehbar, dass ein komplettes Gastbetriebssystem inkl. aller in ihm installierten Zubehörprogramme, Dokumentationen und Treiber sehr viel mehr Resourcen verbraucht, als für die eigentliche Operation sinnvoll erscheint. Die höhere Menge an Quellcode und typische Betriebssystemschnittstellen stellen zudem auch ein erhötes Sicherheitsrisiko dar, da sie potentiell mehr Angriffsvektoren bieten. Als Antwort entstehen deshalb in jüngster Vergangenheit neue Lösungen, bei denen man seinen eigentlichen Programmcode mit Hilfe einer Library entwickelt, die einfache Schnittstellen zur Verfügung stellt um z.B. Netzwerkkommunikation o.ä. zu betreiben. Der Programmcode wird dann mit Hilfe dieser Library in eine sehr viel kleinere \ac{VM} kompiliert, die wieder mit Hilfe eines Hypervisors ausgeführt werden kann. Ein Beispiel für eine solche Library ist MirageOS \citep[Vgl.][]{MadMorAnd13}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/comparison-vm-unikernel.png}
+    \caption{Vergleich klassische VM und Unikernel \citep[Abb. 1]{MadMorAnd13}}
+  \end{center}
+\end{figure}
+
+\subsection{Betriebssystemvirtualisierung mittels OS-Containern}
