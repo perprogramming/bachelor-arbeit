@@ -38,9 +38,27 @@ Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm dir
 
 Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt ein Bare Metal Hypervisor als ressourceneffizienter als ein Hosted Hypervisor. Größter Nachteil dieser Variante ist aber, dass sie mit mehr Installationsaufwand verbunden ist, da der Hypervisor selbst die passenden Gerätetreiber für die zugrundeliegende Hardware benötigt und man nicht auf Standardwerkzeuge wie zum Beispiel den Installationsmanagers eines Hostbetriebssystems zugreifen kann. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel KVM, Citrix XenServer, Microsoft Hyper-V und VMWare ESX \citep{wiki:004}.
 
-Beim Open-Source-Produkt KVM (Kernel-based Virtual Machine) handelt es sich um eine Lösung, bei der ein normaler Linux-Kernel über ein spezielles Kernel-Modul für die grundsätzliche Virtualisierung (kvm.io) und ein weiteres prozessorspezifisches Kernel-Modul (kvm-intel.io oder kvm-amd.io) in die Lage versetzt wird, als Hypervisor zu arbeiten und Gastsysteme zu verwalten. KVM lässt sich damit grundsätzlich auf allen gängigen Linux Distributionen installieren. Oft wird deshalb vermutet, dass es sich nicht um einen reinen Bare Metal Hypervisor handelt, da er eben zusammen mit einem Betriebssystem installiert wird. Da es sich bei dem Kernel-Modul aber nicht um ein Anwendungsprogramm handelt, sondern um eine Erweiterung des eigentlichen Kernels, setzt diese Virtualisierungslösung direkt auf der darunterliegenden Hardware und nicht auf einem dazwischenliegenden Kernel auf \citep[Vgl.][]{kvm:001}. So gibt es zum Beispiel die Linux Distribution Proxmox VE, die man direkt auf eine leere Hardware installieren kann und die die entsprechenden Kernel-Module und weitere Hilfsprogramme (zum Beispiel zur Verwaltung der virtuellen Maschinen) bereits beinhaltet \citep[Vgl.][]{Proxmox14}.
+Beim Open-Source-Produkt KVM (Kernel-based Virtual Machine) handelt es sich um eine Lösung, bei der ein normaler Linux-Kernel über ein spezielles Kernel-Modul für die grundsätzliche Virtualisierung (kvm.io) und ein weiteres prozessorspezifisches Kernel-Modul (kvm-intel.io oder kvm-amd.io) in die Lage versetzt wird, als Hypervisor zu arbeiten und Gastsysteme zu verwalten. KVM lässt sich damit grundsätzlich auf allen gängigen Linux Distributionen installieren. Oft wird deshalb vermutet, dass es sich nicht um einen reinen Bare Metal Hypervisor handelt, da er eben zusammen mit einem Betriebssystem installiert wird. Da es sich bei dem Kernel-Modul aber nicht um ein Anwendungsprogramm handelt, sondern um eine Erweiterung des eigentlichen Kernels, setzt diese Virtualisierungslösung direkt auf der darunterliegenden Hardware und nicht auf einem dazwischenliegenden Kernel auf \citep[Vgl.][]{kvm:001}.
 
-Auch bei XenServer von der Firma Citrix handelt es sich um ein Open-Source-Produkt.
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/kvm.png}
+    \caption{KVM Architektur \citep{kvm:002}}
+  \end{center}
+\end{figure}
+
+So gibt es zum Beispiel die Linux Distribution Proxmox VE, die man direkt auf eine leere Hardware installieren kann und die die entsprechenden Kernel-Module und weitere Hilfsprogramme (zum Beispiel zur Verwaltung der virtuellen Maschinen) bereits beinhaltet \citep[Vgl.][]{Proxmox14}.
+
+Auch bei XenServer von der Firma Citrix handelt es sich um ein Open-Source-Produkt. Auch dieser \ac{VMM} setzt direkt auf der eigentlichen physischen Hardware auf. XenServer basiert ebenfalls auf einem Linux-Kernel. Es handelt sich aber nicht lediglich um Kernel-Module, die sich in eine beliebige Linux-Distribution laden lassen sondern um einen modifizerten Linux-Kernel. XenServer lässt sich also nur auf komplett leere Hardware installieren und bietet auch nicht die vollständigen Funktionalitäten einer normalen Linux-Distribution. Das besondere an XenServer ist, dass die Prozesse zur Steuerung der virtuellen Maschinen selbst in einer virtuellen Maschine laufen. Diese auch "`Privileged Guest"' genannte Maschine muss laufen, bevor weitere Gastsysteme geladen werden können. Der "`Privileged Guest"' oder auch DOM0 genannte Gast hat dabei (wie der Name sagt) besondere Rechte, die im die Steuerung der darunterliegenden Virtualisierungsschicht im Hypervisor ermöglichen.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/xen.png}
+    \caption{Xen Architektur \citep{kvm:002}}
+  \end{center}
+\end{figure}
+
+Als weitere Gastsysteme lassen sich wie auch bei KVM beliebige unmodifzierte Gastsysteme wie Linux-Distributionen oder Windows-Systeme installieren. Besonders ist aber, dass sich auch Linux-Distributionen mit ebenfalls modifiziertem Kernel laden lassen, die direkter mit dem Hypervisor zusammen arbeiten und so eine höhere Performance bieten.
 
 \subsubsection{Hosted Hypervisors}
 
