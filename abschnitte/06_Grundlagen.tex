@@ -8,7 +8,7 @@ Ein einfaches Beispiel für Virtualisierung sind Hardware-Emulatoren. Hardware-E
 
 Ein weiteres Beispiel ist die Virtualisierung von Netzwerkressourcen. So können z.B. VLANs (Virtual Local Area Networks) verbundenen Geräten eine ganz andere Verkabelung vorgaukeln als sie physikalisch vorliegt, um so bestimmte Zugriffe zu erlauben oder zu sperren.
 
-Der für diese Arbeit interessante Bereich der Virtualisierung ist das Bereitstellen virtueller Betriebsumgebungen. Eine Betriebsumgebung meint die Umgebung, die ein Programm für seine Ausführung benötigt. Dazu gehören vor allem bestimmte Hardware-Bauteile (Prozessoren, Arbeitsspeicher, Festplatten, Netzwerk-Adapter), ein Betriebssystem und eventuell zusätzliche Anwendungsprogramme, mit denen das Programm interagiert. Für gewöhnlich läuft eine solche Betriebsumgebung genau auf einem Rechner (z.B. Server oder Desktoprechner). Es gibt nun verschiedene Ansätze eine solche Betriebsumgebung zu virtualisieren, die sich hinsichtlich ihrer Implementierung und Funktionalität unterscheiden. Grundsätzlich unterscheidet man zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden, um so mögliche Kandidaten für die Virtualisierung von Testumgebungen gemäß der Problemstellung zu finden.
+Der für diese Arbeit interessante Bereich der Virtualisierung ist das Bereitstellen virtueller Betriebsumgebungen. Eine Betriebsumgebung meint die Umgebung, die ein Programm für seine Ausführung benötigt. Dazu gehören vor allem bestimmte Hardware-Bauteile (Prozessoren, Arbeitsspeicher, Festplatten, Netzwerk-Adapter), ein Betriebssystem und eventuell zusätzliche Anwendungsprogramme, mit denen das Programm interagiert. Für gewöhnlich läuft eine solche Betriebsumgebung genau auf einem Rechner (z.B. Server oder Desktoprechner). Es gibt nun verschiedene Ansätze eine solche Betriebsumgebung zu virtualisieren, die sich hinsichtlich ihrer Implementierung und Funktionalität unterscheiden. Grundsätzlich unterscheidet man zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden, um so mögliche Kandidaten für die Virtualisierung von Testumgebungen gemäß der Problemstellung zu finden. Abschließend wird ein kurzer Vergleich der beiden Varianten durchgeführt.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -42,7 +42,7 @@ Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm dir
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/VMM-Type1.jpg}
+    \includegraphics[width=6cm]{bilder/VMM-Type1.jpg}
     \caption{Virtual Machine Monitor Type I \citep{wiki:002}}
   \end{center}
 \end{figure}
@@ -77,7 +77,7 @@ Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb ein
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/VMM-Type2.jpg}
+    \includegraphics[width=6cm]{bilder/VMM-Type2.jpg}
     \caption{Virtual Machine Monitor Type II \citep{wiki:003}}
   \end{center}
 \end{figure}
@@ -98,3 +98,38 @@ Eine relativ neue Entwicklung innerhalb der Systemvirtualisierung mittels Hyperv
 Ein Nachteil dieser Lösung ist, dass man lediglich Funktionalität wiederverwenden kann, die genau durch die benutzte Library zur Verfügung steht. So kann man auch lediglich in der Programmiersprache arbeiten, die der Compiler der Library versteht. Im Falle von MirageOS ist dies die Sprache Ocaml. Es ist somit zum Beispiel nicht möglich, einen PHP-Interpreter zu starten und PHP-Scripte auszuführen, wie das mit allen gängigen Betriebssystemen wie Linux, MacOS oder Windows der Fall ist. Unikernels lassen sich somit zumindest bisher nur für sehr spezielle Dienste und Problemestellungen einsetzen.
 
 \subsection{Betriebssystemvirtualisierung mittels OS-Containern}
+
+Ein ganz anderer Ansatz als die Systemvirtualisierung mittels Hypervisor ist die sogenannte Betriebssystemvirtualisierung mittels OS-Container. Dabei wird nicht versucht, ein komplettes Gastsystem mit eigener, virtualisierter Hardware und eigenem Kernel auszuführen. Vielmehr wird grundsätzlich davon ausgegangen, dass sich alle virtuellen Betriebssysteme die Hardware und einen gemeinsamen Kernel teilen. Offensichtlich lassen sich damit nicht verschiedenste Betriebssysteme auf einer Maschine virtualisieren sondern immer nur Betriebssysteme, die auf dem gleichen Kernel basieren wie das Hostsystems. Dafür entfällt die Notwendigkeit, Hardware zu emulieren oder zu virtualisieren. In Bezug auf das Ring-Schemas des Prozessors gilt: Der gemeinsame Kernel arbeitet im Ring 0 und somit direkt auf der physischen Hardware. Das virtualisierte System beinhaltet lediglich Bibliotheken und Anwendungsprogramme und arbeitet somit in Ring 3. Die Notwendigkeit, nicht erlaubte Aufrufe zu finden und zu behandeln entfällt damit. Eine solche isolierte Umgebung, OS-Container genannt, gilt damit als grundsätzlich effizienter als komplette virtuelle Maschinen \citep[Vgl.][]{wiki:007}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/lxc-architecture.jpg}
+    \caption{OS-Container \citep{Francis2014}}
+  \end{center}
+\end{figure}
+
+Damit die einzelnen Container dennoch isoliert laufen und weder das Hostsystem noch andere Container manipulieren können, muss der Kernel spezielle Schnittstellen anbieten. Entsprechende Technologien sind im Laufe der Zeit bei einer Reihe von Betriebssystemen entwickelt worden, zum Beispiel auch für Linux und Windows. Für andere Betriebssysteme wiederum existiert keine entsprechende Schnittstelle, zum Beispiel Mac OS \citep[Vgl.][]{wiki:007}.
+
+Ein prominenter Vertreter dieser Virtualisierungs-Art ist zur Zeit das Produkt Docker. Docker ist eine Open-Source-Plattform, mit deren Hilfe eine einfache Definition und Verwaltung solcher Container für den Linux-Kernel möglich ist. Kürzlich wurde aber auch eine Kooperation zwischen Microsoft und der Docker Inc., dem Unternehmen hinter Docker, bekannt gegeben. Ziel der Kooperation ist es unteranderem, dass sich entsprechende Container auch für Windows-Betriebssysteme erstellen lassen \citep[Vgl.][]{heise:001}.
+
+Docker setzt auf eine Reihe von Schnittstellen auf, die inzwischen Teil des offizielen Linux-Kernels sind. Unter anderem gehören dazu die Cgroups und die Namespaces:
+
+Cgroups (Control Groups) bieten die Möglichkeit, die Ressourcen-Nutzung bei der Ausführung von Prozessen durch den Kernel einzugrenzen. So lassen sich für Prozesse bestimmte Grenzen der Arbeitsspeicher- und Prozessor-Nutzung definieren. Außerdem lassen sich solche Prozesse auch komplett stoppen bzw. pausieren und wieder starten.
+
+Kernel Namespaces erlauben es, die Sichtbarkeit von Prozessen untereinander einzugrenzen. So können über Namespaces zum Beispiel die Prozess-Identifikatoren (PIDs) für jeden Container neu vergeben werden. Jeder Container kann somit einen Prozess mit der ID 1 besitzen. Aber auch andere Aspekte des Betriebssystems, wie zum Beispiel Hostname, Benutzer-IDs, Dateisystem und Netzwerk-Zugriffe lassen sich mit den Kernel Namespaces von einander trennen.
+
+Docker bietet zusätzlich ein weiteres nützliches Feature, sogenannte Union-Filesystems:
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=8cm]{bilder/UnionFilesystem.png}
+    \caption{Union Filesystem}
+    \label{Union Filesystem}
+  \end{center}
+\end{figure}
+
+Union-Filesystems sind Dateisysteme, die es erlauben, Dateisysteme transparent übereinander zu legen, um so weniger Speicherplatz zu verbrauchen. Das zugrundeliegende Verfahren nennt sich Copy-On-Write. Verwenden zwei Container zum Beispiel die gleiche Linux-Distrubution, so werden die entsprechenden Libraries und Anwendungsprogramme nur einmal auf der Festplatte vorgehalten. Das entsprechende Dateisystem wird dabei read-only unter ein für den Container beschreibbares Dateisystem gelegt. Die beiden Container unterscheiden sich also auf der Festplatte nur durch die tatsächlich individuell von ihnen geschriebenen Daten. Die meisten Union-Filesysteme erlauben dabei ein mehrfaches Übereinanderlegen, so dass eine ganze Hierarchie an ineinander verschachtelten Dateisystemen entstehen kann, um die Unterschiede zwischen den einzelnen Container maximal effizient auf der Festplatte abzulegen.
+
+In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Distribution nur einmal auf der Festplatte abgelegt, obwohl sie von vier laufenden Containern verwendet wird. Sämtliche Dateisysteme sind read-only, bis auf die in rot angedeuteten Kästen, in denen die Container Laufzeitdaten speichern. Container 4 schreibt aber zum Beispiel keine Daten und ist somit komplett nur lesend.
+
+\subsection{Vergleich}
