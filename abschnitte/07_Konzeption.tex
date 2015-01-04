@@ -1,5 +1,74 @@
 \section{Konzeption zweier konkreter Lösungen}
 
+Im Folgenden sollen nun zwei konkrete Lösungen zur Erzeugung von Test- bzw. Betriebsumgebungen skizziert werden. Die konkret verwendeten Virtualisierungslösungen werden dabei von der Pixelhouse GmbH vorgegeben.
+
+Zum einen setzt die Pixelhouse GmbH bereits Oracles VirtualBox ein, um eine lokale Entwicklungsumgebung für die Anwendung der Webseite chefkoch.de auf den Laptops der Entwickler vorzuhalten. VirtualBox ist somit bereits auf fast allen Rechnern vorhanden und es existieren grundlegende Kenntnisse und Erfahrungen für dieses Produkt.
+
+Zum anderen wird aktuell von seiten der Server-Administratoren das Produkt Docker eingeführt, um die Produktivumgebung der Plattform zu betreiben. Diverse Produktiv-Komponenten der Webseite chefkoch.de laufen also bereits innerhalb von Linux-Containern. Die ersten Erfahrungen der Administratoren sind dabei vielversprechend. Es besteht der Wunsch, Probleme zu minimieren, die auftreten, weil Entwicklungs-, Test- und Produktivumgebungen nicht die gleiche Technologie verwenden und sich so grundlegend voneinander unterscheiden.
+
+Nachfolgend soll nun zunächst eine solche Betriebsumgebung definiert werden. Zudem sollen die eingangs in der Problemstellung angedeuteten Probleme bei der Ausführung von Tests genauer erläutert und durch stark eine vereinfachte Anwendung inklusive entsprechend vereinfachter Tests dargestellt werden. Anschließend kann dann für die beiden Produkte VirtualBox und Docker ein Konzept erarbeitet werden, wie sich diese Umgebung mit Hilfe der entsprechenden Technologie virtualisieren lässt, um damit die zuvor definierte Anwendung und ihre Tests erfolgreich auszuführen.
+
+\subsection{Beschreibung der aktuellen Produktivumgebung}
+
+Die Betriebsumgebung die von der Pixelhouse GmbH in Produktion eingesetzt wird und täglich mehrere Millionen Anfragen von Besuchern der Webseite chefkoch.de beantwortet, besteht aus einer Vielzahl von Komponenten und Diensten. Bis auf die unternehmensweite Groupwarelösung (E-Mails, Kalender, etc.), die bereits als Dienste in Docker-Containern virtualisert werden, handelt es sich dabei um echte Maschinen, die jeweils auf ihrer eigenen Hardware laufen.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=10cm]{bilder/Produktiv-Umgebung.png}
+    \caption{Die Produktiv-Umgebung der Webseite chefkoch.de}
+  \end{center}
+\end{figure}
+
+Im Zentrum der Infrastruktur stehen insgesamt drei Appserver. Bei jedem Appserver handelt es sich dabei um einen Ubuntu-Server, auf dem der Webserver Nginx und der Script-Interpreter PHP ausgeführt wird, um HTTP-Anfragen mit Hilfe statischer oder dynamische Inhalte zu beantworten. Für die langfristige Datenhaltung greifen die PHP-Scripte dabei auf zwei Datenbankserver (Master und Slave) zu, auf denen ebenfalls Ubuntu und der Mysql-Fork MariaDB installiert sind. Für kurzfristige und hochverfügbare Datencaches gibt es zwei Ubuntu-Server (Master und Slave) auf denen der Key-Value-Store Redis läuft. Zudem wird auf weiteren zwei Ubuntu-Servern (Master und Slave) ein Such-Index mit Hilfe der Suchmaschine Solr betrieben, die als Java-Anwendung in einem Tomcat-Application-Server läuft. Binärdateien (Videos, Bilder, Dokumente, etc.) werden auf insgesamt 7 weiteren Servern redundant abgelegt. Damit die Appserver und die SAN-Server von außen unter einheitlichen HTTP-Adressen erreichbar sind und sich die Last gleichmäßig auf die einzelnen Server verteilt, landen sämtliche HTTP-Anfragen per DNS-Round-Robin zunächst bei einem von zwei Ubuntu-Servern, auf denen Varnish als Load-Balancer installiert ist. Diese nehmen die Anfragen entgegen und verteilen sie an die dahinter liegenden Server. Varnish ist zudem ein effizienter HTTP-Cache, der in der Lage ist, die von den App- oder SAN-Servern zurückgelieferten Antworten zu cachen und bei erneuter Anfrage selbst auszuliefern. Zu guter Letzt gibt es noch drei weitere Server, auf denen Software für die Administration und das Reporting läuft.
+
+\subsection{Beschreibung der aktuellen Testumgebung}
+
+Da eine so umfangreiche Umgebung bei der Erarbeitung eines Konzeptes und einer anschließenden Implementierung zumindest den Rahmen dieser Arbeit sprengt, ist es notwendig eine einfachere Umgebung zu definieren. Diese sollte jedoch dafür ausreichen, die Lösung der Probleme der aktuellen Testumgebungen zu zeigen.
+
+Die aktuellen Testumgebungen der Pixelhouse GmbH besitzen einen extrem reduzierten Aufbau. Die Testumgebungen werden alle auf ein und der selben Hardware-Maschine installiert. Fast alle Komponenten der zuvor beschriebenen Produktiv-Umgebung werden dabei von den einzelnen Testumgebungen gemeinsam verwendet. Beispielsweise nutzen alle Testumgebungen den gleichen Varnish für Load-Balancing und Caching. Dieser reicht die HTTP-Anfragen an den selben Nginx-Web-Server und PHP-Interpreter weiter und cached die Antworten bei Bedarf gleichermaßen. Als Backend-Dienste werden die selbe MariaDB-Datenbank, der selbe Redis-Cache und der selbe Solr-Such-Index verwendet. Die Binärdateien werden ebenfalls auf dem selben Host von allen Testumgebungen gemeinsam verwendet. Einziger Unterschied zwischen den einzelnen Testumgebungen ist, dass aufgrund einer speziellen Konfiguration im Nginx-Webserver je nach aufgerufener URL vom PHP-Interpreter andere PHP-Scripte geladen werden und somit jeweils eine andere Version der PHP-Anwendung getestet werden kann.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=10cm]{bilder/Aktuelle-Testumgebung.png}
+    \caption{Die aktuelle Test-Umgebung}
+  \end{center}
+\end{figure}
+
+Die aktuelle Testumgebung bringt Probleme in Bezug auf die Testbarkeit der Anwendung mit sich. Da alle Testumgebungen zum Beispiel die gleichen Backend-Dienste verwenden, ist es mitunter nicht möglich, die für den Test notwendigen Testdaten zu erzeugen, ohne damit Einfluss auf andere Testumgebungen zu nehmen. Ein weiteres Problem ist, dass nur Änderungen am PHP-Code selbst testbar sind. Will man zum Beispiel eine Änderung am HTTP-Caching im Varnish testen, kann man diese nur in allen Testumgebungen gleichermaßen vornehmen.
+
+\subsection{Definition einer verifizierbaren Testumgebung}
+
+Um nun eine zwar möglichst leicht zu implementierende, für die Darstellung der Lösbarkeit dieser Probleme aber hinreichende Umgebung zu definieren, werden folgende Änderungen vorgenommen:
+Zunächst wird die Anzahl gleicher Komponenten auf jeweils eins reduziert. Außerdem werden die Caches und der Such-Index ausgeblendet, da sie genau wie die Datenbankserver aus den Appserver heraus als Backend-Dienst abgefragt werden und lediglich eine andere Technologie beziehungsweise einen anderen Schwerpunkt der Datenhaltung widerspiegeln (Kurzfristigkeit und Durchsuchbarkeit). Zuletzt ignorieren wir im Rahmen dieser Arbeit die SAN- und Management-Server.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=4cm]{bilder/Untersuchungs-Umgebung.png}
+    \caption{Für die Untersuchung definierte Umgebung}
+  \end{center}
+\end{figure}
+
+Die von uns definierte Umgebung besteht somit lediglich aus einem Varnish-Load-Balancer, einem Nginx-Appserver, der den Script-Interpreter PHP ausführt und einen Maria-DB-Server, der aus PHP heraus als Backend-Dienst abgefragt werden kann.
+
+\subsection{Definition von Anwendungs- und Testfällen}
+
+Für die Verifizierung der jeweiligen Testumgebungen ist es notwendig, eine andere PHP-Anwendung als die echte Anwendung der Webseite chefkoch.de zu verwenden. Zum einen ist die echte PHP-Anwendung auf dieser reduzierten Testumgebung nicht lauffähig. Zum anderen hat sie im Laufe der Jahre eine Komplexität erreicht, die es schwer macht, einen einfachen Anwendungsfall zu finden, der dennoch die Notwendigkeit von isolierten Testumgebungen aufzeigt.
+
+Es ist deshalb von Vorteil im Rahmen dieser Arbeit neue PHP-Scripte mit einzelnen Anwendungsfällen zu definieren, die die zuvor angedeuteten Probleme beim Ausführen der Tests, die auf eine mangelnde Isolation einzelner Test-Umgebungen zurückzuführen sind, einfach provozieren. Passend dazu lassen sich dann ebenso einfache Testfälle definieren, die zeigen, ob die neue Testumgebungen mit Hilfe der Virtualisierungstechnologien die eingangs erläuterten Probleme einfach lösen.
+
+\subsubsection{Isolierte Testdaten in der Datenbank}
+
+Wir denken uns einen einfachen Anwendungsfall aus, der Daten derart in die Datenbank schreibt, dass es Einfluß auf andere Testumgebungen haben würde, wenn sich mehrere Testumgebungen die gleiche Datenbank teilen. Dazu reicht es zum Beispiel aus, einen einfachen Zähler zu implementieren. Dieser Zähler legt zunächst, falls noch nicht vorhanden, eine neue Tabelle an, die eine Integer-Spalte enthält und fügt einen Datensatz mit dem Wert 0 ein. Falls die Tabelle schon existiert, erhöht er den Wert um eins. Der aktuelle Wert wird anschließend ausgegeben. Dieser Anwendungsfall sollte also beim ersten Aufruf eine 0 ausgeben und bei jedem weiteren Aufruf einen um eins erhöhten Wert (1, 2, 3, 4...).
+
+Zum Test der Testdaten-Isolierung muss man nun lediglich zwei Testumgebungen anlegen und sicherstellen, dass beide Umgebungen unabhängig voneinander zählen.
+
+\subsubsection{Konfigurationsänderung im HTTP-Cache}
+
+Um eine Änderung am HTTP-Caching zu testen, brauchen wir zunächst ein einfaches PHP-Script, das zum einen die aktuelle Uhrzeit ausgibt und zum anderen einen HTTP-Cache-Header mitsendet, der HTTP-Caches dazu veranlasst, die HTTP-Antwort für 10 Sekunden zu cachen.
+Es ist nun per Varnish-Konfiguration möglich, diese HTTP-Header für bestimmte URLs zu berücksichtigen oder eben nicht.
+
+Damit sollte es möglich sein, eine Testumgebung zu starten, die beim Aufruf des PHP-Scriptes immer die aktuelle Uhrzeit anzeigt. Gleichzeitig muss es möglich sein, eine weitere Testumgebung zu starten, in der das gleiche HTTP-Cache nur alle 10 Sekunden die aktuelle Uhrzeit anzeigt.
+
 \subsection{VirtualBox}
 
 \subsection{Docker}
