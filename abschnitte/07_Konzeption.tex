@@ -39,14 +39,16 @@ Die aktuelle Testumgebung bringt Probleme in Bezug auf die Testbarkeit der Anwen
 Um nun eine zwar möglichst leicht zu implementierende, für die Darstellung der Lösbarkeit dieser Probleme aber hinreichende Umgebung zu definieren, werden folgende Änderungen vorgenommen:
 Zunächst wird die Anzahl gleicher Komponenten auf jeweils eins reduziert. Außerdem werden die Caches und der Such-Index ausgeblendet, da sie genau wie die Datenbankserver aus den Appserver heraus als Backend-Dienst abgefragt werden und lediglich eine andere Technologie beziehungsweise einen anderen Schwerpunkt der Datenhaltung widerspiegeln (Kurzfristigkeit und Durchsuchbarkeit). Zuletzt ignorieren wir im Rahmen dieser Arbeit die SAN- und Management-Server.
 
+Die von uns definierte Umgebung besteht somit lediglich aus einem Varnish-Load-Balancer, einem Nginx-Appserver, der den Script-Interpreter PHP ausführt und einen Maria-DB-Server, der aus PHP heraus als Backend-Dienst abgefragt werden kann.
+
+Eine solche Umgebung könnte nun mit Hilfe von Virtualisierung mehrmals parallel auf einer physischen Maschine gestartet werden.
+
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=4cm]{bilder/Untersuchungs-Umgebung.png}
+    \includegraphics[width=10cm]{bilder/Untersuchungs-Umgebung.png}
     \caption{Für die Untersuchung definierte Umgebung}
   \end{center}
 \end{figure}
-
-Die von uns definierte Umgebung besteht somit lediglich aus einem Varnish-Load-Balancer, einem Nginx-Appserver, der den Script-Interpreter PHP ausführt und einen Maria-DB-Server, der aus PHP heraus als Backend-Dienst abgefragt werden kann.
 
 \subsection{Definition von Anwendungs- und Testfällen}
 
