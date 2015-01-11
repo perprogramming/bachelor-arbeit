@@ -97,4 +97,24 @@ Solche Feature oder auch User Story genannten Beschreibungen werden von der Pixe
 
 \subsection{VirtualBox}
 
+Um die zuvor definierte Testumgebung mit VirtualBox zu virtualisieren, ist es zunächst sinnvoll, fertige virtuelle Maschinen zu erzeugen, die sich bei Bedarf direkt mit VirtualBox starten lassen. Ein Werkzeug zur Erzeugung solcher Maschinenabbilder ist Packer.
+
+Es wäre außerdem von Vorteil, das Starten der einzelnen Maschinen nicht selbstständig steuern zu müssen. Ein Werkzeug, mit dem man mehrere virtuelle Maschinen zu einer Gesamtumgebung auf Basis von VirtualBox orchestrieren kann ist Vagrant.
+
+Im Folgenden wird nun die Funktionsweise der beiden Werkzeuge Packer und Vagrant genauer beschrieben.
+
+\subsubsection{Erzeugung der einzelnen Maschinen mit Packer}
+
+\subsubsection{Umgebungssteuerung mit Vagrant}
+
 \subsection{Docker}
+
+Auch bei der Verwendung von Docker zur Virtualisierung der Testumgebung mit Hilfe von OS-Containern stellt sich zunächst die Frage, wie man die einzelnen Container erzeugt. Im Gegensatz zu VirtualBox ist dazu keine weitere Software notwendig, da Docker bereits selbst die Möglichkeit zur Erzeugung solcher Images mit sich bringt. Es ist dazu lediglich notwendig, eine einfach Definitionsdatei, eine sogenannte Dockerfile, zu schreiben.
+
+Die Orchestrierung der einzelnen Container zu einer Gesamtumgebung soll auch Teil von Docker selbst werden. Bislang wird eine entsprechendes Werkzeug aber noch als getrenntes Projekt namens Fig entwickelt.
+
+Sowohl auf die Verwendung der Dockerfiles als auch auf die Verwendung von Fig wird im Folgenden näher eingegangen.
+
+\subsubsection{Images mit Dockerfiles bauen}
+
+\subsubsection{Steuerung der Umgebung mit Fig}
