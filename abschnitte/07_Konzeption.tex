@@ -131,4 +131,6 @@ Sowohl auf die Verwendung der Dockerfiles als auch auf die Verwendung von Fig wi
 
 \subsubsection{Images mit Dockerfiles bauen}
 
+Docker bietet eine einfache, integrierte Möglichkeit, neue Maschinen-Abbilder zu erzeugen. Wie im Grundlagen-Kapitel beschrieben, werden diese Maschinen-Abbilder mit Hilfe eines Union-Filesystems gestartet. Einzelne Abbilder lassen sich so durch das Hinzufügen eines weiteren, überlagernden Dateisystems zu neuen Abbildern erweitern. Die Definitions-Datei eines Docker-Images, Dockerfile genannt, startet deshalb immer mit der Angabe des zugrundeliegenden Images. Anschließend lassen sich einfach Kommandozeilen-Befehle definieren, die in der laufenden Maschine ausgeführt werden. Führen diese Befehle zu Änderungen am Dateisystem, so werden diese Änderungen eben in einer neuen Dateisysteme-Ebene festgehalten, die Teil des fertigen Abbildes wird. Genauso einfach lassen sich auch Dateien in die Maschine kopieren, die auf dem Host-System liegen. Weitere Konfigurationsparameter sind zum Beispiel der zu verwendende User und das zu verwendende Arbeitsverzeichnis. Schließlich lässt sich auch ein Befehl konfigurieren, der standardmäßig ausgeführt wird, wenn man das Image später als Container startet.
+
 \subsubsection{Steuerung der Umgebung mit Fig}
