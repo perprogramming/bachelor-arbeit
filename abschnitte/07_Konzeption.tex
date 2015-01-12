@@ -58,7 +58,7 @@ Es ist deshalb von Vorteil im Rahmen dieser Arbeit neue PHP-Scripte mit einzelne
 
 \subsubsection{Isolierte Testdaten in der Datenbank}
 
-Wir denken uns einen einfachen Anwendungsfall aus, der Daten derart in die Datenbank schreibt, dass es Einfluß auf andere Testumgebungen haben würde, wenn sich mehrere Testumgebungen die gleiche Datenbank teilen. Dazu reicht es zum Beispiel aus, einen einfachen Zähler zu implementieren. Dieser Zähler legt zunächst, falls noch nicht vorhanden, eine neue Tabelle an, die eine Integer-Spalte enthält und fügt einen Datensatz mit dem Wert 0 ein. Falls die Tabelle schon existiert, erhöht er den Wert um eins. Der aktuelle Wert wird anschließend ausgegeben. Dieser Anwendungsfall sollte also beim ersten Aufruf eine 0 ausgeben und bei jedem weiteren Aufruf einen um eins erhöhten Wert (1, 2, 3, 4...).
+Wir denken uns einen einfachen Anwendungsfall aus, der Daten derart in die Datenbank schreibt, dass es Einfluß auf andere Testumgebungen haben würde, wenn sich mehrere Testumgebungen die gleiche Datenbank teilen. Dazu reicht es zum Beispiel aus, einen einfachen Zähler zu implementieren. Dieser Zähler legt zunächst, falls noch nicht vorhanden, eine neue Tabelle an, die eine Integer-Spalte enthält und fügt einen Datensatz mit dem Wert 1 ein. Falls die Tabelle schon existiert, erhöht er den Wert um eins. Der aktuelle Wert wird anschließend ausgegeben. Dieser Anwendungsfall sollte also beim ersten Aufruf eine 1 ausgeben und bei jedem weiteren Aufruf einen um eins erhöhten Wert (2, 3, 4, 5...).
 
 Zum Test der Testdaten-Isolierung muss man nun lediglich zwei Testumgebungen anlegen und sicherstellen, dass beide Umgebungen unabhängig voneinander zählen.
 
@@ -76,20 +76,18 @@ Natürlich ist es möglich, die zuvor beschriebenen Tests wie auch echte Tests z
 \begin{figure}[!ht]
   \begin{center}
     \begin{gherkincode}
-Feature: Isolated Database
+Feature: Counter
+  In order to know how often I visited the counter page
+  the counter has to increase with every visit
 
   Scenario:
-    Given I start environment "test1"
-    And I open "/counter.php"
-    Then I should see "0"
-    When I reload the page
+    Given I open "/counter.php"
     Then I should see "1"
-    When I start environment "test2"
-    And I open "/counter.php"
-    Then I should see "0"
+    When I reload the page
+    Then I should see "2"
 
     \end{gherkincode}
-    \caption{Beispiel-Feature für den Test isolierter Daten}
+    \caption{Beispiel-Feature für den Zähler}
   \end{center}
 \end{figure}
 
@@ -115,7 +113,13 @@ Zu guter Letzt kennt Packer nun noch das Konzept des Post-Prozessor. Ein Post-Pr
 
 \subsubsection{Umgebungssteuerung mit Vagrant}
 
+Vagrant bietet eine einfach zu konfigurierende, reproduzierbare und portierbare Betriebsumgebung auf Basis etablierter Virtualisierungs-Technologien und einen einfachen Ansatz zu deren Verwaltung.
 
+Dazu legt man zunächst eine Konfigurationsdatei namens Vagrantfile an, in der man seine Umgebung definiert. Vagrant bietet dabei die Möglichkeit eine oder mehrere virtuelle Maschinen auf Basis von verschiedenen Virtualisierungstechnologien zu starten. So bietet es eben auch die Möglichkeit virtuelle Maschinen mit Hilfe von VirtualBox zu starten, die mit Packer vorbereitet wurden. Es bietet weiterhin einfache Konfigurationsparameter, die zum Beispiel die Netzwerkkommunikation zwischen den virtuellen Maschinen und dem Host-Betriebssystem und auch untereinander ermöglichen. Auch einzelne Parameter wie Anzahl der virtuellen Prozessoren und die Menge des zur Verfügung gestellten Arbeitsspeicher lassen sich hier noch nachträglich definieren. Es ist auch möglich, Ordner zwischen dem Host-Betriebssystem und den virtuellen Maschinen zu teilen, um so zum Beispiel während der Entwicklung mit einer IDE auf dem Host-Betriebssystem Code zu bearbeiten, der direkt in den virtuellen Maschinen ausgeführt wird.
+
+Ist die Konfigurationsdatei fertig, so lässt sich die entsprechende Umgebung mit einem einfach Kommandozeilen-Befehl starten: "`vagrant up"'. Vagrant lädt und startet dann alle in der Konfigurationsdatei angegebenen Maschinen und setzt die gewünschten Konfigurationen für Netzwerkkommunikation, Hardware-Parameter und gemeinsame Ordner um.
+
+Anschließend lässt sich die innerhalb der Umgebung laufende Anwendung zum Beispiel mit einem Browser des Host-Betriebssystems oder eben mit dem Testtool Behat ansteuern.
 
 \subsection{Docker}
 
