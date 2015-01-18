@@ -6,7 +6,7 @@ Diese Bachelorarbeit entsteht in Zusammenarbeit mit der Pixelhouse GmbH. Diese b
 
 Die Webseite Chefkoch.de basiert auf einer seit Beginn des Projektes stetig wachsenden PHP-Anwendung. Große Teile der Anwendung sind dabei ohne fundierte Kenntnisse in der Softwareentwicklung entstanden. Dies merkt man vor allem an einer fehlenden Systemarchitektur und einer unübersichtlichen und sehr redundanten Struktur der Daten.
 
-Auch die auf Linux/Ubuntu-Systemen basierende Infrastruktur der Chefkoch-Anwendung ist mit den Jahren sehr komplex geworden ist, vor allem auch, um die hohe Last von mehreren Millionen Besuchern täglich bedienen zu können. So werden Loadbalancer, mehrere Application-Server und diverse Persistenz-Dienste wie SQL-Datenbanken und Key-Value-Stores eingesetzt.
+Auch die auf Linux/Ubuntu-Systemen basierende Infrastruktur der Chefkoch-Anwendung ist mit den Jahren sehr komplex geworden, vor allem auch, um die hohe Last von mehreren Millionen Besuchern täglich bedienen zu können. So werden Loadbalancer, mehrere Application-Server und diverse Persistenz-Dienste wie SQL-Datenbanken und Key-Value-Stores eingesetzt.
 
 Der Wartungsaufwand und auch die benötigte Zeit für Neuentwicklungen sind entsprechend hoch. Die Herausforderung für das aktuelle Entwicklungsteam besteht darin, neben dem Alltagsgeschäft und der Umsetzung neuer Produktideen auch grundlegende Modernisierungen am System vorzunehmen.
 
@@ -18,17 +18,17 @@ Das größte Problem mit dieser Art von Systemtest ist, dass sie vergleichsweise
 
 Eine mögliche Lösung hierfür wäre es, mehrere Testumgebungen anzubieten, um das Ausführen der automatischen Systemtests parallelisieren zu können oder auch einfach manuelle Abnahmen durch das Produktmanagement zu unterstützen.
 
-Stand heute ist es allerdings sehr aufwändig, neue Testumgebungen aufzusetzen. Der entsprechende Prozess kann mitunter mehrere Tage dauern, da Softwareentwicklung und Betrieb hier wenig effizient zusammenarbeiten und viele Teilschritte manuell erfolgen.
+Beim heutigen Stand ist es allerdings sehr aufwändig, neue Testumgebungen aufzusetzen. Der entsprechende Prozess kann mitunter mehrere Tage dauern, da Softwareentwicklung und Betrieb hier wenig effizient zusammenarbeiten und viele Teilschritte manuell erfolgen.
 
 Die Testumgebungen sind außerdem meist wenig isoliert und laufen zum Beispiel auf den gleichen Datenbankservern oder hinter dem gleichen Loadbalancer. So lassen sich Änderungen an diesen Infrasktruktur-Komponenten heute mitunter gar nicht testen.
 
 \subsection{Motivierende Softwareentwicklungsmethodiken}
 
-Der hohe Zeitaufwand für das Aufsetzen neuer Testumgebungen und das Durchführen der Systemtests widersprechen schon lange etablierten Softwareentwicklungsmethodiken wie Continuous Integration und Continuous Delivery. Diese zielen darauf ab, kurze Feedbackschleifen für Entwickler und Produktmanager zu ermöglichen, in dem sich neue Versionen der Software kurzfristig mit denen anderer Entwickler integriert lassen und ebenso kurzfristig in Produktion genommen werden können, um so auch Feedback von echten Benutzern zu erhalten.
+Der hohe Zeitaufwand für das Aufsetzen neuer Testumgebungen und das Durchführen der Systemtests widersprechen schon lange etablierten Softwareentwicklungsmethodiken wie Continuous Integration und Continuous Delivery. Diese zielen darauf ab, kurze Feedbackschleifen für Entwickler und Produktmanager zu ermöglichen, indem sich neue Versionen der Software kurzfristig mit denen anderer Entwickler integriert lassen und ebenso kurzfristig in Produktion genommen werden können, um so auch Feedback von echten Benutzern zu erhalten.
 
 Die Tatsache, dass sich bestimmte Infrastrukturkomponenten gar nicht testen lassen und dass die Zusammenarbeit zwischen Entwicklern und Betrieb hier wenig effizient erfolgt, werden von der Wissenschaft heute bereits mit der DevOps Bewegung beantwortet.
 
-Wie konkrete Virtualisierungsansätze, zum Beispiel die Verwendung von Containern, hier effizient Abhilfe schaffen kann, ist dabei allerdings weniger umfangreich beleuchtet.
+Wie konkrete Virtualisierungsansätze, zum Beispiel die Verwendung von Containern, hier effizient Abhilfe schaffen können, ist dabei allerdings weniger umfangreich beleuchtet.
 
 \subsection{Ziel}
 
