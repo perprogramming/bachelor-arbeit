@@ -2,7 +2,7 @@
 
 \subsection{Problemstellung}
 
-Diese Bachelorarbeit entsteht in Zusammenarbeit mit der Pixelhouse GmbH. Diese betreibt seit ca. 10 Jahren die Webseite Chefkoch.de, Europas größtes Kochportal. Neben der Vermarktung der Webseite und der Betreuung der Community wird von den Mitarbeitern vor allem auch die softwaretechnische Entwicklung der Plattform und das Hosting durchgeführt.
+Diese Bachelorarbeit entsteht in Zusammenarbeit mit der Pixelhouse GmbH. Diese betreibt seit ca. 10 Jahren die Webseite Chefkoch.de, Europas größtes Kochportal. Neben der Vermarktung der Webseite und der Betreuung der Community wird von den Mitarbeitern vor allem auch die softwaretechnische Entwicklung der Plattform und das Hosting durchgeführt \citep[Vgl.][]{pixelhouse14}.
 
 Die Webseite Chefkoch.de basiert auf einer seit Beginn des Projektes stetig wachsenden PHP-Anwendung. Da im Ökosystem der Programmiersprache PHP lange Zeit keine guten Werkzeuge zur Verwaltung von Paketen und Abhängigkeiten existierten, besteht die Anwendung nur aus einigen wenigen, eher monolithischen Komponenten. Diese enthalten mitunter auch kopierten Programmcode.
 
@@ -27,6 +27,8 @@ Eine Lösung zur Bereitstellung weiterer isolierter Testumgebungen wären natür
 Der hohe Zeitaufwand für das Aufsetzen neuer Testumgebungen und das Durchführen der Systemtests widersprechen schon lange etablierten Softwareentwicklungsmethodiken wie Continuous Integration und Continuous Delivery. Diese zielen darauf ab, kurze Feedbackschleifen für Entwickler und Produktmanager zu ermöglichen, indem sich neue Versionen der Software kurzfristig mit denen anderer Entwickler integriert lassen und ebenso kurzfristig in Produktion genommen werden können, um so auch Feedback von echten Benutzern zu erhalten.
 
 Die Tatsache, dass sich bestimmte Infrastrukturkomponenten gar nicht testen lassen und dass die Zusammenarbeit zwischen Entwicklern und Betrieb hier wenig effizient möglich ist, werden von der Wissenschaft heute bereits mit der DevOps Bewegung beantwortet. Ziel dieser Bewegung ist es, die Konfiguration der Infrastruktur genau wie den Quellcode der Anwendung unter Versionskontrolle zu stellen und ihre Installation und Verwaltung vollständig zu automatisieren.
+
+Die beiden Bücher "`Continous Integration"' \citep{DuvMatAnd07} und "`Continous Delivery"' \citep{HumFar10}, die diese Themen behandeln, gehören zu den Standardwerken der heutigen Literatur zur Softwareentiwcklung.
 
 Wie konkrete Virtualisierungsansätze, zum Beispiel die Verwendung von Containern, hier effizient Abhilfe schaffen können, ist dabei allerdings weniger umfangreich beleuchtet.
 
