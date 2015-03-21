@@ -1,7 +1,130 @@
 \section{Implementierung}
 
-\subsection{Probleme während der Implementierung}
+\subsection{VirtualBox}
 
-\subsection{Besonderheiten}
+Um die zuvor definierte Testumgebung mit VirtualBox zu virtualisieren, ist es zunächst sinnvoll, fertige virtuelle Maschinen zu erzeugen, die sich bei Bedarf direkt mit VirtualBox starten lassen. Ein Werkzeug zur Erzeugung solcher Maschinenabbilder ist Packer.
 
-\subsection{Skizzierung der fertigen Lösungen}
+Es wäre außerdem von Vorteil, das Starten der einzelnen Maschinen nicht selbstständig steuern zu müssen. Ein Werkzeug, mit dem man mehrere virtuelle Maschinen zu einer Gesamtumgebung auf Basis von VirtualBox orchestrieren kann, ist Vagrant.
+
+Im Folgenden wird nun die Funktionsweise der beiden Werkzeuge Packer und Vagrant genauer beschrieben.
+
+\subsubsection{Erzeugung der einzelnen Maschinen mit Packer}
+
+"`Packer ist ein Werkzeug zur Erzeugung eindeutiger Maschinenabbilder für verschiedene Plattformen auf Basis einer einfachen Konfiguration"' \citep[Siehe][]{Packer15}. Packer kennt dabei vor allem drei wichtige Konzepte: Builder, Provisioner und Post-Processor. Diese werden mit Hilfe der Konfigurations-Datei packer.json definiert:
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{jsoncode}
+{
+    "description": "Varnish-Image",
+    "builders": [
+        {
+            "type": "virtualbox-ovf",
+            "source_path": "ubuntu-14.04.ovf"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "/pfad/zum/script-das-varnish-installiert.sh"
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "output": "varnish.box"
+        }
+    ]
+}
+    \end{jsoncode}
+    \caption{Einfaches Beispiel einer packer.json}
+  \end{center}
+\end{figure}
+
+Ein Builder beschreibt eine bestimmte Technologie, mit deren Hilfe das virtuelle Maschinen-Abbild erzeugt wird. Neben verschiedenen anderen Technologien beinhaltet Packer auch Builder zur Erzeugung von virtuellen Maschinen mit VirtualBox. Grundsätzlich gibt es dabei zwei Möglichkeiten: Zum einen kann man einen Builder vom Typ "`virtualbox-iso"' verwenden. Mit diesem wird eine leere virtuelle Maschine erzeugt und anschließend mit Hilfe eines Installationsmedium im ISO-Format ein Betriebssystem installiert. Zum anderen kann man einen Builder vom Typ "`virtualbox-ovf"' verwenden. Das Format OVF ist ein generisches Format zum Import und Export von virtuellen Maschinen. Mit diesem Builder kann man also mit Hilfe von Packer ein Maschinen-Abbild auf Basis eines anderen Maschinen-Abbildes erzeugen. So kann man zum Beispiel eine fertig installierte Linux-Distribution als Ausgangspunkt zur Installation weiterer Anwendungsprogramme verwenden. Für die von uns definierte Testumgebung wollen wir die einzelnen virtuellen Maschinen auf Basis einer fertigen Installation von Ubuntu 14.04 Server erzeugen \citep[Vgl.][]{Packer:001}.
+
+Um nun weitere Software auf der mit dem Builder erzeugten virtuellen Maschine zu installieren, kommt ein sogenannter Provisioner zum Einsatz. Ein Provisioner ist für Packer eine Technologie, mit der es einfach möglich ist, solche Installationsvorgänge zu konfigurieren. Dabei gibt es sehr umfangreiche Ansätze wie die Werkzeuge Puppet oder Chef, die sehr mächtige Konfigurationssprachen bieten, um verschiedenste Installations- und Konfigurationsschritte in einem Betriebssystem vorzunehmen. Eine andere, eher einfache Variante wäre aber zum Beispiel der Provisioner vom Typ "`Shell Script"', bei dem eben lediglich ein Shell Script innerhalb der virtuellen Maschine ausgeführt wird, um weitere Einstellungen oder Installationen vorzunehmen. Dieser sehr einfache Ansatz ist für die einzelnen Maschinen unsere beispielhaften Testumgebung ausreichend \citep[Vgl.][]{Packer:002}.
+
+Zu guter Letzt kennt Packer nun noch das Konzept des Post-Prozessors. Ein Post-Prozessor meint dabei eine bestimmte Art und Weise, mit der das fertige Maschinen-Abbild exportiert und für die Verwendung mit anderen Tools vorbereitet wird. So gibt es eben einen Post-Prozessor vom Typ "`Vagrant"', der es ermöglicht, das fertige Maschinen-Abbild direkt mit Vagrant innerhalb einer Testumgebung zu starten. Damit sollte es möglich sein, die einzelnen fertigen virtuellen Maschinen unserer beispielhaften Testumgebung so abzulegen, dass wir sie sofort als Gesamtumgebung starten können \citep[Vgl.][]{Packer:003}.
+
+\subsubsection{Umgebungssteuerung mit Vagrant}
+
+"`Vagrant bietet eine einfach zu konfigurierende, reproduzierbare und portierbare Betriebsumgebung auf Basis etablierter Virtualisierungs-Technologien und einen einfachen Ansatz zu deren Verwaltung [...]"' \citep[Siehe][]{Vagrant:001}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{rubycode}
+Vagrant.configure("2") do |config|
+  config.vm.define "varnish" do |varnish|
+    varnish.vm.box = "varnish"
+    varnish.vm.box_url = "file:///varnish.box"
+  end
+
+  config.vm.define "mariadb" do |mariadb|
+    mariadb.vm.box = "mariadb"
+    mariadb.vm.box_url = "file:///mariadb.box"
+  end
+
+  # ...
+end
+    \end{rubycode}
+    \caption{Einfaches Beispiel einer Vagrantfile}
+  \end{center}
+\end{figure}
+
+Dazu legt man zunächst eine Konfigurationsdatei namens Vagrantfile an, in der man seine Umgebung definiert. Vagrant bietet dabei die Möglichkeit eine oder mehrere virtuelle Maschinen auf Basis von verschiedenen Virtualisierungstechnologien zu starten. So bietet es eben auch die Möglichkeit, virtuelle Maschinen mit Hilfe von VirtualBox zu starten, die mit Packer vorbereitet wurden. Es bietet weiterhin einfache Konfigurationsparameter, die zum Beispiel die Netzwerkkommunikation zwischen den virtuellen Maschinen und dem Host-Betriebssystem und auch untereinander ermöglichen. Auch einzelne Parameter wie Anzahl der virtuellen Prozessoren und die Menge des zur Verfügung gestellten Arbeitsspeicher lassen sich hier noch nachträglich definieren. Es ist auch möglich, Ordner zwischen dem Host-Betriebssystem und den virtuellen Maschinen zu teilen, um so zum Beispiel während der Entwicklung mit einer IDE auf dem Host-Betriebssystem Code zu bearbeiten, der direkt in den virtuellen Maschinen ausgeführt wird.
+
+Ist die Konfigurationsdatei fertig, so lässt sich die entsprechende Umgebung mit einem einfach Kommandozeilen-Befehl starten: "`vagrant up"'. Vagrant lädt und startet dann alle in der Konfigurationsdatei angegebenen Maschinen und setzt die gewünschten Konfigurationen für Netzwerkkommunikation, Hardware-Parameter und gemeinsame Ordner um.
+
+Anschließend lässt sich die innerhalb der Umgebung laufende Anwendung zum Beispiel mit einem Browser des Host-Betriebssystems oder eben mit dem Testtool Behat ansteuern.
+
+\subsection{Docker}
+
+Auch bei der Verwendung von Docker zur Virtualisierung der Testumgebung mit Hilfe von OS-Containern stellt sich zunächst die Frage, wie man die einzelnen Container erzeugt. Im Gegensatz zu VirtualBox ist dazu keine weitere Software notwendig, da Docker bereits selbst die Möglichkeit zur Erzeugung solcher Images mit sich bringt. Es ist dazu lediglich notwendig, eine einfach Definitionsdatei, eine sogenannte Dockerfile, zu schreiben.
+
+Die Orchestrierung der einzelnen Container zu einer Gesamtumgebung soll auch Teil von Docker selbst werden. Bislang wird ein entsprechendes Werkzeug aber noch als getrenntes Projekt namens Fig entwickelt \citep[Vgl.][]{docker:005}.
+
+Sowohl auf die Verwendung der Dockerfiles als auch auf die Verwendung von Fig wird im Folgenden näher eingegangen.
+
+\subsubsection{Images mit Dockerfiles bauen}
+
+Docker bietet eine einfache, integrierte Möglichkeit, neue Maschinen-Abbilder zu erzeugen. Wie im Grundlagen-Kapitel beschrieben, werden diese Maschinen-Abbilder mit Hilfe eines Union-Filesystems gestartet. Einzelne Abbilder lassen sich so durch das Hinzufügen eines weiteren, überlagernden Dateisystems zu neuen Abbildern erweitern. Die Definitions-Datei eines Docker-Images, Dockerfile genannt, startet deshalb immer mit der Angabe des zugrundeliegenden Images. Anschließend lassen sich einfach Kommandozeilen-Befehle definieren, die in der laufenden Maschine ausgeführt werden. Führen diese Befehle zu Änderungen am Dateisystem, so werden diese Änderungen eben in einer neuen Dateisysteme-Ebene festgehalten, die Teil des fertigen Abbildes wird. Genauso einfach lassen sich auch Dateien in die Maschine kopieren, die auf dem Host-System liegen. Schließlich lässt sich auch ein Befehl konfigurieren, der standardmäßig ausgeführt wird, wenn man das Image später als Container startet \citep[Vgl.][]{docker:003}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{dockercode}
+FROM ubuntu:14.04
+RUN apt-get install -y varnish
+ADD /pfad/zur/varnish-config.vcl /etc/varnish/default.vcl
+CMD ["varnishd"]
+    \end{dockercode}
+    \caption{Einfaches Beispiel einer Dockerfile}
+  \end{center}
+\end{figure}
+
+Ein Image lässt sich dann einfach mit dem Befehl "`docker build -t varnish"' erzeugen. Anschließend lässt sich das Image mit dem Befehl "`docker run varnish"' als Container ausführen. Es ist sogar möglich, das fertige Image mit dem einfachen Befehl "`docker push varnish"' in einem Web-Verzeichnis, der sogenannten docker-registry unter https://registry.hub.docker.com/, zu veröffentlichen. Streng genommen müsste der Name hierbei dann aber der Namenskonvention "`benutzername-bei-docker/varnish"' folgen. So ist es jedem möglich, dieses Image oder auch andere Images des Verzeichnisses als Basis für ein weiteres Image zu verwenden oder auch einfach nur als Container auszuführen \citep[Vgl][]{docker:004}.
+
+\subsubsection{Steuerung der Umgebung mit Fig}
+
+Um nun die mit Docker erzeugten Images zu einer Gesamtumgebung zu orchestrieren, bietet sich das Tool Fig an. Dafür muss zunächst eine Konfigurationsdatei namens fig.yml definiert werden, in der die einzelnen Maschinen der Umgebung und weitere Einstellungen wie zum Beispiel zur Netzwerkkommunikation zwischen den Maschinen konfiguriert werden \citep[Vgl.][]{docker:006}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{yamlcode}
+varnish:
+  image: benutzername-bei-docker/varnish
+  ports:
+   - "80"
+
+mariadb:
+  image: benutzername-bei-docker/mariadb
+  ports:
+   - "3306"
+
+# ...
+    \end{yamlcode}
+    \caption{Einfaches Beispiel einer fig.yml}
+  \end{center}
+\end{figure}
+
+Anschließend lässt sich die Umgebung mit dem einfachen Befehl "`fig up"' starten.
