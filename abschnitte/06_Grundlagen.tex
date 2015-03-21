@@ -10,6 +10,8 @@ Es gibt verschiedene Ziele, die man mit der Virtualisierung von Betriebsumgebung
 
 Ein weiteres Ziel der Virtualisierung von Betriebsumgebungen ist die Trennung beziehungsweise Isolierung verschiedener Anwendungen \citep[Vgl.][Abstract]{Schee14}. Statt zum Beispiel auf einem Server einen Datenbankserver zu installieren, in dem mehrere Mitarbeiter oder auch Kunden ihre Datenbanken pflegen, kann man mit Hilfe von Virtualisierungsansätzen einfach für jeden Anwender einen eigenen Datenbankserver laufen lassen. Zwar bieten Datenbankserver natürlich auch innerhalb einer Instanz die Möglichkeit, den Zugriff auf einzelne Datenbanken zu begrenzen. Die Konfiguration solcher Zugriffsberechtigungen kann aber komplex sein und ist somit fehleranfällig. Gerade aus Sicherheitsgründen kann es somit lohnenswert sein, Anwendungen bereits auf Betriebsumgebungsebene voneinander zu trennen. Zudem gibt es Anwendungen, die selbst keine differenzierbaren Zugriffskonzepte kennen und somit so oder so für jeden Anwender separat gestartet werden müssen. Die eingangs beschriebenen Probleme bei der Testausführung für die Anwendung der Webseite Chefkoch.de lassen sich, wie wir später noch einmal im Detail sehen werden, auf solche mangelnde Isolation zwischen den Anwendungsteilen zurückführen.
 
+TODO Nachteile der Virtualisierung
+
 Es gibt nun verschiedene Ansätze, solche Betriebsumgebungen zu virtualisieren. Grundsätzlich unterscheidet man hinsichtlich ihrer Funktionalität und Implementierung zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden.
 
 \begin{figure}[!ht]
@@ -52,6 +54,8 @@ Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm dir
 \end{figure}
 
 Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt ein Bare Metal Hypervisor als ressourceneffizienter als ein Hosted Hypervisor. Größter Nachteil dieser Variante ist aber, dass sie mit mehr Installationsaufwand verbunden ist, da der Hypervisor selbst die passenden Gerätetreiber für die zugrundeliegende Hardware benötigt und man nicht auf Standardwerkzeuge wie zum Beispiel den Installationsmanagers eines Hostbetriebssystems zugreifen kann. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel KVM und Citrix XenServer.
+
+TODO VMWare vSphere
 
 \begin{figure}[!ht]
   \begin{center}
@@ -148,3 +152,7 @@ Docker bietet zusätzlich ein weiteres nützliches Feature, sogenannte Union-Fil
 Union-Filesystems sind Dateisysteme, die es erlauben, Dateisysteme transparent übereinander zu legen, um so weniger Speicherplatz zu verbrauchen. Das zugrundeliegende Verfahren nennt sich Copy-On-Write. Verwenden zwei Container zum Beispiel die gleiche Linux-Distrubution, so werden die entsprechenden Libraries und Anwendungsprogramme nur einmal auf der Festplatte vorgehalten. Das entsprechende Dateisystem wird dabei read-only unter ein für den Container beschreibbares Dateisystem gelegt. Die beiden Container unterscheiden sich also auf der Festplatte nur durch die tatsächlich individuell von ihnen geschriebenen Daten. Die meisten Union-Filesysteme erlauben dabei ein mehrfaches Übereinanderlegen, so dass eine ganze Hierarchie an ineinander verschachtelten Dateisystemen entstehen kann, um die Unterschiede zwischen den einzelnen Containern maximal effizient auf der Festplatte abzulegen \citep[Vgl.][S. 3]{Schee14}.
 
 In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Distribution nur einmal auf der Festplatte abgelegt, obwohl sie von vier laufenden Containern verwendet wird. Sämtliche Dateisysteme sind read-only, bis auf die in rot angedeuteten Kästen, in denen die Container Laufzeitdaten speichern. Container 4 schreibt aber zum Beispiel keine Daten und ist somit komplett nur lesend.
+
+\subsection{Vergleich der Virtualisierungsansätze}
+
+TODO
