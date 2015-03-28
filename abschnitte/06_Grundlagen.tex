@@ -10,9 +10,9 @@ Es gibt verschiedene Ziele, die man mit der Virtualisierung von Betriebsumgebung
 
 Ein weiteres Ziel der Virtualisierung von Betriebsumgebungen ist die Trennung beziehungsweise Isolierung verschiedener Anwendungen \citep[Vgl.][Abstract]{Schee14}. Statt zum Beispiel auf einem Server einen Datenbankserver zu installieren, in dem mehrere Mitarbeiter oder auch Kunden ihre Datenbanken pflegen, kann man mit Hilfe von Virtualisierungsansätzen einfach für jeden Anwender einen eigenen Datenbankserver laufen lassen. Zwar bieten Datenbankserver natürlich auch innerhalb einer Instanz die Möglichkeit, den Zugriff auf einzelne Datenbanken zu begrenzen. Die Konfiguration solcher Zugriffsberechtigungen kann aber komplex sein und ist somit fehleranfällig. Gerade aus Sicherheitsgründen kann es somit lohnenswert sein, Anwendungen bereits auf Betriebsumgebungsebene voneinander zu trennen. Zudem gibt es Anwendungen, die selbst keine differenzierbaren Zugriffskonzepte kennen und somit so oder so für jeden Anwender separat gestartet werden müssen. Die eingangs beschriebenen Probleme bei der Testausführung für die Anwendung der Webseite Chefkoch.de lassen sich, wie wir später noch einmal im Detail sehen werden, auf solche mangelnde Isolation zwischen den Anwendungsteilen zurückführen.
 
-TODO Nachteile der Virtualisierung
+Die Virtualisierung von Betriebssumgebungen ist aber auch mit Nachteilen verbunden. So geht durch die Virtualisierung Rechenleistung verloren. Ausgeführte Anwendungen sind also mitunter langsamer, als wenn man sie auf echter Hardware betreibt. Die virtualisierten Betriebsumgebungen sind zudem zwar grundsätzlich von einander isoliert. Da sie aber auf der selben Hardware laufen, ist es je nach Virtualisierungstechnik sehr schwer sicherzustellen, dass sie sich garnicht beeinflussen. Auch im Bereich des Datenschutzes und der Lizensierung von Softwareprodukten kommen durch Virutalisierungslösungen neue Probleme auf. So richten sich viele Lizensmodelle nach Anzahl der physischen Prozessoren und der Größe des physischen Arbeitsspeichers. Beides kann aber bei der Virtualisierung nicht zwangsläufig genau einer Betriebsumgebung und deren Anwendungen zugeordnet werden.
 
-Es gibt nun verschiedene Ansätze, solche Betriebsumgebungen zu virtualisieren. Grundsätzlich unterscheidet man hinsichtlich ihrer Funktionalität und Implementierung zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden.
+Es gibt nun verschiedene Ansätze, Betriebsumgebungen zu virtualisieren. Grundsätzlich unterscheidet man hinsichtlich ihrer Funktionalität und Implementierung zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern. Auf diese Varianten soll nun im Näheren eingegangen werden.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -53,9 +53,16 @@ Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm dir
   \end{center}
 \end{figure}
 
-Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt ein Bare Metal Hypervisor als ressourceneffizienter als ein Hosted Hypervisor. Größter Nachteil dieser Variante ist aber, dass sie mit mehr Installationsaufwand verbunden ist, da der Hypervisor selbst die passenden Gerätetreiber für die zugrundeliegende Hardware benötigt und man nicht auf Standardwerkzeuge wie zum Beispiel den Installationsmanagers eines Hostbetriebssystems zugreifen kann. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel KVM und Citrix XenServer.
+Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt ein Bare Metal Hypervisor als ressourceneffizienter als ein Hosted Hypervisor. Größter Nachteil dieser Variante ist aber, dass sie mit mehr Installationsaufwand verbunden ist, da der Hypervisor selbst die passenden Gerätetreiber für die zugrundeliegende Hardware benötigt und man nicht auf Standardwerkzeuge wie zum Beispiel den Installationsmanagers eines Hostbetriebssystems zugreifen kann. Typische Vertreter dieser Hypervisor-Klasse sind zum Beispiel VMWare vSphere, KVM und Citrix XenServer.
 
-TODO VMWare vSphere
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=10cm]{bilder/vmware.png}
+    \caption{VMWare vSphere Architektur \citep{vmware:002}}
+  \end{center}
+\end{figure}
+
+Bei VMWare vSphere handelt es sich um ein kommerzielles Produkt der Firma VMWare, dem Marktführer im Bereich der Virtualisierungslösungen mit einem Marktanteil von ungefähr 50\% \citep[vgl.][]{vmware:001}. vSphere basiert auf einem von WMWare eigens entwickelten Betriebssystem, dem sogenannten VMkernel. Auf diesem Betriebssystem laufen das Programm DCUI (Direct Console User Interface), eine Konsole zur direkten Konfiguration des Servers, und diverse weitere Schnittstellen, mit denen man die Verwaltung des Servers und der auf ihm laufenden virtuellen Maschinen auch über das Netzwerk erledigen kann. Für jede virtuelle Maschine wird ein eigener Hypervisor- und ein weiterer Hilfsprozess gestartet (VMM und VMX). vSphere bietet die Möglichkeit, virtuelle Maschinen im laufenden Betrieb von einem vSphere Server auf einen anderen zu übertragen. Diese Funktion, vMotion genannt, erleichtert das Resourcenmanagement enorm, da sich eine laufende Anwendung auf andere Hardware übertragen lässt, um die vorherige Hardware zum Beispiel zu reparieren oder auch einfach nur zur Einsparung auszuschalten.
 
 \begin{figure}[!ht]
   \begin{center}
