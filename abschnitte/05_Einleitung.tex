@@ -1,5 +1,9 @@
 \section{Einleitung}
 
+Diese Bachelorarbeit entsteht in Zusammenarbeit mit der Pixelhouse GmbH. Diese betreibt seit ca. 10 Jahren die Webseite Chefkoch.de, Europas größtes Kochportal. Neben der Vermarktung der Webseite und der Betreuung der Community wird von den Mitarbeitern vor allem auch die softwaretechnische Entwicklung der Plattform und das Hosting durchgeführt \citep[Vgl.][]{pixelhouse14}.
+
+Wie auch andere Firmen, versucht die Pixelhouse GmbH die Entwicklung der Plattform mit Qualitätsicherungsmaßnahmen zu verbessern. Ein gängiges Problem ist hierbei das Bereitstellen von Testumgebungen.
+
 Der hohe Zeitaufwand für das Aufsetzen neuer Testumgebungen und das Durchführen der Systemtests widersprechen schon lange etablierten Softwareentwicklungsmethodiken wie Continuous Integration und Continuous Delivery. Diese zielen darauf ab, kurze Feedbackschleifen für Entwickler und Produktmanager zu ermöglichen, indem sich neue Versionen der Software kurzfristig mit denen anderer Entwickler integriert lassen und ebenso kurzfristig in Produktion genommen werden können, um so auch Feedback von echten Benutzern zu erhalten.
 
 Die Tatsache, dass sich bestimmte Infrastrukturkomponenten gar nicht testen lassen und dass die Zusammenarbeit zwischen Entwicklern und Betrieb hier wenig effizient möglich ist, werden von der Wissenschaft heute bereits mit der DevOps Bewegung beantwortet. Ziel dieser Bewegung ist es, die Konfiguration der Infrastruktur genau wie den Quellcode der Anwendung unter Versionskontrolle zu stellen und ihre Installation und Verwaltung vollständig zu automatisieren.
@@ -7,10 +11,6 @@ Die Tatsache, dass sich bestimmte Infrastrukturkomponenten gar nicht testen lass
 Die beiden Bücher "`Continous Integration"' \citep{DuvMatAnd07} und "`Continous Delivery"' \citep{HumFar10}, die diese Themen behandeln, gehören zu den Standardwerken der heutigen Literatur zur Softwareentiwcklung.
 
 \subsection{Problemstellung}
-
-Diese Bachelorarbeit entsteht in Zusammenarbeit mit der Pixelhouse GmbH. Diese betreibt seit ca. 10 Jahren die Webseite Chefkoch.de, Europas größtes Kochportal. Neben der Vermarktung der Webseite und der Betreuung der Community wird von den Mitarbeitern vor allem auch die softwaretechnische Entwicklung der Plattform und das Hosting durchgeführt \citep[Vgl.][]{pixelhouse14}.
-
-Wie auch andere Firmen, versucht die Pixelhouse GmbH die Entwicklung der Plattform mit Qualitätsicherungsmaßnahmen zu verbessern. Ein gängiges Problem ist hierbei das Bereitstellen von Testumgebungen.
 
 Die Webseite Chefkoch.de basiert auf einer seit Beginn des Projektes stetig wachsenden PHP-Anwendung. Da im Ökosystem der Programmiersprache PHP lange Zeit keine guten Werkzeuge zur Verwaltung von Paketen und Abhängigkeiten existierten, besteht die Anwendung nur aus einigen wenigen, eher monolithischen Komponenten. Diese enthalten mitunter auch kopierten Programmcode.
 
@@ -36,5 +36,5 @@ Ziel dieser Bachelorarbeit ist es zu untersuchen, ob man mit Hilfe von Virtualis
 
 \subsection{Vorgehensweise}
 
-Diese Arbeit gibt im zweiten Kapitel "`Grundlagen und Ansätze der Virtualisierung von Testumgebungen"' zunächst einen Überblick über die für die Problemstellung relevanten Virtualisierungsansätze. Im darauf folgenden Kapitel "`Konzeption zweier konkreter Lösungen"' sollen dann zwei Ansätze ausgewählt und jeweils ein Konzept zur Lösung der Problemstellung erarbeitet werden. Im anschließenden Kapitel "`Implementierung"' werden die Ergebnisse der prototypischen Umsetzung - vor allem deren Probleme und Besonderheiten - beschrieben. Im vorletzten Kapitel "`Evaluation"' soll eine objektive Bewertung der beiden Umsetzungen erfolgen. Das letzte Kapitel "`Fazit"' fasst die Ergebnisse der Arbeit zusammen und gibt einen Ausblick auf mögliche weitere Schritte.
+Diese Arbeit gibt im zweiten Kapitel "`Grundlagen und Ansätze"' zunächst einen Überblick über die für die Problemstellung relevanten Virtualisierungsansätze. Im darauf folgenden Kapitel "`Konzeption"' sollen dann zwei Ansätze ausgewählt und jeweils ein Konzept zur Lösung der Problemstellung erarbeitet werden. Im anschließenden Kapitel "`Implementierung"' werden die Ergebnisse der prototypischen Umsetzung - vor allem deren Probleme und Besonderheiten - beschrieben. Im vorletzten Kapitel "`Evaluation"' soll eine objektive Bewertung der beiden Umsetzungen erfolgen. Das letzte Kapitel "`Fazit"' fasst die Ergebnisse der Arbeit zusammen und gibt einen Ausblick auf mögliche weitere Schritte.
 

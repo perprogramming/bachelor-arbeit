@@ -1,4 +1,12 @@
-\section{Grundlagen und Ansätze der Virtualisierung von Testumgebungen}
+\section{Grundlagen und Ansätze}
+
+TODO
+
+\subsection{Softwaretests}
+
+TODO
+
+\subsection{Virtualisierung von Testumgebungen}
 
 Laut Duden leitet sich das Adjektiv "`virtuell"' vom lateinischen "`virtus"' für "`Tüchtigkeit, Mannhaftigkeit, Tugend"' ab. Es bedeutet so viel wie "`nicht echt, nicht in Wirklichkeit vorhanden, scheinbar"' \citep[Vgl.][]{duden:001}.
 
@@ -21,7 +29,7 @@ Es gibt nun verschiedene Ansätze, Betriebsumgebungen zu virtualisieren. Grunds�
   \end{center}
 \end{figure}
 
-\subsection{Systemvirtualisierung mittels Hypervisor}
+\subsubsection{Systemvirtualisierung mittels Hypervisor}
 
 Als Hypervisor oder auch \ac{VMM} wird eine Software bezeichnet, die die physisch vorhandene Hardware abstrahiert und mehreren Gastbetriebssystemen zur Verfügung stellt. Dabei spielt es den Gastsystemen jeweils vor, dass sie auf einem eigenen vollständigen Rechner mit Prozessor, Arbeitsspeicher, Festplatte und sonstigen Geräten laufen. Ein solcher virtueller Rechner wird auch \ac{VM} genannt \citep[Vgl.][S. 413]{PopGol74}.
 
@@ -42,7 +50,7 @@ Robert P. Goldberg, der die Grundlagen des \ac{VMM} in den 70er Jahren wissensch
 
 Darauf folgt abschließend ein Unterkapitel zu den sogenannten Unikernels, einer relativ neuen Entwicklung innerhalb der Systemvirtualisierung mittels Hypervisor, die eine bestimmte Art von \ac{VM} beschreibt.
 
-\subsubsection{Bare Metal Hypervisors}
+\subsubsubsection{Bare Metal Hypervisors}
 
 Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm direkt auf echter physischer Hardware läuft und somit kein Betriebssystem auf dem Hostsystem benötigt.
 
@@ -86,7 +94,7 @@ Auch bei XenServer von der Firma Citrix handelt es sich um ein Open-Source-Produ
 
 Als weitere Gastsysteme lassen sich wie auch bei KVM beliebige unmodifzierte Gastsysteme wie Linux-Distributionen oder Windows-Systeme installieren. Besonders ist aber, dass sich auch Linux-Distributionen mit ebenfalls modifiziertem Kernel laden lassen, die direkter mit dem Hypervisor zusammen arbeiten und so eine höhere Performance bieten.
 
-\subsubsection{Hosted Hypervisors}
+\subsubsubsection{Hosted Hypervisors}
 
 Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb eines Hostbetriebssystems läuft. Es ist somit möglich, auch andere Programme neben dem Hypervisor und seinen Gastbetriebssystemen zu verwenden.
 
@@ -110,7 +118,7 @@ VirtualBox bietet nach der Installation eine grafische Benutzeroberfläche, mit 
 
 Neben der grafischen Benutzeroberfläche bietet VirtualBox aber auch alle Funktionen in Form von Kommandozeilen-Programmen an. Damit lässt sich VirtualBox auch leicht automatisiert verwenden, zum Beispiel von einem Continuous-Integration-Server aus, der Testumgebungen starten möchte \citep[Vgl.][S. 113]{Oracle14}.
 
-\subsubsection{Unikernels}
+\subsubsubsection{Unikernels}
 
 Eine relativ neue Entwicklung innerhalb der Systemvirtualisierung mittels Hypervisor sind die sogenannten Unikernels. Vertreter dieser Idee kommen zum Beispiel aus dem Bereich der \ac{SOA} oder der Microservice Architecture. In diesen Architekturen wird versucht, die Teile eines IT-Systems als einzelne Dienste zu betrachten, die (meist über Netzwerk) miteinander kommunizieren. Es ist dabei von Vorteil, wenn diese Dienste jeweils eine bestimmte Aufgabe erledigen und über eine einfache Schnittstelle angesprochen werden können. Solche Dienste können nun jeweils über eine eigene \ac{VM} innerhalb der Virtualisierung abgebildet werden. Hierbei wird nun kritisiert, dass die Installation eines kompletten Gastbetriebssystems und die in ihm laufenden Anwendungsprogramme meist wesentlich mehr Resourcen und Programmcode verwenden und mehr Zugriffspunkte bieten, als für den eigentlichen Dienst benötigt wird. Als konzeptionelles Beispiel stellen wir uns hier einmal einen Dienst vor, der als einzige Aufgabe hat, mit Hilfe einer fortlaufenden Zahl neue Kundennummern zu generieren. Es ist nun durchaus nachvollziehbar, dass ein komplettes Gastbetriebssystem inkl. aller in ihm installierten Zubehörprogramme, Dokumentationen und Treiber sehr viel mehr Resourcen verbraucht, als für die eigentliche Operation sinnvoll erscheint. Die höhere Menge an Quellcode und typische Betriebssystemschnittstellen stellen zudem auch ein erhötes Sicherheitsrisiko dar, da sie potentiell mehr Angriffsvektoren bieten \citep[Vgl.][Abstract und Introduction]{MadMorAnd13}.
 
@@ -125,7 +133,7 @@ Als Antwort entstehen deshalb in jüngster Vergangenheit neue Lösungen, bei den
 
 Ein Nachteil dieser Lösung ist, dass man lediglich Funktionalität wiederverwenden kann, die genau durch die benutzte Library zur Verfügung steht. So kann man auch lediglich in der Programmiersprache arbeiten, die der Compiler der Library versteht. Im Falle von MirageOS ist dies die Sprache Ocaml. Es ist somit zum Beispiel nicht möglich, einen PHP-Interpreter zu starten und PHP-Scripte auszuführen, wie das mit allen gängigen Betriebssystemen wie Linux, MacOS oder Windows der Fall ist. Unikernels lassen sich somit zumindest bisher nur für sehr spezielle Dienste und Problemestellungen einsetzen.
 
-\subsection{Betriebssystemvirtualisierung mittels OS-Containern}
+\subsubsection{Betriebssystemvirtualisierung mittels OS-Containern}
 
 Ein ganz anderer Ansatz als die Systemvirtualisierung mittels Hypervisor ist die sogenannte Betriebssystemvirtualisierung mittels OS-Container. Dabei wird nicht versucht, ein komplettes Gastsystem mit eigener, virtualisierter Hardware und eigenem Kernel auszuführen. Vielmehr basiert dieser Ansatz darauf, dass sich alle virtuellen Betriebssysteme die Hardware und einen gemeinsamen Kernel teilen. Offensichtlich lassen sich damit nicht verschiedenste Betriebssysteme auf einer Maschine virtualisieren, sondern immer nur Betriebssysteme, die auf dem gleichen Kernel basieren wie das Hostsystem. Dafür entfällt die Notwendigkeit, Hardware zu emulieren oder zu virtualisieren. In Bezug auf das Ring-Schemas des Prozessors gilt: Der gemeinsame Kernel arbeitet im Ring 0 und somit direkt auf der physischen Hardware. Das virtualisierte System beinhaltet lediglich Bibliotheken und Anwendungsprogramme und arbeitet somit in Ring 3. Die Notwendigkeit, nicht erlaubte Aufrufe zu finden und zu behandeln entfällt damit. Eine solche isolierte Umgebung, OS-Container genannt, gilt damit als grundsätzlich effizienter als komplette virtuelle Maschinen \citep[Vgl.][Introduction]{Turnball14}.
 
@@ -160,6 +168,6 @@ Union-Filesystems sind Dateisysteme, die es erlauben, Dateisysteme transparent �
 
 In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Distribution nur einmal auf der Festplatte abgelegt, obwohl sie von vier laufenden Containern verwendet wird. Sämtliche Dateisysteme sind read-only, bis auf die in rot angedeuteten Kästen, in denen die Container Laufzeitdaten speichern. Container 4 schreibt aber zum Beispiel keine Daten und ist somit komplett nur lesend.
 
-\subsection{Vergleich der Virtualisierungsansätze}
+\subsubsection{Vergleich der Virtualisierungsansätze}
 
 TODO
