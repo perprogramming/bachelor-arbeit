@@ -8,15 +8,33 @@ Zum anderen werden die Grundlagen und Ansätze zur Virtualisierung beleuchtet. H
 
 \subsection{Softwaretests}
 
-TODO
+Das Testen von Software ist allgemein eine "`Überprüfung des Ein-/Augabeverhaltens eines Programms anhand von Experimenten und gezielten Programmdurchläufen"' \citep[S.][S.662]{itduden}. Es handelt sich also um eine Qualitätssicherungsmaßnahme. Man unterscheidet, jenachdem was ein Test testet, verschiedene Testarten. Außerdem gibt es verschiedene Strategien, Tests auszuführen.
 
 \subsubsection{Testarten}
 
-TODO
+Man unterscheidet grob vier Arten von Tests: Unit-, Integrations-, System- und Aktzeptanztests \citep[Vgl.][S. 129 ff]{DuvMatAnd07}.
+
+\subsubsubsection{Unit-Tests}
+
+"`Unit-Tests verify the behaviour of small elements in a software system, which are most often a single class."' \citep[S.][S. 132]{DuvMatAnd07} Eine wichtige Eigenschaft von Unit-Tests ist dabei, dass sie keine externen Abhängigkeiten wie zum Beispiel Datenbank oder Dateisystem besitzen. Tests können damit sehr früh und schnell geschrieben werden und benötigen nur wenig Zeit zur Ausführung. \citep[Vgl.][S. 133]{DuvMatAnd07} Unit-Tests benötigen deshalb aber auch keine anspruchsvolle Testumgebung oder eine Optimierung der Ausführungszeit. Für die Problemstellung dieser Arbeit sind sie also weniger interessant.
+
+\subsubsection{Integrations-Tests}
+
+Integrations-Tests (beziehungsweise Komponenten-Tests oder Subsystem-Tests) testen mehrere Einheiten einer Software im Zusammenspiel. Diese können dabei auch Zugriff auf eine Datenbank oder das Dateissystem benötigen. \citep[Vgl.][S. 133]{DuvMatAnd07} "`The difference between this type of test and a system test is that integration tests (or component tests or subsystem tests) don't always exercise a publicly preferable API."' \citep[S.][S. 136]{DuvMatAnd07} Integrations-Tests sind aber in jedem Fall Tests, die potentiell Zugriff auf eine Testumgebung benötigen. Da ein Integrations-Tests aber nicht zwingend auf die gesamte Umgebung zugreift, sondern zum Beispiel nur auf die Datenbank aber eben nicht auf einen HTTP-Cache, wäre es für eine mögliche Implementierung einer solchen Testumgebung von Vorteil, wenn diese Umgebung auch nur teilweise gestartet werden könnte.
+
+\subsubsubsection{System-Tests}
+
+"`System tests excercise a complete software and therefore require a fully installed system [..]."' \citep[S.][S. 136]{DuvMatAnd07} System-Tests tendieren grundsätzlich dazu, die längste Ausführungsdauer und auch die aufwendigsten Vorbereitungsmaßnahmen zu besitzen. \citep[Vgl.][S. 136]{DuvMatAnd07} System-Tests sind sowohl hinsichtlich der von ihnen vollständig benötigten Testumgebung und der potentiell optimierbaren Ausführungsdauer genau die Tests, die im Rahmen der Problemstellung relevant sind.
+
+\subsubsubsection{Aktzeptanz-Tests}
+
+Akzeptanz- bzw. Funktionale Tests unterscheiden sich von System-Tests insofern, als das bei ihnen die Betonung darauf liegt, das System aus Sicht des Benutzers zu testen \citep[Vgl.][S. 136]{DuvMatAnd07}. Das Fernsteuern eines Browsers zum Testen einer Webanwendung ist ein typisches Beispiel für einen Akzeptanz-Tests. Aber auch das manuelle Testen der Anwendung durch einen Projekt- oder Produktmanager gilt als Akzeptanztest. Genau wie der System-Tests benötigt der Aktzeptanz-Test auf jeden Fall das gesamte System und somit auch eine vollständige Testumgebung.
 
 \subsubsection{Testausführung}
 
-TODO
+"`Too many projects rely solely on manual acceptance testing to verify that a piece of software conforms to its functional and nonfunctional requirements."' \citep[S.][S. 83]{HumFar10} Auch wenn die manuelle Ausführung von Tests also eine mögliche Testausführungs-Strategie ist, so ist sie nicht die, die nach heutigem Stand der Wissenschaft empfehlenswert ist.
+
+Idealerweise werden in heutigen Softwareprojekten von Beginn an automatische Softwaretests geschrieben. Diese werden sogar vor der eigentlichen Implementierung geschrieben und verifizieren dann die Vollständigkeit und Korrektheit der späteren Implementierung. Als Testsausführungsstrategie empfiehlt es sich deshalb, dass sämtliche Tests automatisch von einem CI-Server ausgeführt werden können, sobald sich etwas an der Anwendung ändert. \citep[Vgl.][S. 83]{HumFar10} "`[..] Tests must run any time and every time something in the system changes."' \citep[S.][S. 131]{DuvMatAnd07}
 
 \subsection{Virtualisierung von Testumgebungen}
 
