@@ -18,7 +18,7 @@ Man unterscheidet grob vier Arten von Tests: Unit-, Integrations-, System- und A
 
 "`Unit-Tests verify the behaviour of small elements in a software system, which are most often a single class."' \citep[S.][S. 132]{DuvMatAnd07} Eine wichtige Eigenschaft von Unit-Tests ist dabei, dass sie keine externen Abhängigkeiten wie zum Beispiel Datenbank oder Dateisystem besitzen. Tests können damit sehr früh und schnell geschrieben werden und benötigen nur wenig Zeit zur Ausführung. \citep[Vgl.][S. 133]{DuvMatAnd07} Unit-Tests benötigen deshalb aber auch keine anspruchsvolle Testumgebung oder eine Optimierung der Ausführungszeit. Für die Problemstellung dieser Arbeit sind sie also weniger interessant.
 
-\subsubsection{Integrations-Tests}
+\subsubsubsection{Integrations-Tests}
 
 Integrations-Tests (beziehungsweise Komponenten-Tests oder Subsystem-Tests) testen mehrere Einheiten einer Software im Zusammenspiel. Diese können dabei auch Zugriff auf eine Datenbank oder das Dateissystem benötigen. \citep[Vgl.][S. 133]{DuvMatAnd07} "`The difference between this type of test and a system test is that integration tests (or component tests or subsystem tests) don't always exercise a publicly preferable API."' \citep[S.][S. 136]{DuvMatAnd07} Integrations-Tests sind aber in jedem Fall Tests, die potentiell Zugriff auf eine Testumgebung benötigen. Da ein Integrations-Tests aber nicht zwingend auf die gesamte Umgebung zugreift, sondern zum Beispiel nur auf die Datenbank aber eben nicht auf einen HTTP-Cache, wäre es für eine mögliche Implementierung einer solchen Testumgebung von Vorteil, wenn diese Umgebung auch nur teilweise gestartet werden könnte.
 
@@ -200,4 +200,61 @@ In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Dis
 
 \subsubsection{Vergleich der Virtualisierungsansätze}
 
-TODO
+\begin{figure}[!ht]
+  \begin{center}
+    \resizebox{14cm}{!} {
+      \begin{tabular}{|l|l|l|l|l|l|l|}
+      \hline
+      {} & \multicolumn{5}{|l|}{Hypervisor} & OS-Container \\
+      \cline{2-6}
+      {} & \multicolumn{3}{|l|}{Bare-Metal} & Hosted & Unikernel & {} \\
+      \hline
+      Eigenschaft & VMWare & KVM & XenServer & VirtualBox & MirageOS & Docker \\
+      \hline
+      Installation & \multicolumn{6}{|l|}{} \\
+      \hline
+      - auf Hardware & X & X & X & - & X & - \\
+      \hline
+      - als Anwendung & - & - & - & X & X & X \\
+      \hline
+      Lizensierung & \multicolumn{6}{|l|}{} \\
+      \hline
+      - kostenpflichtig & X & - & - & - & - & - \\
+      \hline
+      - Open Source & - & X & X & X & X & X \\
+      \hline
+      Funktion & \multicolumn{6}{|l|}{} \\
+      \hline
+      - Live-Migration & X & - & - & - & - & - \\
+      \hline
+      - Verschiedene OS & X & X & X & X & - & - \\
+      \hline
+      - PHP möglich & X & X & X & X & - & X \\
+      \hline
+      - Union Filesystem & - & - & - & - & - & X \\
+      \hline
+      Virtualisierung & \multicolumn{6}{|l|}{} \\
+      \hline
+      - umfasst Hardware & X & X & X & X & X & - \\
+      \hline
+      - beinhaltet OS & X & X & X & X & - & - \\      
+      \hline
+      \end{tabular}
+    }
+    \caption{Zusammenfassung Virtualisierungsansätze}
+  \end{center}
+\end{figure}
+
+Die vorstehende Tabelle fasst noch einmal alle zuvor aufgeführten Virtualisierungsansätze zusammen. Deren unterschiedliche Vor- und Nachteile sollen nun noch einmal vergleichend diskutiert werden.
+
+Bei der Installation der verschiedenen Ansätze kann man grundsätzlich zwischen denen unterscheiden, die sich als natives Betriebssystem auf nakter Hardware installieren lassen und denen, die man als zusätzliches Anwendungsprogramm installiert. Grundsätzlich ist die Installation als Anwendungsprogramm einfacher und erfordert zum Beispiel weniger Zugriffsrechte. Außer bei der Virtualisierung mittels OS-Container ist diese Installationsvariante aber auch tendenziell weniger effizient.
+
+Bis auf das Produkt VMWare vSphere handelt es sich bei allen Ansätzen um kostenlose Open-Source-Produkte. Dafür bietet WMWare vSphere mit der Live-Migration von laufenden virtuellen Maschinen zwischen verschiedenen Hosts aber auch eine sehr mächtige Funktion, die sich gerade für große und flexible Virtualisierungsszenarien anbietet.
+
+Grundsätzlich lassen sich mit den meisten Ansätzen verschiedene Betriebssysteme (zum Beispiel Windows und Linux) virtualisieren. Ausnahmen stellen hier lediglich MirageOS und Docker dar, da MirageOS-Unikernels kein Betriebssystem beinhalten und Docker als OS-Container-Lösung lediglich Anwendungen virtualisiert und kein Betriebssystem.
+
+Das Ausführen eines PHP-Interpreters innerhalb einer virtuellen Maschine ist ohne weiteres bei allen Ansätzen außer MirageOS möglich.
+
+Docker bietet mit seinem Union-Filesystem im Gegensatz zu den anderen Ansätzen eine Möglichkeit, die Nutzung des Dateisystems zu optimieren.
+
+In Hinblick auf die Problemstellung lässt sich zunächst nur MirageOS als mögliche Virtualisierungslösung ausschließen, da die Ausführbarkeit eines PHP-Interpreters zumindest für die Ausgangssituation bei der Pixelhouse GmbH zwingend notwendig ist.
