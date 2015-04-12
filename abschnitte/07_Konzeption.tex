@@ -1,10 +1,10 @@
 \section{Konzeption}
 
-Nachfolgend soll nun zunächst die aktuelle Produktiv- und die aktuellen Testumgebungen beschrieben werden. Anschließend soll eine Betriebsumgebung definiert werden, die im Rahmen dieser Arbeit die Lösbarkeit der bisherigen Probleme mit Hilfe der Virtualisierungstechnologien zeigen kann. Zudem sollen die eingangs in der Problemstellung angedeuteten Probleme bei der Ausführung von Tests genauer erläutert und durch eine stark vereinfachte Anwendung inklusive entsprechend vereinfachter Tests dargestellt werden. Anschließend kann dann für die beiden Produkte VirtualBox und Docker ein Konzept erarbeitet werden, wie sich diese Umgebung mit Hilfe der entsprechenden Technologie virtualisieren lässt, um damit die zuvor definierte Anwendung und ihre Tests erfolgreich auszuführen.
+Nachfolgend soll nun zunächst die aktuelle Produktiv- und die aktuellen Testumgebungen beschrieben werden. Anschließend soll ein neuer Ansatz für eine Testumgebung auf Basis einer Virtualisierung definiert werden, mit dessen Hilfe sich später eine konkrete Implementierung umsetzen lässt. Zudem sollen die eingangs in der Problemstellung angedeuteten Probleme aufgrund fehlender isolierter Testumgebungen bei der Ausführung von Tests genauer erläutert und durch die Definition eines entsprechenden Beispieltests dargestellt werden. Dieser Test soll auch als Grundlage für eine Evaluierung der konkreten Implementierungen in Bezug auf ihre Ausführungsdauer dienen.
 
 \subsection{Beschreibung der aktuellen Produktivumgebung}
 
-Die Betriebsumgebung die von der Pixelhouse GmbH in Produktion eingesetzt wird und täglich mehrere Millionen Anfragen von Besuchern der Webseite chefkoch.de beantwortet, besteht aus einer Vielzahl von Komponenten und Diensten. Bis auf die unternehmensweite Groupwarelösung (E-Mails, Kalender, etc.), die bereits als mehrere Dienste in Docker-Containern virtualisert wird, handelt es sich dabei um echte Maschinen, die jeweils auf ihrer eigenen Hardware laufen.
+Die Betriebsumgebung, die von der Pixelhouse GmbH in Produktion eingesetzt wird, besteht aus einer Vielzahl von Komponenten und Diensten. Diese Komponenten werden bislang jeweils auf echter Serverhardware betrieben.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -13,7 +13,7 @@ Die Betriebsumgebung die von der Pixelhouse GmbH in Produktion eingesetzt wird u
   \end{center}
 \end{figure}
 
-Im Zentrum der Infrastruktur stehen insgesamt drei Appserver. Bei jedem Appserver handelt es sich dabei um einen Ubuntu-Server, auf dem der Webserver Nginx und der Script-Interpreter PHP ausgeführt wird, um HTTP-Anfragen mit Hilfe statischer oder dynamische Inhalte zu beantworten. Für die langfristige Datenhaltung greifen die PHP-Scripte dabei auf zwei Datenbankserver (Master und Slave) zu, auf denen ebenfalls Ubuntu und der Mysql-Fork MariaDB installiert sind. Für kurzfristige und hochverfügbare Datencaches gibt es zwei Ubuntu-Server (Master und Slave) auf denen der Key-Value-Store Redis läuft. Zudem wird auf weiteren zwei Ubuntu-Servern (Master und Slave) ein Such-Index mit Hilfe der Suchmaschine Solr betrieben, die als Java-Anwendung in einem Tomcat-Application-Server läuft. Binärdateien (Videos, Bilder, Dokumente, etc.) werden auf insgesamt 7 weiteren Servern redundant abgelegt. Damit die Appserver und die SAN-Server von außen unter einheitlichen HTTP-Adressen erreichbar sind und sich die Last gleichmäßig auf die einzelnen Server verteilt, landen sämtliche HTTP-Anfragen per DNS-Round-Robin zunächst bei einem von zwei Ubuntu-Servern, auf denen Varnish als Load-Balancer installiert ist. Diese nehmen die Anfragen entgegen und verteilen sie an die dahinter liegenden Server. Varnish ist zudem ein effizienter HTTP-Cache, der in der Lage ist, die von den App- oder SAN-Servern zurückgelieferten Antworten zu cachen und bei erneuter Anfrage selbst auszuliefern. Zu guter Letzt gibt es noch drei weitere Server, auf denen Software für die Administration und das Reporting läuft.
+Im Zentrum der Infrastruktur stehen insgesamt drei Appserver. Bei jedem Appserver handelt es sich dabei um einen Ubuntu-Server, auf dem der Webserver Nginx und der Script-Interpreter PHP ausgeführt wird, um HTTP-Anfragen mit Hilfe statischer oder dynamische Inhalte zu beantworten. Auf den App-Servern läuft somit auch die in PHP geschriebene Anwendung selbst. Für die langfristige Datenhaltung greifen die PHP-Scripte dabei auf zwei Datenbankserver (Master und Slave) zu, auf denen ebenfalls Ubuntu und der Mysql-Fork MariaDB installiert sind. Für kurzfristige und hochverfügbare Datencaches gibt es zwei Ubuntu-Server (Master und Slave) auf denen der Key-Value-Store Redis läuft. Zudem wird auf weiteren zwei Ubuntu-Servern (Master und Slave) ein Such-Index mit Hilfe der Suchmaschine Solr betrieben, die als Java-Anwendung in einem Tomcat-Application-Server läuft. Binärdateien (Videos, Bilder, Dokumente, etc.) werden auf insgesamt 7 weiteren Servern redundant abgelegt. Damit die Appserver und die SAN-Server von außen unter einheitlichen HTTP-Adressen erreichbar sind und sich die Last gleichmäßig auf die einzelnen Server verteilt, landen sämtliche HTTP-Anfragen per DNS-Round-Robin zunächst bei einem von zwei Ubuntu-Servern, auf denen Varnish als Load-Balancer installiert ist. Diese nehmen die Anfragen entgegen und verteilen sie an die dahinter liegenden Server. Varnish ist zudem ein effizienter HTTP-Cache, der in der Lage ist, die von den App- oder SAN-Servern zurückgelieferten Antworten zu cachen und bei erneuter Anfrage selbst auszuliefern. Zu guter Letzt gibt es noch drei weitere Server, auf denen Software für die Administration und das Reporting läuft.
 
 \subsection{Beschreibung der aktuellen Testumgebung}
 
@@ -30,12 +30,7 @@ Die aktuelle Testumgebung bringt Probleme in Bezug auf die Testbarkeit der Anwen
 
 \subsection{Definition einer verifizierbaren Testumgebung}
 
-Um nun eine zwar möglichst leicht zu implementierende, für die Darstellung der Lösbarkeit dieser Probleme aber hinreichende Umgebung zu definieren, werden folgende Änderungen vorgenommen:
-Zunächst wird die Anzahl gleicher Komponenten auf jeweils eins reduziert. Außerdem werden die Caches und der Such-Index ausgeblendet, da sie genau wie die Datenbankserver aus den Appserver heraus als Backend-Dienst abgefragt werden und lediglich eine andere Technologie beziehungsweise einen anderen Schwerpunkt der Datenhaltung widerspiegeln (Kurzfristigkeit und Durchsuchbarkeit). Zuletzt ignorieren wir im Rahmen dieser Arbeit die SAN- und Management-Server.
-
-Die von uns definierte Umgebung besteht somit lediglich aus einem Varnish-Load-Balancer, einem Nginx-Appserver, der den Script-Interpreter PHP ausführt und einen Maria-DB-Server, der aus PHP heraus als Backend-Dienst abgefragt werden kann.
-
-Eine solche Umgebung könnte nun mit Hilfe von Virtualisierung mehrmals parallel auf einer physischen Maschine gestartet werden.
+Ziel der neuen Testumgebung muss es sein, einen der Produktivumgebung entsprechenden Aufbau zu besitzen. So sollen alle in Produktion vorhandenen Komponenten mit Hilfe der Virtualisierung als eigenständige Maschinen dargestellt werden, auch wenn sie tatsächlich auf nur einer echten Hardware-Maschine laufen. Es muss außerdem möglich sein, mehrere dieser Testumgebungen parallel zu betreiben.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -44,48 +39,17 @@ Eine solche Umgebung könnte nun mit Hilfe von Virtualisierung mehrmals parallel
   \end{center}
 \end{figure}
 
-\subsection{Definition von Anwendungs- und Testfällen}
+Tests, die gegen eine solche virtuelle Testumgebung gestartet werden, dürfen sich dabei nicht gegenseitig beinflussen. Das Aufsetzen und Entfernen einer Testumgebung muss programmatisch und mit überschaubarem Zeitaufwand möglich sein. Die tatsächliche Konfiguration der einzelnen Komponenten der Umgebung sollte dabei selbst unter Versionskontrolle gestellt werden können, um langfristig Änderungen an der Infrastruktur nachvollziehen zu können. "`The change should be made to version control and then applied through your automated process for deploying infrastructural changes."' \citep[S.][S. 287]{HumFar10}
+
+\subsection{Definition eines Testfalls}
 
 Für die Verifizierung der jeweiligen Testumgebungen ist es notwendig, eine andere PHP-Anwendung als die echte Anwendung der Webseite chefkoch.de zu verwenden. Zum einen ist die echte PHP-Anwendung auf dieser reduzierten Testumgebung nicht lauffähig. Zum anderen hat sie im Laufe der Jahre eine Komplexität erreicht, die es schwer macht, einen einfachen Anwendungsfall zu finden, der dennoch die Notwendigkeit von isolierten Testumgebungen aufzeigt.
 
 Es ist deshalb von Vorteil, im Rahmen dieser Arbeit neue PHP-Scripte mit einzelnen Anwendungsfällen zu definieren, die die zuvor angedeuteten Probleme beim Ausführen der Tests, die auf eine mangelnde Isolation einzelner Test-Umgebungen zurückzuführen sind, einfach provozieren. Passend dazu lassen sich dann ebenso einfache Testfälle definieren, die zeigen, ob die neue Testumgebungen mit Hilfe der Virtualisierungstechnologien die eingangs erläuterten Probleme einfach lösen.
 
-\subsubsection{Isolierte Testdaten in der Datenbank}
-
 Wir denken uns einen einfachen Anwendungsfall aus, der Daten derart in die Datenbank schreibt, dass es Einfluss auf andere Testumgebungen haben würde, wenn sich mehrere Testumgebungen die gleiche Datenbank teilen. Dazu reicht es zum Beispiel aus, einen einfachen Zähler zu implementieren. Dieser Zähler legt zunächst, falls noch nicht vorhanden, eine neue Tabelle an, die eine Integer-Spalte enthält und fügt einen Datensatz mit dem Wert 1 ein. Falls die Tabelle schon existiert, erhöht er den Wert um eins. Der aktuelle Wert wird anschließend ausgegeben. Dieser Anwendungsfall sollte also beim ersten Aufruf eine 1 ausgeben und bei jedem weiteren Aufruf einen um eins erhöhten Wert (2, 3, 4, 5...).
 
 Zum Test der Testdaten-Isolierung muss man nun lediglich zwei Testumgebungen anlegen und sicherstellen, dass beide Umgebungen unabhängig voneinander zählen.
-
-\subsubsection{Konfigurationsänderung im HTTP-Cache}
-
-Um eine Änderung am HTTP-Caching zu testen, brauchen wir zunächst ein einfaches PHP-Script, das zum einen die aktuelle Uhrzeit ausgibt und zum anderen einen HTTP-Cache-Header mitsendet, der HTTP-Caches dazu veranlasst, die HTTP-Antwort für 10 Sekunden zu cachen.
-Es ist nun per Varnish-Konfiguration möglich, diese HTTP-Header für bestimmte URLs zu berücksichtigen oder eben nicht.
-
-Damit sollte es möglich sein, eine Testumgebung zu starten, die beim Aufruf des PHP-Scriptes immer die aktuelle Uhrzeit anzeigt. Gleichzeitig muss es möglich sein, eine weitere Testumgebung zu starten, in der das gleiche HTTP-Cache nur alle 10 Sekunden die aktuelle Uhrzeit anzeigt.
-
-\subsubsection{Behat als Testframework}
-
-Natürlich ist es möglich, die zuvor beschriebenen Tests wie auch echte Tests zur Webseite chefkoch.de händisch durchzuführen. Vorgabe der Pixelhouse GmbH ist es aber, die Durchführung von Tests zu automatisieren. Die Pixelhouse GmbH hat sich bei der Wahl eines entsprechenden Testframeworks für das Tool Behat entschieden. Dies liegt zum einen daran, dass Behat selbst auch in der Programmiersprache PHP geschrieben ist und somit die notwendige Kompetenz zur Implementierung solcher Testfälle bereits vorhanden ist. Behat ist außerdem ein sogenanntes Behaviour-Driven-Development Tool. Dies meint, dass die eigentliche Definition der Testfälle in Form von menschenlesbarem Text erfolgt, der das gewünschte Verhalten der Anwendung beschreibt \citep[Vgl.][]{Behat15}.
-
-\begin{figure}[!ht]
-  \begin{center}
-    \begin{gherkincode}
-Feature: Counter
-  In order to know how often I visited the counter page
-  the counter has to increase with every visit
-
-  Scenario:
-    Given I open "/counter.php"
-    Then I should see "1"
-    When I reload the page
-    Then I should see "2"
-
-    \end{gherkincode}
-    \caption{Beispiel-Feature für den Zähler}
-  \end{center}
-\end{figure}
-
-Solche Feature oder auch User Story genannten Beschreibungen werden von der Pixelhouse GmbH bereits im Rahmen ihrer Entwicklungsmethode Scrum verwendet, um die Kommunikation zwischen Produktmanagement und Entwicklern zu formalisieren.
 
 \subsection{Verwendete Virtualisierungslösungen}
 

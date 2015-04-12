@@ -130,3 +130,28 @@ mariadb:
 \end{figure}
 
 Anschließend lässt sich die Umgebung mit dem einfachen Befehl "`fig up"' starten.
+
+\subsection{Implementierung des Testfalls}
+
+Natürlich ist es möglich, die zuvor beschriebenen Tests wie auch echte Tests zur Webseite chefkoch.de händisch durchzuführen. Vorgabe der Pixelhouse GmbH ist es aber, die Durchführung von Tests zu automatisieren. Die Pixelhouse GmbH hat sich bei der Wahl eines entsprechenden Testframeworks für das Tool Behat entschieden. Dies liegt zum einen daran, dass Behat selbst auch in der Programmiersprache PHP geschrieben ist und somit die notwendige Kompetenz zur Implementierung solcher Testfälle bereits vorhanden ist. Behat ist außerdem ein sogenanntes Behaviour-Driven-Development Tool. Dies meint, dass die eigentliche Definition der Testfälle in Form von menschenlesbarem Text erfolgt, der das gewünschte Verhalten der Anwendung beschreibt \citep[Vgl.][]{Behat15}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{gherkincode}
+Feature: Counter
+  In order to know how often I visited the counter page
+  the counter has to increase with every visit
+
+  Scenario:
+    Given I open "/counter.php"
+    Then I should see "1"
+    When I reload the page
+    Then I should see "2"
+
+    \end{gherkincode}
+    \caption{Beispiel-Feature für den Zähler}
+  \end{center}
+\end{figure}
+
+Solche Feature oder auch User Story genannten Beschreibungen werden von der Pixelhouse GmbH bereits im Rahmen ihrer Entwicklungsmethode Scrum verwendet, um die Kommunikation zwischen Produktmanagement und Entwicklern zu formalisieren.
+
