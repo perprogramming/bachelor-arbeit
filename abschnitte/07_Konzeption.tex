@@ -43,13 +43,7 @@ Tests, die gegen eine solche virtuelle Testumgebung gestartet werden, dürfen si
 
 \subsection{Definition eines Testfalls}
 
-Für die Verifizierung der jeweiligen Testumgebungen ist es notwendig, eine andere PHP-Anwendung als die echte Anwendung der Webseite chefkoch.de zu verwenden. Zum einen ist die echte PHP-Anwendung auf dieser reduzierten Testumgebung nicht lauffähig. Zum anderen hat sie im Laufe der Jahre eine Komplexität erreicht, die es schwer macht, einen einfachen Anwendungsfall zu finden, der dennoch die Notwendigkeit von isolierten Testumgebungen aufzeigt.
-
-Es ist deshalb von Vorteil, im Rahmen dieser Arbeit neue PHP-Scripte mit einzelnen Anwendungsfällen zu definieren, die die zuvor angedeuteten Probleme beim Ausführen der Tests, die auf eine mangelnde Isolation einzelner Test-Umgebungen zurückzuführen sind, einfach provozieren. Passend dazu lassen sich dann ebenso einfache Testfälle definieren, die zeigen, ob die neue Testumgebungen mit Hilfe der Virtualisierungstechnologien die eingangs erläuterten Probleme einfach lösen.
-
-Wir denken uns einen einfachen Anwendungsfall aus, der Daten derart in die Datenbank schreibt, dass es Einfluss auf andere Testumgebungen haben würde, wenn sich mehrere Testumgebungen die gleiche Datenbank teilen. Dazu reicht es zum Beispiel aus, einen einfachen Zähler zu implementieren. Dieser Zähler legt zunächst, falls noch nicht vorhanden, eine neue Tabelle an, die eine Integer-Spalte enthält und fügt einen Datensatz mit dem Wert 1 ein. Falls die Tabelle schon existiert, erhöht er den Wert um eins. Der aktuelle Wert wird anschließend ausgegeben. Dieser Anwendungsfall sollte also beim ersten Aufruf eine 1 ausgeben und bei jedem weiteren Aufruf einen um eins erhöhten Wert (2, 3, 4, 5...).
-
-Zum Test der Testdaten-Isolierung muss man nun lediglich zwei Testumgebungen anlegen und sicherstellen, dass beide Umgebungen unabhängig voneinander zählen.
+TODO
 
 \subsection{Verwendete Virtualisierungslösungen}
 
