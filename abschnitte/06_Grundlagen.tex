@@ -8,7 +8,7 @@ Zum anderen werden die Grundlagen und Ansätze zur Virtualisierung beleuchtet. H
 
 \subsection{Softwaretests}
 
-Das Testen von Software ist allgemein eine "`Überprüfung des Ein-/Augabeverhaltens eines Programms anhand von Experimenten und gezielten Programmdurchläufen"' \citep[S.][S.662]{itduden}. Es handelt sich also um eine Qualitätssicherungsmaßnahme. Man unterscheidet, jenachdem was ein Test testet, verschiedene Testarten. Außerdem gibt es verschiedene Strategien, Tests auszuführen.
+Das Testen von Software ist allgemein eine "`Überprüfung des Ein-/Augabeverhaltens eines Programms anhand von Experimenten und gezielten Programmdurchläufen"' \citep[S.][S.662]{itduden}. Es handelt sich also um eine Qualitätssicherungsmaßnahme. Man unterscheidet, jenachdem was ein Test testet TODO, verschiedene Testarten. Außerdem gibt es verschiedene Strategien, Tests auszuführen.
 
 \subsubsection{Testarten}
 
@@ -24,11 +24,11 @@ Man unterscheidet grob vier Arten von Tests: Unit-, Integrations-, System- und A
 
 \subsubsubsection{System-Tests}
 
-"`System tests excercise a complete software and therefore require a fully installed system [..]."' \citep[S.][S. 136]{DuvMatAnd07} System-Tests tendieren grundsätzlich dazu, die längste Ausführungsdauer und auch die aufwendigsten Vorbereitungsmaßnahmen zu besitzen. \citep[Vgl.][S. 136]{DuvMatAnd07} System-Tests sind sowohl hinsichtlich der von ihnen vollständig benötigten Testumgebung und der potentiell optimierbaren Ausführungsdauer genau die Tests, die im Rahmen der Problemstellung relevant sind.
+"`System tests excercise a complete software and therefore require a fully installed system [..]."' \citep[S.][S. 136]{DuvMatAnd07} System-Tests tendieren grundsätzlich dazu TODO, die längste Ausführungsdauer und auch die aufwendigsten Vorbereitungsmaßnahmen zu besitzen. \citep[Vgl.][S. 136]{DuvMatAnd07} System-Tests sind sowohl hinsichtlich der von ihnen vollständig benötigten Testumgebung und der potentiell optimierbaren Ausführungsdauer genau die Tests, die im Rahmen der Problemstellung relevant sind.
 
 \subsubsubsection{Aktzeptanz-Tests}
 
-Akzeptanz- bzw. Funktionale Tests unterscheiden sich von System-Tests insofern, als das bei ihnen die Betonung darauf liegt, das System aus Sicht des Benutzers zu testen \citep[Vgl.][S. 136]{DuvMatAnd07}. Das Fernsteuern eines Browsers zum Testen einer Webanwendung ist ein typisches Beispiel für einen Akzeptanz-Tests. Aber auch das manuelle Testen der Anwendung durch einen Projekt- oder Produktmanager gilt als Akzeptanztest. Genau wie der System-Tests benötigt der Aktzeptanz-Test auf jeden Fall das gesamte System und somit auch eine vollständige Testumgebung. Auch die Dauer der Testausführung ist wie bei Systemtests höher als die von Unit- und Integrations-Tests.
+Akzeptanz- bzw. Funktionale Tests unterscheiden sich von System-Tests insofern, als das bei ihnen die Betonung darauf liegt, das System aus Sicht des Benutzers zu testen \citep[Vgl.][S. 136]{DuvMatAnd07}. Das Fernsteuern eines Browsers zum Testen einer Webanwendung ist ein typisches Beispiel für einen Akzeptanz-Test. Aber auch das manuelle Testen der Anwendung durch einen Projekt- oder Produktmanager gilt als Akzeptanztest. Genau wie der System-Tests benötigt der Aktzeptanz-Test auf jeden Fall das gesamte System und somit auch eine vollständige Testumgebung. Auch die Dauer der Testausführung ist wie bei Systemtests höher als die von Unit- und Integrations-Tests.
 
 \subsubsection{Teststrategie}
 
@@ -36,11 +36,11 @@ Neben den unterschiedlichen Testarten gibt es auch unterschiedliche Strategien z
 
 Wie viele andere Firmen auch, hat die Pixelhouse GmbH bei der Entwicklung ihrer Softwarekomponenten lange Zeit lediglich manuelle Tests ausgeführt. "`Too many projects rely solely on manual acceptance testing to verify that a piece of software conforms to its functional and nonfunctional requirements."' \citep[S.][S. 83]{HumFar10} Dabei wurden Unit-, Integrations und Systemtests, soweit solche überhaupt vorhanden sind, lediglich sporadisch und im Rahmen der Entwicklung auf Entwickler-Laptops ausgeführt. Anschließend wurden auf einer Testumgebung durch einen Produktmanager oder Endkunden manuelle Akzeptanztests durchgeführt, die sicherstellen sollten, dass die Software den vor der Entwicklung von ihnen definierten Anforderungen entspricht. Nachteil dieser Herangehensweise ist, dass das Testen der Anwendung nicht gut skaliert. Je mehr Neuerungen durch die Entwicklung entstehen, umso mehr wird der Produktmanager zu einem Engpass bei der manuellen Abnahme dieser Neuerungen. Kommt es beim Testen der Software zu einem Fehler, ist es dem Produktmanager oder Endkunden meist auch nicht möglich, die Fehlerursache zu benennen. Vielmehr geben diese eine Anleitung an die Entwicklung zurück, wie der entsprechende Fehler reproduziert werden kann. Es folgt eine entsprechend aufwendige Fehleranalyse durch einen Entwickler. Ein Vorteil dieser Herangehensweise ist, dass weniger Aufwand für das Bereitstellen von Testumgebungen entsteht. So werden Tests entweder in der Entwicklungsumgebung durch den Entwickler ausgeführt oder eben auf einer geringen Anzahl an festen Testumgebungen, die den Produktmanagern oder Endkunden zur Verfügung steht. Es gibt außerdem auch Fehlern, die sich nur sehr schwer oder auch gar nicht über automatische Tests finden lassen, zum Beispiel optische Fehler im Userinterface einer Anwendung \citep[Vgl.][S. 197]{DuvMatAnd07}. Manuelle Tests haben insofern auf jeden Fall eine Daseinsberechtigung. Insgesamt kann man aber sagen, dass die rein manuelle Ausführung von Tests zwar eine mögliche Testausführungs-Strategie ist, aber nicht die, die nach heutigem Stand der Wissenschaft empfehlenswert ist.
 
-Idealerweise werden in heutigen Softwareprojekten von Beginn an automatische Softwaretests geschrieben. "`In our ideal project, testers collaborate with developers and users to write automated tests from the start of the project."' \citep[S.][S. 83]{HumFar10} Diese werden sogar vor der eigentlichen Implementierung geschrieben und verifizieren dann die Vollständigkeit und Korrektheit der späteren Implementierung. Als Testsausführungsstrategie empfiehlt es sich dabei, dass sämtliche Tests automatisch von einem CI-Server ausgeführt werden können, sobald sich etwas an der Anwendung ändert. \citep[Vgl.][S. 83]{HumFar10} "`[..] Tests must run any time and every time something in the system changes."' \citep[S.][S. 131]{DuvMatAnd07} Bei dieser Herangehensweise ist es wichtig, sich zu überlegen, welche Arten von Tests man wie häufig verwendet. Wie zuvor beschrieben unterscheiden sich die unterschiedlichen Testarten in Bezug auf den Aufwand für ihre Erstellung, die Dauer ihrer Ausführung und ihre Ansprüche an eine gegebenenfalls notwendige Testumgebung. "`Writing and running tests is obviously a good thing, but unless we treat them as an architectural component that requires proper categorization and structure, they can start looking like a hurdle, instead of the key, to success."' \citep[S.][S. 138]{DuvMatAnd07} Durch die sinnvolle Gruppierung von Tests kann ein Entwicklungsteam eine sinnvolle Ausführungsreihenfolge definieren. So sollten schnell laufende Unit-Tests vor den länger laufenden Integrations- und System-Tests ausgeführt werden. Dadurch kann ein Fehler auf dieser Ebene sehr früh entdeckt und einem konkreten Stück Software zugeordnet und an die Entwicklung zurück gegeben werden. Ist auf der Unit-Ebene aber kein Fehler aufgetreten, so können die teureren und länger laufenden Integrations- und Systemtests durchgeführt werden \citep[Vgl.][S. 138]{DuvMatAnd07}. "`All levels are essential to ensure that the application is working and delivering the expected business value."' \citep[S.][S. 178]{HumFar10} Auch wenn alle Ebenen wichtig sind, so wird allgemein empfohlen, mehr Unit-Tests als Integrations-, Systemtests oder Aktzeptanztests zu schreiben. Dies wird gerne über die folgende Testpyramide dargestellt:
+Idealerweise werden in heutigen Softwareprojekten von Beginn an automatische Softwaretests geschrieben. "`In our ideal project, testers collaborate with developers and users to write automated tests from the start of the project."' \citep[S.][S. 83]{HumFar10} Diese werden sogar vor der eigentlichen Implementierung geschrieben und verifizieren dann die Vollständigkeit und Korrektheit der späteren Implementierung. Als Testsausführungsstrategie empfiehlt es sich dabei, dass sämtliche Tests automatisch von einem CI-Server TODO ausgeführt werden können, sobald sich etwas an der Anwendung ändert. \citep[Vgl.][S. 83]{HumFar10} "`[..] Tests must run any time and every time something in the system changes."' \citep[S.][S. 131]{DuvMatAnd07} Bei dieser Herangehensweise ist es wichtig, sich zu überlegen, welche Arten von Tests man wie häufig verwendet. Wie zuvor beschrieben unterscheiden sich die unterschiedlichen Testarten in Bezug auf den Aufwand für ihre Erstellung, die Dauer ihrer Ausführung und ihre Ansprüche an eine gegebenenfalls notwendige Testumgebung. "`Writing and running tests is obviously a good thing, but unless we treat them as an architectural component that requires proper categorization and structure, they can start looking like a hurdle, instead of the key, to success."' \citep[S.][S. 138]{DuvMatAnd07} Durch die sinnvolle Gruppierung von Tests kann ein Entwicklungsteam eine sinnvolle Ausführungsreihenfolge definieren. So sollten schnell laufende Unit-Tests vor den länger laufenden Integrations- und System-Tests ausgeführt werden. Dadurch kann ein Fehler auf dieser Ebene sehr früh entdeckt und einem konkreten Stück Software zugeordnet und an die Entwicklung zurück gegeben werden. Ist auf der Unit-Ebene aber kein Fehler aufgetreten, so können die teureren und länger laufenden Integrations- und Systemtests durchgeführt werden \citep[Vgl.][S. 138]{DuvMatAnd07}. "`All levels are essential to ensure that the application is working and delivering the expected business value."' \citep[S.][S. 178]{HumFar10} Auch wenn alle Ebenen wichtig sind, so wird allgemein empfohlen, mehr Unit-Tests als Integrations-, Systemtests oder Aktzeptanztests zu schreiben. Dies wird gerne über die folgende Testpyramide dargestellt:
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/testpyramide.png}
+    \includegraphics[width=10cm]{bilder/testpyramide.png}
     \caption{Testpyramide \citep[Vgl.][]{testpyramide}}
   \end{center}
 \end{figure}
@@ -55,7 +55,7 @@ Innerhalb der Informatik spricht man immer dann von Virtualität oder Virtualisi
 
 Der für diese Arbeit interessante Bereich der Virtualisierung ist das Bereitstellen virtueller Betriebsumgebungen. Eine Betriebsumgebung meint die Umgebung, die ein Programm für seine Ausführung benötigt. Dazu gehören vor allem bestimmte Hardware-Bauteile (Prozessoren, Arbeitsspeicher, Festplatten, Netzwerk-Adapter), ein Betriebssystem und eventuell zusätzliche Anwendungsprogramme, mit denen das Programm interagiert. Für gewöhnlich läuft eine solche Betriebsumgebung genau auf einem Rechner (zum Beispiel Server oder Desktoprechner). Mit Hilfe der Virtualisierung ist es nun aber möglich, mehrere solcher Betriebsumgebungen auf dem gleichen Rechner laufen zu lassen. Dabei wird der Betriebsumgebung eben nur vorgespielt, auf einem eigenen Rechner zu laufen \citep[Vgl.][Abstract]{DamMohAnd12}.
 
-Es gibt verschiedene Ziele, die man mit der Virtualisierung von Betriebsumgebungen verfolgen kann. Zum einen lässt sich eine effizientere Nutzung der Ressourcen erreichen. Da die tatsächliche Hardware abstrahiert wird, kann diese durch das hinzufügen weiterer Betriebsumgebungen vollständig ausgenutzt werden. Eine Firma könnte also zum Beispiel für jeden Mitarbeiter eine Arbeitsumgebung auf einem zentralen Server starten. Da diese nur Ressourcen verbraucht, wenn der Mitarbeiter tatsächlich arbeitet, kommt man unterm Strich mit weniger Hardwareressourcen aus, als wenn man jedem Mitarbeiter einen echten eigenen Rechner zur Verfügung stellt. Der Betrieb und die Wartung von virtuellen Arbeitsumgebungen lässt sich dabei auch besser planen und einfacher durchführen. Außerdem ist in den letzten Jahren das Mieten solcher zentralen Hardwareressourcen populär geworden. Man spricht hierbei auch gerne von sogenannten Cloud-Anbietern oder Cloud-Lösungen. "`The defining characteristic of cloud computing is that the computing resources you use, such as CPU, memory, storage, and so on, can expand and contract to meet your need, an you pay only for what you use."' \citep[S.][S. 312]{HumFar10} In diesem Falle würde die Hardware erst gar nicht eingekauft und selbst betrieben oder gewartet werden. Dies würde dann in den Aufgabenbereich des Dienstleisters fallen, der (oft minutengenau abgerechnet) nur die tatsächliche Nutzung der Ressourcen in Rechnung stellt \citep[Vgl.][S. 7]{ZhaChe14}.
+Es gibt verschiedene Ziele, die man mit der Virtualisierung von Betriebsumgebungen verfolgen kann. Zum einen lässt sich eine effizientere Nutzung der Ressourcen erreichen. Da die tatsächliche Hardware abstrahiert wird, kann diese durch das hinzufügen weiterer Betriebsumgebungen vollständig ausgenutzt werden. Eine Firma könnte also zum Beispiel für jeden Mitarbeiter eine Arbeitsumgebung auf einem zentralen Server starten. Da diese nur Ressourcen verbraucht, wenn der Mitarbeiter tatsächlich arbeitet, kommt man mit weniger Hardwareressourcen aus, als wenn man jedem Mitarbeiter einen echten eigenen Rechner zur Verfügung stellt. Der Betrieb und die Wartung von virtuellen Arbeitsumgebungen lässt sich dabei auch besser planen und einfacher durchführen. Außerdem ist in den letzten Jahren das Mieten solcher zentralen Hardwareressourcen populär geworden. Man spricht hierbei auch gerne von sogenannten Cloud-Anbietern oder Cloud-Lösungen. "`The defining characteristic of cloud computing is that the computing resources you use, such as CPU, memory, storage, and so on, can expand and contract to meet your need, an you pay only for what you use."' \citep[S.][S. 312]{HumFar10} In diesem Falle würde die Hardware erst gar nicht eingekauft und selbst betrieben oder gewartet werden. Dies würde dann in den Aufgabenbereich des Dienstleisters fallen, der (oft minutengenau abgerechnet) nur die tatsächliche Nutzung der Ressourcen in Rechnung stellt \citep[Vgl.][S. 7]{ZhaChe14}.
 
 Ein weiteres Ziel der Virtualisierung von Betriebsumgebungen ist die Trennung beziehungsweise Isolierung verschiedener Anwendungen \citep[Vgl.][Abstract]{Schee14}. Statt zum Beispiel auf einem Server einen Datenbankserver zu installieren, in dem mehrere Mitarbeiter oder auch Kunden ihre Datenbanken pflegen, kann man mit Hilfe von Virtualisierungsansätzen einfach für jeden Anwender einen eigenen Datenbankserver laufen lassen. Zwar bieten Datenbankserver natürlich auch innerhalb einer Instanz die Möglichkeit, den Zugriff auf einzelne Datenbanken zu begrenzen. Die Konfiguration solcher Zugriffsberechtigungen kann aber komplex sein und ist somit fehleranfällig. Gerade aus Sicherheitsgründen kann es somit lohnenswert sein, Anwendungen bereits auf Betriebsumgebungsebene voneinander zu trennen. Zudem gibt es Anwendungen, die selbst keine differenzierbaren Zugriffskonzepte kennen und somit so oder so für jeden Anwender separat gestartet werden müssen. Die eingangs beschriebenen Probleme bei der Testausführung für die Anwendung der Webseite Chefkoch.de lassen sich, wie wir später noch einmal im Detail sehen werden, auf solche mangelnde Isolation zwischen den Anwendungsteilen zurückführen.
 
@@ -65,7 +65,7 @@ Es gibt nun verschiedene Ansätze, Betriebsumgebungen zu virtualisieren. Grunds�
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/Einordnung_Virtualisierungstechnologien_für_virtuelle_Betriebsumgebungen.png}
+    \includegraphics[width=14cm]{bilder/Einordnung_Virtualisierungstechnologien_für_virtuelle_Betriebsumgebungen.png}
     \caption{Einordnung Virtualisierungstechnologien für virtuelle Betriebsumgebungen \citep{Hirschbach06}}
   \end{center}
 \end{figure}
@@ -78,7 +78,7 @@ Um die Herausforderung dieses Virtualisierungsansatzes genauer zu verstehen, ist
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=6cm]{bilder/500px-CPU_ring_scheme.png}
+    \includegraphics[width=8cm]{bilder/500px-CPU_ring_scheme.png}
     \caption{CPU Ring scheme \citep{wiki:006}}
   \end{center}
 \end{figure}
@@ -97,7 +97,7 @@ Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm dir
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=6cm]{bilder/VMM-Type1.jpg}
+    \includegraphics[width=8cm]{bilder/VMM-Type1.jpg}
     \caption{Virtual Machine Monitor Type I \citep{wiki:002}}
   \end{center}
 \end{figure}
@@ -106,16 +106,16 @@ Durch diesen direkten Zugriff und das nicht notwendige Hostbetriebssystem gilt e
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=10cm]{bilder/vmware.png}
+    \includegraphics[width=14cm]{bilder/vmware.png}
     \caption{VMWare vSphere Architektur \citep{vmware:002}}
   \end{center}
 \end{figure}
 
-Bei VMWare vSphere handelt es sich um ein kommerzielles Produkt der Firma VMWare, dem Marktführer im Bereich der Virtualisierungslösungen mit einem Marktanteil von ungefähr 50\% \citep[Vgl.][]{vmware:001}. vSphere basiert auf einem von WMWare eigens entwickelten Betriebssystem, dem sogenannten VMkernel. Auf diesem Betriebssystem laufen das Programm DCUI (Direct Console User Interface), eine Konsole zur direkten Konfiguration des Servers, und diverse weitere Schnittstellen, mit denen man die Verwaltung des Servers und der auf ihm laufenden virtuellen Maschinen auch über das Netzwerk erledigen kann. Für jede virtuelle Maschine wird ein eigener Hypervisor- und ein weiterer Hilfsprozess gestartet (VMM und VMX) \citep[Vgl.][S. 3]{vmware:002}. vSphere bietet die Möglichkeit, virtuelle Maschinen im laufenden Betrieb von einem vSphere Server auf einen anderen zu übertragen. Diese Funktion, vMotion genannt, erleichtert das Resourcenmanagement enorm, da sich eine laufende Anwendung auf andere Hardware übertragen lässt, um die vorherige Hardware zum Beispiel zu reparieren oder auch einfach nur zur Einsparung auszuschalten \citep[Vgl.][S. 4]{wmware:003}.
+Bei VMWare vSphere handelt es sich um ein kommerzielles Produkt der Firma VMWare, dem Marktführer im Bereich der Virtualisierungslösungen mit einem Marktanteil von ungefähr 50\% \citep[Vgl.][]{vmware:001}. vSphere basiert auf einem von VMWare eigens entwickelten Betriebssystem, dem sogenannten VMkernel. Auf diesem Betriebssystem laufen das Programm DCUI (Direct Console User Interface), eine Konsole zur direkten Konfiguration des Servers, und diverse weitere Schnittstellen, mit denen man die Verwaltung des Servers und der auf ihm laufenden virtuellen Maschinen auch über das Netzwerk erledigen kann. Für jede virtuelle Maschine wird ein eigener Hypervisor- und ein weiterer Hilfsprozess gestartet (VMM und VMX) \citep[Vgl.][S. 3]{vmware:002}. vSphere bietet die Möglichkeit, virtuelle Maschinen im laufenden Betrieb von einem vSphere Server auf einen anderen zu übertragen. Diese Funktion, vMotion genannt, erleichtert das Resourcenmanagement enorm, da sich eine laufende Anwendung auf andere Hardware übertragen lässt, um die vorherige Hardware zum Beispiel zu reparieren oder auch einfach nur zur Einsparung auszuschalten \citep[Vgl.][S. 4]{wmware:003}.
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/kvm.png}
+    \includegraphics[width=10cm]{bilder/kvm.png}
     \caption{KVM Architektur \citep{kvm:002}}
   \end{center}
 \end{figure}
@@ -126,7 +126,7 @@ So gibt es zum Beispiel die Linux Distribution Proxmox VE, die man direkt auf ei
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/xen.png}
+    \includegraphics[width=10cm]{bilder/xen.png}
     \caption{Xen Architektur \citep{kvm:002}}
   \end{center}
 \end{figure}
@@ -141,7 +141,7 @@ Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb ein
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=6cm]{bilder/VMM-Type2.jpg}
+    \includegraphics[width=8cm]{bilder/VMM-Type2.jpg}
     \caption{Virtual Machine Monitor Type II \citep{wiki:003}}
   \end{center}
 \end{figure}
@@ -152,7 +152,7 @@ VirtualBox bietet nach der Installation eine grafische Benutzeroberfläche, mit 
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/virtualbox-gui.png}
+    \includegraphics[width=14cm]{bilder/virtualbox-gui.png}
     \caption{Grafische Benutzeroberfläche von VirtualBox}
   \end{center}
 \end{figure}
@@ -165,8 +165,8 @@ Eine relativ neue Entwicklung innerhalb der Systemvirtualisierung mittels Hyperv
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/comparison-vm-unikernel.png}
-    \caption{Vergleich klassische VM und Unikernel \citep[Abb. 1]{MadMorAnd13}}
+    \includegraphics[width=12cm]{bilder/comparison-vm-unikernel.png}
+    \caption{Vergleich normale VM / Unikernel \citep[Abb. 1]{MadMorAnd13}}
   \end{center}
 \end{figure}
 
@@ -180,7 +180,7 @@ Ein ganz anderer Ansatz als die Systemvirtualisierung mittels Hypervisor ist die
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/lxc-architecture.jpg}
+    \includegraphics[width=10cm]{bilder/lxc-architecture.jpg}
     \caption{OS-Container \citep{Francis2014}}
   \end{center}
 \end{figure}
@@ -199,7 +199,7 @@ Docker bietet zusätzlich ein weiteres nützliches Feature, sogenannte Union-Fil
 
 \begin{figure}[!ht]
   \begin{center}
-    \includegraphics[width=8cm]{bilder/UnionFilesystem.png}
+    \includegraphics[width=10cm]{bilder/UnionFilesystem.png}
     \caption{Union Filesystem}
     \label{Union Filesystem}
   \end{center}
@@ -213,7 +213,7 @@ In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Dis
 
 \begin{figure}[!ht]
   \begin{center}
-    \resizebox{14cm}{!} {
+    \resizebox{15cm}{!} {
       \begin{tabular}{|l|l|l|l|l|l|l|}
       \hline
       {} & \multicolumn{5}{|l|}{Hypervisor} & OS-Container \\
@@ -258,9 +258,9 @@ In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Dis
 
 Die vorstehende Tabelle fasst noch einmal alle zuvor aufgeführten Virtualisierungsansätze zusammen. Deren unterschiedliche Vor- und Nachteile sollen nun vor allem auch in Hinblick auf die Problemstellung noch einmal vergleichend diskutiert werden.
 
-Bei der Installation der verschiedenen Ansätze kann man grundsätzlich zwischen denen unterscheiden, die sich als natives Betriebssystem auf nakter Hardware installieren lassen und denen, die man als zusätzliches Anwendungsprogramm installiert. Grundsätzlich ist die Installation als Anwendungsprogramm einfacher und erfordert zum Beispiel weniger Zugriffsrechte. So lassen sich entsprechende Virtualisierungslösungen zum Beispiel auch auf dem Laptop eines Entwicklers installieren, ohne etwas an seiner grundsätzlichen Entwicklungsumgebung zu ändern. Dies würde zum Beispiel auch für die Entwickler der Pixelhouse GmbH gelten, die überwiegend auf MacOS X arbeiten. Für die eigentliche Problemstellung, nämlich die Optimierung der Testumgebungen, ist diese Möglichkeit aber nicht zwingend notwendig. So könnte rein zum Bereitstellen von Testumgebungen auch ein Bare Metal Hypervisor eingesetzt werden.
+Bei der Installation der verschiedenen Ansätze kann man grundsätzlich zwischen denen unterscheiden, die sich als natives Betriebssystem auf nackter Hardware installieren lassen und denen, die man als zusätzliches Anwendungsprogramm installiert. Grundsätzlich ist die Installation als Anwendungsprogramm einfacher und erfordert zum Beispiel weniger Zugriffsrechte. So lassen sich entsprechende Virtualisierungslösungen zum Beispiel auch auf dem Laptop eines Entwicklers installieren, ohne etwas an seiner grundsätzlichen Entwicklungsumgebung zu ändern. Dies würde zum Beispiel auch für die Entwickler der Pixelhouse GmbH gelten, die überwiegend auf MacOS X arbeiten. Für die eigentliche Problemstellung, nämlich die Optimierung der Testumgebungen, ist diese Möglichkeit aber nicht zwingend notwendig. So könnte rein zum Bereitstellen von Testumgebungen auch ein Bare Metal Hypervisor eingesetzt werden.
 
-Bis auf das Produkt VMWare vSphere handelt es sich bei allen Ansätzen um kostenlose Open-Source-Produkte. Dafür bietet WMWare vSphere mit der Live-Migration von laufenden virtuellen Maschinen zwischen verschiedenen Hosts, vMotion genannt, aber auch eine sehr mächtige Funktion, die sich gerade für große und flexible Virtualisierungsszenarien anbietet. Zwar stellt das Anfallen von Lizenzkosten für unsere Problemstellung und die Pixelhouse GmbH kein grundsätzliches Hinderniss dar. Allerdings ist beim Bereitstellen von Testumgebungen, die nach der Ausführung der Tests ohnehin wieder zerstört werden, die Live-Migration von virtuellen Maschinen keine notwendige Funktionalität.
+Bis auf das Produkt VMWare vSphere handelt es sich bei allen Ansätzen um kostenlose Open-Source-Produkte. Dafür bietet VMWare vSphere mit der Live-Migration von laufenden virtuellen Maschinen zwischen verschiedenen Hosts, vMotion genannt, aber auch eine sehr mächtige Funktion, die sich gerade für große und flexible Virtualisierungsszenarien anbietet. Zwar stellt das Anfallen von Lizenzkosten für unsere Problemstellung und die Pixelhouse GmbH kein grundsätzliches Hinderniss dar. Allerdings ist beim Bereitstellen von Testumgebungen, die nach der Ausführung der Tests ohnehin wieder zerstört werden, die Live-Migration von virtuellen Maschinen keine notwendige Funktionalität.
 
 Grundsätzlich lassen sich mit den meisten Ansätzen verschiedene Betriebssysteme (zum Beispiel Windows und Linux) virtualisieren. Ausnahmen stellen hier lediglich MirageOS und Docker dar, da MirageOS-Unikernels kein Betriebssystem beinhalten und Docker als OS-Container-Lösung auf Basis des Linux-Kernel lediglich Anwendungen virtualisiert und kein Betriebssystem. Für unsere Problemstellung ist die Virtualisierung von Windows Betriebssystemen allerdings weniger interessant. Wie die meisten Firmen, die eine Internetplattform betreiben, verwendet die Pixelhouse GmbH in ihrer Produktivumgebung lediglich Linux-Betriebssysteme. Bis auf MirageOS kommen hier also alle Lösungen in Frage.
 
