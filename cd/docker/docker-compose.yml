@@ -1,0 +1,21 @@
+loadbalancer:
+    build: ./loadbalancer
+    ports: [80]
+    links: [app]
+
+app:
+    build: ./appserver
+    expose: [80]
+    links: [database, cache, search]
+
+database:
+    build: ./database
+    expose: [3306]
+
+cache:
+    build: ./cache
+    expose: [6379]
+
+search:
+    build: ./search
+    expose: [8080]
