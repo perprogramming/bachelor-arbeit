@@ -1,0 +1,1298 @@
+Apr 18 01:21:26 Step 0 : FROM ubuntu:14.04
+Apr 18 01:21:26  ---> d0955f21bf24
+Apr 18 01:21:26 Step 1 : ADD contents /tmp/contents
+Apr 18 01:21:26  ---> 7d627a2573a5
+Apr 18 01:21:26 Removing intermediate container 2254992011d6
+Apr 18 01:21:26 Step 2 : RUN chmod a+x /tmp/contents/install.sh
+Apr 18 01:21:26  ---> Running in 25247a64ff61
+Apr 18 01:21:26  ---> 27e0d2558a1d
+Apr 18 01:21:26 Removing intermediate container 25247a64ff61
+Apr 18 01:21:26 Step 3 : RUN /tmp/contents/install.sh
+Apr 18 01:21:27  ---> Running in f5eff194b8ad
+Apr 18 01:21:28 Ign http://archive.ubuntu.com trusty InRelease
+Apr 18 01:21:28 Ign http://archive.ubuntu.com trusty-updates InRelease
+Apr 18 01:21:28 Ign http://archive.ubuntu.com trusty-security InRelease
+Apr 18 01:21:28 Hit http://archive.ubuntu.com trusty Release.gpg
+Apr 18 01:21:28 Get:1 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Apr 18 01:21:28 Get:2 http://archive.ubuntu.com trusty-security Release.gpg [933 B]
+Apr 18 01:21:28 Hit http://archive.ubuntu.com trusty Release
+Apr 18 01:21:28 Get:3 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Apr 18 01:21:28 Get:4 http://archive.ubuntu.com trusty-security Release [63.5 kB]
+Apr 18 01:21:28 Get:5 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+Apr 18 01:21:29 Get:6 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+Apr 18 01:21:29 Get:7 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Apr 18 01:21:32 Get:8 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Apr 18 01:21:32 Get:9 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Apr 18 01:21:32 Get:10 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Apr 18 01:21:34 Get:11 http://archive.ubuntu.com trusty-updates/main Sources [248 kB]
+Apr 18 01:21:34 Get:12 http://archive.ubuntu.com trusty-updates/restricted Sources [2310 B]
+Apr 18 01:21:34 Get:13 http://archive.ubuntu.com trusty-updates/universe Sources [139 kB]
+Apr 18 01:21:34 Get:14 http://archive.ubuntu.com trusty-updates/main amd64 Packages [636 kB]
+Apr 18 01:21:35 Get:15 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.1 kB]
+Apr 18 01:21:35 Get:16 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [351 kB]
+Apr 18 01:21:35 Get:17 http://archive.ubuntu.com trusty-security/main Sources [97.2 kB]
+Apr 18 01:21:35 Get:18 http://archive.ubuntu.com trusty-security/restricted Sources [1874 B]
+Apr 18 01:21:35 Get:19 http://archive.ubuntu.com trusty-security/universe Sources [22.5 kB]
+Apr 18 01:21:36 Get:20 http://archive.ubuntu.com trusty-security/main amd64 Packages [329 kB]
+Apr 18 01:21:36 Get:21 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [14.8 kB]
+Apr 18 01:21:36 Get:22 http://archive.ubuntu.com trusty-security/universe amd64 Packages [123 kB]
+Apr 18 01:21:36 Fetched 20.7 MB in 8s (2501 kB/s)
+Apr 18 01:21:37 Reading package lists...
+Apr 18 01:21:38 Reading package lists...
+Apr 18 01:21:39 Building dependency tree...
+Apr 18 01:21:39 Reading state information...
+Apr 18 01:21:39 The following extra packages will be installed:
+Apr 18 01:21:39   libjemalloc1 redis-tools
+Apr 18 01:21:39 The following NEW packages will be installed:
+Apr 18 01:21:39   libjemalloc1 redis-server redis-tools
+Apr 18 01:21:39 0 upgraded, 3 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:21:39 Need to get 410 kB of archives.
+Apr 18 01:21:39 After this operation, 1272 kB of additional disk space will be used.
+Apr 18 01:21:39 Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB]
+Apr 18 01:21:40 Get:2 http://archive.ubuntu.com/ubuntu/ trusty/universe redis-tools amd64 2:2.8.4-2 [65.7 kB]
+Apr 18 01:21:40 Get:3 http://archive.ubuntu.com/ubuntu/ trusty/universe redis-server amd64 2:2.8.4-2 [267 kB]
+Apr 18 01:21:40 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:21:40 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:21:40 debconf: falling back to frontend: Readline
+Apr 18 01:21:40 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:21:40 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:21:40 debconf: falling back to frontend: Teletype
+Apr 18 01:21:40 [0m[91mdpkg-preconfigure: unable to re-open stdin: 
+Apr 18 01:21:40 [0mFetched 410 kB in 0s (735 kB/s)
+Apr 18 01:21:40 Selecting previously unselected package libjemalloc1.
+Apr 18 01:21:40 (Reading database ... 11527 files and directories currently installed.)
+Apr 18 01:21:40 Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Apr 18 01:21:40 Unpacking libjemalloc1 (3.5.1-2) ...
+Apr 18 01:21:40 Selecting previously unselected package redis-tools.
+Apr 18 01:21:40 Preparing to unpack .../redis-tools_2%3a2.8.4-2_amd64.deb ...
+Apr 18 01:21:40 Unpacking redis-tools (2:2.8.4-2) ...
+Apr 18 01:21:40 Selecting previously unselected package redis-server.
+Apr 18 01:21:40 Preparing to unpack .../redis-server_2%3a2.8.4-2_amd64.deb ...
+Apr 18 01:21:41 Unpacking redis-server (2:2.8.4-2) ...
+Apr 18 01:21:41 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:21:41 Setting up libjemalloc1 (3.5.1-2) ...
+Apr 18 01:21:41 Setting up redis-tools (2:2.8.4-2) ...
+Apr 18 01:21:41 Setting up redis-server (2:2.8.4-2) ...
+Apr 18 01:21:41 [91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:21:41 [0mProcessing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:21:41 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:21:41  ---> 0e3b456f484e
+Apr 18 01:21:41 Removing intermediate container f5eff194b8ad
+Apr 18 01:21:41 Step 4 : CMD redis-server
+Apr 18 01:21:42  ---> Running in 2c43fc5545f9
+Apr 18 01:21:42  ---> 70eaf43086b8
+Apr 18 01:21:42 Removing intermediate container 2c43fc5545f9
+Apr 18 01:21:42 Successfully built 70eaf43086b8
+Apr 18 01:21:42 Step 0 : FROM ubuntu:14.04
+Apr 18 01:21:42  ---> d0955f21bf24
+Apr 18 01:21:42 Step 1 : ADD contents /tmp/contents
+Apr 18 01:21:42  ---> 09124442f458
+Apr 18 01:21:42 Removing intermediate container be7eb2888291
+Apr 18 01:21:42 Step 2 : RUN chmod a+x /tmp/contents/install.sh
+Apr 18 01:21:42  ---> Running in 5928523ff363
+Apr 18 01:21:42  ---> 08c69b2af320
+Apr 18 01:21:42 Removing intermediate container 5928523ff363
+Apr 18 01:21:42 Step 3 : RUN /tmp/contents/install.sh
+Apr 18 01:21:43  ---> Running in 3f68e8e042cc
+Apr 18 01:21:44 Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.9MbdmmqTjw --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
+Apr 18 01:21:44 [91mgpg: requesting key EEA14886 from hkp server keyserver.ubuntu.com
+Apr 18 01:21:44 [0m[91mgpg: key EEA14886: public key "Launchpad VLC" imported
+Apr 18 01:21:44 gpg: Total number processed: 1
+Apr 18 01:21:44 gpg:               imported: 1  (RSA: 1)
+Apr 18 01:21:45 [0mIgn http://ppa.launchpad.net trusty InRelease
+Apr 18 01:21:45 Get:1 http://ppa.launchpad.net trusty Release.gpg [316 B]
+Apr 18 01:21:45 Get:2 http://ppa.launchpad.net trusty Release [15.1 kB]
+Apr 18 01:21:46 Ign http://archive.ubuntu.com trusty InRelease
+Apr 18 01:21:46 Ign http://archive.ubuntu.com trusty-updates InRelease
+Apr 18 01:21:46 Ign http://archive.ubuntu.com trusty-security InRelease
+Apr 18 01:21:46 Get:3 http://ppa.launchpad.net trusty/main Sources [1396 B]
+Apr 18 01:21:46 Hit http://archive.ubuntu.com trusty Release.gpg
+Apr 18 01:21:46 Get:4 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Apr 18 01:21:46 Get:5 http://ppa.launchpad.net trusty/main amd64 Packages [3077 B]
+Apr 18 01:21:46 Get:6 http://archive.ubuntu.com trusty-security Release.gpg [933 B]
+Apr 18 01:21:46 Hit http://archive.ubuntu.com trusty Release
+Apr 18 01:21:46 Get:7 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Apr 18 01:21:47 Get:8 http://archive.ubuntu.com trusty-security Release [63.5 kB]
+Apr 18 01:21:47 Get:9 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+Apr 18 01:21:49 Get:10 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+Apr 18 01:21:49 Get:11 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Apr 18 01:21:53 Get:12 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Apr 18 01:21:56 Get:13 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Apr 18 01:21:56 Get:14 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Apr 18 01:22:00 Get:15 http://archive.ubuntu.com trusty-updates/main Sources [248 kB]
+Apr 18 01:22:01 Get:16 http://archive.ubuntu.com trusty-updates/restricted Sources [2310 B]
+Apr 18 01:22:01 Get:17 http://archive.ubuntu.com trusty-updates/universe Sources [139 kB]
+Apr 18 01:22:01 Get:18 http://archive.ubuntu.com trusty-updates/main amd64 Packages [636 kB]
+Apr 18 01:22:04 Get:19 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.1 kB]
+Apr 18 01:22:04 Get:20 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [351 kB]
+Apr 18 01:22:04 Get:21 http://archive.ubuntu.com trusty-security/main Sources [97.2 kB]
+Apr 18 01:22:05 Get:22 http://archive.ubuntu.com trusty-security/restricted Sources [1874 B]
+Apr 18 01:22:05 Get:23 http://archive.ubuntu.com trusty-security/universe Sources [22.5 kB]
+Apr 18 01:22:05 Get:24 http://archive.ubuntu.com trusty-security/main amd64 Packages [329 kB]
+Apr 18 01:22:05 Get:25 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [14.8 kB]
+Apr 18 01:22:05 Get:26 http://archive.ubuntu.com trusty-security/universe amd64 Packages [123 kB]
+Apr 18 01:22:06 Fetched 20.7 MB in 20s (1011 kB/s)
+Apr 18 01:22:07 Reading package lists...
+Apr 18 01:22:08 Reading package lists...
+Apr 18 01:22:09 Building dependency tree...
+Apr 18 01:22:09 Reading state information...
+Apr 18 01:22:09 The following extra packages will be installed:
+Apr 18 01:22:09   binutils java-common libidn11 wget
+Apr 18 01:22:09 Suggested packages:
+Apr 18 01:22:09   binutils-doc default-jre equivs binfmt-support visualvm ttf-baekmuk
+Apr 18 01:22:09   ttf-unfonts ttf-unfonts-core ttf-kochi-gothic ttf-sazanami-gothic
+Apr 18 01:22:09   ttf-kochi-mincho ttf-sazanami-mincho ttf-arphic-uming firefox firefox-2
+Apr 18 01:22:09   iceweasel mozilla-firefox iceape-browser mozilla-browser epiphany-gecko
+Apr 18 01:22:09   epiphany-webkit epiphany-browser galeon midbrowser moblin-web-browser
+Apr 18 01:22:09   xulrunner xulrunner-1.9 konqueror chromium-browser midori google-chrome
+Apr 18 01:22:09 Recommended packages:
+Apr 18 01:22:09   gsfonts-x11 ca-certificates
+Apr 18 01:22:09 The following NEW packages will be installed:
+Apr 18 01:22:09   binutils java-common libidn11 oracle-java7-installer
+Apr 18 01:22:09   oracle-java7-set-default wget
+Apr 18 01:22:09 0 upgraded, 6 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:22:09 Need to get 2595 kB of archives.
+Apr 18 01:22:09 After this operation, 13.3 MB of additional disk space will be used.
+Apr 18 01:22:09 Get:1 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java7-installer all 7u80+7u60arm-0~webupd8~0 [22.0 kB]
+Apr 18 01:22:09 Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libidn11 amd64 1.28-1ubuntu2 [93.0 kB]
+Apr 18 01:22:09 Get:3 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java7-set-default all 7u80+7u60arm-0~webupd8~0 [4708 B]
+Apr 18 01:22:09 Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main wget amd64 1.15-1ubuntu1.14.04.1 [269 kB]
+Apr 18 01:22:10 Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu3.1 [2076 kB]
+Apr 18 01:22:11 Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main java-common all 0.51 [130 kB]
+Apr 18 01:22:11 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:22:11 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:22:11 debconf: falling back to frontend: Readline
+Apr 18 01:22:11 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:22:11 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:22:11 debconf: falling back to frontend: Teletype
+Apr 18 01:22:11 [0m[91mdpkg-preconfigure: unable to re-open stdin: 
+Apr 18 01:22:11 [0mFetched 2595 kB in 1s (1628 kB/s)
+Apr 18 01:22:11 Selecting previously unselected package libidn11:amd64.
+Apr 18 01:22:11 (Reading database ... 11527 files and directories currently installed.)
+Apr 18 01:22:11 Preparing to unpack .../libidn11_1.28-1ubuntu2_amd64.deb ...
+Apr 18 01:22:11 Unpacking libidn11:amd64 (1.28-1ubuntu2) ...
+Apr 18 01:22:11 Selecting previously unselected package wget.
+Apr 18 01:22:11 Preparing to unpack .../wget_1.15-1ubuntu1.14.04.1_amd64.deb ...
+Apr 18 01:22:11 Unpacking wget (1.15-1ubuntu1.14.04.1) ...
+Apr 18 01:22:11 Selecting previously unselected package binutils.
+Apr 18 01:22:11 Preparing to unpack .../binutils_2.24-5ubuntu3.1_amd64.deb ...
+Apr 18 01:22:11 Unpacking binutils (2.24-5ubuntu3.1) ...
+Apr 18 01:22:12 Selecting previously unselected package java-common.
+Apr 18 01:22:12 Preparing to unpack .../java-common_0.51_all.deb ...
+Apr 18 01:22:12 Unpacking java-common (0.51) ...
+Apr 18 01:22:12 Setting up libidn11:amd64 (1.28-1ubuntu2) ...
+Apr 18 01:22:12 Setting up wget (1.15-1ubuntu1.14.04.1) ...
+Apr 18 01:22:12 Setting up binutils (2.24-5ubuntu3.1) ...
+Apr 18 01:22:12 Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:22:12 Selecting previously unselected package oracle-java7-installer.
+Apr 18 01:22:12 (Reading database ... 11781 files and directories currently installed.)
+Apr 18 01:22:12 Preparing to unpack .../oracle-java7-installer_7u80+7u60arm-0~webupd8~0_all.deb ...
+Apr 18 01:22:12 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:22:12 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:22:12 debconf: falling back to frontend: Readline
+Apr 18 01:22:12 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:22:12 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:22:12 debconf: falling back to frontend: Teletype
+Apr 18 01:22:12 [0m[91moracle-license-v1-1 license has already been accepted
+Apr 18 01:22:12 [0mUnpacking oracle-java7-installer (7u80+7u60arm-0~webupd8~0) ...
+Apr 18 01:22:12 Selecting previously unselected package oracle-java7-set-default.
+Apr 18 01:22:12 Preparing to unpack .../oracle-java7-set-default_7u80+7u60arm-0~webupd8~0_all.deb ...
+Apr 18 01:22:12 Unpacking oracle-java7-set-default (7u80+7u60arm-0~webupd8~0) ...
+Apr 18 01:22:12 Processing triggers for mime-support (3.54ubuntu1.1) ...
+Apr 18 01:22:12 Setting up java-common (0.51) ...
+Apr 18 01:22:12 Setting up oracle-java7-installer (7u80+7u60arm-0~webupd8~0) ...
+Apr 18 01:22:12 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:22:12 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:22:12 debconf: falling back to frontend: Readline
+Apr 18 01:22:12 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:22:12 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:22:12 debconf: falling back to frontend: Teletype
+Apr 18 01:22:13 [0m[91mDownloading Oracle Java 7...
+Apr 18 01:22:13 [0m[91m--2015-04-17 23:22:13--  http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz
+Apr 18 01:22:13 [0m[91mResolving download.oracle.com (download.oracle.com)... [0m[91m88.221.92.185, 88.221.92.167
+Apr 18 01:22:13 [0m[91mConnecting to download.oracle.com (download.oracle.com)|88.221.92.185|:80... [0m[91mconnected.
+Apr 18 01:22:13 [0m[91mHTTP request sent, awaiting response... [0m[91m302 Moved Temporarily
+Apr 18 01:22:13 [0m[91mLocation: https://edelivery.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz [following]
+Apr 18 01:22:13 --2015-04-17 23:22:13--  https://edelivery.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz
+Apr 18 01:22:13 [0m[91mResolving edelivery.oracle.com (edelivery.oracle.com)... [0m[91m2.20.118.140
+Apr 18 01:22:13 Connecting to edelivery.oracle.com (edelivery.oracle.com)|2.20.118.140|:443... [0m[91mconnected.
+Apr 18 01:22:13 [0m[91mWARNING: cannot verify edelivery.oracle.com's certificate, issued by '/C=US/O=GeoTrust, Inc./CN=GeoTrust SSL CA':
+Apr 18 01:22:13   Unable to locally verify the issuer's authority.
+Apr 18 01:22:13 [0m[91mHTTP request sent, awaiting response... [0m[91m302 Moved Temporarily
+Apr 18 01:22:13 [0m[91mLocation: http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz?AuthParam=1429313053_04177b53aeab28a659edbbed63b61144 [following]
+Apr 18 01:22:13 --2015-04-17 23:22:13--  http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz?AuthParam=1429313053_04177b53aeab28a659edbbed63b61144
+Apr 18 01:22:13 Connecting to download.oracle.com (download.oracle.com)|88.221.92.185|:80... [0m[91mconnected.
+Apr 18 01:22:13 HTTP request sent, awaiting response... [0m[91m200 OK
+Apr 18 01:22:13 [0m[91mLength: 153530841 (146M) [application/x-gzip]
+Apr 18 01:22:13 Saving to: 'jdk-7u80-linux-x64.tar.gz'
+Apr 18 01:22:13 [0m[91m
+Apr 18 01:22:14      0K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.  2% 2.34M 61s[0m[91m
+Apr 18 01:22:16   3072K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.  4% 1.72M 71s[0m[91m
+Apr 18 01:22:18   6144K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.  6% 1.58M 75s[0m[91m
+Apr 18 01:22:20   9216K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.  8% 1.60M 76s[0m[91m
+Apr 18 01:22:22  12288K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 10% 1.52M 77s[0m[91m
+Apr 18 01:22:24  15360K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 12% 1.71M 75s[0m[91m
+Apr 18 01:22:25  18432K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 14% 1.70M 73s[0m[91m
+Apr 18 01:22:27  21504K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 16% 1.69M 72s[0m[91m
+Apr 18 01:22:29  24576K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 18% 1.85M 69s[0m[91m
+Apr 18 01:22:31  27648K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 20% 1.63M 68s[0m[91m
+Apr 18 01:22:33  30720K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 22% 1.38M 68s[0m[91m
+Apr 18 01:22:35  33792K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 24% 1.72M 66s[0m[91m
+Apr 18 01:22:37  36864K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 26% 1.50M 65s[0m[91m
+Apr 18 01:22:39  39936K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 28% 1.33M 64s[0m[91m
+Apr 18 01:22:41  43008K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 30% 1.74M 62s[0m[91m
+Apr 18 01:22:43  46080K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 32% 1.38M 61s[0m[91m
+Apr 18 01:22:45  49152K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 34% 1.43M 59s[0m[91m
+Apr 18 01:22:47  52224K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 36% 1.55M 58s[0m[91m
+Apr 18 01:22:49  55296K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 38% 1.46M 56s[0m[91m
+Apr 18 01:22:51  58368K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 40% 1.40M 54s[0m[91m
+Apr 18 01:22:53  61440K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 43% 1.21M 53s[0m[91m
+Apr 18 01:22:55  64512K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m 45% 1.88M 51s[0m[91m
+Apr 18 01:22:56  67584K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 47% 2.22M 49s[0m[91m
+Apr 18 01:22:58  70656K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 49% 2.33M 46s[0m[91m
+Apr 18 01:22:59  73728K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 51% 2.48M 44s[0m[91m
+Apr 18 01:23:00  76800K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 53% 2.17M 41s[0m[91m
+Apr 18 01:23:02  79872K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 55% 2.14M 39s[0m[91m
+Apr 18 01:23:03  82944K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 57% 2.49M 37s[0m[91m
+Apr 18 01:23:04  86016K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 59% 2.03M 35s[0m[91m
+Apr 18 01:23:06  89088K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 61% 2.32M 33s[0m[91m
+Apr 18 01:23:07  92160K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 63% 2.13M 31s[0m[91m
+Apr 18 01:23:09  95232K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m 65% 1.78M 29s[0m[91m
+Apr 18 01:23:10  98304K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 67% 2.37M 27s[0m[91m
+Apr 18 01:23:11 101376K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 69% 2.42M 25s[0m[91m
+Apr 18 01:23:13 104448K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 71% 2.18M 23s[0m[91m
+Apr 18 01:23:14 107520K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 73% 2.73M 22s[0m[91m
+Apr 18 01:23:16 110592K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 75% 1.55M 20s[0m[91m
+Apr 18 01:23:18 113664K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 77% 1.45M 18s[0m[91m
+Apr 18 01:23:19 116736K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 79% 2.08M 17s[0m[91m
+Apr 18 01:23:21 119808K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 81% 1.82M 15s[0m[91m
+Apr 18 01:23:23 122880K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 84% 1.69M 13s[0m[91m
+Apr 18 01:23:24 125952K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 86% 1.99M 12s[0m[91m
+Apr 18 01:23:26 129024K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 88% 2.00M 10s[0m[91m
+Apr 18 01:23:26 132096K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 90% 4.90M 8s[0m[91m
+Apr 18 01:23:27 135168K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m [0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 92% 3.83M 6s[0m[91m
+Apr 18 01:23:28 138240K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 94% 4.96M 5s[0m[91m
+Apr 18 01:23:28 141312K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 96% 6.11M 3s[0m[91m
+Apr 18 01:23:29 144384K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m. 98% 5.22M 1s[0m[91m
+Apr 18 01:23:29 147456K .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m .[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m.[0m[91m           100% 5.68M=76s
+Apr 18 01:23:29 
+Apr 18 01:23:29 [0m[91m2015-04-17 23:23:30 (1.93 MB/s) - 'jdk-7u80-linux-x64.tar.gz' saved [153530841/153530841]
+Apr 18 01:23:29 
+Apr 18 01:23:29 [0m[91mDownload done.
+Apr 18 01:23:29 Removing outdated cached downloads...
+Apr 18 01:23:34 [0m[91mupdate-alternatives: error: no alternatives for java
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/ControlPanel to provide /usr/bin/ControlPanel (ControlPanel) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/java to provide /usr/bin/java (java) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/java_vm to provide /usr/bin/java_vm (java_vm) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/javaws to provide /usr/bin/javaws (javaws) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/jcontrol to provide /usr/bin/jcontrol (jcontrol) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: [0m[91musing /usr/lib/jvm/java-7-oracle/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/appletviewer to provide /usr/bin/appletviewer (appletviewer) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/extcheck to provide /usr/bin/extcheck (extcheck) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/idlj to provide /usr/bin/idlj (idlj) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jar to provide /usr/bin/jar (jar) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javac to provide /usr/bin/javac (javac) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javafxpackager to provide /usr/bin/javafxpackager (javafxpackager) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javah to provide /usr/bin/javah (javah) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javap to provide /usr/bin/javap (javap) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jhat to provide /usr/bin/jhat (jhat) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jmc to provide /usr/bin/jmc (jmc) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jps to provide /usr/bin/jps (jps) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jsadebugd to provide /usr/bin/jsadebugd (jsadebugd) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jvisualvm to provide /usr/bin/jvisualvm (jvisualvm) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/native2ascii to provide /usr/bin/native2ascii (native2ascii) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/schemagen to provide /usr/bin/schemagen (schemagen) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/wsgen to provide /usr/bin/wsgen (wsgen) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/wsimport to provide /usr/bin/wsimport (wsimport) in auto mode
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/bin/xjc to provide /usr/bin/xjc (xjc) in auto mode
+Apr 18 01:23:34 [0m[91mOracle JDK 7 installed
+Apr 18 01:23:34 [0m[91mupdate-alternatives: using /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnpjp2.so to provide /usr/lib/mozilla/plugins/libjavaplugin.so (mozilla-javaplugin.so) in auto mode
+Apr 18 01:23:34 [0m[91mOracle JRE 7 browser plugin installed
+Apr 18 01:23:34 [0mSetting up oracle-java7-set-default (7u80+7u60arm-0~webupd8~0) ...
+Apr 18 01:23:36 Reading package lists...
+Apr 18 01:23:36 Building dependency tree...
+Apr 18 01:23:36 Reading state information...
+Apr 18 01:23:36 wget is already the newest version.
+Apr 18 01:23:36 wget set to manually installed.
+Apr 18 01:23:36 The following extra packages will be installed:
+Apr 18 01:23:36   libxerces2-java libxml-commons-external-java libxml-commons-resolver1.1-java
+Apr 18 01:23:36   openssl
+Apr 18 01:23:36 Suggested packages:
+Apr 18 01:23:36   ant-doc ant-gcj libcommons-httpclient-java libbcel-java ivy
+Apr 18 01:23:36   libxerces2-java-doc libxerces2-java-gcj libxml-commons-resolver1.1-java-doc
+Apr 18 01:23:36 Recommended packages:
+Apr 18 01:23:36   ant-optional
+Apr 18 01:23:36 The following NEW packages will be installed:
+Apr 18 01:23:36   ant ant-contrib ca-certificates libxerces2-java libxml-commons-external-java
+Apr 18 01:23:36   libxml-commons-resolver1.1-java openssl pwgen
+Apr 18 01:23:37 0 upgraded, 8 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:23:37 Need to get 4518 kB of archives.
+Apr 18 01:23:37 After this operation, 6370 kB of additional disk space will be used.
+Apr 18 01:23:37 Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.11 [488 kB]
+Apr 18 01:23:39 Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main ca-certificates all 20141019ubuntu0.14.04.1 [189 kB]
+Apr 18 01:23:39 Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libxml-commons-resolver1.1-java all 1.2-7build1 [91.6 kB]
+Apr 18 01:23:39 Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libxml-commons-external-java all 1.4.01-2build1 [245 kB]
+Apr 18 01:23:40 Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libxerces2-java all 2.11.0-7 [1362 kB]
+Apr 18 01:23:41 Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main ant all 1.9.3-2build1 [1869 kB]
+Apr 18 01:23:43 Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main pwgen amd64 2.06-1ubuntu4 [17.3 kB]
+Apr 18 01:23:43 Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main ant-contrib all 1.0~b3+svn177-6 [255 kB]
+Apr 18 01:23:46 Preconfiguring packages ...
+Apr 18 01:23:46 Fetched 4518 kB in 5s (754 kB/s)
+Apr 18 01:23:46 Selecting previously unselected package openssl.
+Apr 18 01:23:46 (Reading database ... 11815 files and directories currently installed.)
+Apr 18 01:23:46 Preparing to unpack .../openssl_1.0.1f-1ubuntu2.11_amd64.deb ...
+Apr 18 01:23:46 Unpacking openssl (1.0.1f-1ubuntu2.11) ...
+Apr 18 01:23:46 Selecting previously unselected package ca-certificates.
+Apr 18 01:23:46 Preparing to unpack .../ca-certificates_20141019ubuntu0.14.04.1_all.deb ...
+Apr 18 01:23:46 Unpacking ca-certificates (20141019ubuntu0.14.04.1) ...
+Apr 18 01:23:46 Selecting previously unselected package libxml-commons-resolver1.1-java.
+Apr 18 01:23:46 Preparing to unpack .../libxml-commons-resolver1.1-java_1.2-7build1_all.deb ...
+Apr 18 01:23:46 Unpacking libxml-commons-resolver1.1-java (1.2-7build1) ...
+Apr 18 01:23:46 Selecting previously unselected package libxml-commons-external-java.
+Apr 18 01:23:46 Preparing to unpack .../libxml-commons-external-java_1.4.01-2build1_all.deb ...
+Apr 18 01:23:46 Unpacking libxml-commons-external-java (1.4.01-2build1) ...
+Apr 18 01:23:46 Selecting previously unselected package libxerces2-java.
+Apr 18 01:23:46 Preparing to unpack .../libxerces2-java_2.11.0-7_all.deb ...
+Apr 18 01:23:46 Unpacking libxerces2-java (2.11.0-7) ...
+Apr 18 01:23:46 Selecting previously unselected package ant.
+Apr 18 01:23:46 Preparing to unpack .../ant_1.9.3-2build1_all.deb ...
+Apr 18 01:23:46 Unpacking ant (1.9.3-2build1) ...
+Apr 18 01:23:46 Selecting previously unselected package pwgen.
+Apr 18 01:23:46 Preparing to unpack .../pwgen_2.06-1ubuntu4_amd64.deb ...
+Apr 18 01:23:46 Unpacking pwgen (2.06-1ubuntu4) ...
+Apr 18 01:23:46 Selecting previously unselected package ant-contrib.
+Apr 18 01:23:46 Preparing to unpack .../ant-contrib_1.0~b3+svn177-6_all.deb ...
+Apr 18 01:23:46 Unpacking ant-contrib (1.0~b3+svn177-6) ...
+Apr 18 01:23:46 Setting up openssl (1.0.1f-1ubuntu2.11) ...
+Apr 18 01:23:46 Setting up ca-certificates (20141019ubuntu0.14.04.1) ...
+Apr 18 01:23:47 Setting up libxml-commons-resolver1.1-java (1.2-7build1) ...
+Apr 18 01:23:47 Setting up libxml-commons-external-java (1.4.01-2build1) ...
+Apr 18 01:23:47 Setting up libxerces2-java (2.11.0-7) ...
+Apr 18 01:23:47 Setting up ant (1.9.3-2build1) ...
+Apr 18 01:23:47 Setting up pwgen (2.06-1ubuntu4) ...
+Apr 18 01:23:47 Setting up ant-contrib (1.0~b3+svn177-6) ...
+Apr 18 01:23:47 Processing triggers for ca-certificates (20141019ubuntu0.14.04.1) ...
+Apr 18 01:23:49 Updating certificates in /etc/ssl/certs... 173 added, 0 removed; done.
+Apr 18 01:23:49 Running hooks in /etc/ca-certificates/update.d....done.
+Apr 18 01:24:29  ---> c45454f5638d
+Apr 18 01:24:29 Removing intermediate container 3f68e8e042cc
+Apr 18 01:24:29 Step 4 : CMD /var/lib/tomcat/bin/catalina.sh run
+Apr 18 01:24:29  ---> Running in 29a6ca712714
+Apr 18 01:24:29  ---> 9c1686c26807
+Apr 18 01:24:29 Removing intermediate container 29a6ca712714
+Apr 18 01:24:29 Successfully built 9c1686c26807
+Apr 18 01:24:29 Step 0 : FROM ubuntu:14.04
+Apr 18 01:24:29  ---> d0955f21bf24
+Apr 18 01:24:29 Step 1 : ADD contents /tmp/contents
+Apr 18 01:24:29  ---> 57326453d84d
+Apr 18 01:24:29 Removing intermediate container b3b7c9814352
+Apr 18 01:24:29 Step 2 : RUN chmod a+x /tmp/contents/install.sh
+Apr 18 01:24:30  ---> Running in 2cc9f287d9b7
+Apr 18 01:24:30  ---> 1127b8145a94
+Apr 18 01:24:30 Removing intermediate container 2cc9f287d9b7
+Apr 18 01:24:30 Step 3 : RUN /tmp/contents/install.sh
+Apr 18 01:24:30  ---> Running in 631b6e4cff7b
+Apr 18 01:24:32 Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.vNex5ymJuo --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver pgp.mit.edu --recv-keys 199369E5404BD5FC7D2FE43BCBCB082A1BB943DB
+Apr 18 01:24:32 [91mgpg: requesting key 1BB943DB from hkp server pgp.mit.edu
+Apr 18 01:24:32 [0m[91mgpg: key 1BB943DB: public key "MariaDB Package Signing Key <package-signing-key@mariadb.org>" imported
+Apr 18 01:24:32 gpg: Total number processed: 1
+Apr 18 01:24:32 gpg:               imported: 1
+Apr 18 01:24:33 [0mIgn http://archive.ubuntu.com trusty InRelease
+Apr 18 01:24:33 Ign http://archive.ubuntu.com trusty-updates InRelease
+Apr 18 01:24:33 Ign http://archive.ubuntu.com trusty-security InRelease
+Apr 18 01:24:33 Hit http://archive.ubuntu.com trusty Release.gpg
+Apr 18 01:24:33 Get:1 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Apr 18 01:24:34 Get:2 http://archive.ubuntu.com trusty-security Release.gpg [933 B]
+Apr 18 01:24:34 Hit http://archive.ubuntu.com trusty Release
+Apr 18 01:24:34 Get:3 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Apr 18 01:24:34 Get:4 http://ftp.osuosl.org trusty InRelease [2488 B]
+Apr 18 01:24:34 Get:5 http://archive.ubuntu.com trusty-security Release [63.5 kB]
+Apr 18 01:24:34 Get:6 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+Apr 18 01:24:34 Get:7 http://ftp.osuosl.org trusty/main amd64 Packages [5255 B]
+Apr 18 01:24:35 Get:8 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+Apr 18 01:24:35 Get:9 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Apr 18 01:24:38 Get:10 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Apr 18 01:24:38 Get:11 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Apr 18 01:24:38 Get:12 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Apr 18 01:24:41 Get:13 http://archive.ubuntu.com trusty-updates/main Sources [248 kB]
+Apr 18 01:24:41 Get:14 http://archive.ubuntu.com trusty-updates/restricted Sources [2310 B]
+Apr 18 01:24:41 Get:15 http://archive.ubuntu.com trusty-updates/universe Sources [139 kB]
+Apr 18 01:24:41 Get:16 http://archive.ubuntu.com trusty-updates/main amd64 Packages [636 kB]
+Apr 18 01:24:42 Get:17 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.1 kB]
+Apr 18 01:24:42 Get:18 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [351 kB]
+Apr 18 01:24:42 Get:19 http://archive.ubuntu.com trusty-security/main Sources [97.2 kB]
+Apr 18 01:24:42 Get:20 http://archive.ubuntu.com trusty-security/restricted Sources [1874 B]
+Apr 18 01:24:42 Get:21 http://archive.ubuntu.com trusty-security/universe Sources [22.5 kB]
+Apr 18 01:24:43 Get:22 http://archive.ubuntu.com trusty-security/main amd64 Packages [329 kB]
+Apr 18 01:24:43 Get:23 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [14.8 kB]
+Apr 18 01:24:43 Get:24 http://archive.ubuntu.com trusty-security/universe amd64 Packages [123 kB]
+Apr 18 01:24:43 Fetched 20.7 MB in 9s (2085 kB/s)
+Apr 18 01:24:44 Reading package lists...
+Apr 18 01:24:46 Reading package lists...
+Apr 18 01:24:46 Building dependency tree...
+Apr 18 01:24:46 Reading state information...
+Apr 18 01:24:46 The following extra packages will be installed:
+Apr 18 01:24:46   libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl
+Apr 18 01:24:46   libmariadbclient18 libmysqlclient18 libreadline5 mariadb-client-5.5
+Apr 18 01:24:46   mariadb-client-core-5.5 mariadb-common mariadb-server-5.5
+Apr 18 01:24:46   mariadb-server-core-5.5 mysql-common psmisc
+Apr 18 01:24:46 Suggested packages:
+Apr 18 01:24:46   libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
+Apr 18 01:24:46   libsql-statement-perl libipc-sharedcache-perl libterm-readkey-perl tinyca
+Apr 18 01:24:46   mailx mariadb-test
+Apr 18 01:24:46 The following NEW packages will be installed:
+Apr 18 01:24:46   libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl
+Apr 18 01:24:46   libmariadbclient18 libmysqlclient18 libreadline5 mariadb-client-5.5
+Apr 18 01:24:46   mariadb-client-core-5.5 mariadb-common mariadb-server mariadb-server-5.5
+Apr 18 01:24:46   mariadb-server-core-5.5 mysql-common psmisc
+Apr 18 01:24:47 0 upgraded, 15 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:24:47 Need to get 11.4 MB of archives.
+Apr 18 01:24:47 After this operation, 117 MB of additional disk space will be used.
+Apr 18 01:24:47 Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libaio1 amd64 0.3.109-4 [6364 B]
+Apr 18 01:24:47 Get:2 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mysql-common all 5.5.42+maria-1~trusty [8370 B]
+Apr 18 01:24:47 Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libreadline5 amd64 5.2+dfsg-2 [130 kB]
+Apr 18 01:24:47 Get:4 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-common all 5.5.42+maria-1~trusty [3176 B]
+Apr 18 01:24:47 Get:5 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main libmariadbclient18 amd64 5.5.42+maria-1~trusty [518 kB]
+Apr 18 01:24:47 Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main libdbi-perl amd64 1.630-1 [879 kB]
+Apr 18 01:24:48 Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main libdbd-mysql-perl amd64 4.025-1 [99.3 kB]
+Apr 18 01:24:48 Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main psmisc amd64 22.20-1ubuntu2 [53.2 kB]
+Apr 18 01:24:49 Get:9 http://archive.ubuntu.com/ubuntu/ trusty/main libhtml-template-perl all 2.95-1 [65.5 kB]
+Apr 18 01:24:50 Get:10 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main libmysqlclient18 amd64 5.5.42+maria-1~trusty [2856 B]
+Apr 18 01:24:50 Get:11 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-client-core-5.5 amd64 5.5.42+maria-1~trusty [618 kB]
+Apr 18 01:24:51 Get:12 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-client-5.5 amd64 5.5.42+maria-1~trusty [955 kB]
+Apr 18 01:24:52 Get:13 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server-core-5.5 amd64 5.5.42+maria-1~trusty [3816 kB]
+Apr 18 01:24:55 Get:14 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server-5.5 amd64 5.5.42+maria-1~trusty [4249 kB]
+Apr 18 01:24:57 Get:15 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server all 5.5.42+maria-1~trusty [2890 B]
+Apr 18 01:24:57 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:24:57 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:24:57 debconf: falling back to frontend: Readline
+Apr 18 01:24:57 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:24:57 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:24:57 debconf: falling back to frontend: Teletype
+Apr 18 01:24:57 [0m[91mdpkg-preconfigure: unable to re-open stdin: 
+Apr 18 01:24:57 [0mFetched 11.4 MB in 9s (1160 kB/s)
+Apr 18 01:24:57 Selecting previously unselected package libaio1:amd64.
+Apr 18 01:24:57 (Reading database ... 11527 files and directories currently installed.)
+Apr 18 01:24:57 Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...
+Apr 18 01:24:57 Unpacking libaio1:amd64 (0.3.109-4) ...
+Apr 18 01:24:57 Selecting previously unselected package libreadline5:amd64.
+Apr 18 01:24:57 Preparing to unpack .../libreadline5_5.2+dfsg-2_amd64.deb ...
+Apr 18 01:24:57 Unpacking libreadline5:amd64 (5.2+dfsg-2) ...
+Apr 18 01:24:57 Selecting previously unselected package mysql-common.
+Apr 18 01:24:57 Preparing to unpack .../mysql-common_5.5.42+maria-1~trusty_all.deb ...
+Apr 18 01:24:57 Unpacking mysql-common (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:57 Selecting previously unselected package mariadb-common.
+Apr 18 01:24:57 Preparing to unpack .../mariadb-common_5.5.42+maria-1~trusty_all.deb ...
+Apr 18 01:24:57 Unpacking mariadb-common (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:57 Selecting previously unselected package libdbi-perl.
+Apr 18 01:24:57 Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...
+Apr 18 01:24:57 Unpacking libdbi-perl (1.630-1) ...
+Apr 18 01:24:57 Selecting previously unselected package libmariadbclient18.
+Apr 18 01:24:57 Preparing to unpack .../libmariadbclient18_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:57 Unpacking libmariadbclient18 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:57 Selecting previously unselected package libmysqlclient18.
+Apr 18 01:24:57 Preparing to unpack .../libmysqlclient18_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:57 Unpacking libmysqlclient18 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:57 Selecting previously unselected package libdbd-mysql-perl.
+Apr 18 01:24:57 Preparing to unpack .../libdbd-mysql-perl_4.025-1_amd64.deb ...
+Apr 18 01:24:57 Unpacking libdbd-mysql-perl (4.025-1) ...
+Apr 18 01:24:57 Selecting previously unselected package mariadb-client-core-5.5.
+Apr 18 01:24:57 Preparing to unpack .../mariadb-client-core-5.5_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:57 Unpacking mariadb-client-core-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:57 Selecting previously unselected package mariadb-client-5.5.
+Apr 18 01:24:57 Preparing to unpack .../mariadb-client-5.5_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:57 Unpacking mariadb-client-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:58 Selecting previously unselected package psmisc.
+Apr 18 01:24:58 Preparing to unpack .../psmisc_22.20-1ubuntu2_amd64.deb ...
+Apr 18 01:24:58 Unpacking psmisc (22.20-1ubuntu2) ...
+Apr 18 01:24:58 Selecting previously unselected package mariadb-server-core-5.5.
+Apr 18 01:24:58 Preparing to unpack .../mariadb-server-core-5.5_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:58 Unpacking mariadb-server-core-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:58 Setting up mysql-common (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:58 Setting up mariadb-common (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:58 Selecting previously unselected package mariadb-server-5.5.
+Apr 18 01:24:58 (Reading database ... 11906 files and directories currently installed.)
+Apr 18 01:24:58 Preparing to unpack .../mariadb-server-5.5_5.5.42+maria-1~trusty_amd64.deb ...
+Apr 18 01:24:59 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:24:59 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:24:59 debconf: falling back to frontend: Readline
+Apr 18 01:24:59 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:24:59 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:24:59 debconf: falling back to frontend: Teletype
+Apr 18 01:24:59 [0mUnpacking mariadb-server-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:59 Selecting previously unselected package libhtml-template-perl.
+Apr 18 01:24:59 Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...
+Apr 18 01:24:59 Unpacking libhtml-template-perl (2.95-1) ...
+Apr 18 01:24:59 Selecting previously unselected package mariadb-server.
+Apr 18 01:24:59 Preparing to unpack .../mariadb-server_5.5.42+maria-1~trusty_all.deb ...
+Apr 18 01:24:59 Unpacking mariadb-server (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:59 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:24:59 Setting up libaio1:amd64 (0.3.109-4) ...
+Apr 18 01:24:59 Setting up libreadline5:amd64 (5.2+dfsg-2) ...
+Apr 18 01:24:59 Setting up libdbi-perl (1.630-1) ...
+Apr 18 01:24:59 Setting up psmisc (22.20-1ubuntu2) ...
+Apr 18 01:24:59 Setting up libhtml-template-perl (2.95-1) ...
+Apr 18 01:24:59 Setting up libmysqlclient18 (5.5.42+maria-1~trusty) ...
+Apr 18 01:24:59 Setting up libdbd-mysql-perl (4.025-1) ...
+Apr 18 01:24:59 Setting up libmariadbclient18 (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 Setting up mariadb-client-core-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 Setting up mariadb-client-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 Setting up mariadb-server-core-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 Setting up mariadb-server-5.5 (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:00 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:00 debconf: falling back to frontend: Readline
+Apr 18 01:25:00 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:00 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:00 debconf: falling back to frontend: Teletype
+Apr 18 01:25:00 [0m[91minvoke-rc.d: policy-rc.d denied execution of stop.
+Apr 18 01:25:00 [0m[91m150417 23:25:01 [Note] Plugin 'InnoDB' is disabled.
+Apr 18 01:25:00 [0m[91m150417 23:25:01 [Note] Plugin 'FEEDBACK' is disabled.
+Apr 18 01:25:00 [0m[91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:25:00 [0mProcessing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:25:00 Setting up mariadb-server (5.5.42+maria-1~trusty) ...
+Apr 18 01:25:00 Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:25:01 [91mmysqladmin: connect to server at 'localhost' failed
+Apr 18 01:25:01 error: 'Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)'
+Apr 18 01:25:01 Check that mysqld is running and that the socket: '/var/run/mysqld/mysqld.sock' exists!
+Apr 18 01:25:01 [0mInstalling MariaDB/MySQL system tables in '/var/lib/mysql' ...
+Apr 18 01:25:01 OK
+Apr 18 01:25:01 Filling help tables...
+Apr 18 01:25:01 OK
+Apr 18 01:25:01 
+Apr 18 01:25:01 To start mysqld at boot time you have to copy
+Apr 18 01:25:01 support-files/mysql.server to the right place for your system
+Apr 18 01:25:01 
+Apr 18 01:25:01 PLEASE REMEMBER TO SET A PASSWORD FOR THE MariaDB root USER !
+Apr 18 01:25:01 To do so, start the server, then issue the following commands:
+Apr 18 01:25:01 
+Apr 18 01:25:01 '/usr/bin/mysqladmin' -u root password 'new-password'
+Apr 18 01:25:01 '/usr/bin/mysqladmin' -u root -h e7128b67d9e7 password 'new-password'
+Apr 18 01:25:01 
+Apr 18 01:25:01 Alternatively you can run:
+Apr 18 01:25:01 '/usr/bin/mysql_secure_installation'
+Apr 18 01:25:01 
+Apr 18 01:25:01 which will also give you the option of removing the test
+Apr 18 01:25:01 databases and anonymous user created by default.  This is
+Apr 18 01:25:01 strongly recommended for production servers.
+Apr 18 01:25:01 
+Apr 18 01:25:01 See the MariaDB Knowledgebase at http://mariadb.com/kb or the
+Apr 18 01:25:01 MySQL manual for more instructions.
+Apr 18 01:25:01 
+Apr 18 01:25:01 You can start the MariaDB daemon with:
+Apr 18 01:25:01 cd '/usr' ; /usr/bin/mysqld_safe --datadir='/var/lib/mysql'
+Apr 18 01:25:01 
+Apr 18 01:25:01 You can test the MariaDB daemon with mysql-test-run.pl
+Apr 18 01:25:01 cd '/usr/mysql-test' ; perl mysql-test-run.pl
+Apr 18 01:25:01 
+Apr 18 01:25:01 Please report any problems at http://mariadb.org/jira
+Apr 18 01:25:01 
+Apr 18 01:25:01 The latest information about MariaDB is available at http://mariadb.org/.
+Apr 18 01:25:01 You can find additional information about the MySQL part at:
+Apr 18 01:25:01 http://dev.mysql.com
+Apr 18 01:25:01 Support MariaDB development by buying support/new features from MariaDB
+Apr 18 01:25:01 Corporation Ab. You can contact us about this at sales@mariadb.com.
+Apr 18 01:25:01 Alternatively consider joining our community based development effort:
+Apr 18 01:25:01 http://mariadb.com/kb/en/contributing-to-the-mariadb-project/
+Apr 18 01:25:01 
+Apr 18 01:25:01 [91m150417 23:25:01 InnoDB: The InnoDB memory heap is disabled
+Apr 18 01:25:01 150417 23:25:01 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+Apr 18 01:25:01 150417 23:25:01 InnoDB: Compressed tables use zlib 1.2.8
+Apr 18 01:25:01 150417 23:25:01 InnoDB: Using Linux native AIO
+Apr 18 01:25:01 [0m[91m150417 23:25:02 InnoDB: Initializing buffer pool, size = 256.0M
+Apr 18 01:25:01 [0m[91m150417 23:25:02 InnoDB: Completed initialization of buffer pool
+Apr 18 01:25:01 [0m[91mInnoDB: The first specified data file ./ibdata1 did not exist:
+Apr 18 01:25:01 InnoDB: a new database to be created!
+Apr 18 01:25:01 150417 23:25:02  InnoDB: Setting file ./ibdata1 size to 10 MB
+Apr 18 01:25:01 InnoDB: Database physically writes the file full: wait...
+Apr 18 01:25:01 [0m[91m150417 23:25:02  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+Apr 18 01:25:01 InnoDB: Setting log file ./ib_logfile0 size to 5 MB
+Apr 18 01:25:01 InnoDB: Database physically writes the file full: wait...
+Apr 18 01:25:01 [0m[91m150417 23:25:02  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+Apr 18 01:25:01 InnoDB: Setting log file ./ib_logfile1 size to 5 MB
+Apr 18 01:25:01 InnoDB: Database physically writes the file full: wait...
+Apr 18 01:25:01 [0m[91mInnoDB: Doublewrite buffer not found: creating new
+Apr 18 01:25:01 [0m[91mInnoDB: Doublewrite buffer created
+Apr 18 01:25:01 [0m[91mInnoDB: 127 rollback segment(s) active.
+Apr 18 01:25:01 [0m[91mInnoDB: Creating foreign key constraint system tables
+Apr 18 01:25:01 [0m[91mInnoDB: Foreign key constraint system tables created
+Apr 18 01:25:01 [0m[91m150417 23:25:02  InnoDB: Waiting for the background threads to start
+Apr 18 01:25:02 [0m[91m150417 23:25:03 Percona XtraDB (http://www.percona.com) 5.5.41-MariaDB-37.0 started; log sequence number 0
+Apr 18 01:25:02 [0m[91m150417 23:25:03 [Note] Plugin 'FEEDBACK' is disabled.
+Apr 18 01:25:02 [0m[91m150417 23:25:03 [Note] Server socket created on IP: '0.0.0.0'.
+Apr 18 01:25:02 [0m[91m150417 23:25:03 [Note] Event Scheduler: Loaded 0 events
+Apr 18 01:25:02 [0m[91m150417 23:25:03 [Note] mysqld: ready for connections.
+Apr 18 01:25:02 Version: '5.5.42-MariaDB-1~trusty-log'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution
+Apr 18 01:25:06 [0m[91m150417 23:25:07 [Note] mysqld: Normal shutdown
+Apr 18 01:25:06 
+Apr 18 01:25:06 [0m[91m150417 23:25:07 [Note] Event Scheduler: Purging the queue. 0 events
+Apr 18 01:25:06 [0m[91m150417 23:25:06  InnoDB: Starting shutdown...
+Apr 18 01:25:07 [0m[91m150417 23:25:07  InnoDB: Shutdown completed; log sequence number 1597945
+Apr 18 01:25:07 [0m[91m150417 23:25:07 [Note] mysqld: Shutdown complete
+Apr 18 01:25:07 
+Apr 18 01:25:08 [0m ---> c7b1b029887e
+Apr 18 01:25:08 Removing intermediate container 631b6e4cff7b
+Apr 18 01:25:08 Step 4 : CMD mysqld
+Apr 18 01:25:09  ---> Running in a912b9d4d730
+Apr 18 01:25:09  ---> d2bbf7b1938b
+Apr 18 01:25:09 Removing intermediate container a912b9d4d730
+Apr 18 01:25:09 Successfully built d2bbf7b1938b
+Apr 18 01:25:09 Step 0 : FROM ubuntu:14.04
+Apr 18 01:25:09  ---> d0955f21bf24
+Apr 18 01:25:09 Step 1 : ADD contents /tmp/contents
+Apr 18 01:25:09  ---> 4957fb349b3d
+Apr 18 01:25:09 Removing intermediate container 3e6b69cf086b
+Apr 18 01:25:09 Step 2 : RUN chmod a+x /tmp/contents/install.sh
+Apr 18 01:25:09  ---> Running in 2e302094bf2a
+Apr 18 01:25:10  ---> f6c6e0962c18
+Apr 18 01:25:10 Removing intermediate container 2e302094bf2a
+Apr 18 01:25:10 Step 3 : RUN /tmp/contents/install.sh
+Apr 18 01:25:10  ---> Running in 345288b2b50d
+Apr 18 01:25:11 Ign http://archive.ubuntu.com trusty InRelease
+Apr 18 01:25:11 Ign http://archive.ubuntu.com trusty-updates InRelease
+Apr 18 01:25:11 Ign http://archive.ubuntu.com trusty-security InRelease
+Apr 18 01:25:11 Hit http://archive.ubuntu.com trusty Release.gpg
+Apr 18 01:25:11 Get:1 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Apr 18 01:25:12 Get:2 http://archive.ubuntu.com trusty-security Release.gpg [933 B]
+Apr 18 01:25:12 Hit http://archive.ubuntu.com trusty Release
+Apr 18 01:25:12 Get:3 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Apr 18 01:25:12 Get:4 http://archive.ubuntu.com trusty-security Release [63.5 kB]
+Apr 18 01:25:13 Get:5 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+Apr 18 01:25:15 Get:6 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+Apr 18 01:25:15 Get:7 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Apr 18 01:25:18 Get:8 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Apr 18 01:25:18 Get:9 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Apr 18 01:25:19 Get:10 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Apr 18 01:25:21 Get:11 http://archive.ubuntu.com trusty-updates/main Sources [248 kB]
+Apr 18 01:25:21 Get:12 http://archive.ubuntu.com trusty-updates/restricted Sources [2310 B]
+Apr 18 01:25:21 Get:13 http://archive.ubuntu.com trusty-updates/universe Sources [139 kB]
+Apr 18 01:25:21 Get:14 http://archive.ubuntu.com trusty-updates/main amd64 Packages [636 kB]
+Apr 18 01:25:21 Get:15 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.1 kB]
+Apr 18 01:25:22 Get:16 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [351 kB]
+Apr 18 01:25:23 Get:17 http://archive.ubuntu.com trusty-security/main Sources [97.2 kB]
+Apr 18 01:25:23 Get:18 http://archive.ubuntu.com trusty-security/restricted Sources [1874 B]
+Apr 18 01:25:24 Get:19 http://archive.ubuntu.com trusty-security/universe Sources [22.5 kB]
+Apr 18 01:25:24 Get:20 http://archive.ubuntu.com trusty-security/main amd64 Packages [329 kB]
+Apr 18 01:25:24 Get:21 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [14.8 kB]
+Apr 18 01:25:25 Get:22 http://archive.ubuntu.com trusty-security/universe amd64 Packages [123 kB]
+Apr 18 01:25:25 Fetched 20.7 MB in 13s (1482 kB/s)
+Apr 18 01:25:26 Reading package lists...
+Apr 18 01:25:27 Reading package lists...
+Apr 18 01:25:28 Building dependency tree...
+Apr 18 01:25:28 Reading state information...
+Apr 18 01:25:28 The following extra packages will be installed:
+Apr 18 01:25:28   fontconfig-config fonts-dejavu-core geoip-database libedit2 libfontconfig1
+Apr 18 01:25:28   libfreetype6 libgd3 libgeoip1 libjbig0 libjpeg-turbo8 libjpeg8
+Apr 18 01:25:28   libmysqlclient18 libpython-stdlib libpython2.7-minimal libpython2.7-stdlib
+Apr 18 01:25:28   libsystemd-daemon0 libtiff5 libvpx1 libx11-6 libx11-data libxau6 libxcb1
+Apr 18 01:25:28   libxdmcp6 libxml2 libxpm4 libxslt1.1 lsof mysql-common nginx-common
+Apr 18 01:25:28   nginx-core php5-common php5-json php5-readline psmisc python python-meld3
+Apr 18 01:25:28   python-minimal python-pkg-resources python2.7 python2.7-minimal sgml-base
+Apr 18 01:25:28   xml-core
+Apr 18 01:25:28 Suggested packages:
+Apr 18 01:25:28   libgd-tools geoip-bin fcgiwrap nginx-doc php-pear php5-user-cache python-doc
+Apr 18 01:25:28   python-tk python-distribute python-distribute-doc python2.7-doc binutils
+Apr 18 01:25:28   binfmt-support sgml-base-doc debhelper
+Apr 18 01:25:28 The following NEW packages will be installed:
+Apr 18 01:25:28   fontconfig-config fonts-dejavu-core geoip-database libedit2 libfontconfig1
+Apr 18 01:25:28   libfreetype6 libgd3 libgeoip1 libjbig0 libjpeg-turbo8 libjpeg8
+Apr 18 01:25:28   libmysqlclient18 libpython-stdlib libpython2.7-minimal libpython2.7-stdlib
+Apr 18 01:25:28   libsystemd-daemon0 libtiff5 libvpx1 libx11-6 libx11-data libxau6 libxcb1
+Apr 18 01:25:28   libxdmcp6 libxml2 libxpm4 libxslt1.1 lsof mysql-common nginx nginx-common
+Apr 18 01:25:28   nginx-core php5 php5-cli php5-common php5-fpm php5-json php5-mysql
+Apr 18 01:25:28   php5-readline psmisc python python-meld3 python-minimal python-pkg-resources
+Apr 18 01:25:28   python2.7 python2.7-minimal sgml-base supervisor xml-core
+Apr 18 01:25:29 0 upgraded, 48 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:25:29 Need to get 15.7 MB of archives.
+Apr 18 01:25:29 After this operation, 62.5 MB of additional disk space will be used.
+Apr 18 01:25:29 Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libedit2 amd64 3.1-20130712-2 [86.7 kB]
+Apr 18 01:25:29 Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libgeoip1 amd64 1.6.0-1 [71.0 kB]
+Apr 18 01:25:30 Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libsystemd-daemon0 amd64 204-5ubuntu20.11 [9726 B]
+Apr 18 01:25:30 Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libxau6 amd64 1:1.0.8-1 [8376 B]
+Apr 18 01:25:30 Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libxdmcp6 amd64 1:1.1.1-1 [12.8 kB]
+Apr 18 01:25:30 Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main libxcb1 amd64 1.10-2ubuntu1 [38.0 kB]
+Apr 18 01:25:30 Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main libx11-data all 2:1.6.2-1ubuntu2 [111 kB]
+Apr 18 01:25:30 Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libx11-6 amd64 2:1.6.2-1ubuntu2 [560 kB]
+Apr 18 01:25:31 Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.4 [570 kB]
+Apr 18 01:25:32 Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Apr 18 01:25:32 Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main fonts-dejavu-core all 2.34-1ubuntu1 [1024 kB]
+Apr 18 01:25:33 Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/main fontconfig-config all 2.11.0-0ubuntu4.1 [47.4 kB]
+Apr 18 01:25:33 Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libfreetype6 amd64 2.5.2-1ubuntu2.4 [305 kB]
+Apr 18 01:25:33 Get:14 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libfontconfig1 amd64 2.11.0-0ubuntu4.1 [123 kB]
+Apr 18 01:25:33 Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main libjpeg-turbo8 amd64 1.3.0-0ubuntu2 [104 kB]
+Apr 18 01:25:34 Get:16 http://archive.ubuntu.com/ubuntu/ trusty/main libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+Apr 18 01:25:34 Get:17 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libjbig0 amd64 2.0-2ubuntu4.1 [26.1 kB]
+Apr 18 01:25:34 Get:18 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtiff5 amd64 4.0.3-7ubuntu0.3 [143 kB]
+Apr 18 01:25:34 Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main libvpx1 amd64 1.3.0-2 [556 kB]
+Apr 18 01:25:34 Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main libxpm4 amd64 1:3.5.10-1 [38.3 kB]
+Apr 18 01:25:34 Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main libgd3 amd64 2.1.0-3 [147 kB]
+Apr 18 01:25:35 Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-common all 5.5.41-0ubuntu0.14.04.1 [14.1 kB]
+Apr 18 01:25:35 Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libmysqlclient18 amd64 5.5.41-0ubuntu0.14.04.1 [595 kB]
+Apr 18 01:25:35 Get:24 http://archive.ubuntu.com/ubuntu/ trusty/main libxslt1.1 amd64 1.1.28-2build1 [145 kB]
+Apr 18 01:25:35 Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main psmisc amd64 22.20-1ubuntu2 [53.2 kB]
+Apr 18 01:25:35 Get:26 http://archive.ubuntu.com/ubuntu/ trusty/main lsof amd64 4.86+dfsg-1ubuntu2 [257 kB]
+Apr 18 01:25:36 Get:27 http://archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1 [34.4 kB]
+Apr 18 01:25:36 Get:28 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.7 [442 kB]
+Apr 18 01:25:36 Get:29 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe php5-fpm amd64 5.5.9+dfsg-1ubuntu4.7 [2191 kB]
+Apr 18 01:25:37 Get:30 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5-mysql amd64 5.5.9+dfsg-1ubuntu4.7 [62.9 kB]
+Apr 18 01:25:37 Get:31 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.7 [2163 kB]
+Apr 18 01:25:38 Get:32 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.7 [12.1 kB]
+Apr 18 01:25:39 Get:33 http://archive.ubuntu.com/ubuntu/ trusty/main libpython2.7-minimal amd64 2.7.6-8 [307 kB]
+Apr 18 01:25:39 Get:34 http://archive.ubuntu.com/ubuntu/ trusty/main python2.7-minimal amd64 2.7.6-8 [1190 kB]
+Apr 18 01:25:39 Get:35 http://archive.ubuntu.com/ubuntu/ trusty/main geoip-database all 20140313-1 [1196 kB]
+Apr 18 01:25:40 Get:36 http://archive.ubuntu.com/ubuntu/ trusty/main xml-core all 0.13+nmu2 [23.3 kB]
+Apr 18 01:25:40 Get:37 http://archive.ubuntu.com/ubuntu/ trusty/main libpython2.7-stdlib amd64 2.7.6-8 [1872 kB]
+Apr 18 01:25:41 Get:38 http://archive.ubuntu.com/ubuntu/ trusty/main libpython-stdlib amd64 2.7.5-5ubuntu3 [7012 B]
+Apr 18 01:25:41 Get:39 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.2 [18.1 kB]
+Apr 18 01:25:41 Get:40 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.2 [325 kB]
+Apr 18 01:25:41 Get:41 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.2 [5420 B]
+Apr 18 01:25:41 Get:42 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5 all 5.5.9+dfsg-1ubuntu4.7 [1306 B]
+Apr 18 01:25:41 Get:43 http://archive.ubuntu.com/ubuntu/ trusty/main python2.7 amd64 2.7.6-8 [197 kB]
+Apr 18 01:25:41 Get:44 http://archive.ubuntu.com/ubuntu/ trusty/main python-minimal amd64 2.7.5-5ubuntu3 [27.5 kB]
+Apr 18 01:25:42 Get:45 http://archive.ubuntu.com/ubuntu/ trusty/main python amd64 2.7.5-5ubuntu3 [134 kB]
+Apr 18 01:25:42 Get:46 http://archive.ubuntu.com/ubuntu/ trusty/main python-pkg-resources all 3.3-1ubuntu1 [61.9 kB]
+Apr 18 01:25:42 Get:47 http://archive.ubuntu.com/ubuntu/ trusty/universe python-meld3 amd64 0.6.10-1 [39.0 kB]
+Apr 18 01:25:42 Get:48 http://archive.ubuntu.com/ubuntu/ trusty/universe supervisor all 3.0b2-1 [314 kB]
+Apr 18 01:25:42 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:42 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:42 debconf: falling back to frontend: Readline
+Apr 18 01:25:42 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:42 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:42 debconf: falling back to frontend: Teletype
+Apr 18 01:25:42 [0m[91mdpkg-preconfigure: unable to re-open stdin: 
+Apr 18 01:25:42 [0mFetched 15.7 MB in 13s (1157 kB/s)
+Apr 18 01:25:42 Selecting previously unselected package libedit2:amd64.
+Apr 18 01:25:42 (Reading database ... 11527 files and directories currently installed.)
+Apr 18 01:25:42 Preparing to unpack .../libedit2_3.1-20130712-2_amd64.deb ...
+Apr 18 01:25:42 Unpacking libedit2:amd64 (3.1-20130712-2) ...
+Apr 18 01:25:42 Selecting previously unselected package libgeoip1:amd64.
+Apr 18 01:25:42 Preparing to unpack .../libgeoip1_1.6.0-1_amd64.deb ...
+Apr 18 01:25:42 Unpacking libgeoip1:amd64 (1.6.0-1) ...
+Apr 18 01:25:43 Selecting previously unselected package libsystemd-daemon0:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libsystemd-daemon0_204-5ubuntu20.11_amd64.deb ...
+Apr 18 01:25:43 Unpacking libsystemd-daemon0:amd64 (204-5ubuntu20.11) ...
+Apr 18 01:25:43 Selecting previously unselected package libxau6:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libxau6_1%3a1.0.8-1_amd64.deb ...
+Apr 18 01:25:43 Unpacking libxau6:amd64 (1:1.0.8-1) ...
+Apr 18 01:25:43 Selecting previously unselected package libxdmcp6:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libxdmcp6_1%3a1.1.1-1_amd64.deb ...
+Apr 18 01:25:43 Unpacking libxdmcp6:amd64 (1:1.1.1-1) ...
+Apr 18 01:25:43 Selecting previously unselected package libxcb1:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libxcb1_1.10-2ubuntu1_amd64.deb ...
+Apr 18 01:25:43 Unpacking libxcb1:amd64 (1.10-2ubuntu1) ...
+Apr 18 01:25:43 Selecting previously unselected package libx11-data.
+Apr 18 01:25:43 Preparing to unpack .../libx11-data_2%3a1.6.2-1ubuntu2_all.deb ...
+Apr 18 01:25:43 Unpacking libx11-data (2:1.6.2-1ubuntu2) ...
+Apr 18 01:25:43 Selecting previously unselected package libx11-6:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libx11-6_2%3a1.6.2-1ubuntu2_amd64.deb ...
+Apr 18 01:25:43 Unpacking libx11-6:amd64 (2:1.6.2-1ubuntu2) ...
+Apr 18 01:25:43 Selecting previously unselected package libxml2:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.4_amd64.deb ...
+Apr 18 01:25:43 Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.4) ...
+Apr 18 01:25:43 Selecting previously unselected package sgml-base.
+Apr 18 01:25:43 Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Apr 18 01:25:43 Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Apr 18 01:25:43 Selecting previously unselected package fonts-dejavu-core.
+Apr 18 01:25:43 Preparing to unpack .../fonts-dejavu-core_2.34-1ubuntu1_all.deb ...
+Apr 18 01:25:43 Unpacking fonts-dejavu-core (2.34-1ubuntu1) ...
+Apr 18 01:25:43 Selecting previously unselected package fontconfig-config.
+Apr 18 01:25:43 Preparing to unpack .../fontconfig-config_2.11.0-0ubuntu4.1_all.deb ...
+Apr 18 01:25:43 Unpacking fontconfig-config (2.11.0-0ubuntu4.1) ...
+Apr 18 01:25:43 Selecting previously unselected package libfreetype6:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libfreetype6_2.5.2-1ubuntu2.4_amd64.deb ...
+Apr 18 01:25:43 Unpacking libfreetype6:amd64 (2.5.2-1ubuntu2.4) ...
+Apr 18 01:25:43 Selecting previously unselected package libfontconfig1:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libfontconfig1_2.11.0-0ubuntu4.1_amd64.deb ...
+Apr 18 01:25:43 Unpacking libfontconfig1:amd64 (2.11.0-0ubuntu4.1) ...
+Apr 18 01:25:43 Selecting previously unselected package libjpeg-turbo8:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libjpeg-turbo8_1.3.0-0ubuntu2_amd64.deb ...
+Apr 18 01:25:43 Unpacking libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...
+Apr 18 01:25:43 Selecting previously unselected package libjpeg8:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libjpeg8_8c-2ubuntu8_amd64.deb ...
+Apr 18 01:25:43 Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Apr 18 01:25:43 Selecting previously unselected package libjbig0:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libjbig0_2.0-2ubuntu4.1_amd64.deb ...
+Apr 18 01:25:43 Unpacking libjbig0:amd64 (2.0-2ubuntu4.1) ...
+Apr 18 01:25:43 Selecting previously unselected package libtiff5:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libtiff5_4.0.3-7ubuntu0.3_amd64.deb ...
+Apr 18 01:25:43 Unpacking libtiff5:amd64 (4.0.3-7ubuntu0.3) ...
+Apr 18 01:25:43 Selecting previously unselected package libvpx1:amd64.
+Apr 18 01:25:43 Preparing to unpack .../libvpx1_1.3.0-2_amd64.deb ...
+Apr 18 01:25:43 Unpacking libvpx1:amd64 (1.3.0-2) ...
+Apr 18 01:25:44 Selecting previously unselected package libxpm4:amd64.
+Apr 18 01:25:44 Preparing to unpack .../libxpm4_1%3a3.5.10-1_amd64.deb ...
+Apr 18 01:25:44 Unpacking libxpm4:amd64 (1:3.5.10-1) ...
+Apr 18 01:25:44 Selecting previously unselected package libgd3:amd64.
+Apr 18 01:25:44 Preparing to unpack .../libgd3_2.1.0-3_amd64.deb ...
+Apr 18 01:25:44 Unpacking libgd3:amd64 (2.1.0-3) ...
+Apr 18 01:25:44 Selecting previously unselected package mysql-common.
+Apr 18 01:25:44 Preparing to unpack .../mysql-common_5.5.41-0ubuntu0.14.04.1_all.deb ...
+Apr 18 01:25:44 Unpacking mysql-common (5.5.41-0ubuntu0.14.04.1) ...
+Apr 18 01:25:44 Selecting previously unselected package libmysqlclient18:amd64.
+Apr 18 01:25:44 Preparing to unpack .../libmysqlclient18_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
+Apr 18 01:25:44 Unpacking libmysqlclient18:amd64 (5.5.41-0ubuntu0.14.04.1) ...
+Apr 18 01:25:44 Selecting previously unselected package libxslt1.1:amd64.
+Apr 18 01:25:44 Preparing to unpack .../libxslt1.1_1.1.28-2build1_amd64.deb ...
+Apr 18 01:25:44 Unpacking libxslt1.1:amd64 (1.1.28-2build1) ...
+Apr 18 01:25:44 Selecting previously unselected package psmisc.
+Apr 18 01:25:44 Preparing to unpack .../psmisc_22.20-1ubuntu2_amd64.deb ...
+Apr 18 01:25:44 Unpacking psmisc (22.20-1ubuntu2) ...
+Apr 18 01:25:44 Selecting previously unselected package lsof.
+Apr 18 01:25:44 Preparing to unpack .../lsof_4.86+dfsg-1ubuntu2_amd64.deb ...
+Apr 18 01:25:44 Unpacking lsof (4.86+dfsg-1ubuntu2) ...
+Apr 18 01:25:44 Selecting previously unselected package php5-json.
+Apr 18 01:25:44 Preparing to unpack .../php5-json_1.3.2-2build1_amd64.deb ...
+Apr 18 01:25:44 Unpacking php5-json (1.3.2-2build1) ...
+Apr 18 01:25:44 Selecting previously unselected package php5-common.
+Apr 18 01:25:44 Preparing to unpack .../php5-common_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Apr 18 01:25:44 Unpacking php5-common (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:44 Selecting previously unselected package php5-fpm.
+Apr 18 01:25:44 Preparing to unpack .../php5-fpm_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Apr 18 01:25:44 Unpacking php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:44 Selecting previously unselected package php5-mysql.
+Apr 18 01:25:44 Preparing to unpack .../php5-mysql_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Apr 18 01:25:44 Unpacking php5-mysql (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:44 Selecting previously unselected package php5-cli.
+Apr 18 01:25:44 Preparing to unpack .../php5-cli_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Apr 18 01:25:44 Unpacking php5-cli (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:45 Selecting previously unselected package php5-readline.
+Apr 18 01:25:45 Preparing to unpack .../php5-readline_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Apr 18 01:25:45 Unpacking php5-readline (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:45 Selecting previously unselected package libpython2.7-minimal:amd64.
+Apr 18 01:25:45 Preparing to unpack .../libpython2.7-minimal_2.7.6-8_amd64.deb ...
+Apr 18 01:25:45 Unpacking libpython2.7-minimal:amd64 (2.7.6-8) ...
+Apr 18 01:25:45 Selecting previously unselected package python2.7-minimal.
+Apr 18 01:25:45 Preparing to unpack .../python2.7-minimal_2.7.6-8_amd64.deb ...
+Apr 18 01:25:45 Unpacking python2.7-minimal (2.7.6-8) ...
+Apr 18 01:25:45 Selecting previously unselected package geoip-database.
+Apr 18 01:25:45 Preparing to unpack .../geoip-database_20140313-1_all.deb ...
+Apr 18 01:25:45 Unpacking geoip-database (20140313-1) ...
+Apr 18 01:25:45 Selecting previously unselected package xml-core.
+Apr 18 01:25:45 Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Apr 18 01:25:45 Unpacking xml-core (0.13+nmu2) ...
+Apr 18 01:25:45 Selecting previously unselected package libpython2.7-stdlib:amd64.
+Apr 18 01:25:45 Preparing to unpack .../libpython2.7-stdlib_2.7.6-8_amd64.deb ...
+Apr 18 01:25:45 Unpacking libpython2.7-stdlib:amd64 (2.7.6-8) ...
+Apr 18 01:25:45 Selecting previously unselected package libpython-stdlib:amd64.
+Apr 18 01:25:45 Preparing to unpack .../libpython-stdlib_2.7.5-5ubuntu3_amd64.deb ...
+Apr 18 01:25:45 Unpacking libpython-stdlib:amd64 (2.7.5-5ubuntu3) ...
+Apr 18 01:25:45 Selecting previously unselected package nginx-common.
+Apr 18 01:25:45 Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.2_all.deb ...
+Apr 18 01:25:45 Unpacking nginx-common (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:45 Selecting previously unselected package nginx-core.
+Apr 18 01:25:45 Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.2_amd64.deb ...
+Apr 18 01:25:45 Unpacking nginx-core (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:45 Selecting previously unselected package nginx.
+Apr 18 01:25:45 Preparing to unpack .../nginx_1.4.6-1ubuntu3.2_all.deb ...
+Apr 18 01:25:46 Unpacking nginx (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:46 Selecting previously unselected package php5.
+Apr 18 01:25:46 Preparing to unpack .../php5_5.5.9+dfsg-1ubuntu4.7_all.deb ...
+Apr 18 01:25:46 Unpacking php5 (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:46 Selecting previously unselected package python2.7.
+Apr 18 01:25:46 Preparing to unpack .../python2.7_2.7.6-8_amd64.deb ...
+Apr 18 01:25:46 Unpacking python2.7 (2.7.6-8) ...
+Apr 18 01:25:46 Selecting previously unselected package python-minimal.
+Apr 18 01:25:46 Preparing to unpack .../python-minimal_2.7.5-5ubuntu3_amd64.deb ...
+Apr 18 01:25:46 Unpacking python-minimal (2.7.5-5ubuntu3) ...
+Apr 18 01:25:46 Selecting previously unselected package python.
+Apr 18 01:25:46 Preparing to unpack .../python_2.7.5-5ubuntu3_amd64.deb ...
+Apr 18 01:25:46 Unpacking python (2.7.5-5ubuntu3) ...
+Apr 18 01:25:46 Selecting previously unselected package python-pkg-resources.
+Apr 18 01:25:46 Preparing to unpack .../python-pkg-resources_3.3-1ubuntu1_all.deb ...
+Apr 18 01:25:46 Unpacking python-pkg-resources (3.3-1ubuntu1) ...
+Apr 18 01:25:46 Selecting previously unselected package python-meld3.
+Apr 18 01:25:46 Preparing to unpack .../python-meld3_0.6.10-1_amd64.deb ...
+Apr 18 01:25:46 Unpacking python-meld3 (0.6.10-1) ...
+Apr 18 01:25:46 Selecting previously unselected package supervisor.
+Apr 18 01:25:46 Preparing to unpack .../supervisor_3.0b2-1_all.deb ...
+Apr 18 01:25:46 Unpacking supervisor (3.0b2-1) ...
+Apr 18 01:25:46 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:25:46 Processing triggers for mime-support (3.54ubuntu1.1) ...
+Apr 18 01:25:46 Setting up libedit2:amd64 (3.1-20130712-2) ...
+Apr 18 01:25:46 Setting up libgeoip1:amd64 (1.6.0-1) ...
+Apr 18 01:25:46 Setting up libsystemd-daemon0:amd64 (204-5ubuntu20.11) ...
+Apr 18 01:25:46 Setting up libxau6:amd64 (1:1.0.8-1) ...
+Apr 18 01:25:46 Setting up libxdmcp6:amd64 (1:1.1.1-1) ...
+Apr 18 01:25:46 Setting up libxcb1:amd64 (1.10-2ubuntu1) ...
+Apr 18 01:25:46 Setting up libx11-data (2:1.6.2-1ubuntu2) ...
+Apr 18 01:25:46 Setting up libx11-6:amd64 (2:1.6.2-1ubuntu2) ...
+Apr 18 01:25:46 Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.4) ...
+Apr 18 01:25:46 Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Apr 18 01:25:46 Setting up fonts-dejavu-core (2.34-1ubuntu1) ...
+Apr 18 01:25:46 Setting up fontconfig-config (2.11.0-0ubuntu4.1) ...
+Apr 18 01:25:46 Setting up libfreetype6:amd64 (2.5.2-1ubuntu2.4) ...
+Apr 18 01:25:46 Setting up libfontconfig1:amd64 (2.11.0-0ubuntu4.1) ...
+Apr 18 01:25:46 Setting up libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...
+Apr 18 01:25:46 Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Apr 18 01:25:46 Setting up libjbig0:amd64 (2.0-2ubuntu4.1) ...
+Apr 18 01:25:46 Setting up libtiff5:amd64 (4.0.3-7ubuntu0.3) ...
+Apr 18 01:25:46 Setting up libvpx1:amd64 (1.3.0-2) ...
+Apr 18 01:25:46 Setting up libxpm4:amd64 (1:3.5.10-1) ...
+Apr 18 01:25:47 Setting up libgd3:amd64 (2.1.0-3) ...
+Apr 18 01:25:47 Setting up mysql-common (5.5.41-0ubuntu0.14.04.1) ...
+Apr 18 01:25:47 Setting up libmysqlclient18:amd64 (5.5.41-0ubuntu0.14.04.1) ...
+Apr 18 01:25:47 Setting up libxslt1.1:amd64 (1.1.28-2build1) ...
+Apr 18 01:25:47 Setting up psmisc (22.20-1ubuntu2) ...
+Apr 18 01:25:47 Setting up lsof (4.86+dfsg-1ubuntu2) ...
+Apr 18 01:25:47 Setting up libpython2.7-minimal:amd64 (2.7.6-8) ...
+Apr 18 01:25:47 Setting up python2.7-minimal (2.7.6-8) ...
+Apr 18 01:25:47 Linking and byte-compiling packages for runtime python2.7...
+Apr 18 01:25:47 Setting up geoip-database (20140313-1) ...
+Apr 18 01:25:47 Setting up xml-core (0.13+nmu2) ...
+Apr 18 01:25:47 Setting up libpython2.7-stdlib:amd64 (2.7.6-8) ...
+Apr 18 01:25:47 Setting up libpython-stdlib:amd64 (2.7.5-5ubuntu3) ...
+Apr 18 01:25:47 Setting up nginx-common (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:48 Setting up python2.7 (2.7.6-8) ...
+Apr 18 01:25:48 Setting up python-minimal (2.7.5-5ubuntu3) ...
+Apr 18 01:25:48 Setting up python (2.7.5-5ubuntu3) ...
+Apr 18 01:25:48 Setting up python-pkg-resources (3.3-1ubuntu1) ...
+Apr 18 01:25:48 Setting up python-meld3 (0.6.10-1) ...
+Apr 18 01:25:49 Setting up supervisor (3.0b2-1) ...
+Apr 18 01:25:49 [91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:25:49 [0mProcessing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:25:49 Setting up nginx-core (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:49 [91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:25:49 [0mSetting up nginx (1.4.6-1ubuntu3.2) ...
+Apr 18 01:25:49 Setting up php5-common (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:49 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:49 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:49 debconf: falling back to frontend: Readline
+Apr 18 01:25:49 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:49 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:49 debconf: falling back to frontend: Teletype
+Apr 18 01:25:49 [0m[91m
+Apr 18 01:25:49 Creating config file /etc/php5/mods-available/pdo.ini with new version
+Apr 18 01:25:49 [0m[91mphp5_invoke: Enable module pdo for fpm SAPI
+Apr 18 01:25:49 [0m[91mphp5_invoke: Enable module pdo for cli SAPI
+Apr 18 01:25:49 [0m[91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:49 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:49 debconf: falling back to frontend: Readline
+Apr 18 01:25:49 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:49 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:49 debconf: falling back to frontend: Teletype
+Apr 18 01:25:49 [0m[91m
+Apr 18 01:25:49 Creating config file /etc/php5/mods-available/opcache.ini with new version
+Apr 18 01:25:50 [0m[91mphp5_invoke: Enable module opcache for fpm SAPI
+Apr 18 01:25:50 [0m[91mphp5_invoke: Enable module opcache for cli SAPI
+Apr 18 01:25:50 [0mSetting up php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:50 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:50 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:50 debconf: falling back to frontend: Readline
+Apr 18 01:25:50 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:50 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:50 debconf: falling back to frontend: Teletype
+Apr 18 01:25:50 [0m[91m
+Apr 18 01:25:50 [0m[91mCreating config file /etc/php5/fpm/php.ini with new version
+Apr 18 01:25:50 [0m[91mphp5_invoke opcache: already enabled for fpm SAPI
+Apr 18 01:25:50 [0m[91mphp5_invoke pdo: already enabled for fpm SAPI
+Apr 18 01:25:50 [0m[91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:25:50 [0mSetting up php5-mysql (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:50 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:50 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:50 debconf: falling back to frontend: Readline
+Apr 18 01:25:50 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:50 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:50 debconf: falling back to frontend: Teletype
+Apr 18 01:25:50 [0m[91m
+Apr 18 01:25:50 Creating config file /etc/php5/mods-available/mysql.ini with new version
+Apr 18 01:25:50 [0m[91mphp5_invoke: Enable module mysql for fpm SAPI
+Apr 18 01:25:50 [0m[91mphp5_invoke: Enable module mysql for cli SAPI
+Apr 18 01:25:50 [0m[91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:50 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:50 debconf: falling back to frontend: Readline
+Apr 18 01:25:50 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:50 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:50 debconf: falling back to frontend: Teletype
+Apr 18 01:25:50 [0m[91m
+Apr 18 01:25:50 Creating config file /etc/php5/mods-available/mysqli.ini with new version
+Apr 18 01:25:51 [0m[91mphp5_invoke: Enable module mysqli for fpm SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke: Enable module mysqli for cli SAPI
+Apr 18 01:25:51 [0m[91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:51 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:51 debconf: falling back to frontend: Readline
+Apr 18 01:25:51 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:51 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:51 debconf: falling back to frontend: Teletype
+Apr 18 01:25:51 [0m[91m
+Apr 18 01:25:51 Creating config file /etc/php5/mods-available/pdo_mysql.ini with new version
+Apr 18 01:25:51 [0m[91mphp5_invoke: Enable module pdo_mysql for fpm SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke: Enable module pdo_mysql for cli SAPI
+Apr 18 01:25:51 [0mSetting up php5-cli (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:51 update-alternatives: using /usr/bin/php5 to provide /usr/bin/php (php) in auto mode
+Apr 18 01:25:51 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:51 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:51 debconf: falling back to frontend: Readline
+Apr 18 01:25:51 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:51 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:51 debconf: falling back to frontend: Teletype
+Apr 18 01:25:51 [0m[91m
+Apr 18 01:25:51 [0m[91mCreating config file /etc/php5/cli/php.ini with new version
+Apr 18 01:25:51 [0m[91mphp5_invoke opcache: already enabled for cli SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke pdo_mysql: already enabled for cli SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke pdo: already enabled for cli SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke mysql: already enabled for cli SAPI
+Apr 18 01:25:51 [0m[91mphp5_invoke mysqli: already enabled for cli SAPI
+Apr 18 01:25:51 [0mSetting up php5-readline (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:51 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:25:51 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:25:51 debconf: falling back to frontend: Readline
+Apr 18 01:25:51 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:25:51 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:25:51 debconf: falling back to frontend: Teletype
+Apr 18 01:25:51 [0m[91m
+Apr 18 01:25:51 Creating config file /etc/php5/mods-available/readline.ini with new version
+Apr 18 01:25:52 [0m[91mphp5_invoke: Enable module readline for fpm SAPI
+Apr 18 01:25:52 [0m[91mphp5_invoke: Enable module readline for cli SAPI
+Apr 18 01:25:52 [0mSetting up php5-json (1.3.2-2build1) ...
+Apr 18 01:25:52 [91mphp5_invoke: Enable module json for fpm SAPI
+Apr 18 01:25:52 [0m[91mphp5_invoke: Enable module json for cli SAPI
+Apr 18 01:25:52 [0mProcessing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:25:52 Setting up php5 (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:52 Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:25:52 Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+Apr 18 01:25:52 Processing triggers for php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...
+Apr 18 01:25:52 [91minvoke-rc.d: policy-rc.d denied execution of restart.
+Apr 18 01:25:52 [0m[91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:25:53 [0m ---> 4c7420929e53
+Apr 18 01:25:53 Removing intermediate container 345288b2b50d
+Apr 18 01:25:53 Step 4 : CMD supervisord -n -c /etc/supervisor/supervisord.conf
+Apr 18 01:25:53  ---> Running in c0b16078a21f
+Apr 18 01:25:53  ---> fc9d3bf4d49e
+Apr 18 01:25:53 Removing intermediate container c0b16078a21f
+Apr 18 01:25:53 Successfully built fc9d3bf4d49e
+Apr 18 01:25:53 Step 0 : FROM ubuntu:14.04
+Apr 18 01:25:53  ---> d0955f21bf24
+Apr 18 01:25:53 Step 1 : ADD contents /tmp/contents
+Apr 18 01:25:53  ---> c0c990698a91
+Apr 18 01:25:53 Removing intermediate container 577047f8a58a
+Apr 18 01:25:53 Step 2 : RUN chmod a+x /tmp/contents/install.sh
+Apr 18 01:25:54  ---> Running in 76bfebeae727
+Apr 18 01:25:54  ---> 8bf6142cf8f1
+Apr 18 01:25:54 Removing intermediate container 76bfebeae727
+Apr 18 01:25:54 Step 3 : RUN /tmp/contents/install.sh
+Apr 18 01:25:54  ---> Running in ab209892f85b
+Apr 18 01:25:55 Ign http://archive.ubuntu.com trusty InRelease
+Apr 18 01:25:55 Ign http://archive.ubuntu.com trusty-updates InRelease
+Apr 18 01:25:55 Ign http://archive.ubuntu.com trusty-security InRelease
+Apr 18 01:25:55 Hit http://archive.ubuntu.com trusty Release.gpg
+Apr 18 01:25:55 Get:1 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Apr 18 01:25:55 Get:2 http://archive.ubuntu.com trusty-security Release.gpg [933 B]
+Apr 18 01:25:56 Hit http://archive.ubuntu.com trusty Release
+Apr 18 01:25:56 Get:3 http://archive.ubuntu.com trusty-updates Release [63.5 kB]
+Apr 18 01:25:56 Get:4 http://archive.ubuntu.com trusty-security Release [63.5 kB]
+Apr 18 01:25:56 Get:5 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+Apr 18 01:25:57 Get:6 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+Apr 18 01:25:57 Get:7 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+Apr 18 01:25:58 Get:8 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Apr 18 01:25:59 Get:9 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Apr 18 01:25:59 Get:10 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Apr 18 01:26:01 Get:11 http://archive.ubuntu.com trusty-updates/main Sources [248 kB]
+Apr 18 01:26:01 Get:12 http://archive.ubuntu.com trusty-updates/restricted Sources [2310 B]
+Apr 18 01:26:01 Get:13 http://archive.ubuntu.com trusty-updates/universe Sources [139 kB]
+Apr 18 01:26:01 Get:14 http://archive.ubuntu.com trusty-updates/main amd64 Packages [636 kB]
+Apr 18 01:26:02 Get:15 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.1 kB]
+Apr 18 01:26:02 Get:16 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [351 kB]
+Apr 18 01:26:02 Get:17 http://archive.ubuntu.com trusty-security/main Sources [97.2 kB]
+Apr 18 01:26:02 Get:18 http://archive.ubuntu.com trusty-security/restricted Sources [1874 B]
+Apr 18 01:26:02 Get:19 http://archive.ubuntu.com trusty-security/universe Sources [22.5 kB]
+Apr 18 01:26:02 Get:20 http://archive.ubuntu.com trusty-security/main amd64 Packages [329 kB]
+Apr 18 01:26:02 Get:21 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [14.8 kB]
+Apr 18 01:26:02 Get:22 http://archive.ubuntu.com trusty-security/universe amd64 Packages [123 kB]
+Apr 18 01:26:02 Fetched 20.7 MB in 6s (2981 kB/s)
+Apr 18 01:26:03 Reading package lists...
+Apr 18 01:26:05 Reading package lists...
+Apr 18 01:26:05 Building dependency tree...
+Apr 18 01:26:05 Reading state information...
+Apr 18 01:26:05 The following extra packages will be installed:
+Apr 18 01:26:05   binutils cpp cpp-4.8 gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin libc6-dev
+Apr 18 01:26:05   libcloog-isl4 libedit2 libgcc-4.8-dev libgmp10 libgomp1 libisl10 libitm1
+Apr 18 01:26:05   libjemalloc1 libmpc3 libmpfr4 libquadmath0 libtsan0 libvarnishapi1
+Apr 18 01:26:05   linux-libc-dev manpages manpages-dev
+Apr 18 01:26:05 Suggested packages:
+Apr 18 01:26:05   binutils-doc cpp-doc gcc-4.8-locales gcc-multilib make autoconf automake1.9
+Apr 18 01:26:05   libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc libgcc1-dbg
+Apr 18 01:26:05   libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg
+Apr 18 01:26:05   libbacktrace1-dbg libquadmath0-dbg binutils-gold glibc-doc man-browser
+Apr 18 01:26:05   varnish-doc
+Apr 18 01:26:05 The following NEW packages will be installed:
+Apr 18 01:26:05   binutils cpp cpp-4.8 gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin libc6-dev
+Apr 18 01:26:05   libcloog-isl4 libedit2 libgcc-4.8-dev libgmp10 libgomp1 libisl10 libitm1
+Apr 18 01:26:05   libjemalloc1 libmpc3 libmpfr4 libquadmath0 libtsan0 libvarnishapi1
+Apr 18 01:26:05   linux-libc-dev manpages manpages-dev varnish
+Apr 18 01:26:06 0 upgraded, 26 newly installed, 0 to remove and 16 not upgraded.
+Apr 18 01:26:06 Need to get 20.3 MB of archives.
+Apr 18 01:26:06 After this operation, 73.3 MB of additional disk space will be used.
+Apr 18 01:26:06 Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libedit2 amd64 3.1-20130712-2 [86.7 kB]
+Apr 18 01:26:06 Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libasan0 amd64 4.8.2-19ubuntu1 [63.0 kB]
+Apr 18 01:26:07 Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libatomic1 amd64 4.8.2-19ubuntu1 [8626 B]
+Apr 18 01:26:07 Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+Apr 18 01:26:07 Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libisl10 amd64 0.12.2-1 [419 kB]
+Apr 18 01:26:08 Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 amd64 0.18.2-1 [57.5 kB]
+Apr 18 01:26:08 Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main libgomp1 amd64 4.8.2-19ubuntu1 [23.2 kB]
+Apr 18 01:26:08 Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libitm1 amd64 4.8.2-19ubuntu1 [28.5 kB]
+Apr 18 01:26:08 Get:9 http://archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 amd64 3.1.2-1 [203 kB]
+Apr 18 01:26:09 Get:10 http://archive.ubuntu.com/ubuntu/ trusty/main libquadmath0 amd64 4.8.2-19ubuntu1 [126 kB]
+Apr 18 01:26:09 Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libtsan0 amd64 4.8.2-19ubuntu1 [94.7 kB]
+Apr 18 01:26:09 Get:12 http://archive.ubuntu.com/ubuntu/ trusty/universe libvarnishapi1 amd64 3.0.5-2 [29.9 kB]
+Apr 18 01:26:09 Get:13 http://archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB]
+Apr 18 01:26:09 Get:14 http://archive.ubuntu.com/ubuntu/ trusty/main libmpc3 amd64 1.0.1-1ubuntu1 [38.4 kB]
+Apr 18 01:26:09 Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main manpages all 3.54-1ubuntu1 [627 kB]
+Apr 18 01:26:10 Get:16 http://archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu3.1 [2076 kB]
+Apr 18 01:26:12 Get:17 http://archive.ubuntu.com/ubuntu/ trusty/main cpp-4.8 amd64 4.8.2-19ubuntu1 [4439 kB]
+Apr 18 01:26:14 Get:18 http://archive.ubuntu.com/ubuntu/ trusty/main cpp amd64 4:4.8.2-1ubuntu6 [27.5 kB]
+Apr 18 01:26:14 Get:19 http://archive.ubuntu.com/ubuntu/ trusty/main libgcc-4.8-dev amd64 4.8.2-19ubuntu1 [1688 kB]
+Apr 18 01:26:14 Get:20 http://archive.ubuntu.com/ubuntu/ trusty/main gcc-4.8 amd64 4.8.2-19ubuntu1 [5012 kB]
+Apr 18 01:26:16 Get:21 http://archive.ubuntu.com/ubuntu/ trusty/main gcc amd64 4:4.8.2-1ubuntu6 [5098 B]
+Apr 18 01:26:16 Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin amd64 2.19-0ubuntu6.6 [68.9 kB]
+Apr 18 01:26:16 Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev amd64 3.13.0-49.83 [779 kB]
+Apr 18 01:26:16 Get:24 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev amd64 2.19-0ubuntu6.6 [1910 kB]
+Apr 18 01:26:20 Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1820 kB]
+Apr 18 01:26:21 Get:26 http://archive.ubuntu.com/ubuntu/ trusty/universe varnish amd64 3.0.5-2 [411 kB]
+Apr 18 01:26:21 [91mdebconf: unable to initialize frontend: Dialog
+Apr 18 01:26:21 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+Apr 18 01:26:21 debconf: falling back to frontend: Readline
+Apr 18 01:26:21 [0m[91mdebconf: unable to initialize frontend: Readline
+Apr 18 01:26:21 debconf: (This frontend requires a controlling tty.)
+Apr 18 01:26:21 debconf: falling back to frontend: Teletype
+Apr 18 01:26:21 [0m[91mdpkg-preconfigure: unable to re-open stdin: 
+Apr 18 01:26:21 [0mFetched 20.3 MB in 15s (1322 kB/s)
+Apr 18 01:26:21 Selecting previously unselected package libedit2:amd64.
+Apr 18 01:26:21 (Reading database ... 11527 files and directories currently installed.)
+Apr 18 01:26:21 Preparing to unpack .../libedit2_3.1-20130712-2_amd64.deb ...
+Apr 18 01:26:21 Unpacking libedit2:amd64 (3.1-20130712-2) ...
+Apr 18 01:26:21 Selecting previously unselected package libasan0:amd64.
+Apr 18 01:26:21 Preparing to unpack .../libasan0_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:21 Unpacking libasan0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:21 Selecting previously unselected package libatomic1:amd64.
+Apr 18 01:26:21 Preparing to unpack .../libatomic1_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:21 Unpacking libatomic1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libgmp10:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libisl10:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libisl10_0.12.2-1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libisl10:amd64 (0.12.2-1) ...
+Apr 18 01:26:22 Selecting previously unselected package libcloog-isl4:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libcloog-isl4_0.18.2-1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libcloog-isl4:amd64 (0.18.2-1) ...
+Apr 18 01:26:22 Selecting previously unselected package libgomp1:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libgomp1_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libgomp1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libitm1:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libitm1_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libitm1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libmpfr4:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libmpfr4_3.1.2-1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libmpfr4:amd64 (3.1.2-1) ...
+Apr 18 01:26:22 Selecting previously unselected package libquadmath0:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libquadmath0_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libquadmath0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libtsan0:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libtsan0_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libtsan0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package libvarnishapi1.
+Apr 18 01:26:22 Preparing to unpack .../libvarnishapi1_3.0.5-2_amd64.deb ...
+Apr 18 01:26:22 Unpacking libvarnishapi1 (3.0.5-2) ...
+Apr 18 01:26:22 Selecting previously unselected package libjemalloc1.
+Apr 18 01:26:22 Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Apr 18 01:26:22 Unpacking libjemalloc1 (3.5.1-2) ...
+Apr 18 01:26:22 Selecting previously unselected package libmpc3:amd64.
+Apr 18 01:26:22 Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking libmpc3:amd64 (1.0.1-1ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package manpages.
+Apr 18 01:26:22 Preparing to unpack .../manpages_3.54-1ubuntu1_all.deb ...
+Apr 18 01:26:22 Unpacking manpages (3.54-1ubuntu1) ...
+Apr 18 01:26:22 Selecting previously unselected package binutils.
+Apr 18 01:26:22 Preparing to unpack .../binutils_2.24-5ubuntu3.1_amd64.deb ...
+Apr 18 01:26:22 Unpacking binutils (2.24-5ubuntu3.1) ...
+Apr 18 01:26:22 Selecting previously unselected package cpp-4.8.
+Apr 18 01:26:22 Preparing to unpack .../cpp-4.8_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:22 Unpacking cpp-4.8 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:23 Selecting previously unselected package cpp.
+Apr 18 01:26:23 Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Apr 18 01:26:23 Unpacking cpp (4:4.8.2-1ubuntu6) ...
+Apr 18 01:26:23 Selecting previously unselected package libgcc-4.8-dev:amd64.
+Apr 18 01:26:23 Preparing to unpack .../libgcc-4.8-dev_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:23 Unpacking libgcc-4.8-dev:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:23 Selecting previously unselected package gcc-4.8.
+Apr 18 01:26:23 Preparing to unpack .../gcc-4.8_4.8.2-19ubuntu1_amd64.deb ...
+Apr 18 01:26:23 Unpacking gcc-4.8 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:23 Selecting previously unselected package gcc.
+Apr 18 01:26:23 Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Apr 18 01:26:23 Unpacking gcc (4:4.8.2-1ubuntu6) ...
+Apr 18 01:26:23 Selecting previously unselected package libc-dev-bin.
+Apr 18 01:26:23 Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.6_amd64.deb ...
+Apr 18 01:26:23 Unpacking libc-dev-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:26:23 Selecting previously unselected package linux-libc-dev:amd64.
+Apr 18 01:26:23 Preparing to unpack .../linux-libc-dev_3.13.0-49.83_amd64.deb ...
+Apr 18 01:26:23 Unpacking linux-libc-dev:amd64 (3.13.0-49.83) ...
+Apr 18 01:26:24 Selecting previously unselected package libc6-dev:amd64.
+Apr 18 01:26:24 Preparing to unpack .../libc6-dev_2.19-0ubuntu6.6_amd64.deb ...
+Apr 18 01:26:24 Unpacking libc6-dev:amd64 (2.19-0ubuntu6.6) ...
+Apr 18 01:26:24 Selecting previously unselected package manpages-dev.
+Apr 18 01:26:24 Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+Apr 18 01:26:24 Unpacking manpages-dev (3.54-1ubuntu1) ...
+Apr 18 01:26:24 Selecting previously unselected package varnish.
+Apr 18 01:26:24 Preparing to unpack .../varnish_3.0.5-2_amd64.deb ...
+Apr 18 01:26:24 Unpacking varnish (3.0.5-2) ...
+Apr 18 01:26:24 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:26:24 Setting up libedit2:amd64 (3.1-20130712-2) ...
+Apr 18 01:26:24 Setting up libasan0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libatomic1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+Apr 18 01:26:24 Setting up libisl10:amd64 (0.12.2-1) ...
+Apr 18 01:26:24 Setting up libcloog-isl4:amd64 (0.18.2-1) ...
+Apr 18 01:26:24 Setting up libgomp1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libitm1:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libmpfr4:amd64 (3.1.2-1) ...
+Apr 18 01:26:24 Setting up libquadmath0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libtsan0:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up libvarnishapi1 (3.0.5-2) ...
+Apr 18 01:26:24 Setting up libjemalloc1 (3.5.1-2) ...
+Apr 18 01:26:24 Setting up libmpc3:amd64 (1.0.1-1ubuntu1) ...
+Apr 18 01:26:24 Setting up manpages (3.54-1ubuntu1) ...
+Apr 18 01:26:24 Setting up binutils (2.24-5ubuntu3.1) ...
+Apr 18 01:26:24 Setting up cpp-4.8 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up cpp (4:4.8.2-1ubuntu6) ...
+Apr 18 01:26:24 Setting up libgcc-4.8-dev:amd64 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up gcc-4.8 (4.8.2-19ubuntu1) ...
+Apr 18 01:26:24 Setting up gcc (4:4.8.2-1ubuntu6) ...
+Apr 18 01:26:24 Setting up libc-dev-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:26:24 Setting up linux-libc-dev:amd64 (3.13.0-49.83) ...
+Apr 18 01:26:24 Setting up libc6-dev:amd64 (2.19-0ubuntu6.6) ...
+Apr 18 01:26:24 Setting up manpages-dev (3.54-1ubuntu1) ...
+Apr 18 01:26:24 Setting up varnish (3.0.5-2) ...
+Apr 18 01:26:25 [91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:26:25 [0m[91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:26:25 [0m[91minvoke-rc.d: policy-rc.d denied execution of start.
+Apr 18 01:26:25 [0mProcessing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Apr 18 01:26:25 Processing triggers for ureadahead (0.100.0-16) ...
+Apr 18 01:26:26  ---> 16bb547e82f9
+Apr 18 01:26:26 Removing intermediate container ab209892f85b
+Apr 18 01:26:26 Step 4 : CMD /usr/sbin/varnishd -F -f /etc/varnish/default.vcl
+Apr 18 01:26:26  ---> Running in 4259470ef15a
+Apr 18 01:26:26  ---> db96fac563f0
+Apr 18 01:26:26 Removing intermediate container 4259470ef15a
+Apr 18 01:26:26 Successfully built db96fac563f0

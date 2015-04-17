@@ -1,0 +1,1240 @@
+Apr 18 00:52:49 [1;32mvirtualbox-ovf output will be in this color.[0m
+Apr 18 00:52:49 
+Apr 18 00:52:49 [1;32m==> virtualbox-ovf: Downloading or copying Guest additions[0m
+Apr 18 00:52:49 [0;32m    virtualbox-ovf: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+Apr 18 00:52:49 [1;32m==> virtualbox-ovf: Importing VM: ../ubuntu-14.04.ovf[0m
+Apr 18 00:53:06 [1;32m==> virtualbox-ovf: Creating forwarded port mapping for SSH (host port 4316)[0m
+Apr 18 00:53:06 [1;32m==> virtualbox-ovf: Starting the virtual machine...[0m
+Apr 18 00:53:06 [0;32m    virtualbox-ovf: WARNING: The VM will be started in headless mode, as configured.
+Apr 18 00:53:06     virtualbox-ovf: In headless mode, errors during the boot sequence or OS setup
+Apr 18 00:53:06     virtualbox-ovf: won't be easily visible. Use at your own discretion.[0m
+Apr 18 00:53:06 [1;32m==> virtualbox-ovf: Waiting 10s for boot...[0m
+Apr 18 00:53:16 [1;32m==> virtualbox-ovf: Typing the boot command...[0m
+Apr 18 00:53:16 [1;32m==> virtualbox-ovf: Waiting for SSH to become available...[0m
+Apr 18 00:53:16 [1;32m==> virtualbox-ovf: Connected to SSH![0m
+Apr 18 00:53:16 [1;32m==> virtualbox-ovf: Uploading VirtualBox version info (4.3.26)[0m
+Apr 18 00:53:16 [1;32m==> virtualbox-ovf: Uploading VirtualBox guest additions ISO...[0m
+Apr 18 00:53:18 [1;32m==> virtualbox-ovf: Uploading contents => /tmp[0m
+Apr 18 00:53:18 [1;32m==> virtualbox-ovf: Provisioning with shell script: /var/folders/7x/lhp3_8493w536jyc0mkl9m3c0000gn/T/packer-shell255082220[0m
+Apr 18 00:53:18 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty InRelease[0m
+Apr 18 00:53:19 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-updates InRelease[0m
+Apr 18 00:53:19 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-backports InRelease[0m
+Apr 18 00:53:20 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-security InRelease[0m
+Apr 18 00:53:20 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release.gpg[0m
+Apr 18 00:53:20 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net trusty-updates Release.gpg [933 B][0m
+Apr 18 00:53:21 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net trusty-backports Release.gpg [933 B][0m
+Apr 18 00:53:21 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net trusty-security Release.gpg [933 B][0m
+Apr 18 00:53:21 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release[0m
+Apr 18 00:53:22 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net trusty-updates Release [63.5 kB][0m
+Apr 18 00:53:24 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net trusty-backports Release [63.5 kB][0m
+Apr 18 00:53:25 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net trusty-security Release [63.5 kB][0m
+Apr 18 00:53:26 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main amd64 Packages[0m
+Apr 18 00:53:26 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted amd64 Packages[0m
+Apr 18 00:53:27 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe amd64 Packages[0m
+Apr 18 00:53:27 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse amd64 Packages[0m
+Apr 18 00:53:28 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main i386 Packages[0m
+Apr 18 00:53:28 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted i386 Packages[0m
+Apr 18 00:53:29 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe i386 Packages[0m
+Apr 18 00:53:29 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse i386 Packages[0m
+Apr 18 00:53:30 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main Translation-en[0m
+Apr 18 00:53:30 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse Translation-en[0m
+Apr 18 00:53:31 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted Translation-en[0m
+Apr 18 00:53:32 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe Translation-en[0m
+Apr 18 00:53:32 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net trusty-updates/main amd64 Packages [502 kB][0m
+Apr 18 00:53:38 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net trusty-updates/restricted amd64 Packages [9,238 B][0m
+Apr 18 00:53:38 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net trusty-updates/universe amd64 Packages [269 kB][0m
+Apr 18 00:53:40 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net trusty-updates/multiverse amd64 Packages [11.7 kB][0m
+Apr 18 00:53:40 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net trusty-updates/main i386 Packages [491 kB][0m
+Apr 18 00:53:43 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net trusty-updates/restricted i386 Packages [9,256 B][0m
+Apr 18 00:53:43 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net trusty-updates/universe i386 Packages [270 kB][0m
+Apr 18 00:53:44 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net trusty-updates/multiverse i386 Packages [11.9 kB][0m
+Apr 18 00:53:45 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/main Translation-en[0m
+Apr 18 00:53:45 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/multiverse Translation-en[0m
+Apr 18 00:53:46 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/restricted Translation-en[0m
+Apr 18 00:53:46 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/universe Translation-en[0m
+Apr 18 00:53:46 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net trusty-backports/main amd64 Packages [6,256 B][0m
+Apr 18 00:53:47 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net trusty-backports/restricted amd64 Packages [28 B][0m
+Apr 18 00:53:47 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net trusty-backports/universe amd64 Packages [28.5 kB][0m
+Apr 18 00:53:47 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net trusty-backports/multiverse amd64 Packages [1,245 B][0m
+Apr 18 00:53:48 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net trusty-backports/main i386 Packages [6,285 B][0m
+Apr 18 00:53:48 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net trusty-backports/restricted i386 Packages [28 B][0m
+Apr 18 00:53:48 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net trusty-backports/universe i386 Packages [28.5 kB][0m
+Apr 18 00:53:49 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net trusty-backports/multiverse i386 Packages [1,249 B][0m
+Apr 18 00:53:49 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/main Translation-en[0m
+Apr 18 00:53:49 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/multiverse Translation-en[0m
+Apr 18 00:53:50 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/restricted Translation-en[0m
+Apr 18 00:53:50 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net trusty-backports/universe Translation-en [25.3 kB][0m
+Apr 18 00:53:51 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net trusty-security/main amd64 Packages [258 kB][0m
+Apr 18 00:53:54 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net trusty-security/restricted amd64 Packages [8,875 B][0m
+Apr 18 00:53:54 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net trusty-security/universe amd64 Packages [95.9 kB][0m
+Apr 18 00:53:55 [0;32m    virtualbox-ovf: Get:27 http://mirror.internode.on.net trusty-security/multiverse amd64 Packages [3,451 B][0m
+Apr 18 00:53:55 [0;32m    virtualbox-ovf: Get:28 http://mirror.internode.on.net trusty-security/main i386 Packages [247 kB][0m
+Apr 18 00:53:57 [0;32m    virtualbox-ovf: Get:29 http://mirror.internode.on.net trusty-security/restricted i386 Packages [8,846 B][0m
+Apr 18 00:53:57 [0;32m    virtualbox-ovf: Get:30 http://mirror.internode.on.net trusty-security/universe i386 Packages [95.9 kB][0m
+Apr 18 00:53:58 [0;32m    virtualbox-ovf: Get:31 http://mirror.internode.on.net trusty-security/multiverse i386 Packages [3,643 B][0m
+Apr 18 00:53:58 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/main Translation-en[0m
+Apr 18 00:53:59 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/multiverse Translation-en[0m
+Apr 18 00:53:59 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/restricted Translation-en[0m
+Apr 18 00:54:00 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/universe Translation-en[0m
+Apr 18 00:54:04 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/main Translation-en_US[0m
+Apr 18 00:54:05 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/multiverse Translation-en_US[0m
+Apr 18 00:54:05 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/restricted Translation-en_US[0m
+Apr 18 00:54:05 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/universe Translation-en_US[0m
+Apr 18 00:54:05 [0;32m    virtualbox-ovf: Fetched 2,587 kB in 47s (54.2 kB/s)[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: libjemalloc1 libvarnishapi1[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Suggested packages:[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: varnish-doc[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: libjemalloc1 libvarnishapi1 varnish[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: Need to get 518 kB of archives.[0m
+Apr 18 00:54:09 [0;32m    virtualbox-ovf: After this operation, 1,653 kB of additional disk space will be used.[0m
+Apr 18 00:54:10 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe libvarnishapi1 amd64 3.0.5-2 [29.9 kB][0m
+Apr 18 00:54:12 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB][0m
+Apr 18 00:54:13 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe varnish amd64 3.0.5-2 [411 kB][0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Fetched 518 kB in 7s (72.2 kB/s)[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Selecting previously unselected package libvarnishapi1.[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: (Reading database ... 88557 files and directories currently installed.)[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Preparing to unpack .../libvarnishapi1_3.0.5-2_amd64.deb ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Unpacking libvarnishapi1 (3.0.5-2) ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Selecting previously unselected package libjemalloc1.[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Unpacking libjemalloc1 (3.5.1-2) ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Selecting previously unselected package varnish.[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Preparing to unpack .../varnish_3.0.5-2_amd64.deb ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Unpacking varnish (3.0.5-2) ...[0m
+Apr 18 00:54:17 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 00:54:18 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 00:54:18 [0;32m    virtualbox-ovf: ureadahead will be reprofiled on next reboot[0m
+Apr 18 00:54:18 [0;32m    virtualbox-ovf: Setting up libvarnishapi1 (3.0.5-2) ...[0m
+Apr 18 00:54:19 [0;32m    virtualbox-ovf: Setting up libjemalloc1 (3.5.1-2) ...[0m
+Apr 18 00:54:19 [0;32m    virtualbox-ovf: Setting up varnish (3.0.5-2) ...[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: [34G[ OK ][0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: Processing triggers for libc-bin (2.19-0ubuntu6.6) ...[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 00:54:20 [1;32m==> virtualbox-ovf: Gracefully halting virtual machine...[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: [0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: Broadcast message from vagrant@packer-virtualbox-iso[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: (/dev/pts/0) at 22:54 ...[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf:[0m
+Apr 18 00:54:20 [0;32m    virtualbox-ovf: The system is going down for power off NOW![0m
+Apr 18 00:54:23 [1;32m==> virtualbox-ovf: Preparing to export machine...[0m
+Apr 18 00:54:23 [0;32m    virtualbox-ovf: Deleting forwarded port mapping for SSH (host port 4316)[0m
+Apr 18 00:54:24 [1;32m==> virtualbox-ovf: Exporting virtual machine...[0m
+Apr 18 00:54:24 [0;32m    virtualbox-ovf: Executing: export packer-virtualbox-ovf-1429311169 --output output-virtualbox-ovf/packer-virtualbox-ovf-1429311169.ovf[0m
+Apr 18 00:55:39 [1;32m==> virtualbox-ovf: Unregistering and deleting imported VM...[0m
+Apr 18 00:55:40 [1;32m==> virtualbox-ovf: Running post-processor: vagrant[0m
+Apr 18 00:55:40 [1;32m==> virtualbox-ovf (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+Apr 18 00:55:40 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311169-disk1.vmdk[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311169.ovf[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Renaming the OVF to box.ovf...[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Compressing: Vagrantfile[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Compressing: box.ovf[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Compressing: metadata.json[0m
+Apr 18 00:55:45 [0;32m    virtualbox-ovf (vagrant): Compressing: packer-virtualbox-ovf-1429311169-disk1.vmdk[0m
+Apr 18 00:56:50 [1;32mBuild 'virtualbox-ovf' finished.[0m
+Apr 18 00:56:50 
+Apr 18 00:56:50 ==> Builds finished. The artifacts of successful builds are:
+Apr 18 00:56:50 --> virtualbox-ovf: 'virtualbox' provider box: vagrant.box
+Apr 18 00:56:52 ==> box: Adding box 'loadbalancer' (v0) for provider: 
+Apr 18 00:56:52     box: Downloading: file:///Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/implementierung/machines/loadbalancer/vagrant.box
+Apr 18 00:56:59 [K    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    box: Progress: 43% (Rate: 391M/s, Estimated time remaining: 0:00:02)[K    box: Progress: 95% (Rate: 408M/s, Estimated time remaining: --:--:--)[K==> box: Successfully added box 'loadbalancer' (v0) for 'virtualbox'!
+Apr 18 00:57:01 [1;32mvirtualbox-ovf output will be in this color.[0m
+Apr 18 00:57:01 
+Apr 18 00:57:01 [1;32m==> virtualbox-ovf: Downloading or copying Guest additions[0m
+Apr 18 00:57:01 [0;32m    virtualbox-ovf: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+Apr 18 00:57:01 [1;32m==> virtualbox-ovf: Importing VM: ../ubuntu-14.04.ovf[0m
+Apr 18 00:57:19 [1;32m==> virtualbox-ovf: Creating forwarded port mapping for SSH (host port 3870)[0m
+Apr 18 00:57:20 [1;32m==> virtualbox-ovf: Starting the virtual machine...[0m
+Apr 18 00:57:20 [0;32m    virtualbox-ovf: WARNING: The VM will be started in headless mode, as configured.
+Apr 18 00:57:20     virtualbox-ovf: In headless mode, errors during the boot sequence or OS setup
+Apr 18 00:57:20     virtualbox-ovf: won't be easily visible. Use at your own discretion.[0m
+Apr 18 00:57:20 [1;32m==> virtualbox-ovf: Waiting 10s for boot...[0m
+Apr 18 00:57:30 [1;32m==> virtualbox-ovf: Typing the boot command...[0m
+Apr 18 00:57:30 [1;32m==> virtualbox-ovf: Waiting for SSH to become available...[0m
+Apr 18 00:57:30 [1;32m==> virtualbox-ovf: Connected to SSH![0m
+Apr 18 00:57:30 [1;32m==> virtualbox-ovf: Uploading VirtualBox version info (4.3.26)[0m
+Apr 18 00:57:30 [1;32m==> virtualbox-ovf: Uploading VirtualBox guest additions ISO...[0m
+Apr 18 00:57:31 [1;32m==> virtualbox-ovf: Uploading contents => /tmp[0m
+Apr 18 00:57:31 [1;32m==> virtualbox-ovf: Provisioning with shell script: /var/folders/7x/lhp3_8493w536jyc0mkl9m3c0000gn/T/packer-shell214902329[0m
+Apr 18 00:57:32 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty InRelease[0m
+Apr 18 00:57:33 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-updates InRelease[0m
+Apr 18 00:57:33 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-backports InRelease[0m
+Apr 18 00:57:33 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-security InRelease[0m
+Apr 18 00:57:34 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release.gpg[0m
+Apr 18 00:57:34 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net trusty-updates Release.gpg [933 B][0m
+Apr 18 00:57:34 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net trusty-backports Release.gpg [933 B][0m
+Apr 18 00:57:35 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net trusty-security Release.gpg [933 B][0m
+Apr 18 00:57:35 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release[0m
+Apr 18 00:57:35 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net trusty-updates Release [63.5 kB][0m
+Apr 18 00:57:37 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net trusty-backports Release [63.5 kB][0m
+Apr 18 00:57:38 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net trusty-security Release [63.5 kB][0m
+Apr 18 00:57:39 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main amd64 Packages[0m
+Apr 18 00:57:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted amd64 Packages[0m
+Apr 18 00:57:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe amd64 Packages[0m
+Apr 18 00:57:41 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse amd64 Packages[0m
+Apr 18 00:57:41 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main i386 Packages[0m
+Apr 18 00:57:42 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted i386 Packages[0m
+Apr 18 00:57:43 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe i386 Packages[0m
+Apr 18 00:57:44 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse i386 Packages[0m
+Apr 18 00:57:44 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main Translation-en[0m
+Apr 18 00:57:45 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse Translation-en[0m
+Apr 18 00:57:46 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted Translation-en[0m
+Apr 18 00:57:47 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe Translation-en[0m
+Apr 18 00:57:47 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net trusty-updates/main amd64 Packages [502 kB][0m
+Apr 18 00:57:53 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net trusty-updates/restricted amd64 Packages [9,238 B][0m
+Apr 18 00:57:53 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net trusty-updates/universe amd64 Packages [269 kB][0m
+Apr 18 00:57:55 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net trusty-updates/multiverse amd64 Packages [11.7 kB][0m
+Apr 18 00:57:55 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net trusty-updates/main i386 Packages [491 kB][0m
+Apr 18 00:57:57 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net trusty-updates/restricted i386 Packages [9,256 B][0m
+Apr 18 00:57:57 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net trusty-updates/universe i386 Packages [270 kB][0m
+Apr 18 00:57:59 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net trusty-updates/multiverse i386 Packages [11.9 kB][0m
+Apr 18 00:58:00 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/main Translation-en[0m
+Apr 18 00:58:01 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/multiverse Translation-en[0m
+Apr 18 00:58:01 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/restricted Translation-en[0m
+Apr 18 00:58:02 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/universe Translation-en[0m
+Apr 18 00:58:03 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net trusty-backports/main amd64 Packages [6,256 B][0m
+Apr 18 00:58:03 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net trusty-backports/restricted amd64 Packages [28 B][0m
+Apr 18 00:58:04 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net trusty-backports/universe amd64 Packages [28.5 kB][0m
+Apr 18 00:58:04 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net trusty-backports/multiverse amd64 Packages [1,245 B][0m
+Apr 18 00:58:06 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net trusty-backports/main i386 Packages [6,285 B][0m
+Apr 18 00:58:07 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net trusty-backports/restricted i386 Packages [28 B][0m
+Apr 18 00:58:08 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net trusty-backports/universe i386 Packages [28.5 kB][0m
+Apr 18 00:58:10 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net trusty-backports/multiverse i386 Packages [1,249 B][0m
+Apr 18 00:58:11 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/main Translation-en[0m
+Apr 18 00:58:11 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/multiverse Translation-en[0m
+Apr 18 00:58:12 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/restricted Translation-en[0m
+Apr 18 00:58:12 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net trusty-backports/universe Translation-en [25.3 kB][0m
+Apr 18 00:58:14 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net trusty-security/main amd64 Packages [258 kB][0m
+Apr 18 00:58:24 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net trusty-security/restricted amd64 Packages [8,875 B][0m
+Apr 18 00:58:24 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net trusty-security/universe amd64 Packages [95.9 kB][0m
+Apr 18 00:58:27 [0;32m    virtualbox-ovf: Get:27 http://mirror.internode.on.net trusty-security/multiverse amd64 Packages [3,451 B][0m
+Apr 18 00:58:27 [0;32m    virtualbox-ovf: Get:28 http://mirror.internode.on.net trusty-security/main i386 Packages [247 kB][0m
+Apr 18 00:58:34 [0;32m    virtualbox-ovf: Get:29 http://mirror.internode.on.net trusty-security/restricted i386 Packages [8,846 B][0m
+Apr 18 00:58:34 [0;32m    virtualbox-ovf: Get:30 http://mirror.internode.on.net trusty-security/universe i386 Packages [95.9 kB][0m
+Apr 18 00:58:37 [0;32m    virtualbox-ovf: Get:31 http://mirror.internode.on.net trusty-security/multiverse i386 Packages [3,643 B][0m
+Apr 18 00:58:38 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/main Translation-en[0m
+Apr 18 00:58:38 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/multiverse Translation-en[0m
+Apr 18 00:58:39 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/restricted Translation-en[0m
+Apr 18 00:58:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/universe Translation-en[0m
+Apr 18 00:58:48 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/main Translation-en_US[0m
+Apr 18 00:58:49 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/multiverse Translation-en_US[0m
+Apr 18 00:58:50 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/restricted Translation-en_US[0m
+Apr 18 00:58:50 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/universe Translation-en_US[0m
+Apr 18 00:58:50 [0;32m    virtualbox-ovf: Fetched 2,587 kB in 1min 18s (32.9 kB/s)[0m
+Apr 18 00:58:52 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 00:58:52 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: libjpeg-turbo8 libjpeg8 libmysqlclient18 libtiff5 libvpx1 libxpm4 libxslt1.1[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: mysql-common nginx-common nginx-core php5-common php5-json php5-readline[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: python-meld3 python-pkg-resources[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: Suggested packages:[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: libgd-tools fcgiwrap nginx-doc php-pear php5-user-cache python-distribute[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: python-distribute-doc[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: libjpeg-turbo8 libjpeg8 libmysqlclient18 libtiff5 libvpx1 libxpm4 libxslt1.1[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: mysql-common nginx nginx-common nginx-core php5 php5-cli php5-common[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: php5-fpm php5-json php5-mysql php5-readline python-meld3[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: python-pkg-resources supervisor[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: 0 upgraded, 26 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: Need to get 8,635 kB of archives.[0m
+Apr 18 00:58:53 [0;32m    virtualbox-ovf: After this operation, 34.7 MB of additional disk space will be used.[0m
+Apr 18 00:58:55 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main fonts-dejavu-core all 2.34-1ubuntu1 [1,024 kB][0m
+Apr 18 00:59:04 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main fontconfig-config all 2.11.0-0ubuntu4.1 [47.4 kB][0m
+Apr 18 00:59:04 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main libfontconfig1 amd64 2.11.0-0ubuntu4.1 [123 kB][0m
+Apr 18 00:59:05 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libjpeg-turbo8 amd64 1.3.0-0ubuntu2 [104 kB][0m
+Apr 18 00:59:06 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libjpeg8 amd64 8c-2ubuntu8 [2,194 B][0m
+Apr 18 00:59:07 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main libjbig0 amd64 2.0-2ubuntu4.1 [26.1 kB][0m
+Apr 18 00:59:07 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main libtiff5 amd64 4.0.3-7ubuntu0.3 [143 kB][0m
+Apr 18 00:59:08 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libvpx1 amd64 1.3.0-2 [556 kB][0m
+Apr 18 00:59:11 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libxpm4 amd64 1:3.5.10-1 [38.3 kB][0m
+Apr 18 00:59:11 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libgd3 amd64 2.1.0-3 [147 kB][0m
+Apr 18 00:59:12 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main mysql-common all 5.5.41-0ubuntu0.14.04.1 [14.1 kB][0m
+Apr 18 00:59:13 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main libmysqlclient18 amd64 5.5.41-0ubuntu0.14.04.1 [595 kB][0m
+Apr 18 00:59:15 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libxslt1.1 amd64 1.1.28-2build1 [145 kB][0m
+Apr 18 00:59:16 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1 [34.4 kB][0m
+Apr 18 00:59:16 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.7 [442 kB][0m
+Apr 18 00:59:18 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/universe php5-fpm amd64 5.5.9+dfsg-1ubuntu4.7 [2,191 kB][0m
+Apr 18 00:59:32 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main php5-mysql amd64 5.5.9+dfsg-1ubuntu4.7 [62.9 kB][0m
+Apr 18 00:59:32 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.7 [2,163 kB][0m
+Apr 18 00:59:38 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.7 [12.1 kB][0m
+Apr 18 00:59:38 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.2 [18.1 kB][0m
+Apr 18 00:59:39 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.2 [325 kB][0m
+Apr 18 00:59:49 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.2 [5,420 B][0m
+Apr 18 00:59:50 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty-updates/main php5 all 5.5.9+dfsg-1ubuntu4.7 [1,306 B][0m
+Apr 18 00:59:52 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main python-pkg-resources all 3.3-1ubuntu1 [61.9 kB][0m
+Apr 18 00:59:54 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe python-meld3 amd64 0.6.10-1 [39.0 kB][0m
+Apr 18 00:59:55 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe supervisor all 3.0b2-1 [314 kB][0m
+Apr 18 00:59:59 [0;32m    virtualbox-ovf: Fetched 8,635 kB in 1min 6s (130 kB/s)[0m
+Apr 18 00:59:59 [0;32m    virtualbox-ovf: Selecting previously unselected package fonts-dejavu-core.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: (Reading database ... 88557 files and directories currently installed.)[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../fonts-dejavu-core_2.34-1ubuntu1_all.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking fonts-dejavu-core (2.34-1ubuntu1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package fontconfig-config.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../fontconfig-config_2.11.0-0ubuntu4.1_all.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking fontconfig-config (2.11.0-0ubuntu4.1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libfontconfig1:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libfontconfig1_2.11.0-0ubuntu4.1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libfontconfig1:amd64 (2.11.0-0ubuntu4.1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libjpeg-turbo8:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libjpeg-turbo8_1.3.0-0ubuntu2_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libjpeg8:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libjpeg8_8c-2ubuntu8_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libjbig0:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libjbig0_2.0-2ubuntu4.1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libjbig0:amd64 (2.0-2ubuntu4.1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libtiff5:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libtiff5_4.0.3-7ubuntu0.3_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libtiff5:amd64 (4.0.3-7ubuntu0.3) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libvpx1:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libvpx1_1.3.0-2_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libvpx1:amd64 (1.3.0-2) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libxpm4:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libxpm4_1%3a3.5.10-1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libxpm4:amd64 (1:3.5.10-1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libgd3:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libgd3_2.1.0-3_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libgd3:amd64 (2.1.0-3) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package mysql-common.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../mysql-common_5.5.41-0ubuntu0.14.04.1_all.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking mysql-common (5.5.41-0ubuntu0.14.04.1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libmysqlclient18:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libmysqlclient18_5.5.41-0ubuntu0.14.04.1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libmysqlclient18:amd64 (5.5.41-0ubuntu0.14.04.1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package libxslt1.1:amd64.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../libxslt1.1_1.1.28-2build1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking libxslt1.1:amd64 (1.1.28-2build1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-json.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-json_1.3.2-2build1_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking php5-json (1.3.2-2build1) ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-common.[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-common_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...[0m
+Apr 18 01:00:00 [0;32m    virtualbox-ovf: Unpacking php5-common (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-fpm.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-fpm_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-mysql.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-mysql_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking php5-mysql (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-cli.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-cli_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking php5-cli (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package php5-readline.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../php5-readline_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking php5-readline (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package nginx-common.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.2_all.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking nginx-common (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Selecting previously unselected package nginx-core.[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.2_amd64.deb ...[0m
+Apr 18 01:00:01 [0;32m    virtualbox-ovf: Unpacking nginx-core (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Selecting previously unselected package nginx.[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Preparing to unpack .../nginx_1.4.6-1ubuntu3.2_all.deb ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Unpacking nginx (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Selecting previously unselected package php5.[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Preparing to unpack .../php5_5.5.9+dfsg-1ubuntu4.7_all.deb ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Unpacking php5 (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Selecting previously unselected package python-pkg-resources.[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Preparing to unpack .../python-pkg-resources_3.3-1ubuntu1_all.deb ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Unpacking python-pkg-resources (3.3-1ubuntu1) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Selecting previously unselected package python-meld3.[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Preparing to unpack .../python-meld3_0.6.10-1_amd64.deb ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Unpacking python-meld3 (0.6.10-1) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Selecting previously unselected package supervisor.[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Preparing to unpack .../supervisor_3.0b2-1_all.deb ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Unpacking supervisor (3.0b2-1) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:00:02 [0;32m    virtualbox-ovf: ureadahead will be reprofiled on next reboot[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Processing triggers for ufw (0.34~rc-0ubuntu2) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up fonts-dejavu-core (2.34-1ubuntu1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up fontconfig-config (2.11.0-0ubuntu4.1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libfontconfig1:amd64 (2.11.0-0ubuntu4.1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libjpeg-turbo8:amd64 (1.3.0-0ubuntu2) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libjbig0:amd64 (2.0-2ubuntu4.1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libtiff5:amd64 (4.0.3-7ubuntu0.3) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libvpx1:amd64 (1.3.0-2) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libxpm4:amd64 (1:3.5.10-1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libgd3:amd64 (2.1.0-3) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up mysql-common (5.5.41-0ubuntu0.14.04.1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libmysqlclient18:amd64 (5.5.41-0ubuntu0.14.04.1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up libxslt1.1:amd64 (1.1.28-2build1) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up nginx-common (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:03 [0;32m    virtualbox-ovf: Setting up python-pkg-resources (3.3-1ubuntu1) ...[0m
+Apr 18 01:00:04 [0;32m    virtualbox-ovf: Setting up python-meld3 (0.6.10-1) ...[0m
+Apr 18 01:00:04 [0;32m    virtualbox-ovf: Setting up supervisor (3.0b2-1) ...[0m
+Apr 18 01:00:05 [0;32m    virtualbox-ovf: Starting supervisor: supervisord.[0m
+Apr 18 01:00:05 [0;32m    virtualbox-ovf: Processing triggers for ufw (0.34~rc-0ubuntu2) ...[0m
+Apr 18 01:00:05 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:00:05 [0;32m    virtualbox-ovf: Setting up nginx-core (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: Setting up nginx (1.4.6-1ubuntu3.2) ...[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: Setting up php5-common (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/pdo.ini with new version[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: php5_invoke: Enable module pdo for cli SAPI[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: php5_invoke: Enable module pdo for fpm SAPI[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/opcache.ini with new version[0m
+Apr 18 01:00:06 [0;32m    virtualbox-ovf: php5_invoke: Enable module opcache for cli SAPI[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: php5_invoke: Enable module opcache for fpm SAPI[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: Setting up php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: Creating config file /etc/php5/fpm/php.ini with new version[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: php5_invoke pdo: already enabled for fpm SAPI[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: php5_invoke opcache: already enabled for fpm SAPI[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: php5-fpm start/running, process 2600[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: Setting up php5-mysql (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:07 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/mysql.ini with new version[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module mysql for cli SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module mysql for fpm SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/mysqli.ini with new version[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module mysqli for cli SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module mysqli for fpm SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/pdo_mysql.ini with new version[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module pdo_mysql for cli SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: php5_invoke: Enable module pdo_mysql for fpm SAPI[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: Setting up php5-cli (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:08 [0;32m    virtualbox-ovf: update-alternatives: using /usr/bin/php5 to provide /usr/bin/php (php) in auto mode[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Creating config file /etc/php5/cli/php.ini with new version[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke mysql: already enabled for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke pdo_mysql: already enabled for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke mysqli: already enabled for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke pdo: already enabled for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke opcache: already enabled for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Setting up php5-readline (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Creating config file /etc/php5/mods-available/readline.ini with new version[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke: Enable module readline for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke: Enable module readline for fpm SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Setting up php5-json (1.3.2-2build1) ...[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke: Enable module json for cli SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: php5_invoke: Enable module json for fpm SAPI[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Setting up php5 (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:09 [0;32m    virtualbox-ovf: Processing triggers for libc-bin (2.19-0ubuntu6.6) ...[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: Processing triggers for php5-fpm (5.5.9+dfsg-1ubuntu4.7) ...[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: php5-fpm stop/waiting[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: php5-fpm start/running, process 3689[0m
+Apr 18 01:00:10 [1;32m==> virtualbox-ovf: Gracefully halting virtual machine...[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: [0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: Broadcast message from vagrant@packer-virtualbox-iso[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: (/dev/pts/0) at 23:00 ...[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:00:10 [0;32m    virtualbox-ovf: The system is going down for power off NOW![0m
+Apr 18 01:00:14 [1;32m==> virtualbox-ovf: Preparing to export machine...[0m
+Apr 18 01:00:14 [0;32m    virtualbox-ovf: Deleting forwarded port mapping for SSH (host port 3870)[0m
+Apr 18 01:00:14 [1;32m==> virtualbox-ovf: Exporting virtual machine...[0m
+Apr 18 01:00:14 [0;32m    virtualbox-ovf: Executing: export packer-virtualbox-ovf-1429311420 --output output-virtualbox-ovf/packer-virtualbox-ovf-1429311420.ovf[0m
+Apr 18 01:01:30 [1;32m==> virtualbox-ovf: Unregistering and deleting imported VM...[0m
+Apr 18 01:01:31 [1;32m==> virtualbox-ovf: Running post-processor: vagrant[0m
+Apr 18 01:01:31 [1;32m==> virtualbox-ovf (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+Apr 18 01:01:31 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311420-disk1.vmdk[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311420.ovf[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Renaming the OVF to box.ovf...[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Compressing: Vagrantfile[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Compressing: box.ovf[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Compressing: metadata.json[0m
+Apr 18 01:01:36 [0;32m    virtualbox-ovf (vagrant): Compressing: packer-virtualbox-ovf-1429311420-disk1.vmdk[0m
+Apr 18 01:02:30 [1;32mBuild 'virtualbox-ovf' finished.[0m
+Apr 18 01:02:30 
+Apr 18 01:02:30 ==> Builds finished. The artifacts of successful builds are:
+Apr 18 01:02:30 --> virtualbox-ovf: 'virtualbox' provider box: vagrant.box
+Apr 18 01:02:31 ==> box: Adding box 'app' (v0) for provider: 
+Apr 18 01:02:31     box: Downloading: file:///Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/implementierung/machines/app/vagrant.box
+Apr 18 01:02:39 [K    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    box: Progress: 7% (Rate: 386M/s, Estimated time remaining: 0:00:02)[K    box: Progress: 53% (Rate: 377M/s, Estimated time remaining: 0:00:01)[K==> box: Successfully added box 'app' (v0) for 'virtualbox'!
+Apr 18 01:02:40 [1;32mvirtualbox-ovf output will be in this color.[0m
+Apr 18 01:02:40 
+Apr 18 01:02:40 [1;32m==> virtualbox-ovf: Downloading or copying Guest additions[0m
+Apr 18 01:02:40 [0;32m    virtualbox-ovf: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+Apr 18 01:02:40 [1;32m==> virtualbox-ovf: Importing VM: ../ubuntu-14.04.ovf[0m
+Apr 18 01:02:57 [1;32m==> virtualbox-ovf: Creating forwarded port mapping for SSH (host port 2755)[0m
+Apr 18 01:02:57 [1;32m==> virtualbox-ovf: Starting the virtual machine...[0m
+Apr 18 01:02:57 [0;32m    virtualbox-ovf: WARNING: The VM will be started in headless mode, as configured.
+Apr 18 01:02:57     virtualbox-ovf: In headless mode, errors during the boot sequence or OS setup
+Apr 18 01:02:57     virtualbox-ovf: won't be easily visible. Use at your own discretion.[0m
+Apr 18 01:02:58 [1;32m==> virtualbox-ovf: Waiting 10s for boot...[0m
+Apr 18 01:03:08 [1;32m==> virtualbox-ovf: Typing the boot command...[0m
+Apr 18 01:03:08 [1;32m==> virtualbox-ovf: Waiting for SSH to become available...[0m
+Apr 18 01:03:08 [1;32m==> virtualbox-ovf: Connected to SSH![0m
+Apr 18 01:03:08 [1;32m==> virtualbox-ovf: Uploading VirtualBox version info (4.3.26)[0m
+Apr 18 01:03:08 [1;32m==> virtualbox-ovf: Uploading VirtualBox guest additions ISO...[0m
+Apr 18 01:03:09 [1;32m==> virtualbox-ovf: Uploading contents => /tmp[0m
+Apr 18 01:03:09 [1;32m==> virtualbox-ovf: Provisioning with shell script: /var/folders/7x/lhp3_8493w536jyc0mkl9m3c0000gn/T/packer-shell079613538[0m
+Apr 18 01:03:09 [0;32m    virtualbox-ovf: useradd: Permission denied.[0m
+Apr 18 01:03:09 [0;32m    virtualbox-ovf: useradd: cannot lock /etc/passwd; try again later.[0m
+Apr 18 01:03:09 [0;32m    virtualbox-ovf: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.CvgDZf2RZB --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver pgp.mit.edu --recv-keys 199369E5404BD5FC7D2FE43BCBCB082A1BB943DB[0m
+Apr 18 01:03:09 [0;32m    virtualbox-ovf: gpg: requesting key 1BB943DB from hkp server pgp.mit.edu[0m
+Apr 18 01:03:10 [0;32m    virtualbox-ovf: gpg: key 1BB943DB: public key "MariaDB Package Signing Key <package-signing-key@mariadb.org>" imported[0m
+Apr 18 01:03:10 [0;32m    virtualbox-ovf: gpg: Total number processed: 1[0m
+Apr 18 01:03:10 [0;32m    virtualbox-ovf: gpg:               imported: 1[0m
+Apr 18 01:03:10 [0;32m    virtualbox-ovf: Get:1 http://ftp.osuosl.org trusty InRelease [2,488 B][0m
+Apr 18 01:03:10 [0;32m    virtualbox-ovf: Get:2 http://ftp.osuosl.org trusty/main amd64 Packages [5,255 B][0m
+Apr 18 01:03:11 [0;32m    virtualbox-ovf: Get:3 http://ftp.osuosl.org trusty/main i386 Packages [5,293 B][0m
+Apr 18 01:03:11 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty InRelease[0m
+Apr 18 01:03:11 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-updates InRelease[0m
+Apr 18 01:03:11 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-backports InRelease[0m
+Apr 18 01:03:12 [0;32m    virtualbox-ovf: Ign http://ftp.osuosl.org trusty/main Translation-en_US[0m
+Apr 18 01:03:12 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-security InRelease[0m
+Apr 18 01:03:12 [0;32m    virtualbox-ovf: Ign http://ftp.osuosl.org trusty/main Translation-en[0m
+Apr 18 01:03:12 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release.gpg[0m
+Apr 18 01:03:12 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net trusty-updates Release.gpg [933 B][0m
+Apr 18 01:03:13 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net trusty-backports Release.gpg [933 B][0m
+Apr 18 01:03:13 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net trusty-security Release.gpg [933 B][0m
+Apr 18 01:03:13 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release[0m
+Apr 18 01:03:14 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net trusty-updates Release [63.5 kB][0m
+Apr 18 01:03:16 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net trusty-backports Release [63.5 kB][0m
+Apr 18 01:03:17 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net trusty-security Release [63.5 kB][0m
+Apr 18 01:03:18 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main amd64 Packages[0m
+Apr 18 01:03:19 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted amd64 Packages[0m
+Apr 18 01:03:20 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe amd64 Packages[0m
+Apr 18 01:03:20 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse amd64 Packages[0m
+Apr 18 01:03:21 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main i386 Packages[0m
+Apr 18 01:03:21 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted i386 Packages[0m
+Apr 18 01:03:22 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe i386 Packages[0m
+Apr 18 01:03:22 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse i386 Packages[0m
+Apr 18 01:03:23 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main Translation-en[0m
+Apr 18 01:03:24 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse Translation-en[0m
+Apr 18 01:03:25 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted Translation-en[0m
+Apr 18 01:03:25 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe Translation-en[0m
+Apr 18 01:03:26 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net trusty-updates/main amd64 Packages [502 kB][0m
+Apr 18 01:03:29 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net trusty-updates/restricted amd64 Packages [9,238 B][0m
+Apr 18 01:03:29 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net trusty-updates/universe amd64 Packages [269 kB][0m
+Apr 18 01:03:30 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net trusty-updates/multiverse amd64 Packages [11.7 kB][0m
+Apr 18 01:03:31 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net trusty-updates/main i386 Packages [491 kB][0m
+Apr 18 01:03:33 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net trusty-updates/restricted i386 Packages [9,256 B][0m
+Apr 18 01:03:33 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net trusty-updates/universe i386 Packages [270 kB][0m
+Apr 18 01:03:37 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net trusty-updates/multiverse i386 Packages [11.9 kB][0m
+Apr 18 01:03:39 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/main Translation-en[0m
+Apr 18 01:03:39 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/multiverse Translation-en[0m
+Apr 18 01:03:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/restricted Translation-en[0m
+Apr 18 01:03:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/universe Translation-en[0m
+Apr 18 01:03:41 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net trusty-backports/main amd64 Packages [6,256 B][0m
+Apr 18 01:03:41 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net trusty-backports/restricted amd64 Packages [28 B][0m
+Apr 18 01:03:42 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net trusty-backports/universe amd64 Packages [28.5 kB][0m
+Apr 18 01:03:44 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net trusty-backports/multiverse amd64 Packages [1,245 B][0m
+Apr 18 01:03:44 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net trusty-backports/main i386 Packages [6,285 B][0m
+Apr 18 01:03:45 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net trusty-backports/restricted i386 Packages [28 B][0m
+Apr 18 01:03:46 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net trusty-backports/universe i386 Packages [28.5 kB][0m
+Apr 18 01:03:48 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net trusty-backports/multiverse i386 Packages [1,249 B][0m
+Apr 18 01:03:48 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/main Translation-en[0m
+Apr 18 01:03:49 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/multiverse Translation-en[0m
+Apr 18 01:03:50 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/restricted Translation-en[0m
+Apr 18 01:03:50 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net trusty-backports/universe Translation-en [25.3 kB][0m
+Apr 18 01:03:52 [0;32m    virtualbox-ovf: Get:27 http://mirror.internode.on.net trusty-security/main amd64 Packages [258 kB][0m
+Apr 18 01:03:57 [0;32m    virtualbox-ovf: Get:28 http://mirror.internode.on.net trusty-security/restricted amd64 Packages [8,875 B][0m
+Apr 18 01:03:58 [0;32m    virtualbox-ovf: Get:29 http://mirror.internode.on.net trusty-security/universe amd64 Packages [95.9 kB][0m
+Apr 18 01:03:59 [0;32m    virtualbox-ovf: Get:30 http://mirror.internode.on.net trusty-security/multiverse amd64 Packages [3,451 B][0m
+Apr 18 01:04:00 [0;32m    virtualbox-ovf: Get:31 http://mirror.internode.on.net trusty-security/main i386 Packages [247 kB][0m
+Apr 18 01:04:03 [0;32m    virtualbox-ovf: Get:32 http://mirror.internode.on.net trusty-security/restricted i386 Packages [8,846 B][0m
+Apr 18 01:04:03 [0;32m    virtualbox-ovf: Get:33 http://mirror.internode.on.net trusty-security/universe i386 Packages [95.9 kB][0m
+Apr 18 01:04:04 [0;32m    virtualbox-ovf: Get:34 http://mirror.internode.on.net trusty-security/multiverse i386 Packages [3,643 B][0m
+Apr 18 01:04:04 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/main Translation-en[0m
+Apr 18 01:04:05 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/multiverse Translation-en[0m
+Apr 18 01:04:05 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/restricted Translation-en[0m
+Apr 18 01:04:06 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/universe Translation-en[0m
+Apr 18 01:04:14 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/main Translation-en_US[0m
+Apr 18 01:04:15 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/multiverse Translation-en_US[0m
+Apr 18 01:04:15 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/restricted Translation-en_US[0m
+Apr 18 01:04:16 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/universe Translation-en_US[0m
+Apr 18 01:04:16 [0;32m    virtualbox-ovf: Fetched 2,600 kB in 1min 6s (39.3 kB/s)[0m
+Apr 18 01:04:18 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:04:18 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:04:18 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 01:04:18 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libmariadbclient18 libmysqlclient18 mariadb-client-5.5[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: mariadb-client-core-5.5 mariadb-common mariadb-server-5.5[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: mariadb-server-core-5.5 mysql-common[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: Suggested packages:[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libsql-statement-perl libipc-sharedcache-perl libterm-readkey-perl tinyca[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: mailx mariadb-test[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: libmariadbclient18 libmysqlclient18 mariadb-client-5.5[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: mariadb-client-core-5.5 mariadb-common mariadb-server mariadb-server-5.5[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: mariadb-server-core-5.5 mysql-common[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: 0 upgraded, 13 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: Need to get 11.2 MB of archives.[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: After this operation, 116 MB of additional disk space will be used.[0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: Get:1 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mysql-common all 5.5.42+maria-1~trusty [8,370 B][0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: Get:2 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-common all 5.5.42+maria-1~trusty [3,176 B][0m
+Apr 18 01:04:19 [0;32m    virtualbox-ovf: Get:3 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main libmariadbclient18 amd64 5.5.42+maria-1~trusty [518 kB][0m
+Apr 18 01:04:20 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libaio1 amd64 0.3.109-4 [6,364 B][0m
+Apr 18 01:04:20 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libdbi-perl amd64 1.630-1 [879 kB][0m
+Apr 18 01:04:22 [0;32m    virtualbox-ovf: Get:6 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main libmysqlclient18 amd64 5.5.42+maria-1~trusty [2,856 B][0m
+Apr 18 01:04:22 [0;32m    virtualbox-ovf: Get:7 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-client-core-5.5 amd64 5.5.42+maria-1~trusty [618 kB][0m
+Apr 18 01:04:23 [0;32m    virtualbox-ovf: Get:8 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-client-5.5 amd64 5.5.42+maria-1~trusty [955 kB][0m
+Apr 18 01:04:24 [0;32m    virtualbox-ovf: Get:9 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server-core-5.5 amd64 5.5.42+maria-1~trusty [3,816 kB][0m
+Apr 18 01:04:26 [0;32m    virtualbox-ovf: Get:10 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server-5.5 amd64 5.5.42+maria-1~trusty [4,249 kB][0m
+Apr 18 01:04:28 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libdbd-mysql-perl amd64 4.025-1 [99.3 kB][0m
+Apr 18 01:04:28 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libhtml-template-perl all 2.95-1 [65.5 kB][0m
+Apr 18 01:04:28 [0;32m    virtualbox-ovf: Get:13 http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu/ trusty/main mariadb-server all 5.5.42+maria-1~trusty [2,890 B][0m
+Apr 18 01:04:28 [0;32m    virtualbox-ovf: Fetched 11.2 MB in 9s (1,158 kB/s)[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preconfiguring packages ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package libaio1:amd64.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: (Reading database ... 88557 files and directories currently installed.)[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking libaio1:amd64 (0.3.109-4) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package mysql-common.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../mysql-common_5.5.42+maria-1~trusty_all.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking mysql-common (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-common.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-common_5.5.42+maria-1~trusty_all.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking mariadb-common (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package libdbi-perl.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking libdbi-perl (1.630-1) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package libmariadbclient18.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../libmariadbclient18_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking libmariadbclient18 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package libmysqlclient18.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../libmysqlclient18_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking libmysqlclient18 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package libdbd-mysql-perl.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../libdbd-mysql-perl_4.025-1_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking libdbd-mysql-perl (4.025-1) ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-client-core-5.5.[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-client-core-5.5_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:29 [0;32m    virtualbox-ovf: Unpacking mariadb-client-core-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-client-5.5.[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-client-5.5_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Unpacking mariadb-client-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-server-core-5.5.[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-server-core-5.5_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Unpacking mariadb-server-core-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:30 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:04:31 [0;32m    virtualbox-ovf: Setting up mysql-common (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:31 [0;32m    virtualbox-ovf: Setting up mariadb-common (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:32 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-server-5.5.[0m
+Apr 18 01:04:32 [0;32m    virtualbox-ovf: (Reading database ... 88904 files and directories currently installed.)[0m
+Apr 18 01:04:32 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-server-5.5_5.5.42+maria-1~trusty_amd64.deb ...[0m
+Apr 18 01:04:32 [0;32m    virtualbox-ovf: Unpacking mariadb-server-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Selecting previously unselected package libhtml-template-perl.[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Unpacking libhtml-template-perl (2.95-1) ...[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Selecting previously unselected package mariadb-server.[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Preparing to unpack .../mariadb-server_5.5.42+maria-1~trusty_all.deb ...[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Unpacking mariadb-server (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:33 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: ureadahead will be reprofiled on next reboot[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libaio1:amd64 (0.3.109-4) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libdbi-perl (1.630-1) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libhtml-template-perl (2.95-1) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libmysqlclient18 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libdbd-mysql-perl (4.025-1) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up libmariadbclient18 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up mariadb-client-core-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up mariadb-client-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up mariadb-server-core-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: Setting up mariadb-server-5.5 (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:34 [0;32m    virtualbox-ovf: [34G[ OK ][0m
+Apr 18 01:04:35 [0;32m    virtualbox-ovf: 150417 23:04:35 [Note] Plugin 'InnoDB' is disabled.[0m
+Apr 18 01:04:35 [0;32m    virtualbox-ovf: 150417 23:04:35 [Note] Plugin 'FEEDBACK' is disabled.[0m
+Apr 18 01:04:37 [0;32m    virtualbox-ovf: [34G[ OK ][0m
+Apr 18 01:04:37 [0;32m    virtualbox-ovf: * Checking for corrupt, not cleanly closed and upgrade needing tables.[0m
+Apr 18 01:04:37 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:04:37 [0;32m    virtualbox-ovf: Setting up mariadb-server (5.5.42+maria-1~trusty) ...[0m
+Apr 18 01:04:37 [0;32m    virtualbox-ovf: Processing triggers for libc-bin (2.19-0ubuntu6.6) ...[0m
+Apr 18 01:04:38 [0;32m    virtualbox-ovf: Installing MariaDB/MySQL system tables in '/var/lib/mysql' ...[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: OK[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Filling help tables...[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: OK[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: To start mysqld at boot time you have to copy[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: support-files/mysql.server to the right place for your system[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: PLEASE REMEMBER TO SET A PASSWORD FOR THE MariaDB root USER ![0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: To do so, start the server, then issue the following commands:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: '/usr/bin/mysqladmin' -u root password 'new-password'[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: '/usr/bin/mysqladmin' -u root -h packer-virtualbox-iso password 'new-password'[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Alternatively you can run:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: '/usr/bin/mysql_secure_installation'[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: which will also give you the option of removing the test[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: databases and anonymous user created by default.  This is[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: strongly recommended for production servers.[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: See the MariaDB Knowledgebase at http://mariadb.com/kb or the[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: MySQL manual for more instructions.[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: You can start the MariaDB daemon with:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: cd '/usr' ; /usr/bin/mysqld_safe --datadir='/var/lib/mysql'[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: You can test the MariaDB daemon with mysql-test-run.pl[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: cd '/usr/mysql-test' ; perl mysql-test-run.pl[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Please report any problems at http://mariadb.org/jira[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: The latest information about MariaDB is available at http://mariadb.org/.[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: You can find additional information about the MySQL part at:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: http://dev.mysql.com[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Support MariaDB development by buying support/new features from MariaDB[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Corporation Ab. You can contact us about this at sales@mariadb.com.[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: Alternatively consider joining our community based development effort:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: http://mariadb.com/kb/en/contributing-to-the-mariadb-project/[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: The InnoDB memory heap is disabled[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: Mutexes and rw_locks use GCC atomic builtins[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: Compressed tables use zlib 1.2.8[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: Using Linux native AIO[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: Initializing buffer pool, size = 256.0M[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39 InnoDB: Completed initialization of buffer pool[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: The first specified data file ./ibdata1 did not exist:[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: a new database to be created![0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39  InnoDB: Setting file ./ibdata1 size to 10 MB[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Database physically writes the file full: wait...[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39  InnoDB: Log file ./ib_logfile0 did not exist: new to be created[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Setting log file ./ib_logfile0 size to 5 MB[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Database physically writes the file full: wait...[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39  InnoDB: Log file ./ib_logfile1 did not exist: new to be created[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Setting log file ./ib_logfile1 size to 5 MB[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Database physically writes the file full: wait...[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Doublewrite buffer not found: creating new[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Doublewrite buffer created[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: 127 rollback segment(s) active.[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Creating foreign key constraint system tables[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: InnoDB: Foreign key constraint system tables created[0m
+Apr 18 01:04:39 [0;32m    virtualbox-ovf: 150417 23:04:39  InnoDB: Waiting for the background threads to start[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: 150417 23:04:40 Percona XtraDB (http://www.percona.com) 5.5.41-MariaDB-37.0 started; log sequence number 0[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: 150417 23:04:40 [Note] Plugin 'FEEDBACK' is disabled.[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: 150417 23:04:40 [Note] Server socket created on IP: '0.0.0.0'.[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: 150417 23:04:40 [Note] Event Scheduler: Loaded 0 events[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: 150417 23:04:40 [Note] mysqld: ready for connections.[0m
+Apr 18 01:04:40 [0;32m    virtualbox-ovf: Version: '5.5.42-MariaDB-1~trusty-log'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution[0m
+Apr 18 01:04:44 [0;32m    virtualbox-ovf: 150417 23:04:44 [Note] mysqld: Normal shutdown[0m
+Apr 18 01:04:44 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:44 [0;32m    virtualbox-ovf: 150417 23:04:44 [Note] Event Scheduler: Purging the queue. 0 events[0m
+Apr 18 01:04:44 [0;32m    virtualbox-ovf: 150417 23:04:44  InnoDB: Starting shutdown...[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: 150417 23:04:45  InnoDB: Shutdown completed; log sequence number 1597945[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: 150417 23:04:45 [Note] mysqld: Shutdown complete[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:45 [1;32m==> virtualbox-ovf: Gracefully halting virtual machine...[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: [0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: Broadcast message from vagrant@packer-virtualbox-iso[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: (/dev/pts/1) at 23:04 ...[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:04:45 [0;32m    virtualbox-ovf: The system is going down for power off NOW![0m
+Apr 18 01:04:48 [1;32m==> virtualbox-ovf: Preparing to export machine...[0m
+Apr 18 01:04:48 [0;32m    virtualbox-ovf: Deleting forwarded port mapping for SSH (host port 2755)[0m
+Apr 18 01:04:48 [1;32m==> virtualbox-ovf: Exporting virtual machine...[0m
+Apr 18 01:04:48 [0;32m    virtualbox-ovf: Executing: export packer-virtualbox-ovf-1429311760 --output output-virtualbox-ovf/packer-virtualbox-ovf-1429311760.ovf[0m
+Apr 18 01:06:03 [1;32m==> virtualbox-ovf: Unregistering and deleting imported VM...[0m
+Apr 18 01:06:04 [1;32m==> virtualbox-ovf: Running post-processor: vagrant[0m
+Apr 18 01:06:04 [1;32m==> virtualbox-ovf (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+Apr 18 01:06:04 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311760-disk1.vmdk[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429311760.ovf[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Renaming the OVF to box.ovf...[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Compressing: Vagrantfile[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Compressing: box.ovf[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Compressing: metadata.json[0m
+Apr 18 01:06:10 [0;32m    virtualbox-ovf (vagrant): Compressing: packer-virtualbox-ovf-1429311760-disk1.vmdk[0m
+Apr 18 01:07:05 [1;32mBuild 'virtualbox-ovf' finished.[0m
+Apr 18 01:07:05 
+Apr 18 01:07:05 ==> Builds finished. The artifacts of successful builds are:
+Apr 18 01:07:05 --> virtualbox-ovf: 'virtualbox' provider box: vagrant.box
+Apr 18 01:07:07 ==> box: Adding box 'database' (v0) for provider: 
+Apr 18 01:07:07     box: Downloading: file:///Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/implementierung/machines/database/vagrant.box
+Apr 18 01:07:15 [K    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    box: Progress: 45% (Rate: 402M/s, Estimated time remaining: 0:00:02)[K    box: Progress: 95% (Rate: 417M/s, Estimated time remaining: 0:00:01)[K==> box: Successfully added box 'database' (v0) for 'virtualbox'!
+Apr 18 01:07:16 [1;32mvirtualbox-ovf output will be in this color.[0m
+Apr 18 01:07:16 
+Apr 18 01:07:16 [1;32m==> virtualbox-ovf: Downloading or copying Guest additions[0m
+Apr 18 01:07:16 [0;32m    virtualbox-ovf: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+Apr 18 01:07:16 [1;32m==> virtualbox-ovf: Importing VM: ../ubuntu-14.04.ovf[0m
+Apr 18 01:07:34 [1;32m==> virtualbox-ovf: Creating forwarded port mapping for SSH (host port 3554)[0m
+Apr 18 01:07:34 [1;32m==> virtualbox-ovf: Starting the virtual machine...[0m
+Apr 18 01:07:34 [0;32m    virtualbox-ovf: WARNING: The VM will be started in headless mode, as configured.
+Apr 18 01:07:34     virtualbox-ovf: In headless mode, errors during the boot sequence or OS setup
+Apr 18 01:07:34     virtualbox-ovf: won't be easily visible. Use at your own discretion.[0m
+Apr 18 01:07:34 [1;32m==> virtualbox-ovf: Waiting 10s for boot...[0m
+Apr 18 01:07:44 [1;32m==> virtualbox-ovf: Typing the boot command...[0m
+Apr 18 01:07:44 [1;32m==> virtualbox-ovf: Waiting for SSH to become available...[0m
+Apr 18 01:07:44 [1;32m==> virtualbox-ovf: Connected to SSH![0m
+Apr 18 01:07:44 [1;32m==> virtualbox-ovf: Uploading VirtualBox version info (4.3.26)[0m
+Apr 18 01:07:44 [1;32m==> virtualbox-ovf: Uploading VirtualBox guest additions ISO...[0m
+Apr 18 01:07:46 [1;32m==> virtualbox-ovf: Uploading contents => /tmp[0m
+Apr 18 01:07:46 [1;32m==> virtualbox-ovf: Provisioning with shell script: /var/folders/7x/lhp3_8493w536jyc0mkl9m3c0000gn/T/packer-shell861645834[0m
+Apr 18 01:07:47 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty InRelease[0m
+Apr 18 01:07:47 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-updates InRelease[0m
+Apr 18 01:07:47 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-backports InRelease[0m
+Apr 18 01:07:48 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-security InRelease[0m
+Apr 18 01:07:48 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release.gpg[0m
+Apr 18 01:07:48 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net trusty-updates Release.gpg [933 B][0m
+Apr 18 01:07:49 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net trusty-backports Release.gpg [933 B][0m
+Apr 18 01:07:49 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net trusty-security Release.gpg [933 B][0m
+Apr 18 01:07:49 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release[0m
+Apr 18 01:07:50 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net trusty-updates Release [63.5 kB][0m
+Apr 18 01:07:51 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net trusty-backports Release [63.5 kB][0m
+Apr 18 01:07:53 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net trusty-security Release [63.5 kB][0m
+Apr 18 01:07:54 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main amd64 Packages[0m
+Apr 18 01:07:55 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted amd64 Packages[0m
+Apr 18 01:07:55 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe amd64 Packages[0m
+Apr 18 01:07:55 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse amd64 Packages[0m
+Apr 18 01:07:56 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main i386 Packages[0m
+Apr 18 01:07:56 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted i386 Packages[0m
+Apr 18 01:07:58 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe i386 Packages[0m
+Apr 18 01:07:58 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse i386 Packages[0m
+Apr 18 01:07:59 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main Translation-en[0m
+Apr 18 01:08:00 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse Translation-en[0m
+Apr 18 01:08:00 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted Translation-en[0m
+Apr 18 01:08:01 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe Translation-en[0m
+Apr 18 01:08:01 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net trusty-updates/main amd64 Packages [502 kB][0m
+Apr 18 01:08:07 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net trusty-updates/restricted amd64 Packages [9,238 B][0m
+Apr 18 01:08:08 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net trusty-updates/universe amd64 Packages [269 kB][0m
+Apr 18 01:08:09 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net trusty-updates/multiverse amd64 Packages [11.7 kB][0m
+Apr 18 01:08:09 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net trusty-updates/main i386 Packages [491 kB][0m
+Apr 18 01:08:11 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net trusty-updates/restricted i386 Packages [9,256 B][0m
+Apr 18 01:08:12 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net trusty-updates/universe i386 Packages [270 kB][0m
+Apr 18 01:08:13 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net trusty-updates/multiverse i386 Packages [11.9 kB][0m
+Apr 18 01:08:14 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/main Translation-en[0m
+Apr 18 01:08:14 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/multiverse Translation-en[0m
+Apr 18 01:08:15 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/restricted Translation-en[0m
+Apr 18 01:08:16 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/universe Translation-en[0m
+Apr 18 01:08:16 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net trusty-backports/main amd64 Packages [6,256 B][0m
+Apr 18 01:08:17 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net trusty-backports/restricted amd64 Packages [28 B][0m
+Apr 18 01:08:18 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net trusty-backports/universe amd64 Packages [28.5 kB][0m
+Apr 18 01:08:18 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net trusty-backports/multiverse amd64 Packages [1,245 B][0m
+Apr 18 01:08:19 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net trusty-backports/main i386 Packages [6,285 B][0m
+Apr 18 01:08:20 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net trusty-backports/restricted i386 Packages [28 B][0m
+Apr 18 01:08:20 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net trusty-backports/universe i386 Packages [28.5 kB][0m
+Apr 18 01:08:21 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net trusty-backports/multiverse i386 Packages [1,249 B][0m
+Apr 18 01:08:22 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/main Translation-en[0m
+Apr 18 01:08:22 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/multiverse Translation-en[0m
+Apr 18 01:08:22 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/restricted Translation-en[0m
+Apr 18 01:08:23 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net trusty-backports/universe Translation-en [25.3 kB][0m
+Apr 18 01:08:24 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net trusty-security/main amd64 Packages [258 kB][0m
+Apr 18 01:08:27 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net trusty-security/restricted amd64 Packages [8,875 B][0m
+Apr 18 01:08:28 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net trusty-security/universe amd64 Packages [95.9 kB][0m
+Apr 18 01:08:30 [0;32m    virtualbox-ovf: Get:27 http://mirror.internode.on.net trusty-security/multiverse amd64 Packages [3,451 B][0m
+Apr 18 01:08:31 [0;32m    virtualbox-ovf: Get:28 http://mirror.internode.on.net trusty-security/main i386 Packages [247 kB][0m
+Apr 18 01:08:37 [0;32m    virtualbox-ovf: Get:29 http://mirror.internode.on.net trusty-security/restricted i386 Packages [8,846 B][0m
+Apr 18 01:08:38 [0;32m    virtualbox-ovf: Get:30 http://mirror.internode.on.net trusty-security/universe i386 Packages [95.9 kB][0m
+Apr 18 01:08:40 [0;32m    virtualbox-ovf: Get:31 http://mirror.internode.on.net trusty-security/multiverse i386 Packages [3,643 B][0m
+Apr 18 01:08:40 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/main Translation-en[0m
+Apr 18 01:08:41 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/multiverse Translation-en[0m
+Apr 18 01:08:41 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/restricted Translation-en[0m
+Apr 18 01:08:42 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/universe Translation-en[0m
+Apr 18 01:08:50 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/main Translation-en_US[0m
+Apr 18 01:08:51 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/multiverse Translation-en_US[0m
+Apr 18 01:08:51 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/restricted Translation-en_US[0m
+Apr 18 01:08:52 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/universe Translation-en_US[0m
+Apr 18 01:08:52 [0;32m    virtualbox-ovf: Fetched 2,587 kB in 1min 6s (39.1 kB/s)[0m
+Apr 18 01:08:54 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:08:54 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:08:54 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 01:08:54 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: libjemalloc1 redis-tools[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: libjemalloc1 redis-server redis-tools[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: Need to get 410 kB of archives.[0m
+Apr 18 01:08:55 [0;32m    virtualbox-ovf: After this operation, 1,272 kB of additional disk space will be used.[0m
+Apr 18 01:08:56 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB][0m
+Apr 18 01:09:02 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe redis-tools amd64 2:2.8.4-2 [65.7 kB][0m
+Apr 18 01:09:05 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/universe redis-server amd64 2:2.8.4-2 [267 kB][0m
+Apr 18 01:09:12 [0;32m    virtualbox-ovf: Fetched 410 kB in 17s (23.3 kB/s)[0m
+Apr 18 01:09:12 [0;32m    virtualbox-ovf: Selecting previously unselected package libjemalloc1.[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: (Reading database ... 88557 files and directories currently installed.)[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Unpacking libjemalloc1 (3.5.1-2) ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Selecting previously unselected package redis-tools.[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Preparing to unpack .../redis-tools_2%3a2.8.4-2_amd64.deb ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Unpacking redis-tools (2:2.8.4-2) ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Selecting previously unselected package redis-server.[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Preparing to unpack .../redis-server_2%3a2.8.4-2_amd64.deb ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Unpacking redis-server (2:2.8.4-2) ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:09:13 [0;32m    virtualbox-ovf: ureadahead will be reprofiled on next reboot[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Setting up libjemalloc1 (3.5.1-2) ...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Setting up redis-tools (2:2.8.4-2) ...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Setting up redis-server (2:2.8.4-2) ...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Starting redis-server: redis-server.[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Processing triggers for libc-bin (2.19-0ubuntu6.6) ...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Processing triggers for ureadahead (0.100.0-16) ...[0m
+Apr 18 01:09:14 [1;32m==> virtualbox-ovf: Gracefully halting virtual machine...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: [0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: Broadcast message from vagrant@packer-virtualbox-iso[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: (/dev/pts/0) at 23:09 ...[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:09:14 [0;32m    virtualbox-ovf: The system is going down for power off NOW![0m
+Apr 18 01:09:17 [1;32m==> virtualbox-ovf: Preparing to export machine...[0m
+Apr 18 01:09:17 [0;32m    virtualbox-ovf: Deleting forwarded port mapping for SSH (host port 3554)[0m
+Apr 18 01:09:17 [1;32m==> virtualbox-ovf: Exporting virtual machine...[0m
+Apr 18 01:09:17 [0;32m    virtualbox-ovf: Executing: export packer-virtualbox-ovf-1429312036 --output output-virtualbox-ovf/packer-virtualbox-ovf-1429312036.ovf[0m
+Apr 18 01:10:32 [1;32m==> virtualbox-ovf: Unregistering and deleting imported VM...[0m
+Apr 18 01:10:33 [1;32m==> virtualbox-ovf: Running post-processor: vagrant[0m
+Apr 18 01:10:33 [1;32m==> virtualbox-ovf (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+Apr 18 01:10:33 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429312036-disk1.vmdk[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429312036.ovf[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Renaming the OVF to box.ovf...[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Compressing: Vagrantfile[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Compressing: box.ovf[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Compressing: metadata.json[0m
+Apr 18 01:10:38 [0;32m    virtualbox-ovf (vagrant): Compressing: packer-virtualbox-ovf-1429312036-disk1.vmdk[0m
+Apr 18 01:11:42 [1;32mBuild 'virtualbox-ovf' finished.[0m
+Apr 18 01:11:42 
+Apr 18 01:11:42 ==> Builds finished. The artifacts of successful builds are:
+Apr 18 01:11:42 --> virtualbox-ovf: 'virtualbox' provider box: vagrant.box
+Apr 18 01:11:44 ==> box: Adding box 'cache' (v0) for provider: 
+Apr 18 01:11:44     box: Downloading: file:///Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/implementierung/machines/cache/vagrant.box
+Apr 18 01:11:53 [K    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    box: Progress: 9% (Rate: 150M/s, Estimated time remaining: 0:00:05)[K    box: Progress: 41% (Rate: 250M/s, Estimated time remaining: 0:00:02)[K    box: Progress: 87% (Rate: 305M/s, Estimated time remaining: --:--:--)[K==> box: Successfully added box 'cache' (v0) for 'virtualbox'!
+Apr 18 01:11:54 [1;32mvirtualbox-ovf output will be in this color.[0m
+Apr 18 01:11:54 
+Apr 18 01:11:55 [1;32m==> virtualbox-ovf: Downloading or copying Guest additions[0m
+Apr 18 01:11:55 [0;32m    virtualbox-ovf: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+Apr 18 01:11:55 [1;32m==> virtualbox-ovf: Importing VM: ../ubuntu-14.04.ovf[0m
+Apr 18 01:12:10 [1;32m==> virtualbox-ovf: Creating forwarded port mapping for SSH (host port 3164)[0m
+Apr 18 01:12:10 [1;32m==> virtualbox-ovf: Starting the virtual machine...[0m
+Apr 18 01:12:10 [0;32m    virtualbox-ovf: WARNING: The VM will be started in headless mode, as configured.
+Apr 18 01:12:10     virtualbox-ovf: In headless mode, errors during the boot sequence or OS setup
+Apr 18 01:12:10     virtualbox-ovf: won't be easily visible. Use at your own discretion.[0m
+Apr 18 01:12:10 [1;32m==> virtualbox-ovf: Waiting 10s for boot...[0m
+Apr 18 01:12:20 [1;32m==> virtualbox-ovf: Typing the boot command...[0m
+Apr 18 01:12:20 [1;32m==> virtualbox-ovf: Waiting for SSH to become available...[0m
+Apr 18 01:12:20 [1;32m==> virtualbox-ovf: Connected to SSH![0m
+Apr 18 01:12:20 [1;32m==> virtualbox-ovf: Uploading VirtualBox version info (4.3.26)[0m
+Apr 18 01:12:21 [1;32m==> virtualbox-ovf: Uploading VirtualBox guest additions ISO...[0m
+Apr 18 01:12:22 [1;32m==> virtualbox-ovf: Uploading contents => /tmp[0m
+Apr 18 01:12:22 [1;32m==> virtualbox-ovf: Provisioning with shell script: /var/folders/7x/lhp3_8493w536jyc0mkl9m3c0000gn/T/packer-shell267458604[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.SVm6i8hSGF --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: gpg: requesting key EEA14886 from hkp server keyserver.ubuntu.com[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: gpg: key EEA14886: public key "Launchpad VLC" imported[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: gpg: Total number processed: 1[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: gpg:               imported: 1  (RSA: 1)[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Ign http://ppa.launchpad.net trusty InRelease[0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:1 http://ppa.launchpad.net trusty Release.gpg [316 B][0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:2 http://ppa.launchpad.net trusty Release [15.1 kB][0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:3 http://ppa.launchpad.net trusty/main Sources [1,556 B][0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:4 http://ppa.launchpad.net trusty/main amd64 Packages [3,354 B][0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:5 http://ppa.launchpad.net trusty/main i386 Packages [3,354 B][0m
+Apr 18 01:12:22 [0;32m    virtualbox-ovf: Get:6 http://ppa.launchpad.net trusty/main Translation-en [1,556 B][0m
+Apr 18 01:12:23 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty InRelease[0m
+Apr 18 01:12:23 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-updates InRelease[0m
+Apr 18 01:12:23 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-backports InRelease[0m
+Apr 18 01:12:24 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty-security InRelease[0m
+Apr 18 01:12:24 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release.gpg[0m
+Apr 18 01:12:24 [0;32m    virtualbox-ovf: Get:7 http://mirror.internode.on.net trusty-updates Release.gpg [933 B][0m
+Apr 18 01:12:25 [0;32m    virtualbox-ovf: Get:8 http://mirror.internode.on.net trusty-backports Release.gpg [933 B][0m
+Apr 18 01:12:25 [0;32m    virtualbox-ovf: Get:9 http://mirror.internode.on.net trusty-security Release.gpg [933 B][0m
+Apr 18 01:12:26 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty Release[0m
+Apr 18 01:12:26 [0;32m    virtualbox-ovf: Get:10 http://mirror.internode.on.net trusty-updates Release [63.5 kB][0m
+Apr 18 01:12:28 [0;32m    virtualbox-ovf: Get:11 http://mirror.internode.on.net trusty-backports Release [63.5 kB][0m
+Apr 18 01:12:29 [0;32m    virtualbox-ovf: Get:12 http://mirror.internode.on.net trusty-security Release [63.5 kB][0m
+Apr 18 01:12:30 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main amd64 Packages[0m
+Apr 18 01:12:31 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted amd64 Packages[0m
+Apr 18 01:12:31 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe amd64 Packages[0m
+Apr 18 01:12:32 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse amd64 Packages[0m
+Apr 18 01:12:32 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main i386 Packages[0m
+Apr 18 01:12:33 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted i386 Packages[0m
+Apr 18 01:12:34 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe i386 Packages[0m
+Apr 18 01:12:34 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse i386 Packages[0m
+Apr 18 01:12:35 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/main Translation-en[0m
+Apr 18 01:12:36 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/multiverse Translation-en[0m
+Apr 18 01:12:36 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/restricted Translation-en[0m
+Apr 18 01:12:37 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty/universe Translation-en[0m
+Apr 18 01:12:37 [0;32m    virtualbox-ovf: Get:13 http://mirror.internode.on.net trusty-updates/main amd64 Packages [502 kB][0m
+Apr 18 01:12:41 [0;32m    virtualbox-ovf: Get:14 http://mirror.internode.on.net trusty-updates/restricted amd64 Packages [9,238 B][0m
+Apr 18 01:12:42 [0;32m    virtualbox-ovf: Get:15 http://mirror.internode.on.net trusty-updates/universe amd64 Packages [269 kB][0m
+Apr 18 01:12:43 [0;32m    virtualbox-ovf: Get:16 http://mirror.internode.on.net trusty-updates/multiverse amd64 Packages [11.7 kB][0m
+Apr 18 01:12:43 [0;32m    virtualbox-ovf: Get:17 http://mirror.internode.on.net trusty-updates/main i386 Packages [491 kB][0m
+Apr 18 01:12:45 [0;32m    virtualbox-ovf: Get:18 http://mirror.internode.on.net trusty-updates/restricted i386 Packages [9,256 B][0m
+Apr 18 01:12:46 [0;32m    virtualbox-ovf: Get:19 http://mirror.internode.on.net trusty-updates/universe i386 Packages [270 kB][0m
+Apr 18 01:12:47 [0;32m    virtualbox-ovf: Get:20 http://mirror.internode.on.net trusty-updates/multiverse i386 Packages [11.9 kB][0m
+Apr 18 01:12:48 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/main Translation-en[0m
+Apr 18 01:12:49 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/multiverse Translation-en[0m
+Apr 18 01:12:50 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/restricted Translation-en[0m
+Apr 18 01:12:50 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-updates/universe Translation-en[0m
+Apr 18 01:12:51 [0;32m    virtualbox-ovf: Get:21 http://mirror.internode.on.net trusty-backports/main amd64 Packages [6,256 B][0m
+Apr 18 01:12:51 [0;32m    virtualbox-ovf: Get:22 http://mirror.internode.on.net trusty-backports/restricted amd64 Packages [28 B][0m
+Apr 18 01:12:52 [0;32m    virtualbox-ovf: Get:23 http://mirror.internode.on.net trusty-backports/universe amd64 Packages [28.5 kB][0m
+Apr 18 01:12:52 [0;32m    virtualbox-ovf: Get:24 http://mirror.internode.on.net trusty-backports/multiverse amd64 Packages [1,245 B][0m
+Apr 18 01:12:52 [0;32m    virtualbox-ovf: Get:25 http://mirror.internode.on.net trusty-backports/main i386 Packages [6,285 B][0m
+Apr 18 01:12:53 [0;32m    virtualbox-ovf: Get:26 http://mirror.internode.on.net trusty-backports/restricted i386 Packages [28 B][0m
+Apr 18 01:12:53 [0;32m    virtualbox-ovf: Get:27 http://mirror.internode.on.net trusty-backports/universe i386 Packages [28.5 kB][0m
+Apr 18 01:12:54 [0;32m    virtualbox-ovf: Get:28 http://mirror.internode.on.net trusty-backports/multiverse i386 Packages [1,249 B][0m
+Apr 18 01:12:54 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/main Translation-en[0m
+Apr 18 01:12:55 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/multiverse Translation-en[0m
+Apr 18 01:12:55 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-backports/restricted Translation-en[0m
+Apr 18 01:12:56 [0;32m    virtualbox-ovf: Get:29 http://mirror.internode.on.net trusty-backports/universe Translation-en [25.3 kB][0m
+Apr 18 01:12:57 [0;32m    virtualbox-ovf: Get:30 http://mirror.internode.on.net trusty-security/main amd64 Packages [258 kB][0m
+Apr 18 01:13:00 [0;32m    virtualbox-ovf: Get:31 http://mirror.internode.on.net trusty-security/restricted amd64 Packages [8,875 B][0m
+Apr 18 01:13:00 [0;32m    virtualbox-ovf: Get:32 http://mirror.internode.on.net trusty-security/universe amd64 Packages [95.9 kB][0m
+Apr 18 01:13:01 [0;32m    virtualbox-ovf: Get:33 http://mirror.internode.on.net trusty-security/multiverse amd64 Packages [3,451 B][0m
+Apr 18 01:13:02 [0;32m    virtualbox-ovf: Get:34 http://mirror.internode.on.net trusty-security/main i386 Packages [247 kB][0m
+Apr 18 01:13:03 [0;32m    virtualbox-ovf: Get:35 http://mirror.internode.on.net trusty-security/restricted i386 Packages [8,846 B][0m
+Apr 18 01:13:04 [0;32m    virtualbox-ovf: Get:36 http://mirror.internode.on.net trusty-security/universe i386 Packages [95.9 kB][0m
+Apr 18 01:13:05 [0;32m    virtualbox-ovf: Get:37 http://mirror.internode.on.net trusty-security/multiverse i386 Packages [3,643 B][0m
+Apr 18 01:13:06 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/main Translation-en[0m
+Apr 18 01:13:06 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/multiverse Translation-en[0m
+Apr 18 01:13:07 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/restricted Translation-en[0m
+Apr 18 01:13:07 [0;32m    virtualbox-ovf: Hit http://mirror.internode.on.net trusty-security/universe Translation-en[0m
+Apr 18 01:13:16 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/main Translation-en_US[0m
+Apr 18 01:13:16 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/multiverse Translation-en_US[0m
+Apr 18 01:13:17 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/restricted Translation-en_US[0m
+Apr 18 01:13:17 [0;32m    virtualbox-ovf: Ign http://mirror.internode.on.net trusty/universe Translation-en_US[0m
+Apr 18 01:13:17 [0;32m    virtualbox-ovf: Fetched 2,612 kB in 55s (47.2 kB/s)[0m
+Apr 18 01:13:19 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: java-common[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Suggested packages:[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: default-jre equivs binfmt-support visualvm ttf-baekmuk ttf-unfonts[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: ttf-unfonts-core ttf-kochi-gothic ttf-sazanami-gothic ttf-kochi-mincho[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: ttf-sazanami-mincho ttf-arphic-uming firefox firefox-2 iceweasel[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: mozilla-firefox iceape-browser mozilla-browser epiphany-gecko[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: epiphany-webkit epiphany-browser galeon midbrowser moblin-web-browser[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: xulrunner xulrunner-1.9 konqueror chromium-browser midori google-chrome[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Recommended packages:[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: gsfonts-x11[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: java-common oracle-java7-installer oracle-java7-set-default[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Need to get 157 kB of archives.[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: After this operation, 569 kB of additional disk space will be used.[0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Get:1 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java7-installer all 7u80+7u60arm-0~webupd8~0 [22.0 kB][0m
+Apr 18 01:13:20 [0;32m    virtualbox-ovf: Get:2 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java7-set-default all 7u80+7u60arm-0~webupd8~0 [4,708 B][0m
+Apr 18 01:13:22 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main java-common all 0.51 [130 kB][0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Fetched 157 kB in 6s (24.8 kB/s)[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Preconfiguring packages ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Selecting previously unselected package java-common.[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: (Reading database ... 88557 files and directories currently installed.)[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Preparing to unpack .../java-common_0.51_all.deb ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Unpacking java-common (0.51) ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Selecting previously unselected package oracle-java7-installer.[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Preparing to unpack .../oracle-java7-installer_7u80+7u60arm-0~webupd8~0_all.deb ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: oracle-license-v1-1 license has already been accepted[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Unpacking oracle-java7-installer (7u80+7u60arm-0~webupd8~0) ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Selecting previously unselected package oracle-java7-set-default.[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Preparing to unpack .../oracle-java7-set-default_7u80+7u60arm-0~webupd8~0_all.deb ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Unpacking oracle-java7-set-default (7u80+7u60arm-0~webupd8~0) ...[0m
+Apr 18 01:13:27 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:13:28 [0;32m    virtualbox-ovf: Processing triggers for shared-mime-info (1.2-0ubuntu3) ...[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Processing triggers for mime-support (3.54ubuntu1.1) ...[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Setting up java-common (0.51) ...[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Setting up oracle-java7-installer (7u80+7u60arm-0~webupd8~0) ...[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Downloading Oracle Java 7...[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: --2015-04-17 23:13:29--  http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Resolving download.oracle.com (download.oracle.com)... 92.122.227.67, 92.122.227.74[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Connecting to download.oracle.com (download.oracle.com)|92.122.227.67|:80... connected.[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: HTTP request sent, awaiting response... 302 Moved Temporarily[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Location: https://edelivery.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz [following][0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: --2015-04-17 23:13:29--  https://edelivery.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Resolving edelivery.oracle.com (edelivery.oracle.com)... 2.20.118.140[0m
+Apr 18 01:13:29 [0;32m    virtualbox-ovf: Connecting to edelivery.oracle.com (edelivery.oracle.com)|2.20.118.140|:443... connected.[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: HTTP request sent, awaiting response... 302 Moved Temporarily[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: Location: http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz?AuthParam=1429312530_9af417c934433b610335fd1a7f96ec22 [following][0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: --2015-04-17 23:13:30--  http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz?AuthParam=1429312530_9af417c934433b610335fd1a7f96ec22[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: Connecting to download.oracle.com (download.oracle.com)|92.122.227.67|:80... connected.[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: HTTP request sent, awaiting response... 200 OK[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: Length: 153530841 (146M) [application/x-gzip][0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf: Saving to: ‘jdk-7u80-linux-x64.tar.gz’[0m
+Apr 18 01:13:30 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:13:31 [0;32m    virtualbox-ovf: 0K ........ ........ ........ ........ ........ ........  2% 2.82M 51s[0m
+Apr 18 01:13:32 [0;32m    virtualbox-ovf: 3072K ........ ........ ........ ........ ........ ........  4% 2.80M 50s[0m
+Apr 18 01:13:33 [0;32m    virtualbox-ovf: 6144K ........ ........ ........ ........ ........ ........  6% 2.37M 52s[0m
+Apr 18 01:13:34 [0;32m    virtualbox-ovf: 9216K ........ ........ ........ ........ ........ ........  8% 2.15M 54s[0m
+Apr 18 01:13:36 [0;32m    virtualbox-ovf: 12288K ........ ........ ........ ........ ........ ........ 10% 2.32M 53s[0m
+Apr 18 01:13:37 [0;32m    virtualbox-ovf: 15360K ........ ........ ........ ........ ........ ........ 12% 2.18M 53s[0m
+Apr 18 01:13:39 [0;32m    virtualbox-ovf: 18432K ........ ........ ........ ........ ........ ........ 14% 1.79M 55s[0m
+Apr 18 01:13:41 [0;32m    virtualbox-ovf: 21504K ........ ........ ........ ........ ........ ........ 16% 1.70M 56s[0m
+Apr 18 01:13:42 [0;32m    virtualbox-ovf: 24576K ........ ........ ........ ........ ........ ........ 18% 2.45M 54s[0m
+Apr 18 01:13:43 [0;32m    virtualbox-ovf: 27648K ........ ........ ........ ........ ........ ........ 20% 3.16M 51s[0m
+Apr 18 01:13:45 [0;32m    virtualbox-ovf: 30720K ........ ........ ........ ........ ........ ........ 22% 1.37M 52s[0m
+Apr 18 01:13:46 [0;32m    virtualbox-ovf: 33792K ........ ........ ........ ........ ........ ........ 24% 2.55M 50s[0m
+Apr 18 01:13:47 [0;32m    virtualbox-ovf: 36864K ........ ........ ........ ........ ........ ........ 26% 2.68M 48s[0m
+Apr 18 01:13:49 [0;32m    virtualbox-ovf: 39936K ........ ........ ........ ........ ........ ........ 28% 2.06M 47s[0m
+Apr 18 01:13:50 [0;32m    virtualbox-ovf: 43008K ........ ........ ........ ........ ........ ........ 30% 2.57M 46s[0m
+Apr 18 01:13:51 [0;32m    virtualbox-ovf: 46080K ........ ........ ........ ........ ........ ........ 32% 2.27M 44s[0m
+Apr 18 01:13:53 [0;32m    virtualbox-ovf: 49152K ........ ........ ........ ........ ........ ........ 34% 2.22M 43s[0m
+Apr 18 01:13:54 [0;32m    virtualbox-ovf: 52224K ........ ........ ........ ........ ........ ........ 36% 1.99M 42s[0m
+Apr 18 01:13:55 [0;32m    virtualbox-ovf: 55296K ........ ........ ........ ........ ........ ........ 38% 2.24M 40s[0m
+Apr 18 01:13:57 [0;32m    virtualbox-ovf: 58368K ........ ........ ........ ........ ........ ........ 40% 2.09M 39s[0m
+Apr 18 01:13:58 [0;32m    virtualbox-ovf: 61440K ........ ........ ........ ........ ........ ........ 43% 2.07M 38s[0m
+Apr 18 01:13:59 [0;32m    virtualbox-ovf: 64512K ........ ........ ........ ........ ........ ........ 45% 2.76M 36s[0m
+Apr 18 01:14:00 [0;32m    virtualbox-ovf: 67584K ........ ........ ........ ........ ........ ........ 47% 2.95M 34s[0m
+Apr 18 01:14:02 [0;32m    virtualbox-ovf: 70656K ........ ........ ........ ........ ........ ........ 49% 2.64M 33s[0m
+Apr 18 01:14:03 [0;32m    virtualbox-ovf: 73728K ........ ........ ........ ........ ........ ........ 51% 2.50M 31s[0m
+Apr 18 01:14:04 [0;32m    virtualbox-ovf: 76800K ........ ........ ........ ........ ........ ........ 53% 2.98M 30s[0m
+Apr 18 01:14:05 [0;32m    virtualbox-ovf: 79872K ........ ........ ........ ........ ........ ........ 55% 2.76M 28s[0m
+Apr 18 01:14:06 [0;32m    virtualbox-ovf: 82944K ........ ........ ........ ........ ........ ........ 57% 2.77M 27s[0m
+Apr 18 01:14:07 [0;32m    virtualbox-ovf: 86016K ........ ........ ........ ........ ........ ........ 59% 3.07M 25s[0m
+Apr 18 01:14:08 [0;32m    virtualbox-ovf: 89088K ........ ........ ........ ........ ........ ........ 61% 2.99M 24s[0m
+Apr 18 01:14:09 [0;32m    virtualbox-ovf: 92160K ........ ........ ........ ........ ........ ........ 63% 2.85M 23s[0m
+Apr 18 01:14:10 [0;32m    virtualbox-ovf: 95232K ........ ........ ........ ........ ........ ........ 65% 2.49M 21s[0m
+Apr 18 01:14:11 [0;32m    virtualbox-ovf: 98304K ........ ........ ........ ........ ........ ........ 67% 2.79M 20s[0m
+Apr 18 01:14:12 [0;32m    virtualbox-ovf: 101376K ........ ........ ........ ........ ........ ........ 69% 2.76M 19s[0m
+Apr 18 01:14:13 [0;32m    virtualbox-ovf: 104448K ........ ........ ........ ........ ........ ........ 71% 2.79M 17s[0m
+Apr 18 01:14:14 [0;32m    virtualbox-ovf: 107520K ........ ........ ........ ........ ........ ........ 73% 2.86M 16s[0m
+Apr 18 01:14:16 [0;32m    virtualbox-ovf: 110592K ........ ........ ........ ........ ........ ........ 75% 2.04M 15s[0m
+Apr 18 01:14:17 [0;32m    virtualbox-ovf: 113664K ........ ........ ........ ........ ........ ........ 77% 2.12M 14s[0m
+Apr 18 01:14:18 [0;32m    virtualbox-ovf: 116736K ........ ........ ........ ........ ........ ........ 79% 2.81M 12s[0m
+Apr 18 01:14:19 [0;32m    virtualbox-ovf: 119808K ........ ........ ........ ........ ........ ........ 81% 2.71M 11s[0m
+Apr 18 01:14:21 [0;32m    virtualbox-ovf: 122880K ........ ........ ........ ........ ........ ........ 84% 2.65M 10s[0m
+Apr 18 01:14:22 [0;32m    virtualbox-ovf: 125952K ........ ........ ........ ........ ........ ........ 86% 2.86M 8s[0m
+Apr 18 01:14:23 [0;32m    virtualbox-ovf: 129024K ........ ........ ........ ........ ........ ........ 88% 2.51M 7s[0m
+Apr 18 01:14:24 [0;32m    virtualbox-ovf: 132096K ........ ........ ........ ........ ........ ........ 90% 2.63M 6s[0m
+Apr 18 01:14:25 [0;32m    virtualbox-ovf: 135168K ........ ........ ........ ........ ........ ........ 92% 2.16M 5s[0m
+Apr 18 01:14:27 [0;32m    virtualbox-ovf: 138240K ........ ........ ........ ........ ........ ........ 94% 2.51M 3s[0m
+Apr 18 01:14:28 [0;32m    virtualbox-ovf: 141312K ........ ........ ........ ........ ........ ........ 96% 2.14M 2s[0m
+Apr 18 01:14:29 [0;32m    virtualbox-ovf: 144384K ........ ........ ........ ........ ........ ........ 98% 2.59M 1s[0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf: 147456K ........ ........ ........ ........ ......           100% 2.69M=60s[0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf: 2015-04-17 23:14:30 (2.43 MB/s) - ‘jdk-7u80-linux-x64.tar.gz’ saved [153530841/153530841][0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf: Download done.[0m
+Apr 18 01:14:30 [0;32m    virtualbox-ovf: Removing outdated cached downloads...[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: error: no alternatives for java[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/ControlPanel to provide /usr/bin/ControlPanel (ControlPanel) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/java to provide /usr/bin/java (java) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/java_vm to provide /usr/bin/java_vm (java_vm) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/javaws to provide /usr/bin/javaws (javaws) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/jcontrol to provide /usr/bin/jcontrol (jcontrol) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode[0m
+Apr 18 01:14:35 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/appletviewer to provide /usr/bin/appletviewer (appletviewer) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/extcheck to provide /usr/bin/extcheck (extcheck) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/idlj to provide /usr/bin/idlj (idlj) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jar to provide /usr/bin/jar (jar) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javac to provide /usr/bin/javac (javac) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javafxpackager to provide /usr/bin/javafxpackager (javafxpackager) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javah to provide /usr/bin/javah (javah) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/javap to provide /usr/bin/javap (javap) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jhat to provide /usr/bin/jhat (jhat) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jmc to provide /usr/bin/jmc (jmc) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jps to provide /usr/bin/jps (jps) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jsadebugd to provide /usr/bin/jsadebugd (jsadebugd) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/jvisualvm to provide /usr/bin/jvisualvm (jvisualvm) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/native2ascii to provide /usr/bin/native2ascii (native2ascii) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/schemagen to provide /usr/bin/schemagen (schemagen) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/wsgen to provide /usr/bin/wsgen (wsgen) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/wsimport to provide /usr/bin/wsimport (wsimport) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/bin/xjc to provide /usr/bin/xjc (xjc) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: Oracle JDK 7 installed[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: update-alternatives: using /usr/lib/jvm/java-7-oracle/jre/lib/amd64/libnpjp2.so to provide /usr/lib/mozilla/plugins/libjavaplugin.so (mozilla-javaplugin.so) in auto mode[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: Oracle JRE 7 browser plugin installed[0m
+Apr 18 01:14:36 [0;32m    virtualbox-ovf: Setting up oracle-java7-set-default (7u80+7u60arm-0~webupd8~0) ...[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Reading package lists... Done[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Building dependency tree[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Reading state information... Done[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: ca-certificates is already the newest version.[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: wget is already the newest version.[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: The following extra packages will be installed:[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: libxerces2-java libxml-commons-external-java libxml-commons-resolver1.1-java[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Suggested packages:[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: ant-doc ant-gcj libcommons-httpclient-java libbcel-java ivy[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: libxerces2-java-doc libxerces2-java-gcj libxml-commons-resolver1.1-java-doc[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Recommended packages:[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: ant-optional[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: The following NEW packages will be installed:[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: ant ant-contrib libxerces2-java libxml-commons-external-java[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: libxml-commons-resolver1.1-java pwgen[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: 0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: Need to get 3840 kB of archives.[0m
+Apr 18 01:14:37 [0;32m    virtualbox-ovf: After this operation, 4980 kB of additional disk space will be used.[0m
+Apr 18 01:15:09 [0;32m    virtualbox-ovf: Get:1 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libxml-commons-resolver1.1-java all 1.2-7build1 [91.6 kB][0m
+Apr 18 01:15:13 [0;32m    virtualbox-ovf: Get:2 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libxml-commons-external-java all 1.4.01-2build1 [245 kB][0m
+Apr 18 01:15:17 [0;32m    virtualbox-ovf: Get:3 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main libxerces2-java all 2.11.0-7 [1362 kB][0m
+Apr 18 01:15:26 [0;32m    virtualbox-ovf: Get:4 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main ant all 1.9.3-2build1 [1869 kB][0m
+Apr 18 01:15:33 [0;32m    virtualbox-ovf: Get:5 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main pwgen amd64 2.06-1ubuntu4 [17.3 kB][0m
+Apr 18 01:15:34 [0;32m    virtualbox-ovf: Get:6 http://mirror.internode.on.net/pub/ubuntu/ubuntu/ trusty/main ant-contrib all 1.0~b3+svn177-6 [255 kB][0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Fetched 3840 kB in 57s (67.1 kB/s)[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package libxml-commons-resolver1.1-java.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: (Reading database ... 88634 files and directories currently installed.)[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../libxml-commons-resolver1.1-java_1.2-7build1_all.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking libxml-commons-resolver1.1-java (1.2-7build1) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package libxml-commons-external-java.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../libxml-commons-external-java_1.4.01-2build1_all.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking libxml-commons-external-java (1.4.01-2build1) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package libxerces2-java.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../libxerces2-java_2.11.0-7_all.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking libxerces2-java (2.11.0-7) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package ant.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../ant_1.9.3-2build1_all.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking ant (1.9.3-2build1) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package pwgen.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../pwgen_2.06-1ubuntu4_amd64.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking pwgen (2.06-1ubuntu4) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Selecting previously unselected package ant-contrib.[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Preparing to unpack .../ant-contrib_1.0~b3+svn177-6_all.deb ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Unpacking ant-contrib (1.0~b3+svn177-6) ...[0m
+Apr 18 01:15:35 [0;32m    virtualbox-ovf: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up libxml-commons-resolver1.1-java (1.2-7build1) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up libxml-commons-external-java (1.4.01-2build1) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up libxerces2-java (2.11.0-7) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up ant (1.9.3-2build1) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up pwgen (2.06-1ubuntu4) ...[0m
+Apr 18 01:15:36 [0;32m    virtualbox-ovf: Setting up ant-contrib (1.0~b3+svn177-6) ...[0m
+Apr 18 01:15:38 [1;32m==> virtualbox-ovf: Gracefully halting virtual machine...[0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf: [0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf: Broadcast message from vagrant@packer-virtualbox-iso[0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf: (/dev/pts/0) at 23:15 ...[0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf:[0m
+Apr 18 01:15:38 [0;32m    virtualbox-ovf: The system is going down for power off NOW![0m
+Apr 18 01:15:40 [1;32m==> virtualbox-ovf: Preparing to export machine...[0m
+Apr 18 01:15:40 [0;32m    virtualbox-ovf: Deleting forwarded port mapping for SSH (host port 3164)[0m
+Apr 18 01:15:41 [1;32m==> virtualbox-ovf: Exporting virtual machine...[0m
+Apr 18 01:15:41 [0;32m    virtualbox-ovf: Executing: export packer-virtualbox-ovf-1429312314 --output output-virtualbox-ovf/packer-virtualbox-ovf-1429312314.ovf[0m
+Apr 18 01:17:20 [1;32m==> virtualbox-ovf: Unregistering and deleting imported VM...[0m
+Apr 18 01:17:21 [1;32m==> virtualbox-ovf: Running post-processor: vagrant[0m
+Apr 18 01:17:21 [1;32m==> virtualbox-ovf (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+Apr 18 01:17:21 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429312314-disk1.vmdk[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Copying from artifact: output-virtualbox-ovf/packer-virtualbox-ovf-1429312314.ovf[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Renaming the OVF to box.ovf...[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Compressing: Vagrantfile[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Compressing: box.ovf[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Compressing: metadata.json[0m
+Apr 18 01:17:29 [0;32m    virtualbox-ovf (vagrant): Compressing: packer-virtualbox-ovf-1429312314-disk1.vmdk[0m
+Apr 18 01:18:46 [1;32mBuild 'virtualbox-ovf' finished.[0m
+Apr 18 01:18:46 
+Apr 18 01:18:46 ==> Builds finished. The artifacts of successful builds are:
+Apr 18 01:18:46 --> virtualbox-ovf: 'virtualbox' provider box: vagrant.box
+Apr 18 01:18:48 ==> box: Adding box 'search' (v0) for provider: 
+Apr 18 01:18:48     box: Downloading: file:///Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/implementierung/machines/search/vagrant.box
+Apr 18 01:19:01 [K    box: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    box: Progress: 5% (Rate: 158M/s, Estimated time remaining: 0:00:07)[K    box: Progress: 17% (Rate: 147M/s, Estimated time remaining: 0:00:07)[K    box: Progress: 40% (Rate: 210M/s, Estimated time remaining: 0:00:03)[K    box: Progress: 69% (Rate: 256M/s, Estimated time remaining: 0:00:01)[K==> box: Successfully added box 'search' (v0) for 'virtualbox'!

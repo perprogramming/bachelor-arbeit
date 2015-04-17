@@ -7,6 +7,7 @@
 *.blg
 *.toc
 *.log
+!/cd/Evaluation/*
 *.bbl
 *.lof
 *.lot
