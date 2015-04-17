@@ -19,3 +19,4 @@
 /cd/Implementierung/machines/*/packer_cache
 /cd/Implementierung/machines/*/vagrant.box
 /cd/Implementierung/machines/ubuntu-14.04.*
+/cd/Implementierung/machines/*/output-virtualbox-ovf
