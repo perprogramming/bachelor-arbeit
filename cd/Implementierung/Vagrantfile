@@ -5,70 +5,71 @@ Vagrant.configure(2) do |config|
         database.vm.box = "database"
         database.vm.box_url = "file://" + cwd + "/machines/database/vagrant.box"
         database.vm.hostname = "database"
-        database.vm.network "private_network", :ip => '10.0.0.2'
+        database.vm.network "private_network", ip: "172.28.128.3"
         database.ssh.password = "vagrant"
         database.ssh.insert_key = false
-        database.vm.provision :hosts
         database.vm.provider "virtualbox" do |v|
             v.memory = 128
             v.cpus = 1
         end
+        database.vm.provision "hosts"
     end
 
     config.vm.define "cache" do |cache|
         cache.vm.box = "cache"
         cache.vm.box_url = "file://" + cwd + "/machines/cache/vagrant.box"
         cache.vm.hostname = "cache"
-        cache.vm.network "private_network", :ip => '10.0.0.3'
+        cache.vm.network "private_network", ip: "172.28.128.4"
         cache.ssh.password = "vagrant"
         cache.ssh.insert_key = false
-        cache.vm.provision :hosts
         cache.vm.provider "virtualbox" do |v|
             v.memory = 128
             v.cpus = 1
         end
+        cache.vm.provision "hosts"
     end
 
     config.vm.define "search" do |search|
         search.vm.box = "search"
         search.vm.box_url = "file://" + cwd + "/machines/search/vagrant.box"
         search.vm.hostname = "search"
-        search.vm.network "private_network", :ip => '10.0.0.4'
+        search.vm.network "private_network", ip: "172.28.128.5"
         search.ssh.password = "vagrant"
         search.ssh.insert_key = false
-        search.vm.provision :hosts
         search.vm.provider "virtualbox" do |v|
             v.memory = 128
             v.cpus = 1
         end
+        search.vm.provision "hosts"
     end
    
     config.vm.define "app" do |app|
         app.vm.box = "app"
         app.vm.box_url = "file://" + cwd + "/machines/app/vagrant.box"
         app.vm.hostname = "app"
-        app.vm.network "private_network", :ip => '10.0.0.5'
+        app.vm.network "private_network", ip: "172.28.128.6"
         app.ssh.password = "vagrant"
         app.ssh.insert_key = false
-        app.vm.provision :hosts
         app.vm.provider "virtualbox" do |v|
             v.memory = 128
             v.cpus = 1
         end
+        app.vm.provision "hosts"
     end
 
     config.vm.define "loadbalancer" do |loadbalancer|
         loadbalancer.vm.box = "loadbalancer"     
         loadbalancer.vm.box_url = "file://" + cwd + "/machines/loadbalancer/vagrant.box"
         loadbalancer.vm.hostname = "loadbalancer"
-        loadbalancer.vm.network "private_network", :ip => '10.0.0.6'
+        loadbalancer.vm.network "private_network", ip: "172.28.128.7"
         loadbalancer.vm.network "forwarded_port", guest: 80, host: 8080
         loadbalancer.ssh.password = "vagrant"
         loadbalancer.ssh.insert_key = false
-        loadbalancer.vm.provision :hosts
         loadbalancer.vm.provider "virtualbox" do |v|
-            v.memory = 128
+            v.memory = 256
             v.cpus = 1
         end
+        loadbalancer.vm.provision "hosts"
+        loadbalancer.vm.provision "shell", inline: "sudo service varnish start", keep_color: true
     end
 end

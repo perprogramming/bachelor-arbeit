@@ -10,6 +10,7 @@ Für das Erzeugen und Starten der Virtualbox-Umgebung müssen zunächst folgende
 * [VirtualBox 4.3.26](https://www.virtualbox.org/wiki/Downloads)
 * [Packer 0.7.5](https://packer.io/downloads.html)
 * [Vagrant 1.7.2](https://www.vagrantup.com/downloads.html)
+* [vagrant-hosts 2.4.0](https://github.com/adrienthebo/vagrant-hosts)
 
 Sollten Sie dieses Repository von github geklont haben, müssen Sie außerdem folgende Dateien in das Unterverzeichnis `machines` herunterladen:
 
