@@ -1,21 +1,21 @@
 loadbalancer:
-    build: ./loadbalancer
+    build: ./machines/loadbalancer
     ports: [80]
     links: [app]
 
 app:
-    build: ./app
+    build: ./machines/app
     expose: [80]
     links: [database, cache, search]
 
 database:
-    build: ./database
+    build: ./machines/database
     expose: [3306]
 
 cache:
-    build: ./cache
+    build: ./machines/cache
     expose: [6379]
 
 search:
-    build: ./search
+    build: ./machines/search
     expose: [8080]
