@@ -1,0 +1,32 @@
+{
+    "builders": [
+        {
+            "type": "virtualbox-ovf",
+            "source_path": "../ubuntu-14.04.ovf",
+            "ssh_username": "vagrant",
+            "ssh_password": "vagrant",
+            "headless": true,
+            "shutdown_command": "sudo -S shutdown -P now"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "contents",
+            "destination": "/tmp"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "chmod a+x /tmp/contents/install.sh",
+                "/tmp/contents/install.sh"
+            ]
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "output": "vagrant.box"
+        }
+    ]
+}

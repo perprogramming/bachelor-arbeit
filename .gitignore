@@ -15,3 +15,7 @@
 *.ilg
 *.ind
 /Arbeit.pdf
+/cd/Implementierung/.vagrant/
+/cd/Implementierung/machines/*/packer_cache
+/cd/Implementierung/machines/*/vagrant.box
+/cd/Implementierung/machines/ubuntu-14.04.*

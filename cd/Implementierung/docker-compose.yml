@@ -4,7 +4,7 @@ loadbalancer:
     links: [app]
 
 app:
-    build: ./appserver
+    build: ./app
     expose: [80]
     links: [database, cache, search]
 
