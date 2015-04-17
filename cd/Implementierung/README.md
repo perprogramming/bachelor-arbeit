@@ -12,11 +12,6 @@ Für das Erzeugen und Starten der Virtualbox-Umgebung müssen zunächst folgende
 * [Vagrant 1.7.2](https://www.vagrantup.com/downloads.html)
 * [vagrant-hosts 2.4.0](https://github.com/adrienthebo/vagrant-hosts)
 
-Sollten Sie dieses Repository von github geklont haben, müssen Sie außerdem folgende Dateien in das Unterverzeichnis `machines` herunterladen:
-
-* [ubuntu-14.04.ovf](https://www.dropbox.com/s/2e6i2aj9b12xws2/ubuntu-14.04.ovf?dl=1)
-* [ubuntu-14.04.vmdk](https://www.dropbox.com/s/bka6ph38bmcrsg5/ubuntu-14.04.vmdk?dl=1)
-
 ### Erzeugung der Umgebung
 
 Führen Sie einfach das Build-Script aus:
