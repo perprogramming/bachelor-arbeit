@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
         database.ssh.password = "vagrant"
         database.ssh.insert_key = false
         database.vm.provider "virtualbox" do |v|
-            v.memory = 128
+            v.memory = 256
             v.cpus = 1
         end
         database.vm.provision "hosts"
@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
         cache.ssh.password = "vagrant"
         cache.ssh.insert_key = false
         cache.vm.provider "virtualbox" do |v|
-            v.memory = 128
+            v.memory = 256
             v.cpus = 1
         end
         cache.vm.provision "hosts"
@@ -37,7 +37,7 @@ Vagrant.configure(2) do |config|
         search.ssh.password = "vagrant"
         search.ssh.insert_key = false
         search.vm.provider "virtualbox" do |v|
-            v.memory = 128
+            v.memory = 256
             v.cpus = 1
         end
         search.vm.provision "hosts"
@@ -51,7 +51,7 @@ Vagrant.configure(2) do |config|
         app.ssh.password = "vagrant"
         app.ssh.insert_key = false
         app.vm.provider "virtualbox" do |v|
-            v.memory = 128
+            v.memory = 256
             v.cpus = 1
         end
         app.vm.provision "hosts"
