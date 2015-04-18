@@ -180,7 +180,7 @@ Eine relativ neue Entwicklung innerhalb der Systemvirtualisierung mittels Hyperv
 
 Als Antwort entstehen deshalb in jüngster Vergangenheit neue Lösungen, bei denen man seinen eigentlichen Programmcode mit Hilfe einer Library entwickelt, die einfache Schnittstellen zur Verfügung stellt, um zum Beispiel Netzwerkkommunikation oder ähnliches zu betreiben. Der Programmcode wird dann mit Hilfe dieser Library in eine sehr viel kleinere \ac{VM} kompiliert, die wieder mit Hilfe eines Hypervisors ausgeführt werden kann. Ein Beispiel für eine solche Library ist MirageOS \citep[Vgl.][]{MadMorAnd13}.
 
-Ein Nachteil dieser Lösung ist, dass man lediglich Funktionalität wiederverwenden kann, die genau durch die benutzte Library zur Verfügung steht. So kann man auch lediglich in der Programmiersprache arbeiten, die der Compiler der Library versteht. Im Falle von MirageOS ist dies die Sprache Ocaml. Es ist somit zum Beispiel nicht möglich, einen PHP-Interpreter zu starten und PHP-Scripte auszuführen, wie das mit allen gängigen Betriebssystemen wie Linux, MacOS oder Windows der Fall ist. Unikernels lassen sich somit zumindest bisher nur für sehr spezielle Dienste und Problemestellungen einsetzen.
+Ein Nachteil dieser Lösung ist, dass man lediglich Funktionalität wiederverwenden kann, die genau durch die benutzte Library zur Verfügung steht. So kann man auch lediglich in der Programmiersprache arbeiten, die der Compiler der Library versteht. Im Falle von MirageOS ist dies die Sprache Ocaml. Es ist somit zum Beispiel nicht möglich, einen Interpreter für \ac{PHP} zu starten und PHP-Scripte auszuführen, wie das mit allen gängigen Betriebssystemen wie Linux, MacOS oder Windows der Fall ist. Unikernels lassen sich somit zumindest bisher nur für sehr spezielle Dienste und Problemestellungen einsetzen.
 
 \subsubsection{Betriebssystemvirtualisierung mittels OS-Containern}
 
@@ -238,7 +238,7 @@ In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Dis
       \hline
       Lizensierung & \multicolumn{6}{|l|}{} \\
       \hline
-      - kostenpflichtig & X & - & - & - & - & - \\
+      - kostenpflichtig & X & - & X & - & - & - \\
       \hline
       - Open Source & - & X & - & X & X & X \\
       \hline
