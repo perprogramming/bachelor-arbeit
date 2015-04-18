@@ -1,0 +1,1531 @@
+"implementierung_database_1429358582372_97876" {b446eef3-1b73-4eeb-9ed1-4ccddc8088fd}
+"implementierung_cache_1429358627163_36659" {cd3377b8-376b-4f59-b971-dac401e29a2a}
+"implementierung_search_1429358688109_2650" {c42de727-9b34-40e3-bf8f-7f1b423f0237}
+"implementierung_app_1429358731445_77967" {7d7443f0-be02-46a6-b905-3bd8034d8fa8}
+"implementierung_loadbalancer_1429358777370_42133" {1488ad33-28a1-44fa-9646-5bf586106b41}
+"Implementierung2_database_1429359244749_54193" {5c0ad987-096d-4933-a6e3-579b6250f640}
+"Implementierung2_cache_1429359293241_4622" {02041766-01fe-401d-88ba-a83c5a89873e}
+"Implementierung2_search_1429359344909_9501" {2d7e7824-ced0-45e7-874e-f01c50606afb}
+"Implementierung2_app_1429359390544_90984" {3ebb9287-e2b3-470e-8f03-c8da551773c2}
+"Implementierung2_loadbalancer_1429359436130_19100" {82006217-fdb6-4eef-a91e-12bf48d7851b}
+"Implementierung3_database_1429359632492_54442" {4c8369dc-7eff-40ae-8a05-d8d3e385b3d6}
+"Implementierung3_cache_1429359678559_50167" {d7f6eccc-078e-4457-8aa7-848f2113808d}
+"Implementierung3_search_1429359730371_21137" {63ef7dcc-167d-46d5-895e-fad64cd7609d}
+"Implementierung3_app_1429359777738_73983" {940befe7-9efb-43df-9b86-2c4139a04efa}
+"Implementierung3_loadbalancer_1429359825065_46678" {bc93d481-65b7-4dad-8265-7d9bb3eabdaf}
+Name:            implementierung_database_1429358582372_97876
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            b446eef3-1b73-4eeb-9ed1-4ccddc8088fd
+Config file:     /Users/pb/VirtualBox VMs/implementierung_database_1429358582372_97876/implementierung_database_1429358582372_97876.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/implementierung_database_1429358582372_97876/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/implementierung_database_1429358582372_97876/Logs
+Hardware UUID:   b446eef3-1b73-4eeb-9ed1-4ccddc8088fd
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:03:04.424000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/implementierung_database_1429358582372_97876/packer-virtualbox-ovf-1429311760-disk1.vmdk (UUID: c52c4fb5-3f36-4bc6-b861-f8f8d60f193c)
+NIC 1:           MAC: 0800279D008F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2222, guest ip = , guest port = 22
+NIC 2:           MAC: 08002776D93B, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/implementierung_database_1429358582372_97876/implementierung_database_1429358582372_97876.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            implementierung_cache_1429358627163_36659
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            cd3377b8-376b-4f59-b971-dac401e29a2a
+Config file:     /Users/pb/VirtualBox VMs/implementierung_cache_1429358627163_36659/implementierung_cache_1429358627163_36659.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/implementierung_cache_1429358627163_36659/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/implementierung_cache_1429358627163_36659/Logs
+Hardware UUID:   cd3377b8-376b-4f59-b971-dac401e29a2a
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:03:49.205000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/implementierung_cache_1429358627163_36659/packer-virtualbox-ovf-1429312036-disk1.vmdk (UUID: edf5162d-6b9b-45c8-9081-d738d30c1ed9)
+NIC 1:           MAC: 080027E1F7DC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2200, guest ip = , guest port = 22
+NIC 2:           MAC: 080027E82CDC, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/implementierung_cache_1429358627163_36659/implementierung_cache_1429358627163_36659.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            implementierung_search_1429358688109_2650
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            c42de727-9b34-40e3-bf8f-7f1b423f0237
+Config file:     /Users/pb/VirtualBox VMs/implementierung_search_1429358688109_2650/implementierung_search_1429358688109_2650.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/implementierung_search_1429358688109_2650/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/implementierung_search_1429358688109_2650/Logs
+Hardware UUID:   c42de727-9b34-40e3-bf8f-7f1b423f0237
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:04:50.228000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/implementierung_search_1429358688109_2650/packer-virtualbox-ovf-1429312314-disk1.vmdk (UUID: 3710ce9e-6dfb-4b41-a81a-a31523adbfd5)
+NIC 1:           MAC: 08002727C410, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2201, guest ip = , guest port = 22
+NIC 2:           MAC: 0800274692DC, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/implementierung_search_1429358688109_2650/implementierung_search_1429358688109_2650.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            implementierung_app_1429358731445_77967
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            7d7443f0-be02-46a6-b905-3bd8034d8fa8
+Config file:     /Users/pb/VirtualBox VMs/implementierung_app_1429358731445_77967/implementierung_app_1429358731445_77967.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/implementierung_app_1429358731445_77967/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/implementierung_app_1429358731445_77967/Logs
+Hardware UUID:   7d7443f0-be02-46a6-b905-3bd8034d8fa8
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:05:33.691000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/implementierung_app_1429358731445_77967/packer-virtualbox-ovf-1429311420-disk1.vmdk (UUID: b5a511f8-b6ff-425b-8cf6-28a1cff905cf)
+NIC 1:           MAC: 080027FF3E30, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2202, guest ip = , guest port = 22
+NIC 2:           MAC: 08002776E614, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/implementierung_app_1429358731445_77967/implementierung_app_1429358731445_77967.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            implementierung_loadbalancer_1429358777370_42133
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            1488ad33-28a1-44fa-9646-5bf586106b41
+Config file:     /Users/pb/VirtualBox VMs/implementierung_loadbalancer_1429358777370_42133/implementierung_loadbalancer_1429358777370_42133.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/implementierung_loadbalancer_1429358777370_42133/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/implementierung_loadbalancer_1429358777370_42133/Logs
+Hardware UUID:   1488ad33-28a1-44fa-9646-5bf586106b41
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:06:19.678000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/implementierung_loadbalancer_1429358777370_42133/packer-virtualbox-ovf-1429311169-disk1.vmdk (UUID: 632e9f30-8d2c-44fb-b69c-b3c61b5d4989)
+NIC 1:           MAC: 080027315258, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2203, guest ip = , guest port = 22
+NIC 1 Rule(1):   name = tcp8080, protocol = tcp, host ip = , host port = 8080, guest ip = , guest port = 80
+NIC 2:           MAC: 0800276FBD4B, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/implementierung_loadbalancer_1429358777370_42133/implementierung_loadbalancer_1429358777370_42133.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung2_database_1429359244749_54193
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            5c0ad987-096d-4933-a6e3-579b6250f640
+Config file:     /Users/pb/VirtualBox VMs/Implementierung2_database_1429359244749_54193/Implementierung2_database_1429359244749_54193.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung2_database_1429359244749_54193/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung2_database_1429359244749_54193/Logs
+Hardware UUID:   5c0ad987-096d-4933-a6e3-579b6250f640
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:14:07.580000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung2_database_1429359244749_54193/packer-virtualbox-ovf-1429311760-disk1.vmdk (UUID: fde90663-a9c6-4c19-977f-37cd1a68dd9c)
+NIC 1:           MAC: 0800279D008F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2204, guest ip = , guest port = 22
+NIC 2:           MAC: 080027CD20F9, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung2' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung2_database_1429359244749_54193/Implementierung2_database_1429359244749_54193.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung2_cache_1429359293241_4622
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            02041766-01fe-401d-88ba-a83c5a89873e
+Config file:     /Users/pb/VirtualBox VMs/Implementierung2_cache_1429359293241_4622/Implementierung2_cache_1429359293241_4622.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung2_cache_1429359293241_4622/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung2_cache_1429359293241_4622/Logs
+Hardware UUID:   02041766-01fe-401d-88ba-a83c5a89873e
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:14:55.554000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung2_cache_1429359293241_4622/packer-virtualbox-ovf-1429312036-disk1.vmdk (UUID: 9907a927-e6c1-42e4-9601-683666d3359b)
+NIC 1:           MAC: 080027E1F7DC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2205, guest ip = , guest port = 22
+NIC 2:           MAC: 0800270AFD7F, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung2' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung2_cache_1429359293241_4622/Implementierung2_cache_1429359293241_4622.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung2_search_1429359344909_9501
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            2d7e7824-ced0-45e7-874e-f01c50606afb
+Config file:     /Users/pb/VirtualBox VMs/Implementierung2_search_1429359344909_9501/Implementierung2_search_1429359344909_9501.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung2_search_1429359344909_9501/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung2_search_1429359344909_9501/Logs
+Hardware UUID:   2d7e7824-ced0-45e7-874e-f01c50606afb
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:15:47.284000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung2_search_1429359344909_9501/packer-virtualbox-ovf-1429312314-disk1.vmdk (UUID: 1a1c5ee0-5be6-40c4-a092-c2245cda8b07)
+NIC 1:           MAC: 08002727C410, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2206, guest ip = , guest port = 22
+NIC 2:           MAC: 0800271DE8B5, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung2' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung2_search_1429359344909_9501/Implementierung2_search_1429359344909_9501.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung2_app_1429359390544_90984
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            3ebb9287-e2b3-470e-8f03-c8da551773c2
+Config file:     /Users/pb/VirtualBox VMs/Implementierung2_app_1429359390544_90984/Implementierung2_app_1429359390544_90984.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung2_app_1429359390544_90984/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung2_app_1429359390544_90984/Logs
+Hardware UUID:   3ebb9287-e2b3-470e-8f03-c8da551773c2
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:16:33.003000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung2_app_1429359390544_90984/packer-virtualbox-ovf-1429311420-disk1.vmdk (UUID: c2367d9b-9a00-4a1f-a89e-147f1948a603)
+NIC 1:           MAC: 080027FF3E30, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2207, guest ip = , guest port = 22
+NIC 2:           MAC: 0800270C651C, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung2' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung2_app_1429359390544_90984/Implementierung2_app_1429359390544_90984.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung2_loadbalancer_1429359436130_19100
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            82006217-fdb6-4eef-a91e-12bf48d7851b
+Config file:     /Users/pb/VirtualBox VMs/Implementierung2_loadbalancer_1429359436130_19100/Implementierung2_loadbalancer_1429359436130_19100.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung2_loadbalancer_1429359436130_19100/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung2_loadbalancer_1429359436130_19100/Logs
+Hardware UUID:   82006217-fdb6-4eef-a91e-12bf48d7851b
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:19:24.975000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung2_loadbalancer_1429359436130_19100/packer-virtualbox-ovf-1429311169-disk1.vmdk (UUID: 36393993-fe65-4f2e-9003-a1a3568d44f3)
+NIC 1:           MAC: 080027315258, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2208, guest ip = , guest port = 22
+NIC 2:           MAC: 080027E124E4, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung2' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung2_loadbalancer_1429359436130_19100/Implementierung2_loadbalancer_1429359436130_19100.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung3_database_1429359632492_54442
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            4c8369dc-7eff-40ae-8a05-d8d3e385b3d6
+Config file:     /Users/pb/VirtualBox VMs/Implementierung3_database_1429359632492_54442/Implementierung3_database_1429359632492_54442.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung3_database_1429359632492_54442/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung3_database_1429359632492_54442/Logs
+Hardware UUID:   4c8369dc-7eff-40ae-8a05-d8d3e385b3d6
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:20:35.075000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung3_database_1429359632492_54442/packer-virtualbox-ovf-1429311760-disk1.vmdk (UUID: 928490bd-62a2-4c04-bad3-3440ba41f208)
+NIC 1:           MAC: 0800279D008F, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2209, guest ip = , guest port = 22
+NIC 2:           MAC: 0800279BE8BE, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung3' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung3_database_1429359632492_54442/Implementierung3_database_1429359632492_54442.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung3_cache_1429359678559_50167
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            d7f6eccc-078e-4457-8aa7-848f2113808d
+Config file:     /Users/pb/VirtualBox VMs/Implementierung3_cache_1429359678559_50167/Implementierung3_cache_1429359678559_50167.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung3_cache_1429359678559_50167/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung3_cache_1429359678559_50167/Logs
+Hardware UUID:   d7f6eccc-078e-4457-8aa7-848f2113808d
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:21:21.375000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung3_cache_1429359678559_50167/packer-virtualbox-ovf-1429312036-disk1.vmdk (UUID: dc97bd19-9969-49aa-b8cc-c53f772c19f8)
+NIC 1:           MAC: 080027E1F7DC, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2210, guest ip = , guest port = 22
+NIC 2:           MAC: 080027F02B5B, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung3' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung3_cache_1429359678559_50167/Implementierung3_cache_1429359678559_50167.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung3_search_1429359730371_21137
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            63ef7dcc-167d-46d5-895e-fad64cd7609d
+Config file:     /Users/pb/VirtualBox VMs/Implementierung3_search_1429359730371_21137/Implementierung3_search_1429359730371_21137.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung3_search_1429359730371_21137/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung3_search_1429359730371_21137/Logs
+Hardware UUID:   63ef7dcc-167d-46d5-895e-fad64cd7609d
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:22:13.151000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung3_search_1429359730371_21137/packer-virtualbox-ovf-1429312314-disk1.vmdk (UUID: 83c421d3-9412-4b82-aad3-fad86e245b06)
+NIC 1:           MAC: 08002727C410, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2211, guest ip = , guest port = 22
+NIC 2:           MAC: 080027BAE802, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung3' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung3_search_1429359730371_21137/Implementierung3_search_1429359730371_21137.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung3_app_1429359777738_73983
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            940befe7-9efb-43df-9b86-2c4139a04efa
+Config file:     /Users/pb/VirtualBox VMs/Implementierung3_app_1429359777738_73983/Implementierung3_app_1429359777738_73983.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung3_app_1429359777738_73983/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung3_app_1429359777738_73983/Logs
+Hardware UUID:   940befe7-9efb-43df-9b86-2c4139a04efa
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:23:01.043000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung3_app_1429359777738_73983/packer-virtualbox-ovf-1429311420-disk1.vmdk (UUID: 8d1397ea-1e29-4b3f-9091-39f638335911)
+NIC 1:           MAC: 080027FF3E30, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2212, guest ip = , guest port = 22
+NIC 2:           MAC: 0800271BB432, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung3' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung3_app_1429359777738_73983/Implementierung3_app_1429359777738_73983.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
+Name:            Implementierung3_loadbalancer_1429359825065_46678
+Groups:          /
+Guest OS:        Ubuntu (64 bit)
+UUID:            bc93d481-65b7-4dad-8265-7d9bb3eabdaf
+Config file:     /Users/pb/VirtualBox VMs/Implementierung3_loadbalancer_1429359825065_46678/Implementierung3_loadbalancer_1429359825065_46678.vbox
+Snapshot folder: /Users/pb/VirtualBox VMs/Implementierung3_loadbalancer_1429359825065_46678/Snapshots
+Log folder:      /Users/pb/VirtualBox VMs/Implementierung3_loadbalancer_1429359825065_46678/Logs
+Hardware UUID:   bc93d481-65b7-4dad-8265-7d9bb3eabdaf
+Memory size:     256MB
+Page Fusion:     off
+VRAM size:       8MB
+CPU exec cap:    100%
+HPET:            off
+Chipset:         piix3
+Firmware:        BIOS
+Number of CPUs:  1
+PAE:             on
+Long Mode:       on
+Synthetic CPU:   off
+CPUID overrides: None
+Boot menu mode:  message and menu
+Boot Device (1): HardDisk
+Boot Device (2): DVD
+Boot Device (3): Not Assigned
+Boot Device (4): Not Assigned
+ACPI:            on
+IOAPIC:          on
+Time offset:     0ms
+RTC:             UTC
+Hardw. virt.ext: on
+Nested Paging:   on
+Large Pages:     on
+VT-x VPID:       on
+VT-x unr. exec.: on
+State:           running (since 2015-04-18T12:23:48.389000000)
+Monitor count:   1
+3D Acceleration: off
+2D Video Acceleration: off
+Teleporter Enabled: off
+Teleporter Port: 0
+Teleporter Address: 
+Teleporter Password: 
+Tracing Enabled: off
+Allow Tracing to Access VM: off
+Tracing Configuration: 
+Autostart Enabled: off
+Autostart Delay: 0
+Default Frontend: 
+Storage Controller Name (0):            IDE Controller
+Storage Controller Type (0):            PIIX4
+Storage Controller Instance Number (0): 0
+Storage Controller Max Port Count (0):  2
+Storage Controller Port Count (0):      2
+Storage Controller Bootable (0):        on
+IDE Controller (0, 0): /Users/pb/VirtualBox VMs/Implementierung3_loadbalancer_1429359825065_46678/packer-virtualbox-ovf-1429311169-disk1.vmdk (UUID: 2834959d-f4eb-4ff2-98d0-9e1588622aa6)
+NIC 1:           MAC: 080027315258, Attachment: NAT, Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 1 Settings:  MTU: 0, Socket (send: 64, receive: 64), TCP Window (send:64, receive: 64)
+NIC 1 Rule(0):   name = ssh, protocol = tcp, host ip = 127.0.0.1, host port = 2213, guest ip = , guest port = 22
+NIC 2:           MAC: 0800275D2C99, Attachment: Host-only Interface 'vboxnet10', Cable connected: on, Trace: off (file: none), Type: 82540EM, Reported speed: 0 Mbps, Boot priority: 0, Promisc Policy: deny, Bandwidth group: none
+NIC 3:           disabled
+NIC 4:           disabled
+NIC 5:           disabled
+NIC 6:           disabled
+NIC 7:           disabled
+NIC 8:           disabled
+Pointing Device: PS/2 Mouse
+Keyboard Device: PS/2 Keyboard
+UART 1:          disabled
+UART 2:          disabled
+LPT 1:           disabled
+LPT 2:           disabled
+Audio:           disabled
+Clipboard Mode:  disabled
+Drag'n'drop Mode: disabled
+Session type:    headless
+VRDE:            disabled
+USB:             disabled
+EHCI:            disabled
+
+USB Device Filters:
+
+<none>
+
+Bandwidth groups:  <none>
+
+Shared folders:  
+
+Name: 'vagrant', Host path: '/Users/pb/Dropbox/Uni/Bachelorarbeit/arbeit/cd/Implementierung3' (machine mapping), writable
+
+Video capturing:    not active
+Capture screens:    0
+Capture file:       /Users/pb/VirtualBox VMs/Implementierung3_loadbalancer_1429359825065_46678/Implementierung3_loadbalancer_1429359825065_46678.webm
+Capture dimensions: 1024x768
+Capture rate:       512 kbps
+Capture FPS:        25
+
+Guest:
+
+Configured memory balloon size:      0 MB
+
+
