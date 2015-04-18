@@ -1,1 +1,18 @@
-\section{Fazit}
+\section{Zusammenfassung und Ausblick}
+
+Im Rahmen dieser Arbeit wurde zunächst ein Überblick über die beiden Themenbereiche Softwaretests und Virtualsierung und deren aktuellen Stand der Forschung gegeben.
+
+Im Bereich der Softwaretests wurden dabei die unterschiedlichen Testarten Unit-, Integrations-, System- und Akzeptanz-Tests erläutert und untersucht, dass hier vor allem die System- und Akzeptanz-Tests hohe Anforderungen an Testumgebung und die Ausführungsdauer von Tests stellen. Außerdem wurden verschiedene Strategien zur Testausführung besprochen und argumentiert, warum es sinnvoll sich für eine automatisierte Auführung der Tests zu entscheiden und welche Testarten hierbei mehr oder weniger intensiv verwendet werden sollen.
+
+Im Bereich der Virtualisierung wurde zunächst eine grundsätzliche Kategorisierung zwischen der Systemvirtualisierung mittels Hypervisor und der Betriebssystemvirtualisierung mittels OS-Containern
+erarbeitet. Dabei wurden verschiedene Produkte und technische Lösungen beschrieben, ihre Vor- und Nachteile erarbeitet und abschließend vergleichend diskutiert.
+
+Im darauf folgenden Kapitel "`Konzeption"' wurden zunächst die aktuelle Produktiv- und die aktuellen Testumgebungen der Pixelhouse GmbH beschrieben und vor allem deren Nachteile erarbeitet. Anhand dieser Nachteile und mit Hilfe der im Grundlagen-Kapitel erarbeiteten Möglichkeiten der Virtualisierung wurde dann ein Konzept für eine neue Testumgebung erarbeitet. Hierbei wurde vorallem argumentiert, dass die aktuellen Probleme der Pixelhouse GmbH sich dadurch lösen lassen, dass mit Hilfe der Virtualisierung jede Testumgebung ein vollständiges Abbild der Produktivumgebung ist. Dadurch wird zum einen verhindert, dass verschiedene Tests sich beim parallellen Ausführen gegenseitig beeinträchtigen und zum anderen eröffnet es die Möglichkeit, zukünfig auch Änderungen an der Infrastruktur selbst zu testen.
+
+Im anschließenden Kapitel Implementierung wurden zwei prototypische Umsetzungen, zum einen mit Hilfe des Hosted-Hypervisors Virtualbox von Oracle und zum anderen unter Verwendung der OS-Container-Virtualisierung Docker, vorgestellt. Hierbei wurden die verwendeten Softwarewerkzeuge beschrieben und Probleme beziehungsweise Besonderheiten der jeweiligen Implementierung aufgezeigt.
+
+Im Kapitel "`Evaluation"' wurde dann versucht, eine Evaluationsmethode zu definieren, die es der Pixelhouse GmbH ermöglicht, die beiden Lösungen in Hinblick auf die vorliegende Problemstellung und Ausgangslage zu bewerten. Dazu wurden zunächst bestimmte Evaluationskriterien definiert, beschrieben, wie sie sich ermitteln lassen und zusätzlich eine Gewichtung vorgenommen, da nicht jedes Kriterium für die Pixelhouse GmbH von gleicher Bedeutung ist. Anschließend wurde beschrieben, wie die jeweiligen Kriterien ermittelt wurden und die tatsächlichen Messwerte zu einem gewichteten Mittelwert verrechnet. Dabei ergab sich eine deutliche Tendenz für die Lösung mit Hilfe der OS-Container-Virtualisierung und dem Produkt Docker.
+
+Dies passt positiverweise zu der Bereits von den System-Administratoren eingeschlagenen Richtung und deren Wunsch, die Produktivumgebung auf diese Virtualisierung umzustellen.
+
+Für die Pixelhouse GmbH könnte es eine wichtige Fragestellung sein, inwieweit es möglich ist, die gleiche Betriebsumgebung auch für die Entwicklung der Anwendung auf den Laptops der Entwickler zu verwenden. Es wäre erstrebenswert, zukünftig zwischen allen drei Umgebungen, also Entwicklung, Testbetrieb und Produktion, so wenig abweichungen wie möglich zu haben.
