@@ -32,8 +32,38 @@ Als zweites Kriterium wird die Dauer für das Starten der ersten Umgebung herang
 
 Der zuletzt angedeutete Aspekt, nämlich ein geändertes Laufzeitverhalten aufgrund von endlichen Resourcen auf einer Hardwaremaschine, soll nun ebenfalls durch ein Kriterium messbar gemacht werden. Wie bereits in der Einleitung erwähnt, ist laut Hamble und Farley bei der Parallelieserung von Tests die Gesamtausführungs aller Tests lediglich durch die Dauer des längsten Tests und die Größe des Hardware-Budgets, also durch die Menge der zur Verfügung stehenden Hardware begrenzt \citep[Vgl.][S. 310]{HumFar10}. In Bezug auf die beiden unterschiedliche Ansätze kann man somit sagen, dass eine Lösung, die weniger Resourcen verbraucht, besser ist als diejenige, die mehr Resourcen verbraucht, da man mit ihr auf der gleichen zur Verfügung stehenden Hardware mehr Testumgebungen und somit mehr Tests parallelisieren kann. Zur Messung dieser Eigenschaft wird deshalb untersucht, wieviele Umgebungen sich mit dem jeweiligen Ansatz auf einer konkreten Testhardware starten lassen. Die größere Anzahl wird dann wiederrum mit dem Wert 10 bewertet, die kleinere entsprechend proportional, wobei 1 für nur eine gestartete Umgebung steht. Es wäre noch spannender, sogar das tatsächliche Laufzeitverhalten einer gestarteten Umgebung in Bezug auf die zur Verfügung stehenden Hardware-Resourcen und der Anzahl an anderen Testumgebungen zu untersuchen. So kann es zwar sein, dass beide Ansätze gleich viele Umgebungen starten können, diese aber langsamer oder schneller Anwendungsanfragen abarbeiten. Erste Versuche, entsprechende Zahlen zu ermitteln haben sich aber als sehr schwierig herausgestellt, da gerade im Grenzbereich (also zum Beispiel komplett ausgenutzter Hardwareresourcen) sehr heterogene und schwer reproduzierbare Werte entstehen. Im Rahmen dieser Evaluation wird eine solche Messung also nicht vorgenommen.
 
-Alle drei genannten Kriterien, Erzeugungsdauer, Startdauer und Menge an Umgebungen pro konkreter Hardwareresource sind für die Problemstellung und Ausgangssituation bei der Pixelhouse GmbH von großer Bedeutung. Da aber grundsätzlich ja eine größtmögliche Parallelisierung der Testausführung angestrebt wird, ist die Menge der Umgebungen das wichtigste Kriterium. Es wird somit mit dem Faktor 10 gewichtet. Da sich auch die Erzeugungsdauer der Maschinenabbilder maximal auf soviele Prozesse parallelisieren lässt, wie es konkrete Komponenten innerhalb der Umgebung gibt, spielt auch diese Größe eine wichtige Rolle. Sie wird etwas schwächer aber immer noch mit 7 Punkten gewichtet. Die Startdauer einer einzelnen Umgebung spielt eine geringere Rolle, da sie, wenn man von einer maximalen Parallelisierung ausgehen würde, die Gesamtausführungsdauer aller Tests ja nur konstant erhöhen würde und nicht zum Beispiel linear oder sogar exponentiell. Dauert das Starten zum Beispiel 10 Minuten, würde die Gesamtausführungsdauer aller Tests sich eben um 10 minuten erhöhen, wenn man alle Tests parallel ausführt. Dieses Kriterium wird deshalb lediglich mit dem Faktor 3 gewichtet.
+Alle drei genannten Kriterien, Erzeugungsdauer, Startdauer und Menge an Umgebungen pro konkreter Hardwareresource sind für die Problemstellung und Ausgangssituation bei der Pixelhouse GmbH von großer Bedeutung. Da aber grundsätzlich ja eine größtmögliche Parallelisierung der Testausführung angestrebt wird, ist die Menge der Umgebungen das wichtigste Kriterium. Es wird somit mit dem Faktor 10 gewichtet. Da sich auch die Erzeugungsdauer der Maschinenabbilder nur konstant auf die Ausführungsdauer aller Tests auswirkt, wird sie lediglich mit dem Faktor 5 gewichtet. Auch die Startdauer einer einzelnen Umgebung spielt eine geringere Rolle, da sie, wenn man von einer maximalen Parallelisierung ausgehen würde, die Gesamtausführungsdauer aller Tests ebenfalls nur konstant erhöht und nicht zum Beispiel linear oder sogar exponentiell. Dauert das Starten zum Beispiel 10 Minuten, würde die Gesamtausführungsdauer aller Tests sich eben um 10 Minuten erhöhen, wenn man alle Tests parallel ausführt. Da es aber fraglich ist, ob die Pixelhouse GmbH wirklich eine vollständige Parallelisierung aller Tests erreichen wird beziehungsweise bezahlen möchte, wird dieses Kriterium etwas höher, nämlich mit dem Faktor 7 gewichtet.
 
-Neben Kriterien, die Einfluss auf die Ausführungsdauer haben, spielen für die Pixelhouse nun lediglich noch Kriterien eine Rolle, die die Verwendbarkeit des jeweiligen Ansatzes kennzeichnen. Hier soll jeweils die bessere Lösung mit dem Wert 10 bewertet werden, die schlechtere Lösung mit 1. Die konkreten Kriterien sind dabei: Installationsaufwand, Einfachheit der Konfigurationssyntax (für Maschinen und Umgebungsdefinition) und Einfachheit der Umgebungssteuerung (Kommandozeilentools).
+Neben Kriterien, die Einfluss auf die Ausführungsdauer haben, spielen für die Pixelhouse nun lediglich noch Kriterien eine Rolle, die die Verwendbarkeit des jeweiligen Ansatzes kennzeichnen. Hier soll jeweils die bessere Lösung mit dem Wert 10 bewertet werden, die schlechtere Lösung mit 1. Die konkreten Kriterien sind dabei: Installationsaufwand, Einfachheit der Konfigurationssyntax (für Maschinen und Umgebungsdefinition) und Einfachheit der Umgebungssteuerung (Kommandozeilentools). Die Gewichtung sieht dabei so aus, dass der Installationsaufwand und die Einfacheit der Umgebungssteuer lediglich mit dem Faktor 3 gewichtet wird. Diese Aspekte spielen im Alltag der Entwicklung keine entscheidene Rolle, da die Installation nicht regelmäßig oder sogar automatisiert erfolgt und die Umgebungssteuerung im Falle der automatischen Testausführung ebenfalls programmatisch erfolgt und nicht händisch erfolgt. Die Einfachheit Konfigurationssyntax kann gerade für die Administratoren regelmäßig von Vorteil sein. Sie wird deshalb mit dem Faktor 5 gewichtet. 
+
+Die Kriterien und ihre Gewichtung werden in der Abbildung \ref{kriterien} noch einmal zusammengestellt.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \resizebox{15cm}{!} {
+      \begin{tabular}{|l|r|}
+      \hline
+      Evaluationskriterium & Gewichtungsfaktor \\
+      \hline
+      Dauer der Erzeugung von Maschinen-Abbildern bzw. OS-Container-Images & 5 \\
+      \hline
+      Dauer des Startvorgangs der ersten Umgebung & 7 \\
+      \hline
+      Menge der parallelen Testumgebungen bei gegebener Hardware & 10 \\
+      \hline
+      Einfachheit der Installation der Virtualisierungslösung & 3 \\
+      \hline
+      Einfachheit der Umgebungssteuerung & 3 \\      
+      \hline
+      Einfachheit der Konfigurationssyntax & 5 \\
+      \hline
+      \end{tabular}
+    }
+    \caption{Zusammenfassung Evaluationskriterien und Gewichtung}
+    \label{kriterien}
+  \end{center}
+\end{figure}
 
 \subsubsection{Ermittlung und Diskussion der Ergebnisse}
+
+
