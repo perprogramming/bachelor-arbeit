@@ -52,6 +52,20 @@ Schließlich kennt Packer nun noch das Konzept des Post-Prozessors \citep[Vgl.][
 Vagrant.configure(2) do |config|
     cwd = File.dirname(__FILE__)
     ...
+    config.vm.define "app" do |app|
+        app.vm.box = "app"
+        app.vm.box_url = "file://" + cwd + "/machines/app/vagrant.box"
+        app.vm.hostname = "app"
+        app.vm.network "private_network", ip: "172.28.128.6"
+        app.ssh.password = "vagrant"
+        app.ssh.insert_key = false
+        app.vm.provider "virtualbox" do |v|
+            v.memory = 256
+            v.cpus = 1
+        end
+        app.vm.provision "hosts"
+    end
+    
     config.vm.define "loadbalancer" do |loadbalancer|
         loadbalancer.vm.box = "loadbalancer"     
         loadbalancer.vm.box_url = "file://"
