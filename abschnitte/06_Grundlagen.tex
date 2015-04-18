@@ -126,6 +126,8 @@ Beim Open-Source-Produkt KVM (Kernel-based Virtual Machine) handelt es sich um e
 
 So gibt es zum Beispiel die Linux Distribution Proxmox VE \citep[Vgl.][]{Proxmox14}, die man direkt auf eine leere Hardware installieren kann und die die entsprechenden Kernel-Module und weitere Hilfsprogramme (zum Beispiel zur Verwaltung der virtuellen Maschinen) bereits beinhaltet.
 
+Auch KVM bietet die Möglichkeit, laufende virtuelle Maschinen von einem Host auf einen anderen zu übertragen \citep[Vgl.][]{kvm:001}.
+
 \begin{figure}[!ht]
   \begin{center}
     \includegraphics[width=10cm]{bilder/xen.png}
@@ -136,6 +138,8 @@ So gibt es zum Beispiel die Linux Distribution Proxmox VE \citep[Vgl.][]{Proxmox
 Auch bei XenServer von der Firma Citrix handelt es sich um einen Hypervisor \citep[Vgl.][]{xen:001}. Auch dieser \ac{VMM} setzt direkt auf der eigentlichen physischen Hardware auf. XenServer basiert ebenfalls auf einem Linux-Kernel. Es handelt sich aber nicht lediglich um Kernel-Module, die sich in eine beliebige Linux-Distribution laden lassen, sondern um einen modifizerten Linux-Kernel. XenServer lässt sich also nur auf komplett leere Hardware installieren und bietet auch nicht die vollständigen Funktionalitäten einer normalen Linux-Distribution. Das besondere an XenServer ist, dass die Prozesse zur Steuerung der virtuellen Maschinen selbst in einer virtuellen Maschine laufen. Diese auch "`Privileged Guest"' genannte Maschine muss laufen, bevor weitere Gastsysteme geladen werden können. Der "`Privileged Guest"' oder auch DOM0 genannte Gast hat dabei (wie der Name sagt) besondere Rechte, die ihm die Steuerung der darunterliegenden Virtualisierungsschicht im Hypervisor ermöglichen \citep[Vgl.][S. 2]{Schee14}.
 
 Als weitere Gastsysteme lassen sich wie auch bei KVM beliebige unmodifzierte Gastsysteme wie Linux-Distributionen oder Windows-Systeme installieren. Besonders ist aber, dass sich auch Linux-Distributionen mit ebenfalls modifiziertem Kernel laden lassen, die direkter mit dem Hypervisor zusammen arbeiten und so eine höhere Performance bieten.
+
+Auch XenServer bietet Live-Migrationen, also die Möglichkeit, virtuelle Maschinen von einem Hardware-Rechner auf einen anderen zu übertragen \citep[Vgl.][]{xen:002}.
 
 \subsubsubsection{Hosted Hypervisors}
 
@@ -151,6 +155,8 @@ Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb ein
 Größter Vorteil dieser Variante ist es also, dass das Hostsystem auch für gewöhnliche Benutzerarbeiten zur Verfügung steht und nicht ausschließlich zur Virtualisierung verwendet werden muss. Diese Virtualisierungslösung lässt sich sehr einfach nachträglich auf eine Vielzahl von Betriebssystemen installieren und auch wieder deinstallieren. Ein typischer Vertreter dieser Hypervisor-Klasse ist zum Beispiel VirtualBox von Oracle \citep[Vgl.][S. 24]{DamMohAnd12}.
 
 VirtualBox bietet nach der Installation eine grafische Benutzeroberfläche, mit der man seine virtuellen Maschinen einfach verwalten kann. Zum Beispiel ist es möglich, eine neue, leere virtuelle Maschine zu definieren, ihre Hardware-Einstellungen wie zum Beispiel Menge an Prozessoren und Arbeitsspeicher zu konfigurieren und sie zu starten. Anschließend lässt sich dann zum Beispiel mit einem Installationsmedium ein Betriebssystem auf der Gast-Maschine installieren. Es lassen sich aber auch bestehende Maschinen exportieren und importieren, auf denen zum Beispiel bereits ein Betriebssystem und weitere Anwendungsprogramme installiert sind. Schließlich lassen sich virtuelle Maschinen auch einfach pausieren, stoppen und natürlich löschen \citep[Vgl.][S. 11 ff.]{Oracle14}.
+
+Genau wie die Bare-Metal-Hypervisor, bietet auch Virtualbox die Möglichkeit, laufende Maschinen zwischen zwei Rechnern zu übertagen \citep[Vgl.][S. 111]{Oracle14}.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -238,7 +244,7 @@ In der Abbildung \ref{Union Filesystem} wird zum Beispiel die gesamte Ubuntu-Dis
       \hline
       Funktion & \multicolumn{6}{|l|}{} \\
       \hline
-      - Live-Migration & X & - & - & - & - & - \\
+      - Live-Migration & X & X & X & X & - & - \\
       \hline
       - Verschiedene OS & X & X & X & X & - & - \\
       \hline
