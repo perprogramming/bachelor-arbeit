@@ -1,12 +1,12 @@
 CONTAINER ID        IMAGE                                   COMMAND                CREATED             STATUS                        PORTS                   NAMES
 d62c55847949        implementierung20_loadbalancer:latest   "/bin/sh -c '/usr/sb   2 minutes ago       Up 2 minutes                  0.0.0.0:32813->80/tcp   implementierung20_loadbalancer_1   
 d31dc0481b86        implementierung20_app:latest            "/bin/sh -c 'supervi   2 minutes ago       Up 2 minutes                  80/tcp                  implementierung20_app_1            
-3a18a346d46f        implementierung20_database:latest       "/bin/sh -c mysqld"    2 minutes ago       Exited (1) 2 minutes ago                              implementierung20_database_1       
+3a18a346d46f        implementierung20_database:latest       "/bin/sh -c mysqld"    2 minutes ago       Up 2 minutes                  3306/tcp                implementierung20_database_1       
 84eb7823cf5d        implementierung20_search:latest         "/bin/sh -c '/var/li   2 minutes ago       Up 2 minutes                  8080/tcp                implementierung20_search_1         
 3386b8fb85e1        implementierung20_cache:latest          "/bin/sh -c redis-se   2 minutes ago       Up 2 minutes                  6379/tcp                implementierung20_cache_1          
 68b5acbe6188        implementierung19_loadbalancer:latest   "/bin/sh -c '/usr/sb   2 minutes ago       Up 2 minutes                  0.0.0.0:32812->80/tcp   implementierung19_loadbalancer_1   
 44ed3e5fce05        implementierung19_app:latest            "/bin/sh -c 'supervi   2 minutes ago       Up 2 minutes                  80/tcp                  implementierung19_app_1            
-989cdc855cab        implementierung19_database:latest       "/bin/sh -c mysqld"    2 minutes ago       Exited (1) 2 minutes ago                              implementierung19_database_1       
+989cdc855cab        implementierung19_database:latest       "/bin/sh -c mysqld"    2 minutes ago       Up 2 minutes                  3306/tcp                implementierung19_database_1       
 c2c015f28e91        implementierung19_search:latest         "/bin/sh -c '/var/li   2 minutes ago       Up 2 minutes                  8080/tcp                implementierung19_search_1         
 eaac8b8ac5d7        implementierung19_cache:latest          "/bin/sh -c redis-se   2 minutes ago       Up 2 minutes                  6379/tcp                implementierung19_cache_1          
 be09e7d78e6f        implementierung18_loadbalancer:latest   "/bin/sh -c '/usr/sb   2 minutes ago       Up 2 minutes                  0.0.0.0:32811->80/tcp   implementierung18_loadbalancer_1   
@@ -17,7 +17,7 @@ c31a806d7ad4        implementierung18_search:latest         "/bin/sh -c '/var/li
 2fdda0d6343e        implementierung17_loadbalancer:latest   "/bin/sh -c '/usr/sb   2 minutes ago       Up 2 minutes                  0.0.0.0:32810->80/tcp   implementierung17_loadbalancer_1   
 67e5cc2fc9b1        implementierung17_app:latest            "/bin/sh -c 'supervi   2 minutes ago       Up 2 minutes                  80/tcp                  implementierung17_app_1            
 113af6fb1902        implementierung17_database:latest       "/bin/sh -c mysqld"    2 minutes ago       Up 2 minutes                  3306/tcp                implementierung17_database_1       
-2489ace584f5        implementierung17_search:latest         "/bin/sh -c '/var/li   2 minutes ago       Exited (1) 33 seconds ago                             implementierung17_search_1         
+2489ace584f5        implementierung17_search:latest         "/bin/sh -c '/var/li   2 minutes ago       Up 2 minutes                  8080/tcp                implementierung17_search_1         
 dc7480e3983e        implementierung17_cache:latest          "/bin/sh -c redis-se   2 minutes ago       Up 2 minutes                  6379/tcp                implementierung17_cache_1          
 2c3c6a32dde4        implementierung16_loadbalancer:latest   "/bin/sh -c '/usr/sb   2 minutes ago       Up 2 minutes                  0.0.0.0:32809->80/tcp   implementierung16_loadbalancer_1   
 669c63148ddd        implementierung16_app:latest            "/bin/sh -c 'supervi   2 minutes ago       Up 2 minutes                  80/tcp                  implementierung16_app_1            
@@ -37,7 +37,7 @@ f4d218cbc63c        implementierung14_cache:latest          "/bin/sh -c redis-se
 6ef875782201        implementierung13_loadbalancer:latest   "/bin/sh -c '/usr/sb   3 minutes ago       Up 3 minutes                  0.0.0.0:32806->80/tcp   implementierung13_loadbalancer_1   
 6ab6351f93c3        implementierung13_app:latest            "/bin/sh -c 'supervi   3 minutes ago       Up 3 minutes                  80/tcp                  implementierung13_app_1            
 416c9c08e30a        implementierung13_database:latest       "/bin/sh -c mysqld"    3 minutes ago       Up 3 minutes                  3306/tcp                implementierung13_database_1       
-6ebd8abf54e5        implementierung13_search:latest         "/bin/sh -c '/var/li   3 minutes ago       Exited (1) 33 seconds ago                             implementierung13_search_1         
+6ebd8abf54e5        implementierung13_search:latest         "/bin/sh -c '/var/li   3 minutes ago       Up 3 minutes                  8080/tcp                implementierung13_search_1         
 e62f4477090e        implementierung13_cache:latest          "/bin/sh -c redis-se   3 minutes ago       Up 3 minutes                  6379/tcp                implementierung13_cache_1          
 74081e266c2b        implementierung12_app:latest            "/bin/sh -c 'supervi   3 minutes ago       Up 3 minutes                  80/tcp                  implementierung12_app_1            
 8e5f87ecc17d        implementierung12_loadbalancer:latest   "/bin/sh -c '/usr/sb   3 minutes ago       Up 3 minutes                  0.0.0.0:32805->80/tcp   implementierung12_loadbalancer_1   
@@ -56,7 +56,7 @@ f715c39198d8        implementierung11_cache:latest          "/bin/sh -c redis-se
 ef3e9e639adc        implementierung10_cache:latest          "/bin/sh -c redis-se   3 minutes ago       Up 3 minutes                  6379/tcp                implementierung10_cache_1          
 6d47ee63a13f        implementierung9_loadbalancer:latest    "/bin/sh -c '/usr/sb   3 minutes ago       Up 3 minutes                  0.0.0.0:32802->80/tcp   implementierung9_loadbalancer_1    
 652791af2abb        implementierung9_app:latest             "/bin/sh -c 'supervi   3 minutes ago       Up 3 minutes                  80/tcp                  implementierung9_app_1             
-7414abd98829        implementierung9_database:latest        "/bin/sh -c mysqld"    3 minutes ago       Exited (137) 36 seconds ago                           implementierung9_database_1        
+7414abd98829        implementierung9_database:latest        "/bin/sh -c mysqld"    3 minutes ago       Up 3 minutes                  3306/tcp                implementierung9_database_1        
 42d86200e096        implementierung9_search:latest          "/bin/sh -c '/var/li   3 minutes ago       Up 3 minutes                  8080/tcp                implementierung9_search_1          
 0bfed77a0bfd        implementierung9_cache:latest           "/bin/sh -c redis-se   3 minutes ago       Up 3 minutes                  6379/tcp                implementierung9_cache_1           
 a4bf05ae9cbe        implementierung7_loadbalancer:latest    "/bin/sh -c '/usr/sb   4 minutes ago       Up 4 minutes                  0.0.0.0:32801->80/tcp   implementierung7_loadbalancer_1    
