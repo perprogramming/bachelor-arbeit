@@ -8,7 +8,7 @@ boxes=(
     search
 )
 
-root=`pwd`
+root=$( cd "$( dirname "$0" )" && pwd )
 
 if [ ! -f "$root/machines/ubuntu-14.04.ovf" ]; then
     wget --no-check-certificate -O "$root/machines/ubuntu-14.04.ovf" "https://www.dropbox.com/s/2e6i2aj9b12xws2/ubuntu-14.04.ovf?dl=1"
