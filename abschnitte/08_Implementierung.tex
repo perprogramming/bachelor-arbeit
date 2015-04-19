@@ -6,19 +6,19 @@ Grundsätzlich beiden Ansätzen gemeinsam ist, dass zunächst ein ausführbares 
 
 Wie nun im Folgenden beschrieben wird, unterscheiden sich die beiden Ansätze dabei vor allem in der Einfachheit, die einzelnen Komponenten als gemeinesame Umgebung zu definieren und zu starten.
 
-Die vollständige Implementierung beider Ansätze kann übrigens der beigefügten CD entnommen oder unter https://github.com/perprogramming/bachelor-arbeit/tree/master/cd online eingesehen werden.
+Die vollständige Implementierung beider Ansätze kann übrigens der beigefügten CD entnommen oder unter https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Implementierung online eingesehen werden.
 
 \subsection{VirtualBox}
 
-Um die zuvor konzipierte Testumgebung mit VirtualBox zu virtualisieren, ist es zunächst notwendig, fertige virtuelle Maschinen zu erzeugen, die sich bei Bedarf direkt mit VirtualBox starten lassen. Ein Werkzeug zur Erzeugung solcher Maschinenabbilder ist Packer \citep[Siehe][]{Packer15}.
+Um die zuvor konzipierte Testumgebung mit VirtualBox zu virtualisieren, ist es zunächst notwendig, fertige virtuelle Maschinen zu erzeugen, die sich bei Bedarf direkt mit VirtualBox starten lassen. Ein Werkzeug zur Erzeugung solcher Maschinenabbilder ist Packer \citep[Vgl.][]{Packer15}.
 
-Es wäre außerdem von Vorteil, das Starten der einzelnen Maschinen nicht selbstständig steuern zu müssen. Ein Werkzeug, mit dem man mehrere virtuelle Maschinen zu einer Gesamtumgebung auf Basis von VirtualBox orchestrieren kann, ist Vagrant \citep[Siehe][]{Vagrant:001}.
+Es wäre außerdem von Vorteil, das Starten der einzelnen Maschinen nicht selbstständig steuern zu müssen. Ein Werkzeug, mit dem man mehrere virtuelle Maschinen zu einer Gesamtumgebung auf Basis von VirtualBox orchestrieren kann, ist Vagrant \citep[Vgl.][]{Vagrant:001}.
 
 Im Folgenden wird nun die Funktionsweise der beiden Werkzeuge Packer und Vagrant genauer beschrieben.
 
 \subsubsection{Erzeugung der einzelnen Maschinen mit Packer}
 
-"`Packer ist ein Werkzeug zur Erzeugung eindeutiger Maschinenabbilder für verschiedene Plattformen auf Basis einer einfachen Konfiguration"' \citep[Siehe][]{Packer15}. Packer kennt dabei vor allem drei wichtige Konzepte: Builder \citep[Vgl.][]{Packer:001}, Provisioner \citep[Vgl.][]{Packer:002} und Post-Processor \citep[Vgl.][]{Packer:003}. Diese werden mit Hilfe der Konfigurations-Datei namens packer.json definiert. Die Abbildung \ref{Loadbalancer-Packer} zeigt die entsprechende Konfigurations-Datei für die Komponente des Loadbalancers.
+"`Packer is a tool for creating identical machine images for multiple platforms from a single source configuration."' \citep[S.][]{Packer15} Packer kennt dabei vor allem drei wichtige Konzepte: Builder \citep[Vgl.][]{Packer:001}, Provisioner \citep[Vgl.][]{Packer:002} und Post-Processor \citep[Vgl.][]{Packer:003}. Diese werden mit Hilfe der Konfigurations-Datei namens packer.json definiert. Die Abbildung \ref{Loadbalancer-Packer} zeigt die entsprechende Konfigurations-Datei für die Komponente des Loadbalancers.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -30,7 +30,7 @@ Im Folgenden wird nun die Funktionsweise der beiden Werkzeuge Packer und Vagrant
 
 Ein Builder \citep[Vgl.][]{Packer:001} beschreibt eine bestimmte Technologie, mit deren Hilfe das virtuelle Maschinen-Abbild erzeugt wird. Neben verschiedenen anderen Technologien beinhaltet Packer auch Builder zur Erzeugung von virtuellen Maschinen mit VirtualBox. Grundsätzlich gibt es dabei zwei Möglichkeiten: Zum einen kann man einen Builder vom Typ "`virtualbox-iso"' verwenden. Mit diesem wird eine leere virtuelle Maschine erzeugt und anschließend mit Hilfe eines Installationsmedium im ISO-Format (\acl{ISO}) ein Betriebssystem installiert. Zum anderen kann man einen Builder vom Typ "`virtualbox-ovf"' verwenden. Das Format OVF (\acl{OVF}) ist ein generisches Format zum Import und Export von virtuellen Maschinen. Mit diesem Builder kann man also mit Hilfe von Packer ein Maschinen-Abbild auf Basis eines anderen Maschinen-Abbildes erzeugen. So kann man zum Beispiel eine fertig installierte Linux-Distribution als Ausgangspunkt zur Installation weiterer Anwendungsprogramme verwenden. Für die Testumgebung der Pixelhouse GmbH sollen die einzelnen virtuellen Maschinen idealerweise auf Basis einer fertigen Installation von Ubuntu 14.04 Server erzeugt werden, die auch im Produktivbetrieb zum Einsatz kommt.
 
-Um nun weitere Software auf der mit dem Builder erzeugten virtuellen Maschine zu installieren, kommt ein sogenannter Provisioner \citep[Vgl.][]{Packer:002} zum Einsatz. Ein Provisioner ist für Packer eine Technologie, mit der es einfach möglich ist, solche Installationsvorgänge zu konfigurieren. Dabei gibt es sehr umfangreiche Ansätze wie die Werkzeuge Puppet oder Chef, die sehr mächtige Konfigurationssprachen bieten, um verschiedenste Installations- und Konfigurationsschritte in einem Betriebssystem vorzunehmen. Eine andere, eher einfache Variante wäre aber zum Beispiel der Provisioner vom Typ "`Shell Script"', bei dem eben lediglich ein Shell Script innerhalb der virtuellen Maschine ausgeführt wird, um weitere Einstellungen oder Installationen vorzunehmen. Die Abbildung \ref{Loadbalancer-Install} zeigt zum Beispiel das entsprechende Script für den Loadbalancer. Ein Vorteil solcher Scripte ist, dass sie sich später auch sehr leicht für die Implementierung mit Hilfe von Docker wiederverwenden lassen.
+Um nun weitere Software auf der mit dem Builder erzeugten virtuellen Maschine zu installieren, kommt ein sogenannter Provisioner \citep[Vgl.][]{Packer:002} zum Einsatz. Ein Provisioner ist für Packer eine Technologie, mit der es einfach möglich ist, solche Installationsvorgänge zu konfigurieren. Dabei gibt es sehr umfangreiche Ansätze wie die Werkzeuge Puppet \citep[][]{puppet} oder Chef \citep[][]{chef}, die sehr mächtige Konfigurationssprachen bieten, um verschiedenste Installations- und Konfigurationsschritte in einem Betriebssystem vorzunehmen. Eine andere, eher einfache Variante wäre aber zum Beispiel der Provisioner vom Typ "`shell"', bei dem eben lediglich ein Shell Script innerhalb der virtuellen Maschine ausgeführt wird, um weitere Einstellungen oder Installationen vorzunehmen. Die Abbildung \ref{Loadbalancer-Install} zeigt zum Beispiel das entsprechende Script für den Loadbalancer. Ein Vorteil solcher Scripte ist, dass sie sich später auch sehr leicht für die Implementierung mit Hilfe von Docker wiederverwenden lassen.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -44,7 +44,7 @@ Schließlich kennt Packer nun noch das Konzept des Post-Prozessors \citep[Vgl.][
 
 \subsubsection{Umgebungssteuerung mit Vagrant}
 
-"`Vagrant bietet eine einfach zu konfigurierende, reproduzierbare und portierbare Betriebsumgebung auf Basis etablierter Virtualisierungs-Technologien und einen einfachen Ansatz zu deren Verwaltung [...]"' \citep[Siehe][]{Vagrant:001}.
+"`Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow [..]"' \citep[S.][]{Vagrant:001}
 
 \begin{figure}[!ht]
   \begin{center}
@@ -86,14 +86,27 @@ Vagrant.configure(2) do |config|
     end
 end
     \end{rubycode}
-    \caption{Auszug aus der Vagrantfile der fertigen Testumgebung}
+    \caption{Auszug aus der Vagrantfile der neuen Testumgebung}
     \label{Vagrantfile}
   \end{center}
 \end{figure}
 
-Dazu legt man zunächst eine Konfigurationsdatei namens Vagrantfile an, in der man seine Umgebung definiert. Vagrant bietet dabei die Möglichkeit eine oder mehrere virtuelle Maschinen auf Basis von verschiedenen Virtualisierungstechnologien zu starten. So bietet es eben auch die Möglichkeit, virtuelle Maschinen mit Hilfe von VirtualBox zu starten, die mit Packer vorbereitet wurden. Es bietet weiterhin einfache Konfigurationsparameter, die zum Beispiel die Netzwerkkommunikation zwischen den virtuellen Maschinen und dem Host-Betriebssystem und auch untereinander ermöglichen. Auch einzelne Parameter wie Anzahl der virtuellen Prozessoren und die Menge des zur Verfügung gestellten Arbeitsspeicher lassen sich hier noch nachträglich definieren. Es ist auch möglich, Ordner zwischen dem Host-Betriebssystem und den virtuellen Maschinen zu teilen, um so zum Beispiel während der Entwicklung mit einer IDE (\acl{IDE}) auf dem Host-Betriebssystem Code zu bearbeiten, der direkt in den virtuellen Maschinen ausgeführt wird. Die Abbildung \ref{Vagrantfile} zeigt einen Auszug aus der fertigen Konfigurationsdatei.
+Dazu legt man zunächst eine Konfigurationsdatei namens Vagrantfile an, in der man seine Umgebung definiert. Vagrant bietet dabei die Möglichkeit, eine oder mehrere virtuelle Maschinen auf Basis von verschiedenen Virtualisierungstechnologien zu starten. So bietet es eben auch die Möglichkeit, virtuelle Maschinen mit Hilfe von VirtualBox zu starten, die mit Packer vorbereitet wurden. Es bietet weiterhin einfache Konfigurationsparameter, die zum Beispiel die Netzwerkkommunikation zwischen den virtuellen Maschinen und dem Host-Betriebssystem und auch untereinander ermöglichen. Auch einzelne Parameter wie Anzahl der virtuellen Prozessoren und die Menge des zur Verfügung gestellten Arbeitsspeicher lassen sich hier noch nachträglich definieren. Es ist auch möglich, Ordner zwischen dem Host-Betriebssystem und den virtuellen Maschinen zu teilen, um so zum Beispiel während der Entwicklung mit einer IDE (\acl{IDE}) auf dem Host-Betriebssystem Code zu bearbeiten, der direkt in den virtuellen Maschinen ausgeführt wird. Die Abbildung \ref{Vagrantfile} zeigt einen Auszug aus der fertigen Konfigurationsdatei.
 
-Eine Besonderheit ist hier durch die Einstellung \textit{loadbalancer.vm.provision "`hosts"'} gegeben. Um nämlich die Kommunikation der einzelnen Komponenten untereinander zu ermöglichen, verwenden wir das Vagrant-Plugin "`vagrant-hosts"' \citep[Vgl.][]{vagranthosts}. Dieses wird über diese Konfigurationszeile dazu veranlasst, in die Datei \textit{/etc/hosts} jeder Komponente statische IP-Routen (\acl{IP}-Routen) auf die anderen Komponenten einzutragen. So kann zum Beispiel der Appserver davon ausgehen, dass er den Datenbankserver einfach unter dem Hostnamen \textit{database} findet.
+Eine Besonderheit ist hier durch die Einstellung \textit{loadbalancer.vm.provision "`hosts"'} gegeben. Um nämlich die Kommunikation der einzelnen Komponenten untereinander zu ermöglichen, wird das Vagrant-Plugin "`vagrant-hosts"' \citep[Vgl.][]{vagranthosts} verwendet. Dieses wird über diese Konfigurationszeile dazu veranlasst, in die Datei \textit{/etc/hosts} jeder Komponente statische IP-Einträge (\acl{IP}-Einträge) auf die anderen Komponenten einzutragen. So kann zum Beispiel der Appserver davon ausgehen, dass er den Datenbankserver einfach unter dem Hostnamen \textit{database} findet. Ein Nachteil dieser Lösung ist aber, dass die Provisionierung erst stattfindet, nachdem das Betriebssystem und alle installierten Dienste gestartet wurden. Da Varnish nicht korrekt startet, solange er die IP-Adressen seiner Backends (in diesem Fall die Maschine des Appservers) auflösen kann, muss ein erneutes Starten veranlasst werden, nachdem das Plugin "`vagrant-hosts"' die Adresse der Appserver-Komponente eingetragen hat. Deshalb sieht man in der Konfigurationsdatei danach noch einen weiteren Provider, der den Varnish-Service erneut startet. In der Abbildung \ref{varnishconf} ist die entsprechende Konfiguration des Backends in Varnish zu sehen.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{yamlcode}
+backend default {
+    .host = "app";
+    .port = "80";
+}
+    \end{yamlcode}
+    \caption{Auszug aus der Konfigurationsdatei von Varnish}
+    \label{varnishconf}
+  \end{center}
+\end{figure}
 
 Mit Hilfe der fertigen Konfigurationsdatei lässt sich nun die entsprechende Umgebung mit einem einfach Kommandozeilen-Befehl starten: "`vagrant up"'. Vagrant lädt und startet dann alle in der Konfigurationsdatei angegebenen Maschinen und setzt die gewünschten Konfigurationen für Netzwerkkommunikation und Hardware-Parameter um.
 
@@ -109,7 +122,7 @@ Sowohl auf die Verwendung der Dockerfiles als auch auf die Verwendung von docker
 
 \subsubsection{Images mit Dockerfiles bauen}
 
-Docker bietet eine einfache, integrierte Möglichkeit, neue Maschinen-Abbilder zu erzeugen \citep[Vgl.][]{docker:003}. Wie im Grundlagen-Kapitel beschrieben, werden diese Maschinen-Abbilder mit Hilfe eines Union-Filesystems gestartet. Einzelne Abbilder lassen sich so durch das Hinzufügen eines weiteren, überlagernden Dateisystems zu neuen Abbildern erweitern. Die Definitions-Datei eines Docker-Images, Dockerfile genannt, startet deshalb immer mit der Angabe des zugrundeliegenden Images. Anschließend lassen sich einfach Kommandozeilen-Befehle definieren, die in der laufenden Maschine ausgeführt werden. Führen diese Befehle zu Änderungen am Dateisystem, so werden diese Änderungen eben in einer neuen Dateisysteme-Ebene festgehalten, die Teil des fertigen Abbildes wird. Genauso einfach lassen sich auch Dateien in die Maschine kopieren, die auf dem Host-System liegen. Schließlich lässt sich auch ein Befehl konfigurieren, der standardmäßig ausgeführt wird, wenn man das Image später als Container startet. Die Abbildung \ref{loadbalancer-dockerfile} zeigt die entsprechende Datei für die Loadbalancer-Komponente. Hier ist nun schön zu sehen, dass wir das gleiche Installations-Script wie bei der Erzeugung der Maschinen-Abbilder für VirtualBox verwenden können.
+Docker bietet eine einfache, integrierte Möglichkeit, neue Maschinen-Abbilder zu erzeugen \citep[Vgl.][]{docker:003}. Wie im Grundlagen-Kapitel beschrieben, werden diese Maschinen-Abbilder mit Hilfe eines Union-Filesystems gestartet. Einzelne Abbilder lassen sich so durch das Hinzufügen eines weiteren, überlagernden Dateisystems zu neuen Abbildern erweitern. Die Definitions-Datei eines Docker-Images, Dockerfile genannt, startet deshalb immer mit der Angabe des zugrundeliegenden Images. Anschließend lassen sich einfach Kommandozeilen-Befehle definieren, die in der laufenden Maschine ausgeführt werden. Führen diese Befehle zu Änderungen am Dateisystem, so werden diese Änderungen eben in einer neuen Dateisysteme-Ebene festgehalten, die Teil des fertigen Abbildes wird. Genauso einfach lassen sich auch Dateien in die Maschine kopieren, die auf dem Host-System liegen. Schließlich lässt sich auch ein Befehl konfigurieren, der standardmäßig ausgeführt wird, wenn man das Image später als Container startet. Die Abbildung \ref{loadbalancer-dockerfile} zeigt die entsprechende Datei für die Loadbalancer-Komponente. Hier ist nun zu sehen, dass wir das gleiche Installations-Script wie bei der Erzeugung der Maschinen-Abbilder für VirtualBox verwenden können.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -133,7 +146,7 @@ Um nun die mit Docker erzeugten Images zu einer Gesamtumgebung zu orchestrieren,
   \end{center}
 \end{figure}
 
-Auch bei diesem Ansatz müssen die einzelnen Komponenten in der Lage sein, miteinander zu kommunizieren. Tatsächlich geschieht dies ebenfalls dadurch, dass in die Datei "`/etc/hosts"' der einzelnen Komponenten statische IP-Routen auf anderen Komponenten eingetragen werden. Tatsächlich ist dazu aber kein zusätzliche Plugin wie bei Vagrant notwendig, da docker-compose selbst eine entsprechende Funktionalität mitbringt, die sogenannten Container-Links \citep[Vgl.][]{dockerlinks}. Wie in der Abbildung \ref{dockercomposeyml} zu sehen, kann man an eine konkrete Komponte einfach Links zu anderen Komponenten eintragen. So kann auch hier der Appserver einfach unter dem Hostnamen \textit{database} auf den Datenbankserver zugreifen.
+Auch bei diesem Ansatz müssen die einzelnen Komponenten in der Lage sein, miteinander zu kommunizieren. Tatsächlich geschieht dies ebenfalls dadurch, dass in die Datei "`/etc/hosts"' der einzelnen Komponenten statische IP-Einträge auf anderen Komponenten eingetragen werden. Tatsächlich ist dazu aber kein zusätzliche Plugin wie bei Vagrant notwendig, da docker-compose selbst eine entsprechende Funktionalität mitbringt, die sogenannten Container-Links \citep[Vgl.][]{dockerlinks}. Wie in der Abbildung \ref{dockercomposeyml} zu sehen, kann man an eine konkrete Komponte einfach Links zu anderen Komponenten eintragen. So kann auch hier der Appserver einfach unter dem Hostnamen \textit{database} auf den Datenbankserver zugreifen.
 
 Die neue Testumgebung lässt sich schließlich mit dem einfachen Befehl "`docker-compose up"' starten.
 
