@@ -16,7 +16,7 @@ Zweitens ist es notwendig, die jeweiligen unterschiedlichen Kriterien zu gewicht
 
 Mit Hilfe dieses Verfahrens ist es möglich, am Ende einen konkrete numerische Bewertung der Lösung zu errechnen, in dem man den gewichteten Mittelwert über alle Kriterien berechnet. Das Ergebnis würde sich somit ebenfalls im Bereich von 1 bis 10 bewegen, wobei eine sehr gute Lösung eben die Bewertung 10 erhalten würde, eine sehr schlechte Lösung die Bewertung 1.
 
-Es ist wichtig zu betonen, dass, auch wenn das Verfahren aufgrund der mathematischen Herangehensweise einen sehr rationalen und objektiven Eindruck macht, die Gewichtung der einzelnen Kriterien rein subjektiv in Bezug auf die konkrete Problemstellung und die Ausgangslage bei der Pixelhouse GmbH erfolgt. Somit ist auch die schließliche Bewertung zumindest in diesem Sinne willkürlich.
+Es ist wichtig zu betonen, dass, auch wenn das Verfahren aufgrund der mathematischen Herangehensweise einen sehr objektiven Eindruck macht, die Bewertung der einzelnen Kriterien und ihre zusätzliche Gewichtung rein subjektiv in Bezug auf die konkrete Problemstellung und die Ausgangslage bei der Pixelhouse GmbH erfolgt. Somit ist auch die schließliche Bewertung zumindest in diesem Sinne subjektiv beziehungsweise willkürlich.
 
 \subsection{Durchführung der Evaluation}
 
@@ -68,7 +68,9 @@ Die Kriterien und ihre Gewichtung werden in der Abbildung \ref{kriterien} noch e
 
 Bei der Ermittlung der tatsächlich messbaren Kriterien ist zunächst interessant, auf welchem Testsystem die entsprechenden Zahlen ermittelt werden. Beim Testsystem handelt es sich um einen Laptop, der einen Intel Core i7 mit einer Taktung von 3 GHz und zwei Prozessorkernen enthält. Außerdem verfügt das System über 4 GB DDR3 Hauptspeicher mit einer Taktung von 1600 MHz. Außerdem verfügt das System über eine 120 Mbit Internetanbindung, was gerade beim Erzeugen der Maschinen-Abbilder beziehungsweise OS-Container-Images und der Installation von Softwarepaketen eine Rolle spielt. Bei der Festplatte handelt es sich um eine 256 GB großes \ac{SSD}.
 
-Sämtliche Messergebnisse befinden sich sowohl auf der beiliegenden CD im Ordner Evaluation als auch unter https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Evaluation.
+Sämtliche Messergebnisse befinden sich sowohl auf der beiliegenden CD im Ordner Evaluation als auch online unter der Adresse:
+
+\href{https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Evaluation}{https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Evaluation}.
 
 Die Erzeugung aller Maschinen-Abbilder für VirtualBox mit Hilfe des Tools Packer hat auf diesem System ca. 25 Minuten gedauert. Das Protokoll der Erzeugung kann auf der beiliegenden CD in der Datei Evaluation/build\_virtualbox.log eingesehen werden. Die Erzeugung aller OS-Container-Images mit Docker hat auf dem gleichen Testsystem ca. 5 Minuten gedauert. Auch hier befindet sich das Protokoll auf der CD in der Datei Evaluation/build\_docker.log. Setzt man also bei der Bewertung der Erzeugungsdauer für die längere Dauer von ca. 25 Minuten im Falle von VirtualBox und Packer den Wert 1 an, so ergibt sich daraus für die Dauer von 5 Minuten eine ungefähre Bewertung von 8.
 

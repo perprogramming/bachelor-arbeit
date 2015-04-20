@@ -16,7 +16,7 @@ Man unterscheidet grob vier Arten von Tests: Unit-, Integrations-, System- und A
 
 \subsubsubsection{Unit-Tests}
 
-"`Unit-Tests verify the behaviour of small elements in a software system, which are most often a single class."' \citep[S.][S. 132]{DuvMatAnd07} Eine wichtige Eigenschaft von Unit-Tests ist dabei, dass sie keine externen Abhängigkeiten wie zum Beispiel Datenbank oder Dateisystem besitzen. Tests können damit sehr früh und schnell geschrieben werden und benötigen nur wenig Zeit zur Ausführung. \citep[Vgl.][S. 133]{DuvMatAnd07} Unit-Tests benötigen deshalb aber auch keine anspruchsvolle Testumgebung oder eine Optimierung der Ausführungszeit. Für die Problemstellung dieser Arbeit sind sie also weniger interessant.
+"`Unit-Tests verify the behaviour of small elements in a software system, which are most often a single class."' \citep[S.][S. 132]{DuvMatAnd07} Unit-Tests konzentrieren sich darauf, dass Verhalten einer konkreten Klasse sowohl in Bezug auf ihren internen Zustand als auch in Bezug auf ihr Zusammenspiel mit anderen Klassen zu testen \citep[Vgl.][S. 7]{microservicetesting}. Eine wichtige Eigenschaft von Unit-Tests ist dabei, dass sie keine externen Abhängigkeiten wie zum Beispiel Datenbank oder Dateisystem besitzen. Tests können damit sehr früh und schnell geschrieben werden und benötigen nur wenig Zeit zur Ausführung \citep[Vgl.][S. 133]{DuvMatAnd07}. Sie benötigen deshalb aber auch keine anspruchsvolle Testumgebung oder eine Optimierung der Ausführungszeit. Für die Problemstellung dieser Arbeit sind sie also weniger interessant.
 
 \subsubsubsection{Integrations-Tests}
 
@@ -24,11 +24,35 @@ Man unterscheidet grob vier Arten von Tests: Unit-, Integrations-, System- und A
 
 \subsubsubsection{System-Tests}
 
-"`System tests excercise a complete software and therefore require a fully installed system [..]."' \citep[S.][S. 136]{DuvMatAnd07} Da Systemtests per Definition mehr Komponenten eines Systems im Zusammenspiel testen, als dies bei Integrations- beziehungsweise Unit-Tests der Fall ist, brauchen Systemtests im Vergleich sowohl länger für das Starten der Testumgebung als auch für das Durchlaufen des zu testenden Programmcodes. \citep[Vgl.][S. 136]{DuvMatAnd07} System-Tests sind somit sowohl hinsichtlich der von ihnen vollständig benötigten Testumgebung als auch der potentiell optimierbaren Ausführungsdauer genau die Art von Tests, die im Rahmen der Problemstellung relevant sind.
+"`System tests excercise a complete software and therefore require a fully installed system [..]."' \citep[S.][S. 136]{DuvMatAnd07} Da Systemtests per Definition mehr Komponenten eines Systems im Zusammenspiel testen, als dies bei Integrations- beziehungsweise Unit-Tests der Fall ist, brauchen Systemtests im Vergleich sowohl länger für das Starten der Testumgebung als auch für das Durchlaufen des zu testenden Programmcodes \citep[Vgl.][S. 136]{DuvMatAnd07}. System-Tests sind somit sowohl hinsichtlich der von ihnen vollständig benötigten Testumgebung als auch der potentiell optimierbaren Ausführungsdauer genau die Art von Tests, die im Rahmen der Problemstellung relevant sind.
 
 \subsubsubsection{Aktzeptanz-Tests}
 
-Akzeptanz- bzw. Funktionale Tests unterscheiden sich von System-Tests insofern, als das bei ihnen die Betonung darauf liegt, das System aus Sicht des Benutzers zu testen \citep[Vgl.][S. 136]{DuvMatAnd07}. Das Fernsteuern eines Browsers zum Testen einer Webanwendung ist ein typisches Beispiel für einen Akzeptanz-Test. Aber auch das manuelle Testen der Anwendung durch einen Projekt- oder Produktmanager gilt als Akzeptanztest. Genau wie der System-Tests benötigt der Aktzeptanz-Test auf jeden Fall das gesamte System und somit auch eine vollständige Testumgebung. Auch die Dauer der Testausführung ist wie bei Systemtests höher als die von Unit- und Integrations-Tests.
+Akzeptanz- bzw. Funktionale Tests unterscheiden sich von System-Tests insofern, als das bei ihnen die Betonung darauf liegt, das System aus Sicht des Benutzers zu testen \citep[Vgl.][S. 136]{DuvMatAnd07}. Ein Beispiel für so einen Test ist das manuelle Testen der Anwendung durch einen Projekt- oder Produktmanager. Es ist außerdem möglich, automatische Tests zu schreiben, die die Anwendung über einen programmatisch gesteuerten Webbrowser überprüfen. Solche Tests werden gerne mit Werkzeugen geschrieben, die es ermöglichen, die einzelnen Schritte des Tests in natürlichsprachlicher Syntax zu schreiben. Dadurch soll es zum Beispiel einem Produktmanager oder sogar Kunden möglich sein, die Tests zu verstehen und zu validieren. Die Abbildung \ref{behat} zeigt einen solchen Test, den die Pixelhouse GmbH im Rahmen ihrer Qualitätssicherung mit dem Werkzeug Behat \citep[][]{Behat15} benutzt, um das Einloggen auf der Website Chefkoch.de zu testen.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \begin{gherkincode}
+Feature: Login
+    In order to use personalized features
+    As a website user
+    I need to be able to log in
+
+    Scenario: Login succesfully
+        Given I am on the homepage
+        When I follow "Login"
+        And fill in "tester" for "Benutzername / E-Mail"
+        And fill in "tester" for "Passwort"
+        And press "Einloggen"
+        Then I should see "tester"
+        And should see "Logout"
+    \end{gherkincode}
+    \caption{Testscenario für das Einloggen auf Chefkoch.de}
+    \label{behat}
+  \end{center}
+\end{figure}
+
+Genau wie der System-Tests benötigt der Aktzeptanz-Test auf jeden Fall das gesamte System und somit auch eine vollständige Testumgebung. Auch die Dauer der Testausführung ist wie bei Systemtests höher als die von Unit- und Integrations-Tests.
 
 \subsubsection{Teststrategie}
 
@@ -44,7 +68,7 @@ Insgesamt kann man aber sagen, dass die rein manuelle Ausführung von Tests zwar
 
 Idealerweise werden in heutigen Softwareprojekten von Beginn an automatische Softwaretests geschrieben. "`In our ideal project, testers collaborate with developers and users to write automated tests from the start of the project."' \citep[S.][S. 83]{HumFar10} Diese werden sogar vor der eigentlichen Implementierung geschrieben und verifizieren dann die Vollständigkeit und Korrektheit der späteren Implementierung. Als Testsausführungsstrategie empfiehlt es sich dabei, dass sämtliche Tests automatisch von einem \ac{CI}-Server ausgeführt werden können, sobald sich etwas an der Anwendung ändert. \citep[Vgl.][S. 83]{HumFar10} "`[..] Tests must run any time and every time something in the system changes."' \citep[S.][S. 131]{DuvMatAnd07}
 
-Bei dieser Herangehensweise ist es wichtig, sich zu überlegen, welche Arten von Tests man wie häufig verwendet. Wie zuvor beschrieben unterscheiden sich die unterschiedlichen Testarten in Bezug auf den Aufwand für ihre Erstellung, die Dauer ihrer Ausführung und ihre Ansprüche an eine gegebenenfalls notwendige Testumgebung. "`Writing and running tests is obviously a good thing, but unless we treat them as an architectural component that requires proper categorization and structure, they can start looking like a hurdle, instead of the key, to success."' \citep[S.][S. 138]{DuvMatAnd07} Durch die sinnvolle Gruppierung von Tests kann ein Entwicklungsteam eine sinnvolle Ausführungsreihenfolge definieren. So sollten schnell laufende Unit-Tests vor den länger laufenden Integrations- und System-Tests ausgeführt werden. Dadurch kann ein Fehler auf dieser Ebene sehr früh entdeckt und einem konkreten Stück Software zugeordnet und an die Entwicklung zurück gegeben werden. Ist auf der Unit-Ebene aber kein Fehler aufgetreten, so können die teureren und länger laufenden Integrations- und Systemtests durchgeführt werden \citep[Vgl.][S. 138]{DuvMatAnd07}. "`All levels are essential to ensure that the application is working and delivering the expected business value."' \citep[S.][S. 178]{HumFar10} Auch wenn alle Ebenen wichtig sind, so wird allgemein empfohlen, mehr Unit-Tests als Integrations-, Systemtests oder Aktzeptanztests zu schreiben. Dies wird gerne über die in der Abbildung \ref{pyramide} zu sehende Testpyramide dargestellt.
+Bei dieser Herangehensweise ist es wichtig, sich zu überlegen, welche Arten von Tests man wie häufig verwendet. Wie zuvor beschrieben unterscheiden sich die unterschiedlichen Testarten in Bezug auf den Aufwand für ihre Erstellung, die Dauer ihrer Ausführung und ihre Ansprüche an eine gegebenenfalls notwendige Testumgebung. "`Writing and running tests is obviously a good thing, but unless we treat them as an architectural component that requires proper categorization and structure, they can start looking like a hurdle, instead of the key, to success."' \citep[S.][S. 138]{DuvMatAnd07} Durch die sinnvolle Gruppierung von Tests kann ein Entwicklungsteam eine sinnvolle Ausführungsreihenfolge definieren. So sollten schnell laufende Unit-Tests vor den länger laufenden Integrations- und System-Tests ausgeführt werden. Dadurch kann ein Fehler auf dieser Ebene sehr früh entdeckt und einem konkreten Stück Software zugeordnet und an die Entwicklung zurück gegeben werden. Ist auf der Unit-Ebene aber kein Fehler aufgetreten, so können die teureren und länger laufenden Integrations- und Systemtests durchgeführt werden \citep[Vgl.][S. 138]{DuvMatAnd07}. "`All levels are essential to ensure that the application is working and delivering the expected business value."' \citep[S.][S. 178]{HumFar10} Auch wenn alle Ebenen wichtig sind, so wird allgemein empfohlen, mehr Unit-Tests als Integrations-, Systemtests oder Aktzeptanztests zu schreiben. Dies wird gerne über die in der Abbildung \ref{pyramide} zu sehende Testpyramide dargestellt. "`The concept of the test pyramid is a simple way to think about the relative number of tests that should be written at each granularity. Moving up through the tiers of the pyramid, the scope of the tests increases and the number of tests that should be written decreases."' \citep[S.][S. 24]{microservicetesting} Dabei deutet das breite Fundament der Pyramide an, dass es bei der Testabdeckung einer Anwendung eben wichtig ist, ein breites Fundament an günstigen und schnellen Unit-Tests zu besitzen, auf das man nach oben hin Test setzt, bei denen die Abdeckung aber eben auch der Aufwand für die Wartung, die Zerbrechlichkeit der einzelnen Tests, die Dauer der Ausführung und die Kosten für die Erstellung steigen.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -108,7 +132,7 @@ Darauf folgt abschließend ein Unterkapitel zu den sogenannten Unikernels \citep
 
 \subsubsubsection{Bare Metal Hypervisors}
 
-Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm direkt auf echter physischer Hardware läuft und somit kein Betriebssystem auf dem Hostsystem benötigt. Die Abbildung \ref{bare} stellt diese Situation dar.
+Ein Bare Metal Hypervisor ist ein \ac{VMM}, der als eigenständiges Programm direkt auf echter physischer Hardware läuft und somit kein Betriebssystem auf dem Hostsystem benötigt. In der Abbildung \ref{bare} ist zudem zu sehen, dass auf einem entsprechenden System kein gewöhnliches Betriebssystem oder normale Anwendungsprogramme existieren.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -164,7 +188,7 @@ Auch XenServer bietet Live-Migrationen, also die Möglichkeit, virtuelle Maschin
 
 \subsubsubsection{Hosted Hypervisors}
 
-Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb eines Hostbetriebssystems läuft \citep[Vgl.][S. 22 ff.]{Goldberg73}. Es ist somit möglich, auch andere Programme neben dem Hypervisor und seinen Gastbetriebssystemen zu verwenden. Die Abbildung \ref{hosted} macht diesen Auffbau noch einmal besser verständlich.
+Ein Hosted Hypervisor ist ein \ac{VMM}, der als Anwendungsprogramm innerhalb eines Hostbetriebssystems läuft \citep[Vgl.][S. 22 ff.]{Goldberg73}. Es ist somit möglich, auch andere Programme neben dem Hypervisor und seinen Gastbetriebssystemen zu verwenden. In der Abbildung \ref{hosted} ist zu sehen, dass zwischen dem Hypervisor und der Hardware ein normales Betriebssystem läuft.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -184,7 +208,7 @@ Größter Vorteil dieser Variante ist es also, dass das Hostsystem auch für gew
   \end{center}
 \end{figure}
 
-VirtualBox bietet nach der Installation eine grafische Benutzeroberfläche, mit der man seine virtuellen Maschinen einfach verwalten kann. Diese Oberfläche ist in der Abbildung \ref{virtualbox} zu sehen. Zum Beispiel ist es möglich, eine neue, leere virtuelle Maschine zu definieren, ihre Hardware-Einstellungen wie zum Beispiel Menge an Prozessoren und Arbeitsspeicher zu konfigurieren und sie zu starten. Anschließend lässt sich dann zum Beispiel mit einem Installationsmedium ein Betriebssystem auf der Gast-Maschine installieren. Es lassen sich aber auch bestehende Maschinen exportieren und importieren, auf denen zum Beispiel bereits ein Betriebssystem und weitere Anwendungsprogramme installiert sind. Schließlich lassen sich virtuelle Maschinen auch einfach pausieren, stoppen und natürlich löschen \citep[Vgl.][S. 11 ff.]{Oracle14}.
+VirtualBox bietet nach der Installation eine grafische Benutzeroberfläche, mit der man seine virtuellen Maschinen einfach verwalten kann. Die Abbildung \ref{virtualbox} zeigt die Hauptanzeige dieser grafischen Benutzeroberfläche, in der auf der linken Seite die erzeugten virtuellen Maschinen zu sehen sind und auf der rechten Seite die jeweiligen Details zu einer konkreten Maschine. Darüber befinden sich ein Menü mit den wichtigsten Aktionen. Zum Beispiel ist es möglich, eine neue, leere virtuelle Maschine zu definieren, ihre Hardware-Einstellungen wie zum Beispiel Menge an Prozessoren und Arbeitsspeicher zu konfigurieren und sie zu starten. Anschließend lässt sich dann zum Beispiel mit einem Installationsmedium ein Betriebssystem auf der Gast-Maschine installieren. Es lassen sich aber auch bestehende Maschinen exportieren und importieren, auf denen zum Beispiel bereits ein Betriebssystem und weitere Anwendungsprogramme installiert sind. Schließlich lassen sich virtuelle Maschinen auch einfach pausieren, stoppen und natürlich löschen \citep[Vgl.][S. 11 ff.]{Oracle14}.
 
 Genau wie die vorherigen Hypervisor, bietet auch VirtualBox die Möglichkeit, laufende Maschinen zwischen zwei Rechnern zu übertagen \citep[Vgl.][S. 111]{Oracle14}.
 
@@ -289,7 +313,7 @@ Docker beziehungsweise OS-Container-Virtualisierungen im Allgemeinen stellen im 
       \hline
       - PHP möglich & X & X & X & X & - & X \\
       \hline
-      - Dateisystem Wiederverwendung & - & - & - & - & - & X \\
+      - UnionFS & - & - & - & - & - & X \\
       \hline
       Virtualisierung & \multicolumn{6}{|l|}{} \\
       \hline

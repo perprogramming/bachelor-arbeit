@@ -6,7 +6,9 @@ Grundsätzlich beiden Ansätzen gemeinsam ist, dass zunächst ein ausführbares 
 
 Wie nun im Folgenden beschrieben wird, unterscheiden sich die beiden Ansätze dabei vor allem in der Einfachheit, die einzelnen Komponenten als gemeinesame Umgebung zu definieren und zu starten.
 
-Die vollständige Implementierung beider Ansätze kann übrigens der beigefügten CD entnommen oder unter https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Implementierung online eingesehen werden.
+Die vollständige Implementierung beider Ansätze kann übrigens der beigefügten CD entnommen oder unter folgender Adresse online eingesehen werden:
+
+\href{https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Implementierung}{https://github.com/perprogramming/bachelor-arbeit/tree/master/cd/Implementierung}
 
 \subsection{VirtualBox}
 
@@ -112,6 +114,8 @@ Mit Hilfe der fertigen Konfigurationsdatei lässt sich nun die entsprechende Umg
 
 Anschließend lässt sich die innerhalb der Umgebung laufende Anwendung zum Beispiel mit einem Browser des Host-Betriebssystems ansteuern.
 
+Wie im Kapitel Grundlagen beschrieben, kann es beim Durchführen von Integrationstests vorteilhaft sein kann, nur Teile der gesamten Umgebung zu starten. So kann es zum Beispiel Integrationstests geben, die lediglich das Zusammenspiel von einzelnen Klassen der Anwendung mit der Datenbank testen. Vagrant bietet deshalb die Möglichkeit, gezielt auch nur einzelne Komponenten zu starten oder auch zu stoppen. Dazu kann man dem entsprechenden Befehl einfach die Namen der zu steuernden Komponenten übergeben, zum Beispiel "`vagrant up app database"'.
+
 \subsection{Docker}
 
 Auch bei der Verwendung von Docker zur Virtualisierung der Testumgebung mit Hilfe von OS-Containern stellt sich zunächst die Frage, wie man die einzelnen Container erzeugt. Im Gegensatz zu VirtualBox ist dazu keine weitere Software notwendig, da Docker bereits selbst die Möglichkeit zur Erzeugung solcher Images mit sich bringt. Es ist dazu lediglich notwendig, eine einfach Definitionsdatei, eine sogenannte Dockerfile, zu schreiben \citep[Vgl.][]{docker:003}.
@@ -132,7 +136,7 @@ Docker bietet eine einfache, integrierte Möglichkeit, neue Maschinen-Abbilder z
   \end{center}
 \end{figure}
 
-Ein Image lässt sich dann einfach mit dem Befehl "`docker build -t chefkoch/loadbalancer ."' erzeugen. Anschließend lässt sich das Image mit dem Befehl "`docker run chefkoch/loadbalancer"' als Container ausführen. Es ist sogar möglich, das fertige Image mit dem einfachen Befehl "`docker push chefkoch/loadbalancer"' in einem Web-Verzeichnis, der sogenannten docker-registry unter https://registry.hub.docker.com/, zu veröffentlichen \citep[Vgl][]{docker:004}. So ist es jedem möglich, dieses Image oder auch andere Images des Verzeichnisses als Basis für ein weiteres Image zu verwenden oder auch einfach nur als Container auszuführen. Solange die Container aber auf dem selben Hardware-Host erzeugt und gestartet werden, benötigt man diese Funktionalität nicht.
+Ein Image lässt sich dann einfach mit dem Befehl "`docker build -t chefkoch/loadbalancer ."' erzeugen. Anschließend lässt sich das Image mit dem Befehl "`docker run chefkoch/loadbalancer"' als Container ausführen. Es ist sogar möglich, das fertige Image mit dem einfachen Befehl "`docker push chefkoch/loadbalancer"' in einem Web-Verzeichnis, der sogenannten docker-registry unter \href{https://registry.hub.docker.com/}{https://registry.hub.docker.com/}, zu veröffentlichen \citep[Vgl][]{docker:004}. So ist es jedem möglich, dieses Image oder auch andere Images des Verzeichnisses als Basis für ein weiteres Image zu verwenden oder auch einfach nur als Container auszuführen. Solange die Container aber auf dem selben Hardware-Host erzeugt und gestartet werden, benötigt man diese Funktionalität nicht.
 
 \subsubsection{Steuerung der Umgebung mit docker-compose}
 
@@ -146,8 +150,10 @@ Um nun die mit Docker erzeugten Images zu einer Gesamtumgebung zu orchestrieren,
   \end{center}
 \end{figure}
 
-Auch bei diesem Ansatz müssen die einzelnen Komponenten in der Lage sein, miteinander zu kommunizieren. Tatsächlich geschieht dies ebenfalls dadurch, dass in die Datei "`/etc/hosts"' der einzelnen Komponenten statische IP-Einträge auf anderen Komponenten eingetragen werden. Tatsächlich ist dazu aber kein zusätzliche Plugin wie bei Vagrant notwendig, da docker-compose selbst eine entsprechende Funktionalität mitbringt, die sogenannten Container-Links \citep[Vgl.][]{dockerlinks}. Wie in der Abbildung \ref{dockercomposeyml} zu sehen, kann man an eine konkrete Komponte einfach Links zu anderen Komponenten eintragen. So kann auch hier der Appserver einfach unter dem Hostnamen \textit{database} auf den Datenbankserver zugreifen.
+Auch bei diesem Ansatz müssen die einzelnen Komponenten in der Lage sein, miteinander zu kommunizieren. Tatsächlich geschieht dies ebenfalls dadurch, dass in die Datei "`/etc/hosts"' der einzelnen Komponenten statische IP-Einträge auf anderen Komponenten eingetragen werden. Tatsächlich ist dazu aber kein zusätzliche Plugin wie bei Vagrant notwendig, da docker-compose selbst eine entsprechende Funktionalität mitbringt, die sogenannten Container-Links \citep[Vgl.][]{dockerlinks}. Wie in der Abbildung \ref{dockercomposeyml} zu sehen, kann man an eine konkrete Komponte einfach Links zu anderen Komponenten eintragen. So kann auch hier der Appserver einfach unter dem Hostnamen \textit{database} auf den Datenbankserver zugreifen. Diese Verlinkung wird bereits vor dem Starten des eigentlichen Containers und seiner Prozesse umgesetzt, so dass kein erneutes Starten des Loadbalancers wie bei der Lösung mit VirtualBox beziehungsweise Vagrant notwendig ist.
 
 Die neue Testumgebung lässt sich schließlich mit dem einfachen Befehl "`docker-compose up"' starten.
+
+Auch docker-compose bietet die Möglichkeit, für das Durchführen von Integrationstests nur Teile der gesamten Umgebung zu starten. Dazu kann man dem entsprechenden Befehl einfach die Namen der zu jeweiligen Komponenten übergeben, zum Beispiel "`docker-compose up app database"'. Dabei berücksichtigt docker-compose allerdings die Verlinkung der einzelnen Komponenten. Da die Appserver-Komponente, wie in Abbildung \ref{dockercomposeyml} zu sehen, nicht nur die Datenbank sondern auch den Such-Index und den Cache verlinkt, werden diese automatisch mitgestartet.
 
 
